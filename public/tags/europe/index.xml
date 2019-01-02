@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Europe on Resul Umit</title>
+    <link>/tags/europe/</link>
+    <description>Recent content in Europe on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/europe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>National context is a key determinant of energy security concerns across Europe</title>
+      <link>/publications/energy-security/</link>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/energy-security/</guid>
+      <description>Energy security is an important policy goal for most countries. Here, we show that cross-country differences in concern about energy security across Israel and 22 countries in Europe are explained by energy-specific and general national contextual indi- cators, over-and-above individual-level factors that reflect population demographics. Specifically, public concerns about import dependency and affordability reflect the specific energy context within countries, such as dependency on energy imports and electricity costs, while higher concerns about the affordability, vulnerability and reliability of energy are associated with higher fossil fuel consumption.</description>
+    </item>
+    
+  </channel>
+</rss>

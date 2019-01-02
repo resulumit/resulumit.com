@@ -1,0 +1,43 @@
+---
+date: 2018-08-10
+slug: sds-survey-subgroups
+title: "Calculating standard deviations for survey subgroups in R"
+output: html_document
+categories:
+        - rstats
+        - surveys
+---
+
+
+
+<p>If you work with survey data in R, you would already know how useful the package <a href="https://cran.r-project.org/web/packages/survey/survey.pdf">survey</a> is.</p>
+<p>Among its many other uses, the survey package can compute summary statistics by subgroups. For example, if you have survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.</p>
+<p>However, like many other functions in the package, svyby() returns <em>standard errors</em>—but not <em>standard deviations</em>—of the mean values. Although it is possible to calculate the standard deviations for all observations with the svyvar() function, with no argument for subgroup analysis, this can quickly become tiresome if you have many subgroups or variables to work with.</p>
+<p>I have recently been working witht the <a href="http://www.europeansocialsurvey.org">European Social Survey</a> data, and I needed to calculate the standard deviations of the means of three variabels in 23 countries. hence, I have written a loop, which I am sure I will use again.</p>
+<p>Hoping that it might be useful for someoneelse as well, I am leaving it here:</p>
+<pre class="r"><code>datalist &lt;- list()
+
+for(i in levels(as.factor(df$subgroups))) {
+        
+  df_subset &lt;- df[df$subgroups == i, ] 
+  
+  design &lt;- svydesign(id = ~1 , data = df_subset, weight = ~surveyweight)
+  
+  dat &lt;- data.frame(as.data.frame(sqrt(svyvar(~variable1, na.rm= TRUE, design = design)))[,&quot;variance&quot;],
+                    as.data.frame(sqrt(svyvar(~variable2, na.rm= TRUE, design = design)))[,&quot;variance&quot;])
+  
+  colnames(dat)&lt;-c(&quot;sd.variable1&quot;, &quot;sd.variable2&quot;)
+  
+  datalist[[i]] &lt;- dat
+}
+
+df_sd &lt;- as.data.frame(do.call(rbind, datalist)) %&gt;%
+  rownames_to_column() %&gt;%
+  rename(subgroups = rowname)</code></pre>
+<p>where you will need to change</p>
+<ol style="list-style-type: decimal">
+<li><em>df</em> with your data frame,</li>
+<li><em>subgroups</em> with the variable name for the subgroups (i.e. countries),</li>
+<li><em>surveyweight</em> with the weight(s) in your survey, and</li>
+<li><em>variable1</em> and <em>variable2</em> with the variable names for which you are calculating the standard deviations.</li>
+</ol>

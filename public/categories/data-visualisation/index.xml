@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Visualisation on Resul Umit</title>
+    <link>/categories/data-visualisation/</link>
+    <description>Recent content in Data Visualisation on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 24 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/data-visualisation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Istanbul puts the money where AKP voters are</title>
+      <link>/blog/public-investments-in-istanbul/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/public-investments-in-istanbul/</guid>
+      <description>Mayor of Istanbul suggested that he would invest more in the districts where AKP voters live. I analysed his investment plan for 2018, and found strong evidence that he means it: the districts governed by AKP receive on average around 250 million ₺ more from the city. Statistical tests point to a partisan motivation behind this difference in public investment.
+Last week, Mayor Mevlut Uysal suggested that his administration prioritises serving the voters of Erdogan’s party (AKP), stating that the new metro lines will go to the districts where their voters live.</description>
+    </item>
+    
+  </channel>
+</rss>

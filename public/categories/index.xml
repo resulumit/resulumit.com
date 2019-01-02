@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Resul Umit</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Visualisation</title>
+      <link>/categories/data-visualisation/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data-visualisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elections</title>
+      <link>/categories/elections/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/elections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eu</title>
+      <link>/categories/eu/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/eu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Media</title>
+      <link>/categories/media/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Progress Reports</title>
+      <link>/categories/progress-reports/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/progress-reports/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Public Investments</title>
+      <link>/categories/public-investments/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/public-investments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rstats</title>
+      <link>/categories/rstats/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surveys</title>
+      <link>/categories/surveys/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/surveys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Analyis</title>
+      <link>/categories/text-analyis/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/text-analyis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Turkey</title>
+      <link>/categories/turkey/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/turkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Twitter</title>
+      <link>/categories/twitter/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/twitter/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Resul Umit</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EU press releases differ from their reports on Turkey</title>
+      <link>/blog/eu-turkey-progress-reports/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/eu-turkey-progress-reports/</guid>
+      <description>The European Commission publishes annual reports on the progress of EU candidate countries, accompanied by short press releases. I find noticeable differences between these reports and releases on Turkey; while the sentiments in the reports have been fairly stable over the years, the press releases often remarkably diverge from the reports.
+The Commission’s latest report on Turkey hit the headlines as the worst EU scorecard so far.
+To see if there is evidence for this claim, I analysed the sentiments in the EU reports on Turkey since 2005—the year the accession negotiations started.</description>
+    </item>
+    
+    <item>
+      <title>Calculating standard deviations for survey subgroups in R</title>
+      <link>/blog/sds-survey-subgroups/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/sds-survey-subgroups/</guid>
+      <description>If you work with survey data in R, you would already know how useful the package survey is.
+Among its many other uses, the survey package can compute summary statistics by subgroups. For example, if you have survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.
+However, like many other functions in the package, svyby() returns standard errors—but not standard deviations—of the mean values.</description>
+    </item>
+    
+    <item>
+      <title>Media coverage of presidential candidates in Turkey</title>
+      <link>/blog/media-coverage-candidates/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/media-coverage-candidates/</guid>
+      <description>When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
+Most news media are divided into pro- and anti-Erdogan camps in Turkey.</description>
+    </item>
+    
+    <item>
+      <title>Istanbul puts the money where AKP voters are</title>
+      <link>/blog/public-investments-in-istanbul/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/public-investments-in-istanbul/</guid>
+      <description>Mayor of Istanbul suggested that he would invest more in the districts where AKP voters live. I analysed his investment plan for 2018, and found strong evidence that he means it: the districts governed by AKP receive on average around 250 million ₺ more from the city. Statistical tests point to a partisan motivation behind this difference in public investment.
+Last week, Mayor Mevlut Uysal suggested that his administration prioritises serving the voters of Erdogan’s party (AKP), stating that the new metro lines will go to the districts where their voters live.</description>
+    </item>
+    
+  </channel>
+</rss>

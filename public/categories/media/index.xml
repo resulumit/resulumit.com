@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Media on Resul Umit</title>
+    <link>/categories/media/</link>
+    <description>Recent content in Media on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/media/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Media coverage of presidential candidates in Turkey</title>
+      <link>/blog/media-coverage-candidates/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/media-coverage-candidates/</guid>
+      <description>When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
+Most news media are divided into pro- and anti-Erdogan camps in Turkey.</description>
+    </item>
+    
+  </channel>
+</rss>

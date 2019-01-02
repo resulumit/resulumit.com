@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eu on Resul Umit</title>
+    <link>/categories/eu/</link>
+    <description>Recent content in Eu on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/eu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EU press releases differ from their reports on Turkey</title>
+      <link>/blog/eu-turkey-progress-reports/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/eu-turkey-progress-reports/</guid>
+      <description>The European Commission publishes annual reports on the progress of EU candidate countries, accompanied by short press releases. I find noticeable differences between these reports and releases on Turkey; while the sentiments in the reports have been fairly stable over the years, the press releases often remarkably diverge from the reports.
+The Commission’s latest report on Turkey hit the headlines as the worst EU scorecard so far.
+To see if there is evidence for this claim, I analysed the sentiments in the EU reports on Turkey since 2005—the year the accession negotiations started.</description>
+    </item>
+    
+  </channel>
+</rss>

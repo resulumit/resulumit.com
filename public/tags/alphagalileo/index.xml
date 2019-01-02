@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alphagalileo on Resul Umit</title>
+    <link>/tags/alphagalileo/</link>
+    <description>Recent content in Alphagalileo on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 11 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/alphagalileo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MPs more likely to secure top jobs in safe seats.</title>
+      <link>/outreach/mps-more-likely/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/outreach/mps-more-likely/</guid>
+      <description>A news report on AlphaGalileo about my co-authered article with Elad Klein, Ministerial selection in the UK.</description>
+    </item>
+    
+  </channel>
+</rss>

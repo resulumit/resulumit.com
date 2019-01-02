@@ -1,0 +1,97 @@
+baseurl = "/"
+title = "Resul Umit"
+author = "Resul Umit"
+canonifyurls = true
+relativeurls = false
+paginate = 10
+theme = "resulumit"
+DisqusShortname = "researchtips"
+# googleAnalytics = "UA-37636856-2"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+pluralizeListTitles = false
+buildFuture = true
+
+[params]
+
+# Date format (refer to Go's date format: http://flippinggodateformat.com)
+date_format = "2 January 2006"
+
+# Number of posts to show on main page.
+posts_count = 2
+
+# Number of publications to show on main page.
+pubs_count = 2
+
+# Number of posts to show on main page.
+unpublished_count = 2
+
+# options for highlight.js (version, additional languages, and theme)
+highlightjsVersion = "9.11.0"
+highlightjsCDN = "//cdn.bootcss.com"
+highlightjsLang = ["r", "yaml"]
+highlightjsTheme = "github"
+
+[[params.social]]
+icon = "university"
+icon_pack = "fa"
+link = "https://www.unilu.ch/en/faculties/faculty-of-humanities-and-social-sciences/institutes-departements-and-research-centres/department-of-political-science/"
+text = "Department of Political Science, University of Lucerne, Frohburgstrasse 3, 6002 Lucerne, Switzerland."
+
+[[params.social]]
+icon = "envelope"
+icon_pack = "fa"
+link = "mailto:resul.umit@unilu.ch"
+text = "resul.umit@unilu.ch"
+    
+[[params.social]]
+icon = "twitter"
+icon_pack = "fa"
+link = "https://twitter.com/ResulUmit"
+text = "@ResulUmit"
+site = "Twitter"
+
+#[[params.social]]
+#  icon = "github"
+#  icon_pack = "fa"
+#  link = "//https://gist.github.com/Ayrx/5884802"
+#  text = "Fermat"
+#  site = "GitHub"
+
+[[params.social]]
+icon = "google-scholar"
+icon_pack = "ai"
+link = "https://scholar.google.com/citations?user=J5Ck-vkAAAAJ&hl=en"
+text = "Google Scholar"
+
+# Navigation Links
+# The weight parameter defines the order that the links will appear in.
+
+[[menu.main]]
+name = "Publications"
+url = "/publications/"
+weight = 1
+  
+[[menu.main]]
+name = "Unpublished"
+url = "/unpublished/"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+url = "/blog/"
+weight = 3
+
+[[menu.main]]
+name = "Outreach"
+url = "/outreach/" 
+weight = 4
+
+[[menu.main]]
+name = "Teaching"
+url = "/teaching/"
+weight = 5
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 6

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>E Newsletters on Resul Umit</title>
+    <link>/tags/e-newsletters/</link>
+    <description>Recent content in E Newsletters on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 21 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/e-newsletters/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>With happiness and glory, from your MP: The use of e-newsletters in the UK parliaments</title>
+      <link>/publications/from-your-mp/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/from-your-mp/</guid>
+      <description>This article extends the empirical evidence for the use of e-newsletters in parliamentary communication in between elections. It assesses the effect of electoral incentives and parliamentary institutions on members (MPs1) from all four legislatures in the UK. I find that electoral incentives to cultivate a personal vote increase the e-newsletter usage by MPs. However, being an MP in subnational parliaments or smaller parties decreases it. These findings throw a fresh light on why only some parliamentarians are happy to adopt new and seemingly resource-efficient ways to reach out to voters.</description>
+    </item>
+    
+  </channel>
+</rss>

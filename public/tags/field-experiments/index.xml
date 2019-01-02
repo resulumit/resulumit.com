@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Field Experiments on Resul Umit</title>
+    <link>/tags/field-experiments/</link>
+    <description>Recent content in Field Experiments on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/field-experiments/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Communication without legislation? A cross-national field experiment on members of parliament</title>
+      <link>/publications/communication-without-legislation/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/communication-without-legislation/</guid>
+      <description>Do legislators communicate with constituents about affairs that they cannot legislate? An influential literature underlines the communication of what legislators do in the legislature to their constituents. This article questions the hypothetical link between communication and legislation. I conduct a cross-national field experiment on members of national parliaments (MPs) to investigate how they behave when ordinary citizens require them to explain what they cannot legislate. Overall, the results show that MPs are evenly responsive to explanation requests within and outside their legislative competence.</description>
+    </item>
+    
+  </channel>
+</rss>
