@@ -17,5 +17,3 @@ The design follows http://kieranhealy.org and https://robjhyndman.com, modificat
 * Font Awesome 4.6.3: SIL OFL 1.1 (font), MIT License (CSS)
 * Academicons 1.7.0: SIL OFL 1.1 (font), MIT License (CSS)
 * Google fonts: OFL (SIL Open Font License)
-
-ra
