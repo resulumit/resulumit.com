@@ -14,6 +14,7 @@ build:
 clean:
 	rm -rf public
 	rm -rf blogdown
+	rm -f content/blog/*.html
 
 
 
