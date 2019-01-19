@@ -5,7 +5,7 @@
     <link>/categories/surveys/</link>
     <description>Recent content in Surveys on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/surveys/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Calculating standard deviations for survey subgroups in R</title>
       <link>/blog/sds-survey-subgroups/</link>
-      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/sds-survey-subgroups/</guid>
       <description>If you work with survey data in R, you would already know how useful the package survey is.
