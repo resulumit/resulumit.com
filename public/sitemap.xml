@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/unpublished/expectations/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/unpublished/energy-saving/</loc>
     <lastmod>2018-12-12T00:00:00+00:00</lastmod>
   </url>
@@ -188,7 +193,7 @@
   
   <url>
     <loc>/tags/brexit/</loc>
-    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -218,6 +223,12 @@
   <url>
     <loc>/categories/data-visualisation/</loc>
     <lastmod>2018-03-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/democracy/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -342,8 +353,14 @@
   </url>
   
   <url>
+    <loc>/tags/quasi-experiment/</loc>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -443,7 +460,7 @@
   
   <url>
     <loc>/unpublished/</loc>
-    <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

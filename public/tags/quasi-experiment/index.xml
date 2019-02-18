@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Brexit on Resul Umit</title>
-    <link>/tags/brexit/</link>
-    <description>Recent content in Brexit on Resul Umit</description>
+    <title>Quasi Experiment on Resul Umit</title>
+    <link>/tags/quasi-experiment/</link>
+    <description>Recent content in Quasi Experiment on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/brexit/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/quasi-experiment/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,15 +17,6 @@
       
       <guid>/unpublished/expectations/</guid>
       <description>Every vote creates winners and losers, opening a satisfaction gap between the two. At a time when concerns are high for democracy, we do not know what exactly leaves substantial proportions of voters&amp;mdash;losers&amp;mdash;dissatisfied with the system. This paper provides causal evidence for the cognitive dissonance theory, which points at unfulfilled winning expectations. With a difference-in-differences design around the Brexit referendum, it finds that the result caused an additional 3% decrease in the Remainers&amp;rsquo; satisfaction if they were expecting to win the vote.</description>
-    </item>
-    
-    <item>
-      <title>Saboteurs in the house: Divergent preferences and legislative speeches on Brexit</title>
-      <link>/unpublished/saboteurs/</link>
-      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/unpublished/saboteurs/</guid>
-      <description>How do legislators deal with having preferences that go against those of the principals that they represent in parliament? This article analyses the debate in the aftermath of the Brexit referendum in the House of Commons to explore the relationship between divergent preferences and legislative speeches. It finds that legislators who defy the will of their country or constituency are rather communicative, and their speeches reveal higher levels of negativity. In contrast, those defying their party refrain from speaking in parliament, but if they speak, they use a significantly less negative language.</description>
     </item>
     
   </channel>
