@@ -5,10 +5,19 @@
     <link>/publications/</link>
     <description>Recent content in Publications on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/publications/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The role of income in energy efficiency and curtailment behaviours: Findings from 22 European countries</title>
+      <link>/publications/energy-saving/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/energy-saving/</guid>
+      <description>Reducing consumers&amp;rsquo; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&amp;rsquo; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
+    </item>
     
     <item>
       <title>National context is a key determinant of energy security concerns across Europe</title>
