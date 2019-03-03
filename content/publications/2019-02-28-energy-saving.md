@@ -4,12 +4,13 @@ comments: false
 date: '2019-02-28'
 slug: energy-saving
 title: 'The role of income in energy efficiency and curtailment behaviours: Findings from 22 European countries'
-kind: published
+kind: article
 tags:
 - energy
 - efficiency
 - curltailment
 - surveys
+citation: Forthcoming in <em>Energy Reserch & Social Science</em>
 file: energy_saving.pdf
 ---
 
