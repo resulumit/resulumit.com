@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>/outreach/perceptions-climate-energy/</loc>
+    <lastmod>2018-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/unpublished/carbon-taxes/</loc>
     <lastmod>2018-11-02T00:00:00+00:00</lastmod>
   </url>
@@ -269,6 +274,12 @@
   </url>
   
   <url>
+    <loc>/tags/ess/</loc>
+    <lastmod>2018-11-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/eu/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -324,7 +335,7 @@
   
   <url>
     <loc>/outreach/</loc>
-    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -355,6 +366,12 @@
   <url>
     <loc>/tags/quasi-experiment/</loc>
     <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/report/</loc>
+    <lastmod>2018-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
