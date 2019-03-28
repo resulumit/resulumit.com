@@ -1,16 +1,17 @@
 ---
 author: Resul Umit, Katrin Auel
 comments: false
-date: '2018-06-05'
+date: '2019-03-28'
 slug: saboteurs
-title: 'Saboteurs in the house: Divergent preferences and legislative speeches on Brexit'
-kind: unpublished
+title: 'Divergent preferences and legislative speeches on Brexit'
+kind: article
 tags:
 - parliaments
 - brexit
 - speeches
 - uk
-file: saboteurs.pdf
+citation: Forthcoming in <em>Journal of Elections, Public Opinion & Parties</em>
+file: divergent_preferences.pdf
 ---
 
 
