@@ -2,7 +2,7 @@
 author: Resul Umit, Katrin Auel
 comments: false
 date: '2019-03-28'
-slug: saboteurs
+slug: divergent-preferences
 title: 'Divergent preferences and legislative speeches on Brexit'
 kind: article
 tags:
