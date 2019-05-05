@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/unpublished/communication-allowances/</loc>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publications/divergent-preferences/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
   </url>
@@ -173,6 +178,12 @@
   </url>
   
   <url>
+    <loc>/tags/allowances/</loc>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/alphagalileo/</loc>
     <lastmod>2016-08-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -209,7 +220,7 @@
   
   <url>
     <loc>/tags/communication/</loc>
-    <lastmod>2018-03-14T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -341,7 +352,7 @@
   
   <url>
     <loc>/tags/parliaments/</loc>
-    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -377,7 +388,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,7 +488,7 @@
   
   <url>
     <loc>/unpublished/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
