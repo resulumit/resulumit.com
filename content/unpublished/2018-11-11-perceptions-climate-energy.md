@@ -3,7 +3,7 @@ author: Pasi Pohjolainen, Iida Kukkonen, Pekka Jokinen, Wouter Poortinga, Resul 
 comments: false
 date: 2018-11-11
 slug: perceptions-climate-energy
-title: 'Public Perceptions on Climate Change and Energy in Europe and Russia'
+title: 'Public Perceptions on Climate Change and Energy in Europe and Russia: Evidence from Round 8 of the European Social Survey'
 kind: report
 tags:
 - report

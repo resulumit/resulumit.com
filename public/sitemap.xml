@@ -267,14 +267,14 @@
   </url>
   
   <url>
-    <loc>/tags/elections/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
+    <loc>/categories/elections/</loc>
+    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/elections/</loc>
-    <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <loc>/tags/elections/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -417,14 +417,14 @@
   </url>
   
   <url>
-    <loc>/tags/surveys/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <loc>/categories/surveys/</loc>
+    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/surveys/</loc>
-    <lastmod>2018-09-10T00:00:00+00:00</lastmod>
+    <loc>/tags/surveys/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -463,26 +463,26 @@
   </url>
   
   <url>
-    <loc>/tags/turkey/</loc>
-    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/turkey/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/twitter/</loc>
-    <lastmod>2017-02-03T00:00:00+00:00</lastmod>
+    <loc>/tags/turkey/</loc>
+    <lastmod>2018-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/twitter/</loc>
     <lastmod>2018-08-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/twitter/</loc>
+    <lastmod>2017-02-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
