@@ -5,10 +5,19 @@
     <link>/tags/europe/</link>
     <description>Recent content in Europe on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/europe/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Public Perceptions on Climate Change and Energy in Europe and Russia</title>
+      <link>/unpublished/perceptions-climate-energy/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/unpublished/perceptions-climate-energy/</guid>
+      <description>A co-authered report on our work in the PAWCER (Public Attitudes to Welfare and Climate Change in the European Union and Russia) project.</description>
+    </item>
     
     <item>
       <title>National context is a key determinant of energy security concerns across Europe</title>
