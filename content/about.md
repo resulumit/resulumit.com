@@ -2,10 +2,9 @@
 title: "About me"
 ---
 
-I am a post-doctoral researcher in political science at the [University of Lucerne](https://www.unilu.ch).
+I am a post-doctoral researcher in political science at the [University of Lucerne](https://www.unilu.ch). Prevoiusly, I was a researcher at the <a href="https://www.ihs.ac.at" target="_blank">Institute for Advanced Studies</a> and an adjuct lecturer at the <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>.
 
-Before joining the University of Lucerne, I was a researcher at the <a href="https://www.ihs.ac.at" target="_blank">Institute for Advanced Studies</a>. During my time there, I also completed my PhD at the <a href="https://www.univie.ac.at/en/" target="_blank">University of Vienna</a> and taught at the <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>. 
-
+I completed my PhD in 2017 at the <a href="https://www.univie.ac.at/en/" target="_blank">University of Vienna</a>.
 
 
 <h4><a href="https://resulumit.com/files/cv_resulumit.pdf" class="badge badge-large">Curriculum Vitae&nbsp; <i class="fa fa-file-pdf-o"></i></a>
