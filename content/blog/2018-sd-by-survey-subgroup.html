@@ -10,12 +10,15 @@ categories:
 
 
 
-<p>If you work with survey data in R, you would already know how useful the package <a href="https://cran.r-project.org/web/packages/survey/survey.pdf">survey</a> is.</p>
-<p>Among its many other uses, the survey package can compute summary statistics by subgroups. For example, if you have survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.</p>
-<p>However, like many other functions in the package, svyby() returns <em>standard errors</em>—but not <em>standard deviations</em>—of the mean values. Although it is possible to calculate the standard deviations for all observations with the svyvar() function, with no argument for subgroup analysis, this can quickly become tiresome if you have many subgroups or variables to work with.</p>
+<p>The <a href="https://cran.r-project.org/web/packages/survey/survey.pdf">survey</a> package is one of my favourites in R.</p>
+<p>Among its many other uses, it can compute summary statistics by subgroups. For example, if you have a survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the <code>svyby()</code> function.</p>
+<p>However, like many other functions in the package, <code>svyby()</code> returns <em>standard errors</em>—but not <em>standard deviations</em>—of the mean values. Although it is possible to calculate the standard deviations for all observations with the svyvar() function, with no argument for subgroup analysis, this can quickly become tiresome if you have many subgroups or variables to work with.</p>
 <p>I have recently been working witht the <a href="http://www.europeansocialsurvey.org">European Social Survey</a> data, and I needed to calculate the standard deviations of the means of three variabels in 23 countries. hence, I have written a loop, which I am sure I will use again.</p>
-<p>Hoping that it might be useful for someoneelse as well, I am leaving it here:</p>
-<pre class="r"><code>datalist &lt;- list()
+<p>Hoping that it might be useful for others as well, I am leaving it here:</p>
+<pre class="r"><code>library(survey)
+library(tidyverse)
+
+datalist &lt;- list()
 
 for(i in levels(as.factor(df$subgroups))) {
         

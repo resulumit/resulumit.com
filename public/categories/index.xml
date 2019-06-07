@@ -5,66 +5,22 @@
     <link>/categories/</link>
     <description>Recent content in Categories on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Data Visualisation</title>
-      <link>/categories/data-visualisation/</link>
-      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      <title>journals</title>
+      <link>/categories/journals/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/data-visualisation/</guid>
+      <guid>/categories/journals/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Elections</title>
-      <link>/categories/elections/</link>
-      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/elections/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Eu</title>
-      <link>/categories/eu/</link>
-      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/eu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Media</title>
-      <link>/categories/media/</link>
-      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/media/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Progress Reports</title>
-      <link>/categories/progress-reports/</link>
-      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/progress-reports/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Public Investments</title>
-      <link>/categories/public-investments/</link>
-      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/public-investments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rstats</title>
+      <title>rstats</title>
       <link>/categories/rstats/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -73,7 +29,7 @@
     </item>
     
     <item>
-      <title>Surveys</title>
+      <title>surveys</title>
       <link>/categories/surveys/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
@@ -82,11 +38,11 @@
     </item>
     
     <item>
-      <title>Text Analyis</title>
-      <link>/categories/text-analyis/</link>
+      <title>EU</title>
+      <link>/categories/eu/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/text-analyis/</guid>
+      <guid>/categories/eu/</guid>
       <description></description>
     </item>
     
@@ -100,11 +56,65 @@
     </item>
     
     <item>
+      <title>progress reports</title>
+      <link>/categories/progress-reports/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/progress-reports/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text analyis</title>
+      <link>/categories/text-analyis/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/text-analyis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Twitter</title>
       <link>/categories/twitter/</link>
       <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elections</title>
+      <link>/categories/elections/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/elections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>media</title>
+      <link>/categories/media/</link>
+      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data visualisation</title>
+      <link>/categories/data-visualisation/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data-visualisation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>public investments</title>
+      <link>/categories/public-investments/</link>
+      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/public-investments/</guid>
       <description></description>
     </item>
     

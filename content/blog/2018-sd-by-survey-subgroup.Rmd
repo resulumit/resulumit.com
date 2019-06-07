@@ -12,18 +12,19 @@ categories:
 library(survey)
 ```
 
+The [survey](https://cran.r-project.org/web/packages/survey/survey.pdf) package is one of my favourites in R.
 
-If you work with survey data in R, you would already know how useful the package [survey](https://cran.r-project.org/web/packages/survey/survey.pdf) is.
+Among its many other uses, it can compute summary statistics by subgroups. For example, if you have a survey of individuals from several countries with an item on the respondents' income, you can calculate the average income in each subgroup with the `svyby()` function.  
 
-Among its many other uses, the survey package can compute summary statistics by subgroups. For example, if you have  survey of individuals from several countries with an item on the respondents' income, you can calculate the average income in each subgroup with the svyby() function.  
-
-However, like many other functions in the package, svyby() returns _standard errors_---but not _standard deviations_---of the mean values. Although it is possible to calculate the standard deviations for all observations with the svyvar() function, with no argument for subgroup analysis, this can quickly become tiresome if you have many subgroups or variables to work with.
+However, like many other functions in the package, `svyby()` returns *standard errors*---but not *standard deviations*---of the mean values. Although it is possible to calculate the standard deviations for all observations with the svyvar() function, with no argument for subgroup analysis, this can quickly become tiresome if you have many subgroups or variables to work with.
 
 I have recently been working witht the [European Social Survey](http://www.europeansocialsurvey.org) data, and I needed to calculate the standard deviations of the means of three variabels in 23 countries. hence, I have written a loop, which I am sure I will use again.
 
-Hoping that it might be useful for someoneelse as well, I am leaving it here:
+Hoping that it might be useful for others as well, I am leaving it here:
 
 ```{r code, echo=TRUE, eval=FALSE}
+library(survey)
+library(tidyverse)
 
 datalist <- list()
 
@@ -48,7 +49,7 @@ df_sd <- as.data.frame(do.call(rbind, datalist)) %>%
 
 where you will need to change
 
-1. _df_ with your data frame,
-2. _subgroups_ with the variable name for the subgroups (i.e. countries),
-3. _surveyweight_ with the weight(s) in your survey, and
-4. _variable1_ and _variable2_ with the variable names for which you are calculating the standard deviations.
+1. *df* with your data frame,
+2. *subgroups* with the variable name for the subgroups (i.e. countries),
+3. *surveyweight* with the weight(s) in your survey, and
+4. *variable1* and *variable2* with the variable names for which you are calculating the standard deviations.

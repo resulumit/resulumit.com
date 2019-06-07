@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Surveys on Resul Umit</title>
+    <title>surveys on Resul Umit</title>
     <link>/categories/surveys/</link>
-    <description>Recent content in Surveys on Resul Umit</description>
+    <description>Recent content in surveys on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 10 Sep 2018 00:00:00 +0000</lastBuildDate>
     
@@ -16,8 +16,8 @@
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/sds-survey-subgroups/</guid>
-      <description>If you work with survey data in R, you would already know how useful the package survey is.
-Among its many other uses, the survey package can compute summary statistics by subgroups. For example, if you have survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.
+      <description>The survey package is one of my favourites in R.
+Among its many other uses, it can compute summary statistics by subgroups. For example, if you have a survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.
 However, like many other functions in the package, svyby() returns standard errors—but not standard deviations—of the mean values.</description>
     </item>
     

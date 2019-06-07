@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic Journals on Resul Umit</title>
+    <link>/categories/academic-journals/</link>
+    <description>Recent content in Academic Journals on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/academic-journals/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research notes in political science journals</title>
+      <link>/blog/polisci-research-notes/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/polisci-research-notes/</guid>
+      <description>The survey package is one of my favourites in R. Among its many other uses, it can compute summary statistics by subgroups. For example, if you have a survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function. However, like many other functions in the package, svyby() returns standard errors—but not standard deviations—of the mean values.</description>
+    </item>
+    
+  </channel>
+</rss>

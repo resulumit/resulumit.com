@@ -1,0 +1,44 @@
+---
+date: 2019-06-07
+slug: polisci-research-notes
+title: "Research notes in political science journals"
+output: html_document
+categories:
+        - journals
+---
+
+In addition to 'regular' articles, some political science journals publish shorter manuscripts as well. They are often called *research notes*, but the name, and indeed the format itself, can differ from one journal to another. Yet, this definition, by <a href='https://academic.oup.com/poq/pages/general_instructions'target='_blank'>*Public Opinion Quarterly*</a>, covers a lot of common ground:
+
+> Research Notes are shorter reports ... of single findings, important extensions or replications of previous research, or other major additions to the literature that warrant publication, and which can be communicated effectively without the more extended theoretical development or detailed analysis characteristic of regular articles. 
+
+I have gone through the 'author guidelines' of more than a hundred political science journals, and put together a list of journals that publish research notes. You can also click on the hyperlinks under *Format Name* to learn more about the format in each journal.
+
+| Journal  | Format Name   | Lenght   | h5-index   |
+|--------: | ------------: |--------: |----------: |
+| American Political Science Review | <a href='https://www.apsanet.org/APSR-Submission-Guidelines'target='_blank'>Letter</a> | 4k words | 59 |
+| Journal of Common Market Studies | <a href='https://onlinelibrary.wiley.com/page/journal/14685965/homepage/forauthors.html'target='_blank'>Research Note</a> | 3.5k -- 5k words | 48 |
+| Journal of Politics | <a href='https://www.journals.uchicago.edu/journals/jop/instruct'target='_blank'>Short Article</a> | 10 pages | 48 |
+| International Organization | <a href='https://www.cambridge.org/core/journals/international-organization/information/instructions-contributors'target='_blank'>Research Note</a> | 8k words | 45 |
+| British Journal of Political Science | <a href='https://www.cambridge.org/core/journals/british-journal-of-political-science/information/instructions-contributors'target='_blank'>Letter</a> | 4k words | 41 |
+| International Studies Quarterly | <a href='https://academic.oup.com/isq/pages/General_Instructions'target='_blank'>Research Note</a> | 4k -- 8k words | 41 |
+| Party Politics | <a href='https://us.sagepub.com/en-us/nam/party-politics/journal200772#submission-guidelines'target='_blank'>Research Note</a> | 4k words | 38 |
+| Electoral Studies | <a href='https://www.elsevier.com/journals/electoral-studies/02613794/guide-for-authors'target='_blank'>Research Note</a> | 4k -- 6k words | 37 |
+| European Journal of Political Research | <a href='https://onlinelibrary.wiley.com/page/journal/14756765/homepage/forauthors.html'target='_blank'>Research Note</a> | 5k words | 37 |
+| West European Politics | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=fwep20#Preparing_your_paper'target='_blank'>Research Note</a> | 3k words | 35 |
+| Political Analysis | <a href='https://www.cambridge.org/core/journals/political-analysis/information/instructions-contributors#articles'target='_blank'>Letter</a> | 1.5k -- 3k words | 33 |
+| Public Opinion Quarterly | <a href='https://academic.oup.com/poq/pages/general_instructions'target='_blank'>Research Note</a> | 3k words | 32 |
+| Regulation & Governance | <a href='https://onlinelibrary.wiley.com/page/journal/17485991/homepage/forauthors.html#manuscript'target='_blank'>Research Forum</a> | 6k words | 32 |
+| African Affairs | <a href='https://academic.oup.com/afraf/pages/research_notes'target='_blank'>Research Note</a> | 4k -- 5k words | 29 |
+| Global Environmental Politics | <a href='https://www.mitpressjournals.org/journals/glep/sub'target='_blank'>Research Note</a> | 3k -- 5k words | 28 |
+| European Union Politics | <a href='https://uk.sagepub.com/en-gb/eur/journal/european-union-politics#submission-guidelines'target='_blank'>Letter</a> | 1k -- 2k words | 27 |
+| International Political Science Review | <a href='https://uk.sagepub.com/en-gb/eur/journal/international-political-science-review#submission-guidelines'target='_blank'>Research Report</a> | 6k words | 26 |
+| Political Science Research and Methods | <a href='https://www.cambridge.org/core/journals/political-science-research-and-methods/information/instructions-contributors'target='_blank'>Research Note</a> | 4k words | 23 |
+| Comparative Politics | <a href='http://jcp.gc.cuny.edu/submission/style-sheet/'>Research Note</a> | 6k words | 21 |
+| Journal of Elections, Public Opinion and Parties | <a href='https://www.tandfonline.com/action/authorSubmission?journalCode=fbep20&page=instructions#prep'target='_blank'>Research Note</a> | 4k words | 19 |
+| Journal of Legislative Studies | <a href='https://www.tandfonline.com/action/authorSubmission?journalCode=fjls20&page=instructions#Word_limits'target='_blank'>Research Note</a> | 4k words | 17 |
+| Research & Politics | <a href='https://uk.sagepub.com/en-gb/eur/journal/research-politics#submission-guidelines'target='_blank'>Research Article</a> | 2k words | 17 |
+| Scandinavian Political Studies | <a href='https://onlinelibrary.wiley.com/page/journal/14679477/homepage/forauthors.html'target='_blank'>Research Note</a> | 4k words | 16 |
+| Japanese Journal of Political Science | <a href='https://www.cambridge.org/core/journals/japanese-journal-of-political-science/information/instructions-contributors'target='_blank'>Research Note</a> | 4k -- 8k words | 10 |
+| Representation | <a href='https://www.tandfonline.com/action/authorSubmission?journalCode=rrep20&page=instructions'target='_blank'>Research Note</a> | 4k words | 10 |
+
+Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please <a href="mailto: resul.umit@unilu.ch">send me an email</a>. I would be happy to hear from you.
