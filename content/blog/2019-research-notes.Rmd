@@ -46,10 +46,11 @@ I have gone through the 'author guidelines' of more than a hundred political sci
 | Journal of Women, Politics & Policy | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=wwap20#formatting'target='_blank'>Research Note</a> | 5k -- 6k words | 11 |
 | Japanese Journal of Political Science | <a href='https://www.cambridge.org/core/journals/japanese-journal-of-political-science/information/instructions-contributors'target='_blank'>Research Note</a> | 4k -- 8k words | 10 |
 | Representation | <a href='https://www.tandfonline.com/action/authorSubmission?journalCode=rrep20&page=instructions'target='_blank'>Research Note</a> | 4k words | 10 |
+| Hobbes Studies | <a href='https://brill.com/fileasset/downloads_products/Author_Instructions/HOBS.pdf'target='_blank'>Research Note</a> | 5k words | *N/A* |
 | Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Meta-Analysis</a> | 3k words | *N/A* |
 | Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Replication</a> | 3k words | *N/A* |
 | Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Short Report</a> | 1k words | *N/A* |
-| Hobbes Studies | <a href='https://brill.com/fileasset/downloads_products/Author_Instructions/HOBS.pdf'target='_blank'>Research Note</a> | 5k words | *N/A* |
+| Political Research Exchange | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=prxx20#prep'target='_blank'>Research Note</a> | 5k -- 8k words | *N/A* |
 
 Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please <a href="mailto: resul.umit@unilu.ch">send me an email</a>. I would be happy to hear from you.
 
