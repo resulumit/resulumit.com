@@ -1,0 +1,41 @@
+---
+date: 2019-10-20
+slug: polisci-open-access
+title: "Open access journals in political science"
+output: html_document
+categories:
+        - journals
+---
+
+Here is a list of open access journals in political science---journals that make all of their articles freely accessible without delay. 
+
+Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please <a href="mailto: resul.umit@unilu.ch">send me an email</a>. I would be happy to hear from you.
+
+Click on titles to learn more about the journals in the list and their open access policies.
+
+| Journal  | Publication charge   | SSCI rank   | h5-index   |
+|--------: | -------------------: |-----------: |----------: |
+| <a href='https://www.tandfonline.com/toc/rpas20/current'target='_blank'>Policy and Society</a> | No| 50/176 | 23 |
+| <a href='https://journals.sagepub.com/home/rap'target='_blank'>Research & Politics</a> | No* | *N/A* | 23 |
+| <a href='https://www.cogitatiopress.com/politicsandgovernance'target='_blank'>Politics and Governance</a>  | Yes | 94/176 | 19 |
+| <a href='http://www.revistacienciapolitica.cl/index.php/rcp'target='_blank'>Revista de Ciencia Política</a> | *N/A* </a> | 139/176 | 16 |
+| <a href='https://journals.sagepub.com/home/cca'target='_blank'>Journal of Current Chinese Affairs</a> | No | *N/A* | 15 |
+| <a href='https://journals.sagepub.com/home/saa'target='_blank'>Journal of Current Southeast Asian Affairs</a> | No | *N/A* | 13 |
+| <a href='http://www.scielo.br/scielo.php?script=sci_serial&pid=0034-7329&lng=en&nrm=iso'target='_blank'>Revista Brasileira de Politica Internacional</a> | No | 125/176 | 14 |
+| <a href='http://www.politicaygobierno.cide.edu/index.php/pyg'target='_blank'>Política y gobierno</a> | No | 90/176 | 10 |
+| <a href='http://australianpe.wixsite.com/japehome'target='_blank'>Journal of Australian Political Economy</a> | *N/A* | 168/176 | 8 |
+| <a href='https://webapp.uibk.ac.at/ojs2/index.php/OEZP'target='_blank'>Austrian Journal of Political Science</a> | No | 164/176 | 6 |
+| <a href='https://www.vse.cz/polek/'target='_blank'>Politická ekonomie</a> | No | 167/176 | 6 |
+| <a href='https://tidsskriftet-ip.no/index.php/intpol'target='_blank'>Internasjonal Politikk</a> | No | 160/176 | 5 |
+| <a href='https://ojs.unbc.ca/index.php/cpsr/index'target='_blank'>Canadian Political Science Review</a> | *N/A* | *N/A* | *N/A* |
+| <a href='https://www.tandfonline.com/toc/zegp20/current'target='_blank'>Ethics & Global Politics</a> | No | 143/176 | *N/A* |
+| <a href='http://www.ijcv.org/index.php/ijcv'target='_blank'>International Journal of Conflict and Violence</a> | No | 107/176 | *N/A* |
+| <a href='https://journals.sagepub.com/home/pla'target='_blank'>Journal of Politics in Latin America</a> | No | *N/A* | *N/A* |
+| <a href='https://www.degruyter.com/view/j/openps'target='_blank'>Open Political Science</a> | No* | *N/A* | *N/A* |
+| <a href='https://tandfonline.com/toc/prxx20/current'target='_blank'>Political Research Exchange</a> | No* | *N/A* | *N/A* |
+
+To create this list, I had a look at <a href='https://ooir.org/'target='_blank'>here</a> and <a href='https://doaj.org/'target='_blank'>here</a> before going through the websites of major publishers.
+
+_____
+
+&#42; There might or will certainly be a publication charge in the future.
