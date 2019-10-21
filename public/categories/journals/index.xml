@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Journals on Resul Umit</title>
+    <title>journals on Resul Umit</title>
     <link>/categories/journals/</link>
-    <description>Recent content in Journals on Resul Umit</description>
+    <description>Recent content in journals on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/journals/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Open access journals in political science</title>
+      <link>/blog/polisci-open-access/</link>
+      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/polisci-open-access/</guid>
+      <description>have gone through the ‘author guidelines’ of more than a hundred political science journals, and put together a list of journals that publish research notes. You can also click on the hyperlinks under Format Name to learn more about the format in each journal.have gone through the ‘author guidelines’ of more than a hundred political science journals, and put together a list of journals that publish research notes. You can also click on the hyperlinks under Format Name to learn more about the format in each journal.</description>
+    </item>
     
     <item>
       <title>Research notes in political science journals</title>
