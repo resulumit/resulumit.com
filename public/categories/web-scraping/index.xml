@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rstats on Resul Umit</title>
-    <link>/categories/rstats/</link>
-    <description>Recent content in rstats on Resul Umit</description>
+    <title>web scraping on Resul Umit</title>
+    <link>/categories/web-scraping/</link>
+    <description>Recent content in web scraping on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <description>Here is a list of all political science journals in the Social Science Citations Index (SSCI),1 ranked according to their h5-index on Google Scholar.
 Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals. I was wondering how the list looked below this number.
 To see that, I have scraped Google Scholar for the journals in SSCI, with the rvest package in R.</description>
-    </item>
-    
-    <item>
-      <title>Calculating standard deviations for survey subgroups in R</title>
-      <link>/blog/sds-survey-subgroups/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/sds-survey-subgroups/</guid>
-      <description>The survey package is one of my favourites in R.
-Among its many other uses, it can compute summary statistics by subgroups. For example, if you have a survey of individuals from several countries with an item on the respondents’ income, you can calculate the average income in each subgroup with the svyby() function.
-However, like many other functions in the package, svyby() returns standard errors—but not standard deviations—of the mean values.</description>
     </item>
     
   </channel>

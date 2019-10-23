@@ -5,7 +5,7 @@
     <link>/categories/</link>
     <description>Recent content in Categories on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>journals</title>
       <link>/categories/journals/</link>
-      <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/journals/</guid>
       <description></description>
@@ -22,9 +22,18 @@
     <item>
       <title>rstats</title>
       <link>/categories/rstats/</link>
-      <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web scraping</title>
+      <link>/categories/web-scraping/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/web-scraping/</guid>
       <description></description>
     </item>
     

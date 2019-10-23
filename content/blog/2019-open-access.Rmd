@@ -7,7 +7,7 @@ categories:
         - journals
 ---
 
-Here is a list of open access journals in political science---journals that make all of their articles freely accessible without delay. 
+I have created a list of open access journals in political science---journals that make all of their articles freely accessible without delay. 
 
 Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please <a href="mailto: resul.umit@unilu.ch">send me an email</a>. I would be happy to hear from you.
 

@@ -5,10 +5,21 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Google Scholar ranking of political science journals</title>
+      <link>/blog/polisci-google-scholar/</link>
+      <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/polisci-google-scholar/</guid>
+      <description>Here is a list of all political science journals in the Social Science Citations Index (SSCI),1 ranked according to their h5-index on Google Scholar.
+Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals. I was wondering how the list looked below this number.
+To see that, I have scraped Google Scholar for the journals in SSCI, with the rvest package in R.</description>
+    </item>
     
     <item>
       <title>Open access journals in political science</title>
@@ -16,7 +27,7 @@
       <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/blog/polisci-open-access/</guid>
-      <description>Here is a list of open access journals in political science—journals that make all of their articles freely accessible without delay.
+      <description>I have created a list of open access journals in political science—journals that make all of their articles freely accessible without delay.
 Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please send me an email. I would be happy to hear from you.</description>
     </item>
     
