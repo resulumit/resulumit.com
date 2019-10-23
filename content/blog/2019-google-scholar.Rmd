@@ -16,7 +16,7 @@ Google Scholar provides a similar <a href='https://scholar.google.com/citations?
 To see that, I have scraped Google Scholar for the journals in SSCI, with <a href='https://github.com/tidyverse/rvest'target='_blank'>the rvest package</a> in R.
 
 
-| GS rank  | Journal              | h5-index    | h10-index   |  SSCI rank  |
+| GS rank  | Journal              | h5-index    | h5-median   |  SSCI rank  |
 |--------: | -------------------: |-----------: |-----------: | ----------: |
 | 1 | <a href='https://onlinelibrary.wiley.com/journal/15405907'target='_blank'>American Journal of Political Science</a> | 69 | 101 | 2 | 
 | 2 | <a href='https://www.cambridge.org/core/journals/american-political-science-review'target='_blank'>American Political Science Review</a> | 58 | 88 | 7 | 
