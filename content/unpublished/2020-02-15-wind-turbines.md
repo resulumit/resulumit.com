@@ -1,7 +1,7 @@
 ---
 author: Resul Umit, Lena Schaffer
 comments: false
-date: '2019-02-18'
+date: '2020-02-18'
 slug: wind-turbines
 title: 'Wind Turbines, Public Acceptance, and Electoral Outcomes'
 kind: unpublished

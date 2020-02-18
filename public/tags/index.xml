@@ -5,10 +5,37 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>elections</title>
+      <link>/tags/elections/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/elections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>energy</title>
+      <link>/tags/energy/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/energy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survey experiments</title>
+      <link>/tags/survey-experiments/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/survey-experiments/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>allowances</title>
@@ -56,7 +83,7 @@
     </item>
     
     <item>
-      <title>UK</title>
+      <title>uk</title>
       <link>/tags/uk/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -83,15 +110,6 @@
     </item>
     
     <item>
-      <title>energy</title>
-      <link>/tags/energy/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/energy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>surveys</title>
       <link>/tags/surveys/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
@@ -110,29 +128,11 @@
     </item>
     
     <item>
-      <title>elections</title>
-      <link>/tags/elections/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/elections/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>quasi experiment</title>
       <link>/tags/quasi-experiment/</link>
       <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/quasi-experiment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>survey experiments</title>
-      <link>/tags/survey-experiments/</link>
-      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/survey-experiments/</guid>
       <description></description>
     </item>
     

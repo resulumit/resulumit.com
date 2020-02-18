@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/elections/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/energy/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/survey-experiments/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/unpublished/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/unpublished/wind-turbines/</loc>
+    <lastmod>2020-02-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
     <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
@@ -19,11 +54,6 @@
   
   <url>
     <loc>/categories/journals/</loc>
-    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,16 +98,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/unpublished/</loc>
-    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/brexit/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
   </url>
@@ -113,11 +133,6 @@
   </url>
   
   <url>
-    <loc>/tags/energy/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/surveys/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url>
@@ -133,27 +148,12 @@
   </url>
   
   <url>
-    <loc>/tags/elections/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/quasi-experiment/</loc>
     <lastmod>2019-02-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/survey-experiments/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/unpublished/expectations/</loc>
-    <lastmod>2019-02-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/unpublished/wind-turbines/</loc>
     <lastmod>2019-02-18T00:00:00+00:00</lastmod>
   </url>
   
