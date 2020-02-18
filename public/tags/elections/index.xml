@@ -5,10 +5,19 @@
     <link>/tags/elections/</link>
     <description>Recent content in elections on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/elections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wind Turbines, Public Acceptance, and Electoral Outcomes</title>
+      <link>/unpublished/wind-turbines/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/unpublished/wind-turbines/</guid>
+      <description>We study the public acceptance of wind turbines, and its effect on electoral outcomes. Despite a widespread public support for wind energy in general, wind turbine proposals attract a considerable amount of public opposition&amp;mdash;a challenge for any government looking to invest in this source of renewable energy. Our analysis draws on a survey experiment in Switzerland, where the number of wind turbines will grow from a couple of dozens to over a thousand in the next three decades.</description>
+    </item>
     
     <item>
       <title>Rallies around the flag-draped coffins: The electoral effects of security force casualties in terror attacks</title>

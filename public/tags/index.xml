@@ -56,7 +56,7 @@
     </item>
     
     <item>
-      <title>uk</title>
+      <title>UK</title>
       <link>/tags/uk/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -110,11 +110,29 @@
     </item>
     
     <item>
+      <title>elections</title>
+      <link>/tags/elections/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/elections/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>quasi experiment</title>
       <link>/tags/quasi-experiment/</link>
       <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/quasi-experiment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>survey experiments</title>
+      <link>/tags/survey-experiments/</link>
+      <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/survey-experiments/</guid>
       <description></description>
     </item>
     
@@ -128,7 +146,7 @@
     </item>
     
     <item>
-      <title>Europe</title>
+      <title>europe</title>
       <link>/tags/europe/</link>
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
       
@@ -205,15 +223,6 @@
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/news-report/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>elections</title>
-      <link>/tags/elections/</link>
-      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/elections/</guid>
       <description></description>
     </item>
     
