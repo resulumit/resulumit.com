@@ -1,7 +1,7 @@
 ---
 author: Resul Umit, Katrin Auel
 comments: false
-date: '2019-03-28'
+date: '2020-02-22'
 slug: divergent-preferences
 title: 'Divergent preferences and legislative speeches on Brexit'
 kind: article
