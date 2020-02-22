@@ -4,7 +4,7 @@ comments: false
 date: '2018-11-02'
 slug: carbon-taxes
 title: 'Attitudes to carbon taxes across Europe: The role of perceived uncertainty and self-interest'
-kind: unpublished
+kind: article
 tags:
 - energy
 - taxes
