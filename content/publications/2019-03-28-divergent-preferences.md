@@ -10,7 +10,7 @@ tags:
 - brexit
 - speeches
 - uk
-citation: Forthcoming in <em>Journal of Elections, Public Opinion & Parties</em>
+citation: Forthcoming in the <em>Journal of Elections, Public Opinion & Parties</em>
 doi: 10.1080/17457289.2019.1604529
 file: divergent_preferences.pdf
 ---

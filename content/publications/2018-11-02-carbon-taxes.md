@@ -9,6 +9,7 @@ tags:
 - energy
 - taxes
 - surveys
+citation: Forthcoming in <em>Energy Policy</em>
 file: carbon_taxes.pdf
 ---
 
