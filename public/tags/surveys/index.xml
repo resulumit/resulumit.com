@@ -5,10 +5,19 @@
     <link>/tags/surveys/</link>
     <description>Recent content in surveys on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/surveys/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Attitudes to carbon taxes across Europe: The role of perceived uncertainty and self-interest</title>
+      <link>/publications/carbon-taxes/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/carbon-taxes/</guid>
+      <description>While using carbon taxes to reduce greenhouse gas emissions may well be effective, this has recently proved too unpopular to put into practice in a number of countries. Yet, at a time when governments across the world are preparing their nationally determined contributions to the Paris Agreement, our knowledge of whether and why people oppose these taxes originates from a single or small number of cases. Drawing on the European Social Survey (n = 44,387), this article provides evidence on public attitudes towards increasing taxes on fossil fuels to reduce climate change from 23 countries, most of which have never featured in the literature before.</description>
+    </item>
     
     <item>
       <title>The role of income in energy efficiency and curtailment behaviours: Findings from 22 European countries</title>
@@ -17,15 +26,6 @@
       
       <guid>/publications/energy-saving/</guid>
       <description>Reducing consumers&amp;rsquo; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&amp;rsquo; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
-    </item>
-    
-    <item>
-      <title>Attitudes to carbon taxes across Europe: The role of perceived uncertainty and self-interest</title>
-      <link>/unpublished/carbon-taxes/</link>
-      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/unpublished/carbon-taxes/</guid>
-      <description>While using carbon taxes to reduce greenhouse gas emissions may well be effective, this has recently proved too unpopular to put into practice in a number of countries. Yet, at a time when governments across the world are preparing their nationally determined contributions to the Paris Agreement, our knowledge of whether and why people oppose these taxes originates from a single or small number of cases. Drawing on the European Social Survey (n = 44,387), this article provides evidence on public attitudes towards increasing taxes on fossil fuels to reduce climate change from 23 countries, most of which have never featured in the literature before.</description>
     </item>
     
   </channel>

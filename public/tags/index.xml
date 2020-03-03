@@ -5,10 +5,73 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>brexit</title>
+      <link>/tags/brexit/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/brexit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>parliaments</title>
+      <link>/tags/parliaments/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/parliaments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speeches</title>
+      <link>/tags/speeches/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/speeches/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uk</title>
+      <link>/tags/uk/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/uk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>energy</title>
+      <link>/tags/energy/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/energy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>surveys</title>
+      <link>/tags/surveys/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/surveys/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taxes</title>
+      <link>/tags/taxes/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/taxes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>elections</title>
@@ -16,15 +79,6 @@
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/elections/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>energy</title>
-      <link>/tags/energy/</link>
-      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/energy/</guid>
       <description></description>
     </item>
     
@@ -56,42 +110,6 @@
     </item>
     
     <item>
-      <title>parliaments</title>
-      <link>/tags/parliaments/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/parliaments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>brexit</title>
-      <link>/tags/brexit/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/brexit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>speeches</title>
-      <link>/tags/speeches/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/speeches/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>uk</title>
-      <link>/tags/uk/</link>
-      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/uk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>curltailment</title>
       <link>/tags/curltailment/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
@@ -106,15 +124,6 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/efficiency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>surveys</title>
-      <link>/tags/surveys/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/surveys/</guid>
       <description></description>
     </item>
     
@@ -146,7 +155,7 @@
     </item>
     
     <item>
-      <title>europe</title>
+      <title>Europe</title>
       <link>/tags/europe/</link>
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
       
@@ -169,15 +178,6 @@
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/russia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>taxes</title>
-      <link>/tags/taxes/</link>
-      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/taxes/</guid>
       <description></description>
     </item>
     
