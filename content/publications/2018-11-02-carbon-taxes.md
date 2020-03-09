@@ -1,16 +1,17 @@
 ---
-author: Resul Umit, Lena Schaffer
+author: Resul Umit, Lena Maria Schaffer
 comments: false
 date: '2020-02-21'
 slug: carbon-taxes
-title: 'Attitudes to carbon taxes across Europe: The role of perceived uncertainty and self-interest'
+title: 'Attitudes towards carbon taxes across Europe: The role of perceived uncertainty and self-interest'
 kind: article
 tags:
 - energy
 - taxes
 - surveys
-citation: Forthcoming in <em>Energy Policy</em>
+citation: <em>Energy Policy, 140</em>
 file: carbon_taxes.pdf
+doi: 10.1016/j.enpol.2020.111385
 ---
 
 
