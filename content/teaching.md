@@ -26,5 +26,5 @@ title: "Teaching experience"
 ## 
   
 * *Academic websites*
-    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, 25 March 2020
-    - <a href="https://resulumit.com/syllabi/20march_blogdown.pdf" target="_blank">Syllabus</a>
+    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, 29 May 2020
+    - <a href="https://resulumit.com/syllabi/29may_blogdown.pdf" target="_blank">Syllabus</a>
