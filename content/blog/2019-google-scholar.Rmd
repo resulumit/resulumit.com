@@ -89,20 +89,20 @@ To see that, I have scraped Google Scholar for the journals in SSCI, with <a hre
 | 69 | <a href='https://www.tandfonline.com/toc/flgs20/current'target='_blank'>Local Government Studies</a> | 24 | 30 | 57 | 
 | 70 | <a href='https://onlinelibrary.wiley.com/journal/19442866'target='_blank'>Policy & Internet</a> | 24 | 41 | 53 | 
 | 71 | <a href='https://www.springer.com/social+sciences/journal/11558'target='_blank'>The Review of International Organizations</a> | 24 | 31 | 66 | 
-| 72 | <a href='https://journals.sagepub.com/home/afs'target='_blank'>Armed Forces & Society</a> | 23 | 29 | 135 | 
+| 72 | <a href='http://journals.sagepub.com/home/afs'target='_blank'>Armed Forces & Society</a> | 23 | 29 | 135 | 
 | 73 | <a href='http://www.ingentaconnect.com/content/cuny/cp'target='_blank'>Comparative Politics</a> | 23 | 33 | 80 | 
 | 74 | <a href='https://academic.oup.com/ijpor'target='_blank'>International Journal of Public Opinion Research</a> | 23 | 35 | 81 | 
 | 75 | <a href='https://www.tandfonline.com/toc/rpas20/current'target='_blank'>Policy and Society</a> | 23 | 40 | 50 | 
 | 76 | <a href='https://www.tandfonline.com/toc/csms20/current'target='_blank'>Social Movement Studies</a> | 23 | 40 | 49 | 
 | 77 | <a href='https://www.cambridge.org/core/journals/government-and-opposition'target='_blank'>Government and Opposition</a> | 22 | 34 | 32 | 
 | 78 | <a href='https://newleftreview.org/'target='_blank'>New Left Review</a> | 22 | 50 | 51 | 
-| 79 | <a href='http://journals.sagepub.com/home/afs'target='_blank'>Politics & Gender</a> | 22 | 30 | 136 | 
+| 79 | <a href='https://www.cambridge.org/core/journals/politics-and-gender'target='_blank'>Politics & Gender</a> | 22 | 30 | 136 | 
 | 80 | <a href='http://journals.sagepub.com/home/pas'target='_blank'>Politics & Society</a> | 22 | 30 | 41 | 
 | 81 | <a href='http://journals.sagepub.com/home/apr'target='_blank'>American Politics Research</a> | 21 | 31 | 105 | 
 | 82 | <a href='https://www.tandfonline.com/toc/feus20/current'target='_blank'>European Security</a> | 21 | 29 | 85 | 
 | 83 | <a href='https://onlinelibrary.wiley.com/journal/14679760'target='_blank'>Journal of Political Philosophy</a> | 21 | 33 | 126 | 
 | 84 | <a href='https://monthlyreview.org/'target='_blank'>Monthly Review</a> | 21 | 29 | 119 | 
-| 85 | <a href='http://pub.lex-localis.info/index.php/LexLocalis'target='_blank'>Nationalities Papers</a> | 21 | 28 | 130 | 
+| 85 | <a href='https://www.tandfonline.com/toc/cnap20/current'target='_blank'>Nationalities Papers</a> | 21 | 28 | 130 | 
 | 86 | <a href='https://academic.oup.com/publius'target='_blank'>Publius: The Journal of Federalism</a> | 21 | 28 | 79 | 
 | 87 | <a href='https://www.tandfonline.com/toc/crea20/current'target='_blank'>Review of African Political Economy</a> | 21 | 26 | 115 | 
 | 88 | <a href='https://www.ifjpglobal.org/'target='_blank'>International Feminist Journal of Politics</a> | 20 | 34 | 114 | 
@@ -119,7 +119,7 @@ To see that, I have scraped Google Scholar for the journals in SSCI, with <a hre
 | 99 | <a href='https://www.journals.elsevier.com/communist-and-post-communist-studies/'target='_blank'>Communist and Post-Communist Studies</a> | 19 | 27 | 91 | 
 | 100 | <a href='https://www.tandfonline.com/toc/fcsp20/current'target='_blank'>Contemporary Security Policy</a> | 19 | 25 | 76 | 
 | 101 | <a href='https://www.tandfonline.com/toc/fjss20/current'target='_blank'>Journal of Strategic Studies</a> | 19 | 26 | 83 | 
-| 102 | <a href='https://www.cambridge.org/core/journals/politics-and-religion'target='_blank'>Latin American Politics and Society</a> | 19 | 27 | 132 | 
+| 102 | <a href='https://www.cambridge.org/core/journals/latin-american-politics-and-society'target='_blank'>Latin American Politics and Society</a> | 19 | 27 | 132 | 
 | 103 | <a href='https://onlinelibrary.wiley.com/journal/19399162'target='_blank'>Legislative Studies Quarterly</a> | 19 | 26 | 71 | 
 | 104 | <a href='https://www.cogitatiopress.com/politicsandgovernance'target='_blank'>Politics and Governance</a> | 19 | 25 | 94 | 
 | 105 | <a href='https://www.tandfonline.com/toc/ccam20/current'target='_blank'>Cambridge Review of International Affairs</a> | 18 | 23 | 146 | 
@@ -137,26 +137,26 @@ To see that, I have scraped Google Scholar for the journals in SSCI, with <a hre
 | 117 | <a href='https://www.palgrave.com/gp/journal/41269'target='_blank'>Acta Politica</a> | 16 | 31 | 108 | 
 | 118 | <a href='https://www.palgrave.com/de/journal/41293'target='_blank'>British Politics</a> | 16 | 21 | 112 | 
 | 119 | <a href='https://www.tandfonline.com/toc/fgrp20/current'target='_blank'>German Politics</a> | 16 | 20 | 84 | 
-| 120 | <a href='https://newrepublic.com/'target='_blank'>Intelligence and National Security</a> | 16 | 25 | 134 | 
+| 120 | <a href='https://www.tandfonline.com/toc/fint20/current'target='_blank'>Intelligence and National Security</a> | 16 | 25 | 134 | 
 | 121 | <a href='https://onlinelibrary.wiley.com/journal/14698129'target='_blank'>Nations and Nationalism</a> | 16 | 21 | 96 | 
 | 122 | <a href='http://journals.sagepub.com/home/ptx'target='_blank'>Political Theory</a> | 16 | 30 | 121 | 
 | 123 | <a href='https://onlinelibrary.wiley.com/journal/14679485'target='_blank'>Scottish Journal of Political Economy</a> | 16 | 25 | 159 | 
 | 124 | <a href='https://www.tandfonline.com/toc/cajp20/current'target='_blank'>Australian Journal of Political Science</a> | 15 | 24 | 127 | 
 | 125 | <a href='https://www.tandfonline.com/toc/wwap20/current'target='_blank'>Journal of Women, Politics & Policy</a> | 15 | 16 | 109 | 
 | 126 | <a href='http://journals.sagepub.com/home/psw'target='_blank'>Political Studies Review</a> | 15 | 25 | 104 | 
-| 127 | <a href='https://www.cambridge.org/core/journals/politics-and-gender'target='_blank'>Scandinavian Political Studies</a> | 15 | 25 | 137 | 
+| 127 | <a href='https://onlinelibrary.wiley.com/journal/14679477'target='_blank'>Scandinavian Political Studies</a> | 15 | 25 | 137 | 
 | 128 | <a href='http://muse.jhu.edu/journal/348'target='_blank'>Contemporary Southeast Asia</a> | 14 | 18 | 113 | 
 | 129 | <a href='http://muse.jhu.edu/journal/464'target='_blank'>Dissent</a> | 14 | 30 | 110 | 
 | 130 | <a href='https://www.palgrave.com/gp/journal/41304'target='_blank'>European Political Science</a> | 14 | 17 | 106 | 
-| 131 | <a href='https://onlinelibrary.wiley.com/journal/14679477'target='_blank'>Journal of Chinese Political Science</a> | 14 | 24 | 138 | 
-| 132 | <a href='http://www.revistacienciapolitica.cl/index.php/rcp'target='_blank'>Lex Localis-Journal of Local Self-Government</a> | 14 | 19 | 140 | 
+| 131 | <a href='https://link.springer.com/journal/11366'target='_blank'>Journal of Chinese Political Science</a> | 14 | 24 | 138 | 
+| 132 | <a href='http://pub.lex-localis.info/index.php/LexLocalis'target='_blank'>Lex Localis-Journal of Local Self-Government</a> | 14 | 19 | 140 | 
 | 133 | <a href='https://onlinelibrary.wiley.com/journal/1538165x'target='_blank'>Political Science Quarterly</a> | 14 | 29 | 149 | 
-| 134 | <a href='https://www.tandfonline.com/toc/cnap20/current'target='_blank'>Politics and Religion</a> | 14 | 16 | 131 | 
+| 134 | <a href='https://www.cambridge.org/core/journals/politics-and-religion'target='_blank'>Politics and Religion</a> | 14 | 16 | 131 | 
 | 135 | <a href='http://journals.sagepub.com/home/ppe'target='_blank'>Politics, Philosophy & Economics</a> | 14 | 30 | 147 | 
 | 136 | <a href='http://www.currenthistory.com/'target='_blank'>Current History</a> | 13 | 18 | 173 | 
 | 137 | <a href='https://www.tandfonline.com/toc/fips20/current'target='_blank'>Irish Political Studies</a> | 13 | 19 | 124 | 
 | 138 | <a href='https://onlinelibrary.wiley.com/journal/17415705'target='_blank'>Presidential Studies Quarterly</a> | 13 | 18 | 166 | 
-| 139 | <a href='https://www.cambridge.org/core/journals/canadian-journal-of-political-science-revue-canadienne-de-science-politique'target='_blank'>Canadian Journal of Political Science</a> | 12 | 15 | 157 | 
+| 139 | <a href='https://www.cambridge.org/core/journals/canadian-journal-of-political-science-revue-canadienne-de-science-politique'target='_blank'>Canadian Journal of Political Science/Revue canadienne de science politique</a> | 12 | 15 | 157 | 
 | 140 | <a href='https://www.tandfonline.com/toc/rcri20/current'target='_blank'>Critical Review</a> | 12 | 17 | 128 | 
 | 141 | <a href='https://www.tandfonline.com/toc/cpsa20/current'target='_blank'>Politikon</a> | 11 | 18 | 145 | 
 | 142 | <a href='https://www.degruyter.com/view/j/for'target='_blank'>The Forum</a> | 11 | 20 | 156 | 
@@ -179,21 +179,18 @@ To see that, I have scraped Google Scholar for the journals in SSCI, with <a hre
 | 159 | <a href='http://journal.telospress.com/'target='_blank'>Telos</a> | 7 | 9 | 174 | 
 | 160 | <a href='https://onlinelibrary.wiley.com/journal/14678497'target='_blank'>Australian Journal of Politics & History</a> | 6 | 7 | 162 | 
 | 161 | <a href='http://www.oezp.at/'target='_blank'>Österreichische Zeitschrift für Politikwissenschaft</a> | 6 | 12 | 164 | 
-| 162 | <a href='https://www.tandfonline.com/toc/rpnz20/current'target='_blank'>Philippine Political Science Journal</a> | 6 | 9 | 154 | 
+| 162 | <a href='https://www.tandfonline.com/toc/rpsj20/current'target='_blank'>Philippine Political Science Journal</a> | 6 | 9 | 154 | 
 | 163 | <a href='https://www.vse.cz/polek/'target='_blank'>Politická Ekonomie</a> | 6 | 10 | 167 | 
-| 164 | <a href='https://tidsskriftet-ip.no/index.php/intpol'target='_blank'>Internasjonal Politikk</a> | 5 | 6 | 161 | 
-| 165 | <a href='https://www.tandfonline.com/toc/cpsa20/current'target='_blank'>Politikon</a> | 3 | 8 | 145 | 
+| 164 | <a href='https://tidsskriftet-ip.no/index.php/intpol'target='_blank'>Internasjonal Politikk</a> | 5 | 6 | 161 |
 | *N/A* | <a href='https://onlinelibrary.wiley.com/journal/14680343'target='_blank'>Economics & Politics</a> | *N/A* | *N/A* | 111 | 
 | *N/A* | <a href='https://www.tandfonline.com/toc/zegp20/current'target='_blank'>Ethics & Global Politics</a> | *N/A* | *N/A* | 143 | 
 | *N/A* | <a href='http://www.ijcv.org/index.php/ijcv'target='_blank'>International Journal of Conflict and Violence</a> | *N/A* | *N/A* | 107 | 
-| *N/A* | <a href='https://www.cambridge.org/core/journals/latin-american-politics-and-society'target='_blank'>New Republic</a> | *N/A* | *N/A* | 133 | 
+| *N/A* | <a href='https://newrepublic.com/'target='_blank'>New Republic</a> | *N/A* | *N/A* | 133 | 
 | *N/A* | <a href='https://onlinelibrary.wiley.com/journal/10884963'target='_blank'>Philosophy & Public Affairs</a> | *N/A* | *N/A* | 74 | 
 | *N/A* | <a href='http://www.politicaygobierno.cide.edu/index.php/pyg'target='_blank'>Política y Gobierno</a> | *N/A* | *N/A* | 90 | 
-| *N/A* | <a href='https://www.tandfonline.com/toc/rpsj20/current'target='_blank'>Political Science</a> | *N/A* | *N/A* | 155 | 
+| *N/A* | <a href='https://www.tandfonline.com/toc/rpnz20/current'target='_blank'>Political Science</a> | *N/A* | *N/A* | 155 | 
 | *N/A* | <a href='https://www.nowpublishers.com/QJPS'target='_blank'>Quarterly Journal of Political Science</a> | *N/A* | *N/A* | 64 | 
 | *N/A* | <a href='http://www.scielo.br/scielo.php?script=sci_serial&pid=0034-7329&lng=en&nrm=iso'target='_blank'>Revista Brasileira de Política Internacional</a> | *N/A* | *N/A* | 125 | 
-| *N/A* | <a href='https://link.springer.com/journal/11366'target='_blank'>Revista de Ciencia Politica</a> | *N/A* | *N/A* | 139 | 
+| *N/A* | <a href='http://www.revistacienciapolitica.cl/index.php/rcp'target='_blank'>Revista de Ciencia Politica</a> | *N/A* | *N/A* | 139 | 
 | *N/A* | <a href='http://www.sar.org.ro/polsci/'target='_blank'>Romanian Journal of Political Science</a> | *N/A* | *N/A* | 176 | 
-| *N/A* | <a href='https://www.cambridge.org/core/journals/studies-in-american-political-development'target='_blank'>Studies in American Political Development</a> | *N/A* | *N/A* | 122 | 
-
-
+| *N/A* | <a href='https://www.cambridge.org/core/journals/studies-in-american-political-development'target='_blank'>Studies in American Political Development</a> | *N/A* | *N/A* | 122 |
