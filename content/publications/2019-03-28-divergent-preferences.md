@@ -12,7 +12,7 @@ tags:
 - uk
 citation: <em>Journal of Elections, Public Opinion & Parties, 30</em>(2), 202–220
 doi: 10.1080/17457289.2019.1604529
-file: divergent_preferences.pdf
+file: umit2020b.pdf
 ---
 
 

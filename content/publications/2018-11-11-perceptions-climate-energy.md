@@ -12,7 +12,7 @@ tags:
 - Russia
 citation: 'London: European Research Infrastructure Consortium'
 online: http://www.europeansocialsurvey.org/about/news/essnews0059.html
-file: pawcer_report.pdf
+file: pohjolainen2018.pdf
 ---
 
 A co-authered report on our work in the PAWCER (Public Attitudes to Welfare and Climate Change in the European Union and Russia) project.
