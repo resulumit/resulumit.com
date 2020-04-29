@@ -37,7 +37,7 @@ for(i in levels(as.factor(df$subgroups))) {
   dat <- data.frame(as.data.frame(sqrt(svyvar(~variable1, na.rm= TRUE, design = design)))[,"variance"],
                     as.data.frame(sqrt(svyvar(~variable2, na.rm= TRUE, design = design)))[,"variance"])
   
-  colnames(dat)<-c("sd.variable1", "sd.variable2")
+  colnames(dat) <- c("sd.variable1", "sd.variable2")
   
   datalist[[i]] <- dat
 }
