@@ -8,10 +8,10 @@ categories:
         - rstats
 ---
 
-My writing workflow has been based on R Markdown for some time. In March 2020, I organised a workshop at [Campus Luzern](https://www.campus-luzern.ch/), to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
+My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at [Campus Luzern](https://www.campus-luzern.ch/), to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
 
-Since then I have revised the workshop material, which you can find at <https://github.com/resulumit/rmd_workshop>. The slides are better viewed at <https://resulumit.com/teaching/rmd_workshop.html>.
+Since then I have revised the workshop material, which you can find at [GitHub](https://github.com/resulumit/rmd_workshop). The slides are better viewed [here at my website](https://resulumit.com/teaching/rmd_workshop.html).
 
-I would be happy if other instructors used my material for teaching. I would also be happy to delvier this workshop again at different institutions.
+I would be happy if other instructors used my material for teaching. I would also be happy to deliver this workshop again at different institutions --- or online during the lockdown. Would you be interested? Let me know.
 
 My next workshop is again at Campus Luzern, this time on creating academic websites with Blogdown. I look forward to it.
