@@ -5,10 +5,21 @@
     <link>/categories/rstats/</link>
     <description>Recent content in rstats on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R Markdown Workshop</title>
+      <link>/blog/rmd-workshop/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/rmd-workshop/</guid>
+      <description>My writing workflow has been based on R Markdown for some time. In March 2020, I organised a workshop at Campus Luzern, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
+Since then I have revised the workshop material, which you can find at https://github.com/resulumit/rmd_workshop. The slides are better viewed at https://resulumit.com/teaching/rmd_workshop.html.
+I would be happy if other instructors used my material for teaching.</description>
+    </item>
     
     <item>
       <title>Google Scholar ranking of political science journals</title>
