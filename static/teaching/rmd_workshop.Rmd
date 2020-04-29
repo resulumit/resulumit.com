@@ -41,17 +41,17 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 <style type="text/css">
 
+.hljs-github .hljs {
+    background: #e5e5e5;
+}
+
 .inline-c, remark-inline-code {
-   background: #f8f8f8;
+   background: #e5e5e5;
    border-radius: 3px;
    padding: 4px;
    font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
 }
 
-.inline-cs, remark-inline-code {
-   background: #f8f8f8;
-   font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
-}
 
 .yellow-h{
    background: #ffff88;
@@ -59,7 +59,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 
 .out-t, remark-inline-code {
-   background: #00ff00;
+   background: #9fff9f;
    border-radius: 3px;
    padding: 4px;
    
@@ -86,15 +86,11 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
     font-size: 50%
     }
 
-.exercise {
-    background-color:#ffd000;
+.action {
+    background-color: #f2eecb;
   
 }
 
-.follow-along {
-    background-color:#D8BFD8;
-  
-}
 
 </style>
 
@@ -282,10 +278,7 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 **Part 8. Using Version Control**
    - e.g., integrating Git and GitHub
 
-**Part 9. Collaborating with Others**
-   - e.g., working simultaneously with co-authors
-
-**Part 10. Working on a Real Project**
+**Part 9. Working on a Real Project**
    - e.g., converting a work-in-progress of yours
 
 ]
@@ -298,15 +291,42 @@ Now, with .yellow-h[R Markdown], I am ... happy!
   - participants learn as much from their partner as from instructors
   - switch partners after ever second part
 
-- Type, rather than copy/paste, the code that you will find on these slides
+- Type, rather than copy and paste, the code that you will find on these slides
 
   - typing is a part of the learning process
 
-- When you have a R-related question:
+- When you have a question
 
   - ask your partner
-  - `Google` together
+  - google together
   - ask me
+
+---
+class: action
+
+## The Workshop &mdash; Organisation &mdash; Slides
+
+Slides with this background colour indicate that your action is required, for
+
+- setting the workshop up
+    - e.g., downloading course material 
+    
+- completing the exercises
+    - e.g., managing references in R Markdown
+    - there are 35 exercises
+    - these slides have countdown timers
+
+---
+## The Workshop &mdash; Organisation &mdash; Slides
+
+- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]
+    - long codes and texts will have their own line(s)
+
+- Results that come out in output files .out-t[appear as such &mdash; in the same font, on green background]
+    - except very obvious results, such as figures and tables
+    
+- Specific sections are .yellow-h[highlighted yellow as such] for emphasis
+    - these could be for anything &mdash; codes and texts in input, results in output, and/or texts on slides
 
 ---
 ## The Workshop &mdash; Aims
@@ -320,8 +340,8 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 
 - To encourage you to convert into R Markdown 
 
-  - practice with the mock manuscript (Parts 3&ndash;9)
-  - start converting a real one (Part 10)
+  - practice with a mock manuscript (Parts 3&ndash;8)
+  - start converting a real one (Part 9)
     
 ---
 class: inverse, center, middle
@@ -329,11 +349,11 @@ class: inverse, center, middle
 # Part 1. Getting the Tools Ready
 
 ---
-class: follow-along
+class: action
 
 ## Course Materials &mdash; Download from the Internet
 
-Materials, available at <https://github.com/resulumit/rmd_workshop>, have the following structure:
+Materials, available at <https://github.com/resulumit/rmd_workshop>, have the following structure
 
 ```
 rmd_workshop
@@ -349,6 +369,9 @@ rmd_workshop
    |
    |-image
    |  |- google_scholar.png
+   |
+   |-presentation
+   |  |- rmd_workshop.pdf
 
 ```
 
@@ -356,25 +379,41 @@ rmd_workshop
 ## Course Materials &mdash; Contents
 
 - `reproduce_this.pdf`
+
     - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
-    - randomly generated sentences,<sup>*</sup> with figures and tables from randomly generated data, with key sections in-need of attention highlighted
+    - randomly generated sentences, with figures and tables from randomly generated dataset<sup>*</sup>
+    - key sections in-need of attention are highlighted
+    
+.footnote[
+
+[*] The text, _Lorem ipsum_, is generated with the `stringi` package (Gagolewski, 2020) while the dataset is created with the `fabricatr` package (Blair et al., 2019). 
+
+]
+
+---
+## Course Materials &mdash; Contents
+
+- `reproduce_this.pdf`
+    - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
+    - randomly generated sentences, with figures and tables from randomly generated dataset
+    - key sections in-need of attention are highlighted
 
 - `journals.Rmd`
     - the R Markdown document that we will work on
-        - includes unformatted text from `reproduce_this.pdf` to save time
-        
+    - includes unformatted text from `reproduce_this.pdf` to save time
+    - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
+
+--
+
 - `references.bib` 
-    - the BibTeX document with three fabricated references
-    
+
+    - a BibTeX document with three fabricated references
+
+--
+
 - `apa_7th.csl`
-    - a *Citation Style Language* document, with APA (7th Edition) referencing style (Wiernik, 2020)
 
-
-.footnote[
-
-[*] _Lorem ipsum_ text, generated with the `stringi` package (Gagolewski, 2020).
-
-]
+    - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
 
 ---
 ## Course Materials &mdash; Contents  
@@ -382,7 +421,7 @@ rmd_workshop
 `journals.csv`
 - a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the `Google Scholar` rankings of fictitious journals
     
-- including the following variables:  
+- includes the following variables 
     - **name**: journals (1090 random titles)
     - **origin**: geographic origins (five continents)
     - **branch**: major discipline of journals (four branches)
@@ -394,17 +433,32 @@ rmd_workshop
     - **issues**: number of issues published per year (integers)
 
 ---
-class: follow-along
+## Course Materials &mdash; Contents  
+
+- `google_scholar.png`
+
+    - a screeenshot image of the [Google Scholar homapage](https://scholar.google.ch/) 
+
+--
+
+- `rmd_workshop.pdf`
+
+    - these slides in PDF format
+    - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
+        - offers, among others, the ability to scroll across long codes on some slides
+
+---
+class: action
 
 ## Git &mdash; Download from the Internet and Install
 
-- For Windows, install *Git for Windows*, downloading from [https://gitforwindows.org](https://gitforwindows.org/)
+- For Windows, install 'Git for Windows', downloading from [https://gitforwindows.org](https://gitforwindows.org/)
        - select 'Git from the command line and also from 3rd-party software'
        
-- For Mac, install *Git*, downloading from [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- For Mac, install 'Git', downloading from [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 ---
-class: follow-along
+class: action
 
 ## GitHub &mdash; Open an Account
 
@@ -419,18 +473,18 @@ Sign up for GitHub at [https://github.com](https://github.com/)
 - usernames can be changed later
         
 ---
-class: follow-along
+class: action
 
 ## R and RStudio &mdash; Download from the Internet and Install
 
-- R at [https://cloud.r-project.org](https://cloud.r-project.org)
+- Download R from [https://cloud.r-project.org](https://cloud.r-project.org)
     - choose the version for your operating system
 
-- RStudio at [https://rstudio.com/products/rstudio/download](https://rstudio.com/products/rstudio/download)
+- Download RStudio from [https://rstudio.com/products/rstudio/download](https://rstudio.com/products/rstudio/download)
     - choose the free version
 
 ---
-class: follow-along
+class: action
 
 ## R Packages &mdash; Install from within RStudio
 
@@ -454,7 +508,7 @@ install.packages(c("rmarkdown", "tinytex",
     - alternatives: e.g., `knitr` (Xie, 2020b), `kableExtra` (Zhu, 2019)
 
 ---
-class: follow-along
+class: action
 
 ## R Project &mdash; Create from within RStudio 
 
@@ -472,13 +526,19 @@ class: follow-along
   - but, we don't want all our projects to be named `manusript.Rproj`
 
 ---
-## Other Resources<sup>*</sup>
+class: action
 
-- R Markdown Cheat Sheet
+## R Markdown Cheat Sheet &mdash; Download from the Internet
 
-   - follow from the RStudio menu
+Downloading process can be imitated from within RStudio
+
+- follow from the RStudio menu
 
 > `Help -> Cheatsheets -> R Markdown Cheat Sheet` 
+
+
+---
+## Other Resources<sup>*</sup>
 
 - Pandoc User's Guide
 
@@ -495,7 +555,7 @@ class: follow-along
    
 .footnote[
 
-[&#42;] *During* the workshop, R Markdown Cheat Sheet is likely to be the most helpful of these resources. I recommend the remaining to be consulted after the workshop.
+[&#42;] During the workshop, R Markdown Cheat Sheet is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
 
 ]
 
@@ -505,7 +565,7 @@ class: inverse, center, middle
 # Part 3. Introducing R Markdown
 
 ---
-class: follow-along
+class: action
 
 ## R Markdown Document &mdash; Create from within RStudio
 
@@ -580,7 +640,7 @@ Observe also that the document has three components
 ]
 
 ---
-class: follow-along
+class: action
 
 ## R Markdown Document &mdash; Compile
 
@@ -619,7 +679,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 
 [*] If you had not alrady have the `knitr` package, it would have been installed together with the `rmarkdown` package.
 
-[**] RStudio comes with a compy of `pandoc` ([http://pandoc.org](http://pandoc.org)), which is not an R package, so that you do not have to install it separately. 
+[**] RStudio comes with a copy of `pandoc` ([http://pandoc.org](http://pandoc.org)), which is not an R package, so that you do not have to install it separately. 
 
 ]
 
@@ -629,7 +689,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 - Behind the scenes, each .Rmd file is compiled in its own session, and therefore
 
   - the code needs to stand alone, for reproducibility reasons
-  - you might have already loaded a package and/or imported data elsewhere (e.g., in a seperate .R and/or .Rmd file), but even in the same session, these won't be available to a given .Rmd file
+  - you might have already loaded a package and/or imported data elsewhere (e.g., in a separate .R and/or .Rmd file), but even in the same session, these won't be available to a given .Rmd file
 
 --
 
@@ -641,7 +701,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 
 .footnote[
 
-[*] Here we will focus on academic papers only. In a seperate workshop, I teach how to create professional websites with R Blogdown.
+[*] Here we will focus on research papers only. In a separate workshop, I teach how to create professional websites with R Blogdown.
 
 ]  
 
@@ -669,25 +729,34 @@ output:
 
 .footnote[
 
-[*] Tecnically, we can place YAML anywhere in a .Rmd document. However, it is a good practice to start with YAML.
+[*] Technically, we can place YAML anywhere in a .Rmd document. However, it is a good practice to start with YAML.
 
 ]
 ---
-## YAML &mdash; Overview
+## YAML &mdash; Variables
 
-.Rmd documents start with YAML
-- it includes the metadata variables
-    - e.g., title, output format    
-<br>    
-- it is written between a pair of three hyphens .yellow-h[-]
+- `title` and `output` are the basic variables of YAML
+    - variable names are typed in lower case, followed by a colon <span style="background-color: #ffff88;">:</span>
+<br>
+    - the list of available variables, as well as options and sub-options for these variables, depends on the output format
+       - [Pandoc User's Guide](https://pandoc.org/MANUAL.html) provides a comprehensive documentation
+       - R Markdown Cheat Sheet provides a helpful list
+
+- Typical YAML variables for an research paper:
 
 ```{r, eval = FALSE}
 ---
 title: 
-output:
+author: 
+date: 
+bibliography: 
+csl: 
+output: 
 ---
 ```
 
+---
+## YAML &mdash; Variables
 
 Variables can take .yellow-h[strings]
 
@@ -699,20 +768,7 @@ output:
 ```
 
 ---
-## YAML &mdash; Overview
-
-.Rmd documents start with YAML
-- it includes the metadata variables
-    - e.g., title, output format    
-<br>    
-- it is written between a pair of three hyphens .yellow-h[-]
-
-```{r, eval = FALSE}
----
-title: 
-output:
----
-```
+## YAML &mdash; Variables
 
 Variables can take strings, .yellow-h[options]
 
@@ -724,20 +780,7 @@ output: pdf_document                                  #<<
 ```
 
 ---
-## YAML &mdash; Overview
-
-.Rmd documents start with YAML
-- it includes the metadata variables
-    - e.g., title, output format    
-<br>    
-- it is written between a pair of three hyphens .yellow-h[-]
-
-```{r, eval = FALSE}
----
-title: 
-output:
----
-```
+## YAML &mdash; Variables
 
 Variables can take strings, options, .yellow-h[sub-options]
 
@@ -751,20 +794,7 @@ output:
 ```
 
 ---
-## YAML &mdash; Overview
-
-.Rmd documents start with YAML
-- it includes the metadata variables
-    - e.g., title, output format    
-<br>    
-- it is written between a pair of three hyphens .yellow-h[-]
-
-```{r, eval = FALSE}
----
-title: 
-output:
----
-```
+## YAML &mdash; Variables
 
 Variables can take strings, options, sub-options, and .yellow-h[code]
 
@@ -775,29 +805,6 @@ date: "`r format(Sys.Date(), '%d %B %Y')`"      #<<
 output: 
     pdf_document:
         keep_tex: true                    
----
-```
-
----
-## YAML &mdash; Variables
-
-- `title` and `output` are the basic variables of YAML
-    - variable names are typed in lower case, followed by a colon <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">:</span>
-<br>
-    - the list of available variables, as well as options and sub-options for these variables, depends on the output format
-       - [Pandoc User's Guide](https://pandoc.org/MANUAL.html) provides a comprehensive documentation
-       - R Markdown Cheat Sheet provides a helpful list
-
-- Typical YAML variables for an academic paper:
-
-```{r, eval = FALSE}
----
-title: 
-author: 
-date: 
-bibliography: 
-csl: 
-output: 
 ---
 ```
 
@@ -938,7 +945,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .footnote[
 
-[*] For reasons of simplicity, this workhop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. see [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
+[*] For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. see [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
 
 ]
 ---
@@ -946,7 +953,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .pull-left-c[
 
-Strings with special characters, such as colon, require quotation marks
+Strings with special characters, such as colon, require quotation marks .yellow-h["] or .yellow-h[']
 
 ```{r, eval = FALSE}
 ---
@@ -1025,7 +1032,7 @@ The `bibliography` and `csl` variables take strings as well
 
 ```{r, eval = FALSE}
 ---
-title: "Journals: Random Words With Random Data^[The paragraphs in this article are randomly generated, at https://randomwordgenerator.com. Similarly, the data is fictitious, created with the fabricatr package (https://declaredesign.org/r/fabricatr).]"
+title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"                                    
 date: 4 May 2020 
@@ -1035,7 +1042,8 @@ output: pdf_document
 ---
 ```
 
---
+---
+## YAML &mdash; Strings
 
 These strings depend on (a) where the files are located and (b) how they are named
 
@@ -1106,7 +1114,7 @@ output:                   #<<
 
 Notice that
 
-- this specific setting, highlited, will create multiple outputs
+- this specific setting, highlighted, will create multiple outputs
     - a LaTeX and a PDF document
 
 - all but the last option (i.e., `true`) takes a colon
@@ -1176,7 +1184,7 @@ Notice that
     - and that can be automatically updated
         - e.g., `date`
 
-- there are quotation marks " around the code
+- there are quotation marks around the code
 
 - we'll cover codes in .Rmd documents later on in the workshop
 
@@ -1227,9 +1235,9 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml6.png")
     - the other option is `yes` &mdash; a click on an (part of) citation will take the screen to the relevant entry in the list of references
 
 ---
-class: exercise
+class: action
 
-## Part 3 &mdash; Exercises
+## Exercises
 
 1) Open `journals.Rmd` and fill in the YAML variables for the mock paper
 - take cues from `reproduce_this.pdf` and/or the slides
@@ -1398,9 +1406,9 @@ second sentence of that paragraph, which is followed by a blank line.
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 4 &mdash; Exercises
+## Exercises
 
 6) Hard Brakes
 
@@ -1472,53 +1480,53 @@ The number sign .yellow-h[&#x23;] introduces headers; lower levels are created w
 ---
 ## Syntax &mdash; Emphases 
 
-A pair of single asterics .yellow-h[&#42;] or underscores .yellow-h[&#95;] introduces italics
+A pair of single asterisk .yellow-h[&#42;] or underscores .yellow-h[&#95;] introduces italics
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;italics&#42;</span> becomes .out-t[*italics*]    
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;italics&#42;</span> becomes .out-t[*italics*]    
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;italics&#95;</span> becomes .out-t[*italics*] as well
-
-<br>
-
-A pair of double asterics or underscores introduces bold  
-
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;bold&#42;&#42;</span> becomes .out-t[**bold**]
-
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#95;bold&#95;&#95;</span> becomes .out-t[**bold**] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;italics&#95;</span> becomes .out-t[*italics*] as well
 
 <br>
 
-These two syntaxes can be combined
+A pair of double asterisk or underscores introduces bold  
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#95;bolditalics&#95;&#42;&#42;</span> becomes .out-t[**_boldsitalics_**]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;bold&#42;&#42;</span> becomes .out-t[**bold**]
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#42;&#42;bolditalics&#42;&#42;&#95;</span> becomes .out-t[_**bolditalics**_]  as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#95;bold&#95;&#95;</span> becomes .out-t[**bold**] as well
+
+<br>
+
+These two rules can be combined
+
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#95;bolditalics&#95;&#42;&#42;</span> becomes .out-t[**_boldsitalics_**]
+
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#42;&#42;bolditalics&#42;&#42;&#95;</span> becomes .out-t[_**bolditalics**_]  as well
 
 ---
 ## Syntax &mdash; Strikethrough
 
 A pair of double tildes .yellow-h[~] introduces strikethrough
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;strikethrough&#126;&#126;</span> becomes .out-t[~~strikethrough~~]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;strikethrough&#126;&#126;</span> becomes .out-t[~~strikethrough~~]
 
 <br>
 
 Strikethrough can be combined with italics or bold
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#126;&#126;strikebold&#126;&#126;&#42;&#42;</span> or <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#95;&#126;&#126;strikebold&#126;&#126;&#95;&#95;</span>, they both become .out-t[**~~strikebold~~**]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#126;&#126;strikebold&#126;&#126;&#42;&#42;</span> or <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#95;&#126;&#126;strikebold&#126;&#126;&#95;&#95;</span>, they both become .out-t[**~~strikebold~~**]
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#42;&#42;strikebold&#42;&#42;&#126;&#126;</span> or <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#95;&#95;strikebold&#95;&#95;&#126;&#126;</span>, they both become .out-t[~~**strikebold**~~] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#42;&#42;strikebold&#42;&#42;&#126;&#126;</span> or <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#95;&#95;strikebold&#95;&#95;&#126;&#126;</span>, they both become .out-t[~~**strikebold**~~] as well
 
 <br>
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#126;&#126;strikeitalitcs&#126;&#126;&#42;</span> or <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#126;&#126;strikeitalitcs&#126;&#126;&#95;</span>, they both become .out-t[*~~strikeitalitcs~~*] 
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#126;&#126;strikeitalitcs&#126;&#126;&#42;</span> or <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#126;&#126;strikeitalitcs&#126;&#126;&#95;</span>, they both become .out-t[*~~strikeitalitcs~~*] 
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#42;strikeitalitcs&#42;&#126;&#126;</span> or <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#95;strikeitalitcs&#95;&#126;&#126;</span>, they both become .out-t[*~~strikeitalitcs~~*] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#42;strikeitalitcs&#42;&#126;&#126;</span> or <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#95;strikeitalitcs&#95;&#126;&#126;</span>, they both become .out-t[*~~strikeitalitcs~~*] as well
 
 ---
-class: exercise
+class: action
 
-## Part 4 &mdash; Exercises
+## Exercises
 
 8) Headers
 
@@ -1543,13 +1551,13 @@ class: exercise
 
 You can link text to section headers in the same document
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Conclusion](#conclusion)</span> becomes .out-t[[Conclusion](#conclusion)], and a click takes the screen to that secion
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Conclusion](#conclusion)</span> becomes .out-t[[Conclusion](#conclusion)], and a click takes the screen to that section
 
 <br>
 
 Multi-word headers need hyphenation
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Literature Review](#literature-review)</span> becomes .out-t[[Literature Review](#literature-review)], and it works only if the second part is hyphenated
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Literature Review](#literature-review)</span> becomes .out-t[[Literature Review](#literature-review)], and it works only if the second part is hyphenated
 
 .footnote[
 
@@ -1562,30 +1570,32 @@ Multi-word headers need hyphenation
 
 You can link text to URLs
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;click here](https	&#58;//resulumit.com/)</span> becomes .out-t[[click here](https://resulumit.com/)]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;click here](https	&#58;//resulumit.com/)</span> becomes .out-t[[click here](https://resulumit.com/)]
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//resulumit.com></span> becomes .out-t[<https://resulumit.com>]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//resulumit.com></span> becomes .out-t[<https://resulumit.com>]
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//resulumit.com](https&#58;//resulumit.com/)</span> becomes .out-t[[https://resulumit.com](https://resulumit.com/)] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//resulumit.com](https&#58;//resulumit.com/)</span> becomes .out-t[[https://resulumit.com](https://resulumit.com/)] as well
+
+--
 
 <br>
 
 You can also link text to email addresses
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;resul.umit@unilu.ch)</span> becomes .out-t[[email me](mailto:resul.umit@unilu.ch)]<sup>*</sup>
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;resul.umit@unilu.ch)</span><sup>*</sup> becomes .out-t[[email me](mailto:resul.umit@unilu.ch)]
 
-<span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;resul.umit@unilu.ch&#62;</span> becomes .out-t[<resul.umit@unilu.ch>]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;resul.umit@unilu.ch&#62;</span> becomes .out-t[<resul.umit@unilu.ch>]
 
 .footnote[
 
-[*] Notice the prefix `mailto:` in the second part
+[*] Notice the prefix .yellow-h[mailto:] in the second part of the construct
 
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 4 &mdash; Exercises
+## Exercises
 
 10) Links &mdash; Internal
 
@@ -1608,7 +1618,7 @@ class: exercise
 ---
 ## Syntax &mdash; Equations
 
-Inline equations go between a pair of single dollar signs <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#x24;</span> &mdash; with no space between the signs and the equation itself
+Inline equations go between a pair of single dollar signs <span style="background-color: #ffff88;">&#x24;</span> &mdash; with no space between the signs and the equation itself
 
 .inline-c[$E = mc^{2}$] becomes .out-t[*E = mc<sup>2</sup>*]
 
@@ -1656,7 +1666,7 @@ For inline footnotes, use the .inline-c[^[footnote]] syntax
 
 Notice that 
 
-- the caret sign .yellow-h[^] comes *before* the left square bracket .yellow-h[&#91;]
+- the caret sign .yellow-h[^] comes .yellow-h[before] the left square bracket .yellow-h[&#91;]
 - this syntax works in YAML as well as in text
     - footnotes in YAML get symbols, in text they get numbers
 
@@ -1685,13 +1695,13 @@ Dr Doe holds a PhD in rock science.[^defence_date]
 
 Notice that 
 
-- the caret sign comes *after* the left square bracket
+- the caret sign comes .yellow-h[after] the left square bracket
 - this syntax works in text, but not in YAML
 
 ---
-class: exercise
+class: action
 
-## Part 4 &mdash; Exercises
+## Exercises
 
 12) Equations
 
@@ -1710,7 +1720,7 @@ class: exercise
 ---
 ## Syntax &mdash; Lists
 
-Lines starting with asterics .yellow-h[&#42;] as well as plus .yellow-h[&#43;] or minus .yellow-h[&#8722;] signs introduce lists
+Lines starting with asterisk .yellow-h[&#42;] as well as plus .yellow-h[&#43;] or minus .yellow-h[&#8722;] signs introduce lists
 
 ```{r eval=FALSE}
 - books
@@ -1828,16 +1838,16 @@ A pair of carets introduces subscript
 Notice that
 
 - the syntax here (Markdown-based) is different than the one for equations (LaTeX-based)
-    - e.g., <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">R&#94;2&#94;</span> versus <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"> mc^{2}</span>
+    - e.g., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">R&#94;2&#94;</span> versus <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"> mc^{2}</span>
 
 
 
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 4 &mdash; Exercises
+## Exercises
 
 14) Lists
 
@@ -1876,7 +1886,7 @@ class: inverse, center, middle
 <br>
 
 - `pandoc` looks for a .bib file, and for the definitions therein, to process citations
-    - .bib files are specifified with the `bibliography` variable in YAML
+    - .bib files are specified with the `bibliography` variable in YAML
 
 <br>
 
@@ -1948,7 +1958,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 <br>
 
 - `pandoc` looks for a .csl file, and for the styles therein, to style citations and references
-    - .csl files are specifified with the `csl` variable in YAML
+    - .csl files are specified with the `csl` variable in YAML
     - if unspecified, it uses a Chicago author-date format
     
 
@@ -1974,16 +1984,11 @@ All citations keys take the 'at' sign .yellow-h[@], square brackets and/or minus
 
 <br>
 
-.pull-left[
-
 .inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)]
-
 
 .inline-c[@bennett2015] becomes .out-t[Bennett (2015)]
 
-
 .inline-c[[-@bennett2015]] becomes .out-t[(2015)]
-
 
 .inline-c[-@bennett2015] becomes .out-t[2015]
 
@@ -1991,20 +1996,14 @@ All citations keys take the 'at' sign .yellow-h[@], square brackets and/or minus
 
 .inline-c[[@bennett2015 33-35]] becomes .out-t[(Bennett, 2015, pp. 33&ndash;35)]
 
-]
-
-.pull-right[
-
 .inline-c[[@bennett2015, ch. 1]] becomes .out-t[(Bennett, 2015, ch. 1)]
 
 .inline-c[[@bennett2015; @gilbert2019]] becomes .out-t[(Bennett, 2015; Gilbert, 2019)]
 
 .inline-c[[see @bennett2015, for details]] becomes .out-t[(see Bennett, 2015, for details)]
 
-
 .inline-c[@bennett2015 [33-35]] becomes .out-t[Bennett (2015, pp. 33&ndash;35)]
 
-]
 
 ---
 ## Citations &mdash; Reference List
@@ -2034,7 +2033,7 @@ York: Antman.
 ---
 ## References &mdash; Internal Links
 
-For internal links from in-text citations to the reference list, set the YAML variable `link-citations` to `yes`
+For internal links from in-text citations to the reference list, set .inline-c[link-citations: yes] in YAML
 
 - a click on these links take the screen to the relevant entry in the list
 - the `linkcolor` variable make these links explicit
@@ -2052,9 +2051,9 @@ linkcolor: blue        #<<
 ```
 
 ---
-class: exercise
+class: action
 
-## Part 5 &mdash; Exercises
+## Exercises
 
 17) Add an entry to `references.bib` for the following book
 - *R Markdown: The Definitive Guide* by Xie and co-authors
@@ -2075,7 +2074,7 @@ class: exercise
 
 20) Link the citations to the reference list
 
-`r countdown(minutes = 5, seconds = 00, top = 0)`
+`r countdown(minutes = 7, seconds = 30, top = 0)`
 
 ---
 
@@ -2126,7 +2125,7 @@ The average H5 Index for the journals in the dataset is \`r mean(df$h5_index)`.
 
 - `r` is an option of the chunk, indicating that the code in the chunk above should be run by R
     - it could have been `python`, which we will not cover in this workshop
-    - options go in a pair of curly brackets, on the same line with the first delimitter
+    - options go in a pair of curly brackets, on the same line with the first delimiter
 
 - Chunks can be placed anywhere in .Rmd documents
     - their output, if there is any, might float around text to avoid breaking across pages
@@ -2154,7 +2153,7 @@ df <- read_csv("data/journals.csv")
 
 - Code chunks take options, listed on the same line with the first delimitter, in curly brackets
 
-    - avoid spaces around the equal sign <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">=</span> between option tags and values
+    - avoid spaces around the equal sign <span style="background-color: #ffff88;">=</span> between option tags and values
         - such spaces might lead to errors    
 <br>
     - in the example below, the chunk is labelled as `setup`, and and the `include` option is set to `FALSE`
@@ -2237,6 +2236,7 @@ head(df)
 
 This chunk therefore prints one thing in the output document &mdash; the head of the data frame
 
+
 .out-t[
 
 ```{r, include=TRUE, echo=FALSE}
@@ -2244,6 +2244,7 @@ head(df)
 ```
 
 ]
+
 ---
 ## Code Chunks &mdash; Other Useful Options
 
@@ -2301,7 +2302,7 @@ Prevent messages and/or warnings from being displayed in the output
 ---
 ## Code Chunks &mdash; Other Useful Options
 
-Define the *actual* dimensions of figures, in inches
+Define the .yellow-h[actual] dimensions of figures, in inches
 
 ````md
 `r ''````{r ... `fig.height=6`, `fig.width=9`}
@@ -2311,7 +2312,7 @@ Define the *actual* dimensions of figures, in inches
 
 --
 
-Define the size of figures *in the output document*, with `out.width` and/or `out.height`
+Define the size of figures .yellow-h[in the output document], with `out.width` and/or `out.height`
 
 ````md
 `r ''````{r ... `out.width="50%"`}
@@ -2365,7 +2366,7 @@ Set extra options, such as angle, that output format would accept for figures
 
 It is recommended to use the first code chunk for general setup, where you can
 
-- define *your own defaults* for chunk options, with `knitr::opts_chunk$set()`
+- define .yellow-h[your own defaults] for chunk options, with `knitr::opts_chunk$set()`
     - avoids repeating chunk options    
 <br>
 - load the necessary packages    
@@ -2462,7 +2463,7 @@ df <- df_raw %>%
 ---
 ## Inline Code &mdash; Overview
 
-Code can also be incorporated in text, with the <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>&grave;r &grave;</code></span> syntax
+Code can also be incorporated in text, with the <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>&grave;r &grave;</code></span> syntax
 
 - unline chunks, these do not take options   
 <br>
@@ -2499,9 +2500,9 @@ other than English.
 .out-t[__Only `r nrow(subset(df, english == 0))` journals__ in the dataset are published in a language other than English.]
 
 ---
-class: exercise
+class: action
 
-## Part 6 &mdash; Exercises
+## Exercises
 
 21) Introduce a setup chunk
 - define one or more defaults chunk options, with `knitr::opts_chunk$set()`
@@ -2535,7 +2536,7 @@ class: center, middle
 ---
 ## Figures &mdash; Images &mdash; Markdown Syntax
 
-The syntax <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(figure.extension)</span> embeds images, and/or figures produced elsewhere,<sup>*</sup> into .Rmd documents
+The syntax <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(figure.extension)</span> embeds images, and/or figures produced elsewhere,<sup>*</sup> into .Rmd documents
  
 - similar to the link syntax, only this time it is preceded by an exclamation mark .yellow-h[!]
 - goes outside code chunks, on a new line
@@ -2574,7 +2575,7 @@ Figures are numbered automatically
 knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
 ```
 
-<center>.out-t[Figure 1]: A screenshot of the Google Scholar homepage. </center>
+<center>.yellow-h[Figure 1]: A screenshot of the Google Scholar homepage. </center>
 
 ---
 ## Figures &mdash; Images &mdash; Markdown Syntax
@@ -2666,6 +2667,17 @@ knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
 <center>Figure 1: A screenshot of the Google Scholar homepage.</center> 
 
 ---
+class: action
+
+## Exercises
+
+24) Images
+- see `reproduce_this.pdf`: figure 1 on page 10
+- apply in `journals.Rmd`: figure 1, between paragraphs 19 and 20
+
+`r countdown(minutes = 3, seconds = 00, top = 0)`
+
+---
 ## Figures &mdash; `ggplot2` &mdash; Overview
 
 - A powerful package for visualising data 
@@ -2694,7 +2706,7 @@ ggplot(data = df)
 
 --
 
-2) The mapping aesthetics, or *aes*; most importantly, the variable(s) that we want to plot
+2) The mapping aesthetics, or .yellow-h[aes]; most importantly, the variable(s) that we want to plot
 - specify as an additional argument in the same `ggplot` function
 
 ```{r, eval=FALSE, tidy=FALSE}
@@ -2703,7 +2715,7 @@ ggplot(data = df, `mapping = aes(x = h5_median, y = h5_index, color = subfield)`
 
 --
 
-3) The geometric objects, or *geom*; the visual representations
+3) The geometric objects, or .yellow-h[geom]; the visual representations
 - specify, after a plus sign .yellow-h[+], as an additional function
 
 ```{r, eval=FALSE, tidy=FALSE}
@@ -2901,6 +2913,23 @@ Figure 1. A scatterplot of journal metrics.
     - `geom_bar` for bar charts
     - `geom_boxplot` for box and whiskers plots
 
+---
+class: action
+
+## Exercises
+
+25) Barplot
+- see `reproduce_this.pdf`: figure 2 on page 7
+- apply in `journals.Rmd`: figure 2, between paragraphs 21 and 22
+
+<br>
+
+26) Scatterplot
+- see `reproduce_this.pdf`: figure 3 on page 9
+- apply in `journals.Rmd`: figure 3, between paragraphs 27 and 28
+
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
 
 ---
 
@@ -3075,7 +3104,7 @@ Third cell        Third cell
 
 .pull-right[
 
-<center>.out-t[Table 1]: A hand-made table with R Markdown</center> 
+<center>.yellow-h[Table 1]: A hand-made table with R Markdown</center> 
 <br>
 
 | &nbsp;&nbsp;&nbsp; Centered  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right-Aligned |               
@@ -3177,11 +3206,11 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 6 &mdash; Exercises
+## Exercises
 
-24) Markdown Tables
+27) Markdown Tables
 - see `reproduce_this.pdf`: table 1 on page 4
 - apply in `journals.Rmd`: table 1, between paragraphs 11 and 12
 
@@ -3216,7 +3245,7 @@ class: exercise
   - set the chunk option .inline-c[results="asis"] for chunks with stargazer tables  
 <br>
   - change the argument `type` in the `stargazer()` function for different output formats accordingly   
-  <ul> <li style="margin-top: 7px;">e.g., the default <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span> is for LaTeX and PDF, <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span> for HTML</li> </ul>
+  <ul> <li style="margin-top: 7px;">e.g., the default <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span> is for LaTeX and PDF, <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span> for HTML</li> </ul>
 
 --
 
@@ -3247,10 +3276,10 @@ class: exercise
 - The `data` argument of that function, with two main options
 
     1. a data frame for data or summary statistics tables
-        - e.g., `df`, here coming from <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">df <- read_csv(journals.csv)</span>     
+        - e.g., `df`, here coming from <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">df <- read_csv(journals.csv)</span>     
 <br>
     2. one or more regression models for regression tables
-        - e.g., `lm1`, here coming from <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">lm1 <- lm(h5_index ~ issues, data = df)</span> 
+        - e.g., `lm1`, here coming from <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">lm1 <- lm(h5_index ~ issues, data = df)</span> 
     
 ---
 ## Tables &mdash; `stargazer` &mdash; Data Tables
@@ -3273,7 +3302,7 @@ Notice the options of the chunk and the arguments of the function
 --
 
 - with .inline-c[results="asis"], `knitr` will pass through results without reformatting them 
-    - these results are produced in LaTeX, due to <span style="background-color: #f8f8f8; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span>
+    - these results are produced in LaTeX, due to <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span>
     - they should remain LaTeX because our outcome document is PDF, converted from LaTeX
     
 --
@@ -3459,11 +3488,11 @@ stargazer(data = df, type = "html", summary = TRUE, flip = TRUE,
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 6 &mdash; Exercises
+## Exercises
 
-25) Summary Statistics Tables
+28) Summary Statistics Tables
 - see `reproduce_this.pdf`: table 2 on page 8
 - apply in `journals.Rmd`: table 2, between paragraphs 23 and 24
 
@@ -3713,11 +3742,11 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 6 &mdash; Exercises
+## Exercises
 
-26) Regression Tables
+29) Regression Tables
 - see `reproduce_this.pdf`: table 3 on page 10
 - apply in `journals.Rmd`: table 3, between paragraphs 30 and 31
 
@@ -3749,11 +3778,11 @@ In Model 1, the coefficient for _Issues_ is
 .out-t[In Model 1, the coefficient for _Issues_ is `r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.]
 
 ---
-class: exercise
+class: action
 
-## Part 6 &mdash; Exercises
+## Exercises
 
-27) Referring to Tables
+30) Referring to Tables
 - see `reproduce_this.pdf`: pages 7 and 9
 - apply in `journals.Rmd`: paragraph 23 and 29
 
@@ -3765,7 +3794,7 @@ class: inverse, center, middle
 # Part 7. Addressing Functionality Gaps
 
 ---
-# Functionality Gaps
+## Functionality Gaps
 
 - Not everything is possible to achieve with R Markdown syntax, code chunks, and/or code
     - e.g., centering text
@@ -3786,7 +3815,7 @@ class: inverse, center, middle
     - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
 
 ---
-# Functionality Gaps &mdash; Examples
+## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
@@ -3817,7 +3846,7 @@ ggplot(data = df) +
 
 
 ---
-# Functionality Gaps &mdash; Examples
+## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
@@ -3847,17 +3876,17 @@ See `\autoref{handmade_table}` for further details.
 .out-t[See [Table 1]() for further details.]
 
 ---
-class: exercise
+class: action
 
-## Part 7 &mdash; Exercises
+## Exercises
 
-28) Referring to Figures
+31) Referring to Figures
 - see `reproduce_this.pdf`: pages 6 and 9
 - apply in `journals.Rmd`: paragraphs 19, 21, and 27
 
 <br>
 
-29) Referring to Markdown Tables
+32) Referring to Markdown Tables
 - see `reproduce_this.pdf`: page 4
 - apply in `journals.Rmd`: paragraph 11
 
@@ -3865,7 +3894,7 @@ class: exercise
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
-# Functionality Gaps &mdash; Examples
+## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
@@ -3885,7 +3914,7 @@ Define where exactly the list of references should appear with the HMTL code .in
 ```
 
 ---
-# Functionality Gaps &mdash; Examples
+## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
@@ -3906,16 +3935,16 @@ header-includes:
 ```
 
 .footnote[
-[*] This can be reversed for specific sections in text, with `singlespacing` placed before and `doublespacing` after a section.
+[*] This can be reversed anywhere in text, with the `singlespacing` command.
 
 ]
 
 ---
-class: exercise
+class: action
 
-## Part 7 &mdash; Exercises
+## Exercises
 
-30) Line Spacing
+33) Line Spacing
 - introduce 1.5 spacing to the manuscript
     - hint: the command is called `onehalfspacing`    
 <br>
@@ -3924,7 +3953,7 @@ class: exercise
 `r countdown(minutes = 2, seconds = 00, top = 0)`
 
 ---
-# Functionality Gaps &mdash; Examples
+## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
@@ -3952,34 +3981,43 @@ class: inverse, center, middle
 ---
 ## Version Control
 
-- Academic papers have many versions before publication   
-<br>
-    - typically written over a long period of time, in numerous sittings, and often by multiple authors
-    - at the end of every sitting by each co-author, esentially a different version of the same manuscript is created
+- Research papers have many versions before publication
 
---
+    - typically written over a long period of time, in numerous sittings
+    - at the end of every sitting, esentially a different version of the same manuscript is created<sup>*</sup>
 
-- With many versions created over time on different computers by different co-authors, there emerges at least three challenges
-   1. keeping track of changes and versions
-   2. communicating these changes and versions between/among co-authors
-   3. merging the changes and versions
+.footnote[
+
+[*] They also often written by multiple authors, increasing the number of versions created. Here I assume projects are single-authored, leaving the topic of collaboration to the next section &mdash; Part 9.
+
+]
+
+---
+## Version Control
+
+- Research papers have many versions before publication
+
+    - typically written over a long period of time, in numerous sittings
+    - at the end of every sitting, esentially a different version of the same manuscript is created
+    
+
+- With many versions created over time, possibly on different computers, there emerges at least two challenges
+
+   - keeping track of changes and versions
+   - communicating these changes between computers
 
 --
 
 - We all version control, in different ways, such as
-   1. edit, rename, save
-      - for collaboration, save in a shared folder or attach to an email message
-   2. use applications or websites such as `Dropbox`, `Google Docs`, `Overleaf`
-   3. use distributed version control systems such as `Git` and `GitHub`
+
+   - edit, rename, save
+   - use applications or websites such as Dropbox, Google Docs, Overleaf
+   - use distributed version control systems such as Git and GitHub
 
 ---
 ## Version Control &mdash; Manual Attempts
 
-Typically, hand-made attemps to version control lead to uncontrollable folders
-
-.pull-left[
-
-Single-authored projects
+Typically, hand-made attemps to version control lead to cluttered folders
 
 ```{r eval=FALSE}
 manuscript
@@ -3995,31 +4033,6 @@ manuscript
    |- apa_7th.csl
    
 ```
-]
-
-
-.pull-right[
-
-Co-authored projects
-
-```{r eval=FALSE}
-manuscript
-   |
-   |- journals_FINAL_19MAY`_RU`.Rmd
-   |- journals_FINAL`_EK`.Rmd
-   |- journals_FINAL`_RU`.Rmd
-   |- journals_FINAL.Rmd
-   |- journals_29APRIL_newlit`_EK`.Rmd
-   |- journals_26APRIL_newlit.Rmd
-   
-   ...
-   
-   |- journals.Rproj
-   |- references.bib
-   |- apa_7th.csl
-
-```
-]
 
 ---
 ## Version Control &mdash; Git and GitHub &mdash; Definitions
@@ -4053,39 +4066,33 @@ manuscript
 - To push
     - to move the records from Git to GitHub, from your computer to online
     - it is like uploading (the new versions of) your files to a website, 
-    - it also involves mergeing, if this not the first push
+    - it also involves merging, if this not the first push
 
 --
 
 - To pull
-    - to move the updated records (e.g., by your co-authors) from GitHub to your computer
+    - to move the updated records from GitHub to your computer
     - it is like downloading a zipped folder of files, and merging with the ones on your computer
-
---
-
-- To clone
-    - to move a repository from GitHub to your computer for first time
-    - it is like downloading a zipped folder, which you do not have on your computer yet
 
 ---
 ## Version Control &mdash; Git and GitHub
 
 Version control with Git and GitHub requires
 
-1. *initial setup*, done once<sup>*</sup>
+1. .yellow-h[initial setup], done once<sup>*</sup>
     - unless for a new computer or, if ever, a new GitHub account
     - a bit technical, but worth the hussle
     
-2. *project setup*, repeated for every paper
+2. .yellow-h[project setup], repeated for every paper
     - shorter, less complicated
 
 .footnote[
 
-[*] We have _started_ this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub.
+[*] We have started this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub.
 
 ]
 ---
-class: follow-along
+class: action
 
 ## Version Control &mdash; Git &mdash; Inital Setup
 
@@ -4097,11 +4104,15 @@ class: follow-along
 
 - RStudio will likely find Git automatically. In case it cannot, Git is likely to be at
 
-> `c:/Program Files/Git/bin/git.exe`
+    - `c:/Program Files/Git/bin/git.exe` on Windows
 
-> `/usr/local/git/bin/git`
+    - `/usr/local/git/bin/git` on Mac
 
-<br>
+---
+class: action
+
+## Version Control &mdash; Git &mdash; Inital Setup
+
 
 2) Set Git Bash as your shell (Windows-only step)
 
@@ -4110,7 +4121,7 @@ class: follow-along
 > `Tools -> Global Options -> Terminal -> New terminals open with: Git Bash`
 
 ---
-class: follow-along
+class: action
 
 ## Version Control &mdash; Git &mdash; Inital Setup
 
@@ -4130,7 +4141,7 @@ git config --global --list
 ```
 
 ---
-class: follow-along
+class: action
 
 ## Version Control &mdash; Git and Github &mdash; Project Setup
 
@@ -4138,11 +4149,11 @@ class: follow-along
 
 - from the RStudio menu, follow:
 
-> `Tools -> Version Control -> Project Setup... -> Version Control System (Git)`
+> `Tools -> Version Control -> Project Setup... -> Version Control System -> Git`
 
 
 ---
-class: follow-along
+class: action
 
 ## Version Control &mdash; Git and Github &mdash; Project Setup
 
@@ -4152,15 +4163,16 @@ class: follow-along
 
 > `Repositories -> New -> Repository name (e.g., "rwd_workshop") -> Public -> Create repository`
 
-- observe that:
+- observe that
 
     - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
     
         - this is the address to view the repository online
-        - the address gets `.git` added to the end, (https://github.com/USER_NAME/REPOSITORY_NAME.git), for use in the `Terminal`
+        - for use in the `Terminal`, the address gets the `.git` extension
+            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
 
 ---
-class: exercise
+class: action
 
 ## Version Control &mdash; Git and Github &mdash; Project Setup
 
@@ -4178,13 +4190,13 @@ git push -u origin master
 
 ```
 
-- observe that:
+- observe that
    - now there is now a Git tab in RStudio, documenting the differences between you local repository and the one on GitHub. When you change a file, it will appear here.
-   - your files now include a `.gitignore` file, where you can list files to be excluded from being tracked
-
+   - your files now include a `.gitignore` file, 
+       - this is where you can list files and/or folders to be excluded from being tracked
 
 ---
-class: follow-along
+class: action
 
 ## Version Control &mdash; Git and Github &mdash; Workflow
 
@@ -4195,7 +4207,9 @@ class: follow-along
 <br>
 
 2) Commit and Push
-- under the Git tab on RStudio, find the list of files edited (`Status = M`; modified) since the last push
+- under the Git tab on RStudio, find the list of files edited
+    - these will have `M`, for modified, as `Status`    
+<br>
 - tick `Staged`<sup>*</sup>  for one or more files that you would like to commit
    - enter a `Commit message` that summarises the edits
    - click `Commit` to create a record of the new version locally to your computer
@@ -4206,70 +4220,150 @@ class: follow-along
 ]
 
 ---
-class: exercise
+## Version Control &mdash; Git and Github &mdash; `.gitignore`
 
-## Part 7 &mdash; Exercises
+- `.gitignore` specifies which file(s) and/or folder(s) should be excluded from version control
 
-30) Reproducibility and Version Control
-- imagine that, after producing all these tables and figures, and writing up your results, you have decided to exclude *Oceania* from analysis
+    - a set of files and directories are ignored by default &mdash; see your `.gitignore` file
+
+--
+
+- There might be good reasons to ignore some files, including files
+
+    - that contain information that we do not want others to see
+        - e.g., personal API keys    
+<br>
+    - that we do not have the right to share with others
+        - e.g., secondary data with user agreements otherwise    
+<br>
+    - that we (re-)create automatically as outputs
+        - e.g., `journals.pdf`, as opposed to journals.Rmd
+        
+--
+
+- See the documentation at <https://git-scm.com/docs/gitignore> for further details
+
+---
+## Version Control &mdash; Git and Github &mdash; `.gitignore`
+
+Ignore a specific file in a specific folder, relative to the root directory
+
+.inline-c[
+/manuscript/journals.pdf
+]
+
+--
+
+Ignore a specific file in any folder
+
+.inline-c[
+
+journals.pdf
+
+]
+
+--
+
+Ignore all files with a spefic extension
+
+.inline-c[
+
+*.pdf
+
+]
+
+
+--
+
+Ignore a specific folder
+
+.inline-c[
+
+/literature/
+
+]
+
+---
+## Version Control &mdash; Git and Github &mdash; `.gitignore` &mdash; Notes
+
+- There are many other pattern formats
+    - see the documentation at <https://git-scm.com/docs/gitignore>
+
+--
+
+- Starting to ignore a file or folder that is already being tracked requires clearing the cache
+
+    - after changing and saving `.gitignore`, enter the following line in the `Terminal`
+    - with your speficic `/path/to/file`
+
+```yaml
+git rm --cached /path/to/file
+
+```
+--
+
+- Following command clears all cache
+    - might be useful after chnages to `.gitignore` that involves several files or folders
+    - but should be used with care, on an otherwise up-to-date repository  
+    
+```yaml
+git rm -r --cached .
+
+```
+
+---
+class: action
+
+## Exercises
+
+34) Reproducibility and Version Control
+- imagine that, after producing all these tables and figures, and writing up your results, you have decided to exclude journals from Oceania from analysis
    - hint: use the `filter` function in the data chunk  
 <br>
-   - create a new version, and push it to GitHub
+   - create a new version of the manuscript
+   - comit and push to GitHub
+   
+35) Gitignore
+- stop tracking `journals.pdf`
+    - change `.gitignore`
+    - remove `journals.pdf` from cache
+    - comit and push to GitHub
+
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
 class: inverse, center, middle
 
-# Part 9. Collaborating with Others
+# Part 9. Working on a Real Project
 
 ---
-## Colloboration &mdash; Git and Github &mdash; Workflow
+## Real Project
 
-#### 1. Create a new RStudio project
-- From the Rstudio menu, follow
+- Consider converting a real project to R Markdown
+    - now, in the remainder of the workshop
 
-> `File -> New Project -> Version Control -> Git`
+<br>
 
-- Enter `Repository URL`<sup>*</sup>, give your local project folder a name, and save it to a desired location.
+- Choose an existing project, preferably
+    - single--authored
+    - at an early stage
+    - but one that you will be working on in the very near future
 
-> `Open in a new session -> Create Project`
+<br>
 
-
-#### 2. Edit, save, commit, and push as before
-- In a collaborative project, it is recommended to push frequently to avoid merge conflicts
-
-
-.footnote[
-[*] Notice that this is the URL and not the .git version. If the collaborator's repository is private, they will have to invite you with administrative privilages first.
-]
-
----
-## Colloboration &mdash; Git and Github &mdash; Workflow
-
-#### 3. Pull frequently
-- Colloborative projects require pulling as well as pushing because your colloborator(s) might have pushed their commits to GitHub
-- Pulling and pushing frequently minimises the risk of merge conflicts
-
----
-
-## Colloboration &mdash; Git and Github &mdash; Merge Conflicts
-
-- Changes are tracked line by line.
-- If colloborators work on the same document, but edits different lines, Git merges the versions from different colloborators without problems.
-- Conflicts occur when colloborators edit the same line in the same document.
-   - This requires human intervention, to decide which edit to keep and which to discharge.
-- Pulling and pushing frequently minimises the risk that colloborators will be editing the same line.
-
----
-class: inverse, center, middle
-
-# Part 10. Working on a Real Project
+- Ask me for help
+    - with no more slides to go through, I will now focus on individual coaching
 
 ---
 class: middle, center
 
 ## Thank You!
+
+---
+class: inverse, center, middle
+
+# References
 
 ---
 ## References
