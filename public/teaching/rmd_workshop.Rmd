@@ -278,9 +278,11 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 **Part 8. Using Version Control**
    - e.g., integrating Git and GitHub
 
-**Part 9. Working on a Real Project**
-   - e.g., converting a work-in-progress of yours
+**Part 9. Collaborating with Others**
+   - e.g., working simultaneously with co-authors
 
+**Part 10. Working on a Real Project**
+   - e.g., converting a work-in-progress of yours
 ]
 
 ---
@@ -340,8 +342,8 @@ Slides with this background colour indicate that your action is required, for
 
 - To encourage you to convert into R Markdown 
 
-  - practice with a mock manuscript (Parts 3&ndash;8)
-  - start converting a real one (Part 9)
+  - practice with a mock manuscript (Parts 3&ndash;9)
+  - start converting a real one (Part 10)
     
 ---
 class: inverse, center, middle
@@ -4335,7 +4337,17 @@ class: action
 ---
 class: inverse, center, middle
 
-# Part 9. Working on a Real Project
+# Part 9. Collaborating with Others
+
+---
+class: center, middle
+
+# *This part of the workshop is currently under construction.*
+
+---
+class: inverse, center, middle
+
+# Part 10. Working on a Real Project
 
 ---
 ## Real Project
@@ -4346,7 +4358,7 @@ class: inverse, center, middle
 <br>
 
 - Choose an existing project, preferably
-    - single--authored
+    - single&ndash;authored
     - at an early stage
     - but one that you will be working on in the very near future
 
