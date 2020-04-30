@@ -17,4 +17,4 @@ Since then I have revised the workshop material, which you can find at [GitHub](
 
 I would be happy if other instructors used my material for teaching. I would also be happy to deliver this workshop again at different institutions --- or online during the lockdown. Would you be interested? Let me know.
 
-My next workshop is again at Campus Luzern, this time on creating academic websites with Blogdown. I look forward to it.
+My next workshop is again at Campus Luzern, this time on creating academic websites with `blogdown`. I look forward to it.
