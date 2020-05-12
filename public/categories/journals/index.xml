@@ -16,9 +16,9 @@
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/blog/polisci-google-scholar/</guid>
-      <description>Here is a list of all political science journals in the Social Science Citations Index (SSCI),1 ranked according to their h5-index on Google Scholar.
-Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals. I was wondering how the list looked below this number.
-To see that, I have scraped Google Scholar for the journals in SSCI, with the rvest package in R.</description>
+      <description>This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at https://resulumit.shinyapps.io/psjournals.
+Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar.
+Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals. I was wondering how the list looked below this number.</description>
     </item>
     
     <item>

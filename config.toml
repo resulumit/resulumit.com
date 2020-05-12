@@ -50,12 +50,12 @@ link = "https://twitter.com/ResulUmit"
 text = "@ResulUmit"
 site = "Twitter"
 
-#[[params.social]]
-#  icon = "github"
-#  icon_pack = "fa"
-#  link = "//https://gist.github.com/Ayrx/5884802"
-#  text = "Fermat"
-#  site = "GitHub"
+[[params.social]]
+icon = "github"
+icon_pack = "fa"
+link = "https://github.com/resulumit"
+text = "resulumit"
+site = "GitHub"
 
 [[params.social]]
 icon = "google-scholar"

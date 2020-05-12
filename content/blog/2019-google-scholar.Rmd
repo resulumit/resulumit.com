@@ -9,7 +9,9 @@ categories:
         - rstats
 ---
 
-Here is a list of all political science journals in the Social Science Citations Index (SSCI),^[As found on <a href='https://ooir.org/journals.php?category=polisci&list=ps'target='_blank'>this website</a>.] ranked according to their h5-index on Google Scholar. 
+_This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at <a href='https://resulumit.shinyapps.io/psjournals/'target='_blank'>https://resulumit.shinyapps.io/psjournals</a>_.
+
+Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar. 
 
 Google Scholar provides a similar <a href='https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=soc_politicalscience'target='_blank'> list of top journals in political science</a>, but this includes only the top 20 journals. I was wondering how the list looked below this number.
 
@@ -194,3 +196,9 @@ To see that, I have scraped Google Scholar for the journals in SSCI, with <a hre
 | *N/A* | <a href='http://www.revistacienciapolitica.cl/index.php/rcp'target='_blank'>Revista de Ciencia Politica</a> | *N/A* | *N/A* | 139 | 
 | *N/A* | <a href='http://www.sar.org.ro/polsci/'target='_blank'>Romanian Journal of Political Science</a> | *N/A* | *N/A* | 176 | 
 | *N/A* | <a href='https://www.cambridge.org/core/journals/studies-in-american-political-development'target='_blank'>Studies in American Political Development</a> | *N/A* | *N/A* | 122 |
+
+
+
+_____
+
+&#42; As found on <a href='https://ooir.org/journals.php?category=polisci&list=ps'target='_blank'>this website</a>.
