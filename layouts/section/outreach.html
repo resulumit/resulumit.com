@@ -9,7 +9,7 @@
         <div class="row">
           <div class="column small-12 medium-10 medium-offset-1 end large-offset-0 large-8 large-pull-3">
             <h1>Scientific outreach of my research</h1>
-            {{ range (where .Data.Pages "Section" "outreach").GroupByDate "2006" "desc" }}
+            {{ range (where .Site.RegularPages "Section" "outreach").GroupByDate "2006" "desc" }}
             <div class="row">
               <div class="column small-2 medium-2">
                 <h3>{{ .Key }}</h3>

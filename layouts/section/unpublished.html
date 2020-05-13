@@ -11,7 +11,7 @@
       
       </div>
       <h2>Working papers</h2>
-      {{ range (where .Data.Pages "Params.kind" "==" "unpublished").GroupByDate "2006" "desc" }}
+      {{ range (where .Pages "Params.kind" "==" "unpublished").GroupByDate "2006" "desc" }}
       <div class="row">
         <div class="column small-2 medium-2">
           <h3>{{ .Key }}</h3>
@@ -30,7 +30,7 @@
       <div style='padding-bottom: 2rem;'></div>
       
       <h2>Dormant papers</h2>
-      {{ range (where .Data.Pages "Params.kind" "==" "dormant").GroupByDate "2006" "desc" }}
+      {{ range (where .Pages "Params.kind" "==" "dormant").GroupByDate "2006" "desc" }}
       <div class="row">
         <div class="column small-2 medium-2">
           <h3>{{ .Key }}</h3>

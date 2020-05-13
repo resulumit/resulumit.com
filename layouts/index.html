@@ -7,21 +7,21 @@
 {{ $unpublished_count := index .Site.Params "unpublished_count" | default 3 }}
 <div class="row">
   <div class="column small-12 medium-7 large-6">
-    {{ range first $posts_count ((where .Data.Pages.ByDate "Section" "blog").Reverse) }}
+    {{ range first $posts_count ((where .Site.RegularPages.ByDate "Section" "blog").Reverse) }}
     {{ partial "post-summary" . }}
     {{ end }}
   </div>
   <div class="column small-12 medium-5 large-offset-1">
     <h2><a href="/publications/">Latest {{ $pubs_title }}</a></h2>
     <ul class="compact fa-ul">
-      {{ range first $pubs_count (where .Data.Pages.ByDate "Section" "publications").Reverse }}
+      {{ range first $pubs_count (where .Site.RegularPages.ByDate "Section" "publications").Reverse }}
       <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
       {{ end }}
     </ul>
     <div style="padding-top: 5ex;"></div>
     <h2><a href="/unpublished/"> {{ $unpublished_title }}</a></h2>
     <ul class="compact fa-ul">
-    {{ range first $unpublished_count ((where .Data.Pages.ByDate "Section" "unpublished").Reverse) }}
+    {{ range first $unpublished_count ((where .Site.RegularPages.ByDate "Section" "unpublished").Reverse) }}
       <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
     {{ end }}
     </ul>
