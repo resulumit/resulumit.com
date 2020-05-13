@@ -2,7 +2,6 @@
 title: "Teaching experience"
 ---
 
-
 ## Graduate course
 
 * *Research design*

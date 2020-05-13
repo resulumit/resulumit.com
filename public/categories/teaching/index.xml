@@ -1,25 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>teaching on Resul Umit</title>
-    <link>/categories/teaching/</link>
-    <description>Recent content in teaching on Resul Umit</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/teaching/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Writing reproducible research papers with R Markdown</title>
-      <link>/blog/rmd-workshop/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/rmd-workshop/</guid>
-      <description>Click here for the slides, here for all workshop materials.
-My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at Campus Luzern, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
-Since then I have revised the workshop material, which you can find at GitHub. The slides are better viewed here at my website.</description>
-    </item>
-    
-  </channel>
-</rss>
+        <channel>
+        <title>teaching on Resul Umit</title>
+        <link>/categories/teaching/</link>
+        <description>Recent content in teaching on Resul Umit</description>
+        <generator>Hugo -- gohugo.io</generator>
+<lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
+
+<atom:link href="/categories/teaching/index.xml" rel="self" type="application/rss+xml" />
+
+
+<item>
+        <title>Writing reproducible research papers with R Markdown</title>
+        <link>/blog/rmd-workshop/</link>
+        <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+        
+<guid>/blog/rmd-workshop/</guid>
+        <description>
+
+
+&lt;p&gt;&lt;em&gt;Click &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the slides, &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for all workshop materials.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at &lt;a href=&#34;https://www.campus-luzern.ch/&#34;&gt;Campus Luzern&lt;/a&gt;, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.&lt;/p&gt;
+&lt;p&gt;Since then I have revised the workshop material, which you can find at &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. The slides are better viewed &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;here at my website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I would be happy if other instructors used my material for teaching. I would also be happy to deliver this workshop again at different institutions — or online during the lockdown. Would you be interested? Let me know.&lt;/p&gt;
+&lt;p&gt;My next workshop is again at Campus Luzern, this time on creating academic websites with &lt;code&gt;blogdown&lt;/code&gt;. I look forward to it.&lt;/p&gt;
+</description>
+        </item>
+        
+</channel>
+        </rss>

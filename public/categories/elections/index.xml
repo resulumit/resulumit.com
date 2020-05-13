@@ -1,24 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>elections on Resul Umit</title>
-    <link>/categories/elections/</link>
-    <description>Recent content in elections on Resul Umit</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/elections/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Media coverage of presidential candidates in Turkey</title>
-      <link>/blog/media-coverage-candidates/</link>
-      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/media-coverage-candidates/</guid>
-      <description>When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
-Most news media are divided into pro- and anti-Erdogan camps in Turkey.</description>
-    </item>
-    
-  </channel>
-</rss>
+        <channel>
+        <title>elections on Resul Umit</title>
+        <link>/categories/elections/</link>
+        <description>Recent content in elections on Resul Umit</description>
+        <generator>Hugo -- gohugo.io</generator>
+<lastBuildDate>Sun, 05 Aug 2018 00:00:00 +0000</lastBuildDate>
+
+<atom:link href="/categories/elections/index.xml" rel="self" type="application/rss+xml" />
+
+
+<item>
+        <title>Media coverage of presidential candidates in Turkey</title>
+        <link>/blog/media-coverage-candidates/</link>
+        <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+        
+<guid>/blog/media-coverage-candidates/</guid>
+        <description>
+
+
+&lt;p&gt;When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.&lt;/p&gt;
+&lt;p&gt;Most news media are divided into pro- and anti-Erdogan camps in Turkey. The former, larger camp is in the hands of a few conglomerates, who owe some of their wealth to their ability to win government tenders.When one of these conglomerates, Demiroren Holding, bought Dogan Media — ‘&lt;a href=&#34;https://www.economist.com/europe/2018/03/27/turkeys-last-big-independent-media-firm-is-snapped-up-by-a-regime-ally&#34;&gt;Turkey’s last big independent media firm&lt;/a&gt;’ — on 9 April, the question marks over the media freedom in Turkey just got bigger.&lt;/p&gt;
+&lt;p&gt;At the time, many commentators raised concerns about the potential effect of this sale on the media coverage of the campaign for the upcoming 2019 presidential election.&lt;/p&gt;
+&lt;p&gt;Only for Erdogan, a few weeks after the sale, to call for snap elections to be held on 24 June 2018.&lt;/p&gt;
+&lt;p&gt;Have Dogan Media news outlets changed their position towards Erdogan in the short time before the election? To answer this question, I analysed Hurriyet’s tweets&lt;sup&gt;1&lt;/sup&gt; during 50 days&lt;sup&gt;2&lt;/sup&gt; before the 2014 and 2018 presidential elections. The results show that Hurriyet was already biased towards Erdogan in 2014, which increased significantly in 2018.&lt;/p&gt;
+&lt;p&gt;The figures below demonstrates how active Hurriyet was on Twitter during the two campaigns, and how much of this activity was related to the candidates in the campaigns.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/daily%20mean-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;On the left, we see that Hurriyet’s Twitter account was more active in 2018 than in 2014: while it posted on average about 80 tweets a day before the 2014 election, it now tweets about 135 times a day.&lt;/p&gt;
+&lt;p&gt;Despite this 65% increase in its overall activity on Twitter, Hurriyet’s attention to the candidates decreased — both in absolute and therefore in relative numbers. In 2014, 11% of Hurriyet’s messages on Twitter were related to the candidates in the upcoming election.&lt;sup&gt;3&lt;/sup&gt; However, the share of candidate-related tweets decreased to below 6% in 2018.&lt;/p&gt;
+&lt;p&gt;The decrease in Hurriyet’s attention to the candidates becomes all the more surprising if we consider that the 2018 election:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;was more salient due to the change from a parliamentary to a presidential system,&lt;/li&gt;
+&lt;li&gt;was more competitive — unlike the 2014 election, there was less certainty that Erdogan would win, and&lt;/li&gt;
+&lt;li&gt;had more candidates, and the campaign was more lively.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Overall, this suggests that Hurriyet paid relatively less attention to the election in 2018, compared with the previous election in 2014.&lt;/p&gt;
+&lt;p&gt;In a series of figures below, I will analyse how Hurriyet covered Erdogan versus all other candidates in the elections.&lt;/p&gt;
+&lt;p&gt;First, a general look at the share of tweets about the candidates. The figure below plots the share of messages that mention Erdogan and all other candidates anywhere in tweets.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/general-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that Erdogan’s share decreased while the other candidates’ share increased from 2014 to 2018. However, this figure might be misleading because it does not take the substance of the messages into account.&lt;/p&gt;
+&lt;p&gt;Consider, for example, the tweet below, where Hurriyet reports Erdogan’s call for members of parliament to sue Ince, the runner-up in the 2018 election.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;tr&#34; dir=&#34;ltr&#34;&gt;Cumhurbaşkanı Erdoğan&amp;#39;dan vekillere çağrı: Bu İnce&amp;#39;ye dava açın &lt;a href=&#34;https://t.co/j5MvCmafI1&#34;&gt;https://t.co/j5MvCmafI1&lt;/a&gt; &lt;a href=&#34;https://t.co/8xlVwiM5Et&#34;&gt;pic.twitter.com/8xlVwiM5Et&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hürriyet.com.tr| #EvdeKal🏠 (@Hurriyet) &lt;a href=&#34;https://twitter.com/Hurriyet/status/1002906264962260993?ref_src=twsrc%5Etfw&#34;&gt;June 2, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Although both Erdogan and Ince feature in this tweet, its message is clearly about Erdogan, who is the subject in the tweet while Ince is only an object. Differentiating the candidates as subjects or objects in the tweets, the figures below re-plot the data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/subject%20object-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;On the left, we see that the share of candidates as subjects increased for both Erdogan and the other candidates. However, the increase is steeper for Erdogan. This is despite the fact that Erdogan faced only two other candidates in the first election, but five in the second. Still, his share of tweets where is the subject has gone over 50%.&lt;/p&gt;
+&lt;p&gt;On the right, we see a different picture. While the share of tweets where Erdogan is an object decreased dramatically, the opposite is true for the other candidates.&lt;/p&gt;
+&lt;p&gt;These results suggests that Hurriyet gave more weight to Erdogan’s perspective in its campaign coverage of both elections, but this became more obvious in the 2018 election.&lt;/p&gt;
+&lt;p&gt;Finally, a look at the tone. The figure below plots the negative share of tweets about the candidates in two elections.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/negative-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;During the 50 days preceding the 2014 election, about 11% of the tweets that Hurriyet posted included something negative about Erdogan. However, there was only one single negative tweet during the 2018 campaign, and that tweet was a self-ciricitism by Erdogan, where he says he does not deny that FETO — who were allegedly behind the coup attempt in 2016 — gained power during this rule.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;tr&#34; dir=&#34;ltr&#34;&gt;Cumhurbaşkanı Erdoğan: FETÖ&amp;#39;nün bizim zamanımızda büyüdüğü iddiasını ben reddetmem. Bunlar büyük bir ihanet şebekesi içerisindeymiş.&lt;a href=&#34;https://t.co/owNaR2YPqo&#34;&gt;https://t.co/owNaR2YPqo&lt;/a&gt; &lt;a href=&#34;https://t.co/9AmQYHBDso&#34;&gt;pic.twitter.com/9AmQYHBDso&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hürriyet.com.tr| #EvdeKal🏠 (@Hurriyet) &lt;a href=&#34;https://twitter.com/Hurriyet/status/1004837304773603328?ref_src=twsrc%5Etfw&#34;&gt;June 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;In comparison, the negative share of all other candidates has doubled from 2014 to 2018, increasing from about 6% to 12%.&lt;/p&gt;
+&lt;p&gt;To sum up, although many thought Dogan Media outlets were independent of the government, my analysis of Hurriyet’s tweets shows that, its leading newspaper was already biased towards Erdogan during the campaign for the 2014 presidential election. However, during the most recent election under the control of a pro-government conglomerate, Hurriyet’s coverage has gone from bad to worse, and possibly from bias to propaganda.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Analysing tweets are not only resource effective. Social media is also &lt;a href=&#34;http://www.journalism.org/2016/02/04/the-2016-presidential-campaign-a-news-event-thats-hard-to-miss/&#34;&gt;where more and more people follow the news, including the ones on political campaigns&lt;/a&gt;. At the time of writing, &lt;a href=&#34;https://twitter.com/Hurriyet&#34;&gt;Hurriyet&lt;/a&gt; has 4.17 million followers on Twitter.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I look at only 50 days before each election because, the runner-up in the 2018 elections — Muharrem Ince — announced his candidacy 51 days before the election.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I located the candidate-related tweets by searching for the names and surnames of the candidates, and then reading these tweets to see if they were really about the elections.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+</channel>
+        </rss>

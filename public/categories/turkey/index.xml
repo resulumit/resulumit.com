@@ -1,45 +1,306 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Turkey on Resul Umit</title>
-    <link>/categories/turkey/</link>
-    <description>Recent content in Turkey on Resul Umit</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/turkey/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>EU press releases differ from their reports on Turkey</title>
-      <link>/blog/eu-turkey-progress-reports/</link>
-      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/eu-turkey-progress-reports/</guid>
-      <description>The European Commission publishes annual reports on the progress of EU candidate countries, accompanied by short press releases. I find noticeable differences between these reports and releases on Turkey; while the sentiments in the reports have been fairly stable over the years, the press releases often remarkably diverge from the reports.
-The Commission’s latest report on Turkey hit the headlines as the worst EU scorecard so far.
-To see if there is evidence for this claim, I analysed the sentiments in the EU reports on Turkey since 2005—the year the accession negotiations started.</description>
-    </item>
-    
-    <item>
-      <title>Media coverage of presidential candidates in Turkey</title>
-      <link>/blog/media-coverage-candidates/</link>
-      <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/media-coverage-candidates/</guid>
-      <description>When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
-Most news media are divided into pro- and anti-Erdogan camps in Turkey.</description>
-    </item>
-    
-    <item>
-      <title>Istanbul puts the money where AKP voters are</title>
-      <link>/blog/public-investments-in-istanbul/</link>
-      <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/public-investments-in-istanbul/</guid>
-      <description>Mayor of Istanbul suggested that he would invest more in the districts where AKP voters live. I analysed his investment plan for 2018, and found strong evidence that he means it: the districts governed by AKP receive on average around 250 million ₺ more from the city. Statistical tests point to a partisan motivation behind this difference in public investment.
-Last week, Mayor Mevlut Uysal suggested that his administration prioritises serving the voters of Erdogan’s party (AKP), stating that the new metro lines will go to the districts where their voters live.</description>
-    </item>
-    
-  </channel>
-</rss>
+        <channel>
+        <title>Turkey on Resul Umit</title>
+        <link>/categories/turkey/</link>
+        <description>Recent content in Turkey on Resul Umit</description>
+        <generator>Hugo -- gohugo.io</generator>
+<lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+
+<atom:link href="/categories/turkey/index.xml" rel="self" type="application/rss+xml" />
+
+
+<item>
+        <title>EU press releases differ from their reports on Turkey</title>
+        <link>/blog/eu-turkey-progress-reports/</link>
+        <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+        
+<guid>/blog/eu-turkey-progress-reports/</guid>
+        <description>
+
+
+&lt;p&gt;The European Commission publishes annual reports on the progress of EU candidate countries, accompanied by short press releases. I find noticeable differences between these reports and releases on Turkey; while the sentiments in the reports have been fairly stable over the years, the press releases often remarkably diverge from the reports.&lt;/p&gt;
+&lt;p&gt;The Commission’s &lt;a href=&#34;https://ec.europa.eu/neighbourhood-enlargement/sites/near/files/20180417-turkey-report.pdf&#34;&gt;latest report on Turkey&lt;/a&gt; hit the headlines as the &lt;a href=&#34;https://uk.reuters.com/article/uk-eu-turkey/turkey-to-get-worst-eu-scorecard-so-far-officials-say-idUKKBN1HL11Z&#34;&gt;worst EU scorecard so far&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To see if there is evidence for this claim, I analysed the sentiments in the EU reports on Turkey since 2005—the year the accession negotiations started. These reports are available from the EU websites, except for 2017 when the Commission did not publish one.&lt;/p&gt;
+&lt;p&gt;To quantify the negative sentiment in the reports, I use the &lt;a href=&#34;http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm&#34;&gt;NRC Word-Emotion Association Lexicon&lt;/a&gt;, which can match words in a text with two sentiments (negative and positive) and eight emotions (anger, anticipation, disgust, fear, joy, sadness, surprise, trust).&lt;/p&gt;
+&lt;p&gt;The figure below plots the share of words associated with negative sentiment in the EU reports on Turkey. It shows that, indeed, the 2018 report was clearly more negative than most of the previous reports. To be precise, excluding the stop words, 7.1% of the report was negative. This is only slightly behind the 2016 report, where the negativity share was 7.2%.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-progress-reports_files/figure-html/negative-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I think it is safe to say that these reports have very limited readership. They are not only technical, but also lengthy documents. For example. the 2018 report on Turkey is 111-page long, and the average length is about 102 pages.&lt;/p&gt;
+&lt;p&gt;This is perhaps one of the reasons why the Commission publishes press releases together with reports. These releases are much shorter; for example the [latest press release]&lt;a href=&#34;http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf&#34; class=&#34;uri&#34;&gt;http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf&lt;/a&gt; on Turkey has only five pages. On average, they are about 3.5 pages long.&lt;sup&gt;1&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Considering that press releases are more widely-read than the reports (especially by the journalists, from whom most people would learn about the reports), I wanted to compare the two types with regards to the sentiments and emotions that they reveal.&lt;/p&gt;
+&lt;p&gt;The figure below plots the results.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-progress-reports_files/figure-html/comparison-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that the reports have been relatively stable over the years in almost all sentiments or emotions. This is especially true for the negative half—the categories in the bottom row. In comparison, the press releases have been ‘all over the place’.&lt;/p&gt;
+&lt;p&gt;In the upper, positive row of categories, the lines representing the releases are generally over the line for reports. In the bottom row of negative categories, the opposite is the case: the releases were below the reports until very recently.&lt;/p&gt;
+&lt;p&gt;Overall, this suggests that EU press releases have for a long time been more positive and less negative than the reports on which they were based.&lt;/p&gt;
+&lt;p&gt;This overall trend seems to have changed since 2015, at least in the negative categories. This is when the releases have become more negative than the reports themselves.&lt;/p&gt;
+&lt;p&gt;There are possibly many explanations for the difference between the reports and press releases and for the recent change in the general trend.&lt;/p&gt;
+&lt;p&gt;One such explanations could be that press releases are rather ‘political’ documents, where the Commission frames the relationship with the candidate countries somewhat independently from the bureaucratic details in the reports.&lt;/p&gt;
+&lt;p&gt;In the case of Turkey, it seems that the Commission has been brushing the negatives under the carpet and overemphasising the positives until recently, which seems to have changed with the latest press release.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;I could not find the press releases for the years 2005 and 2006 online. Therefore, my analysis of the releases are based on the data from 2007 to 2018.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+<item>
+        <title>Media coverage of presidential candidates in Turkey</title>
+        <link>/blog/media-coverage-candidates/</link>
+        <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
+        
+<guid>/blog/media-coverage-candidates/</guid>
+        <description>
+
+
+&lt;p&gt;When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.&lt;/p&gt;
+&lt;p&gt;Most news media are divided into pro- and anti-Erdogan camps in Turkey. The former, larger camp is in the hands of a few conglomerates, who owe some of their wealth to their ability to win government tenders.When one of these conglomerates, Demiroren Holding, bought Dogan Media — ‘&lt;a href=&#34;https://www.economist.com/europe/2018/03/27/turkeys-last-big-independent-media-firm-is-snapped-up-by-a-regime-ally&#34;&gt;Turkey’s last big independent media firm&lt;/a&gt;’ — on 9 April, the question marks over the media freedom in Turkey just got bigger.&lt;/p&gt;
+&lt;p&gt;At the time, many commentators raised concerns about the potential effect of this sale on the media coverage of the campaign for the upcoming 2019 presidential election.&lt;/p&gt;
+&lt;p&gt;Only for Erdogan, a few weeks after the sale, to call for snap elections to be held on 24 June 2018.&lt;/p&gt;
+&lt;p&gt;Have Dogan Media news outlets changed their position towards Erdogan in the short time before the election? To answer this question, I analysed Hurriyet’s tweets&lt;sup&gt;1&lt;/sup&gt; during 50 days&lt;sup&gt;2&lt;/sup&gt; before the 2014 and 2018 presidential elections. The results show that Hurriyet was already biased towards Erdogan in 2014, which increased significantly in 2018.&lt;/p&gt;
+&lt;p&gt;The figures below demonstrates how active Hurriyet was on Twitter during the two campaigns, and how much of this activity was related to the candidates in the campaigns.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/daily%20mean-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;On the left, we see that Hurriyet’s Twitter account was more active in 2018 than in 2014: while it posted on average about 80 tweets a day before the 2014 election, it now tweets about 135 times a day.&lt;/p&gt;
+&lt;p&gt;Despite this 65% increase in its overall activity on Twitter, Hurriyet’s attention to the candidates decreased — both in absolute and therefore in relative numbers. In 2014, 11% of Hurriyet’s messages on Twitter were related to the candidates in the upcoming election.&lt;sup&gt;3&lt;/sup&gt; However, the share of candidate-related tweets decreased to below 6% in 2018.&lt;/p&gt;
+&lt;p&gt;The decrease in Hurriyet’s attention to the candidates becomes all the more surprising if we consider that the 2018 election:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;was more salient due to the change from a parliamentary to a presidential system,&lt;/li&gt;
+&lt;li&gt;was more competitive — unlike the 2014 election, there was less certainty that Erdogan would win, and&lt;/li&gt;
+&lt;li&gt;had more candidates, and the campaign was more lively.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Overall, this suggests that Hurriyet paid relatively less attention to the election in 2018, compared with the previous election in 2014.&lt;/p&gt;
+&lt;p&gt;In a series of figures below, I will analyse how Hurriyet covered Erdogan versus all other candidates in the elections.&lt;/p&gt;
+&lt;p&gt;First, a general look at the share of tweets about the candidates. The figure below plots the share of messages that mention Erdogan and all other candidates anywhere in tweets.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/general-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that Erdogan’s share decreased while the other candidates’ share increased from 2014 to 2018. However, this figure might be misleading because it does not take the substance of the messages into account.&lt;/p&gt;
+&lt;p&gt;Consider, for example, the tweet below, where Hurriyet reports Erdogan’s call for members of parliament to sue Ince, the runner-up in the 2018 election.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;tr&#34; dir=&#34;ltr&#34;&gt;Cumhurbaşkanı Erdoğan&amp;#39;dan vekillere çağrı: Bu İnce&amp;#39;ye dava açın &lt;a href=&#34;https://t.co/j5MvCmafI1&#34;&gt;https://t.co/j5MvCmafI1&lt;/a&gt; &lt;a href=&#34;https://t.co/8xlVwiM5Et&#34;&gt;pic.twitter.com/8xlVwiM5Et&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hürriyet.com.tr| #EvdeKal🏠 (@Hurriyet) &lt;a href=&#34;https://twitter.com/Hurriyet/status/1002906264962260993?ref_src=twsrc%5Etfw&#34;&gt;June 2, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Although both Erdogan and Ince feature in this tweet, its message is clearly about Erdogan, who is the subject in the tweet while Ince is only an object. Differentiating the candidates as subjects or objects in the tweets, the figures below re-plot the data.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/subject%20object-1.png&#34; width=&#34;1152&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;On the left, we see that the share of candidates as subjects increased for both Erdogan and the other candidates. However, the increase is steeper for Erdogan. This is despite the fact that Erdogan faced only two other candidates in the first election, but five in the second. Still, his share of tweets where is the subject has gone over 50%.&lt;/p&gt;
+&lt;p&gt;On the right, we see a different picture. While the share of tweets where Erdogan is an object decreased dramatically, the opposite is true for the other candidates.&lt;/p&gt;
+&lt;p&gt;These results suggests that Hurriyet gave more weight to Erdogan’s perspective in its campaign coverage of both elections, but this became more obvious in the 2018 election.&lt;/p&gt;
+&lt;p&gt;Finally, a look at the tone. The figure below plots the negative share of tweets about the candidates in two elections.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-hurriyet_files/figure-html/negative-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;During the 50 days preceding the 2014 election, about 11% of the tweets that Hurriyet posted included something negative about Erdogan. However, there was only one single negative tweet during the 2018 campaign, and that tweet was a self-ciricitism by Erdogan, where he says he does not deny that FETO — who were allegedly behind the coup attempt in 2016 — gained power during this rule.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;tr&#34; dir=&#34;ltr&#34;&gt;Cumhurbaşkanı Erdoğan: FETÖ&amp;#39;nün bizim zamanımızda büyüdüğü iddiasını ben reddetmem. Bunlar büyük bir ihanet şebekesi içerisindeymiş.&lt;a href=&#34;https://t.co/owNaR2YPqo&#34;&gt;https://t.co/owNaR2YPqo&lt;/a&gt; &lt;a href=&#34;https://t.co/9AmQYHBDso&#34;&gt;pic.twitter.com/9AmQYHBDso&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hürriyet.com.tr| #EvdeKal🏠 (@Hurriyet) &lt;a href=&#34;https://twitter.com/Hurriyet/status/1004837304773603328?ref_src=twsrc%5Etfw&#34;&gt;June 7, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;In comparison, the negative share of all other candidates has doubled from 2014 to 2018, increasing from about 6% to 12%.&lt;/p&gt;
+&lt;p&gt;To sum up, although many thought Dogan Media outlets were independent of the government, my analysis of Hurriyet’s tweets shows that, its leading newspaper was already biased towards Erdogan during the campaign for the 2014 presidential election. However, during the most recent election under the control of a pro-government conglomerate, Hurriyet’s coverage has gone from bad to worse, and possibly from bias to propaganda.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Analysing tweets are not only resource effective. Social media is also &lt;a href=&#34;http://www.journalism.org/2016/02/04/the-2016-presidential-campaign-a-news-event-thats-hard-to-miss/&#34;&gt;where more and more people follow the news, including the ones on political campaigns&lt;/a&gt;. At the time of writing, &lt;a href=&#34;https://twitter.com/Hurriyet&#34;&gt;Hurriyet&lt;/a&gt; has 4.17 million followers on Twitter.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I look at only 50 days before each election because, the runner-up in the 2018 elections — Muharrem Ince — announced his candidacy 51 days before the election.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;I located the candidate-related tweets by searching for the names and surnames of the candidates, and then reading these tweets to see if they were really about the elections.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+<item>
+        <title>Istanbul puts the money where AKP voters are</title>
+        <link>/blog/public-investments-in-istanbul/</link>
+        <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
+        
+<guid>/blog/public-investments-in-istanbul/</guid>
+        <description>
+
+
+&lt;p&gt;Mayor of Istanbul suggested that he would invest more in the districts where AKP voters live. I analysed his investment plan for 2018, and found strong evidence that he means it: the districts governed by AKP receive on average around 250 million ₺ more from the city. Statistical tests point to a partisan motivation behind this difference in public investment.&lt;/p&gt;
+&lt;p&gt;Last week, Mayor Mevlut Uysal suggested that his administration prioritises serving the voters of Erdogan’s party (AKP), stating that the new metro lines will go to the districts where their voters live.&lt;/p&gt;
+&lt;p&gt;Uysal’s statement is highly controversial—even for the supporters of his own party—and many argue that &lt;a href=&#34;http://www.haberturk.com/yazarlar/sevilay-yilman-2383/1881495-oy-verene-hizmet-var-vermeyene-yok-ne-demek-allah-askiniza&#34;&gt;this is not an AKP policy&lt;/a&gt;. As a political scientist, I am curious to see what the statistics say.&lt;/p&gt;
+&lt;p&gt;This is why I have analysed &lt;a href=&#34;https://www.ibb.istanbul/Uploads/2017/12/istanbul-Buyuksehir-Belediyesi-Performans-Esasli-Yatirim-Ve-Hizmet-Programi-2018.pdf&#34;&gt;the investment plan&lt;/a&gt; of the AKP’s Istanbul Metropolitan Municipality (IMM) for 2018, and found evidence that Mayor Uysal was probably right: Istanbul’s money seems to go where AKP voters are. In addition—as another signal that the public funds are used strategically for party political purposes—his administration invests more in the districts that AKP marginally won in 2014.&lt;/p&gt;
+&lt;p&gt;The plan lists 555 projects, with information on how much money will be invested in which districts. Some projects cover more than one district, and I calculated their share by simply dividing the total investment equally between them. I have ignored projects that lists the whole city, or the whole European or Asian sides as the target area, to cut the noise out.&lt;/p&gt;
+&lt;p&gt;Let’s have a look at how the investment is distributed among the 39 district municipalities in Istanbul, 25 of which governed by AKP and the remaining 14 by the main opposition, Republican People’s Party (CHP).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/barplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are big differences among the district municipalities with regard to how much IMM invests in their territory. We should note that, while CHP has 36% of the districts, none of the top 5 most-invested districts are governed by the opposition party. In fact, we see only 4 CHP districts within the top 20.&lt;/p&gt;
+&lt;p&gt;Here I am interested in understanding whether how people vote explains these differences, and—if so—how much of the difference it accounts for.&lt;/p&gt;
+&lt;p&gt;There is probably very many reasons behind these differences, and not all would be party political. Once could think of economic reasons, for example, and if poorer districts tend to vote for AKP and the IMM tends to invest more in these poorer districts, then it would be misleading to suggest that the IMM prioritises to serve the voters of Erdogan’s party.&lt;/p&gt;
+&lt;p&gt;One way around the unobserved factors is to find a variable that would be a necessary and sufficient condition for party political decisions, but one that has nothing to distinguish the districts in any other way.&lt;/p&gt;
+&lt;p&gt;Winning vote margin is one such variable, often used in similar studies in political science. Here if we take the AKP margin of victory as a threshold, those districts immediately above have an AKP municipality and those immediately below have a CHP one. This allows us to go a step closer to detect if there are cause and effect relationships.&lt;/p&gt;
+&lt;p&gt;Let me explain with an example. In 2014, AKP won the Kucukcekmece district with a 2.3% cushion while it lost Kartal with a similar margin, 2.1% of the valid votes cast. We can assume that these two districts are similar in many ways, except that the former has an AKP administration while CHP governs the latter. If there is indeed only one difference between such districts on each side of the threshold, the differences that we see in their investment must be due to that difference. Let’s add this factor to our analysis.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/loess-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There is a clear difference between the districts that AKP the AKP lost and won with small margins, and we would normally not expect to see this unless IMM treats AKP and CHP districts differently.&lt;/p&gt;
+&lt;p&gt;I will use two statistical tests to investigate these differences further.&lt;/p&gt;
+&lt;p&gt;First, we can see if there is a significant correlation between these electoral results and the investment in a linear regression. The table below report results from two models, with and without covariates. Specifically, the second model controls for the size of the districts, in terms of both the number of voters and the geographical area that they cover.&lt;/p&gt;
+&lt;table style=&#34;text-align:center&#34;&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+&lt;em&gt;Dependent variable:&lt;/em&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34;&gt;
+Investment
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;/td&gt;
+&lt;td&gt;
+(1)
+&lt;/td&gt;
+&lt;td&gt;
+(2)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+AKP Municipality
+&lt;/td&gt;
+&lt;td&gt;
+270.001&lt;sup&gt;**&lt;/sup&gt; (84.421)
+&lt;/td&gt;
+&lt;td&gt;
+247.092&lt;sup&gt;**&lt;/sup&gt; (85.503)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+AKP Majority
+&lt;/td&gt;
+&lt;td&gt;
+-4.126&lt;sup&gt;*&lt;/sup&gt; (1.714)
+&lt;/td&gt;
+&lt;td&gt;
+-4.242&lt;sup&gt;*&lt;/sup&gt; (1.715)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Electorate
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.0003 (0.0002)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Area
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.021 (0.117)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Constant
+&lt;/td&gt;
+&lt;td&gt;
+18.368 (53.946)
+&lt;/td&gt;
+&lt;td&gt;
+-63.077 (85.196)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Observations
+&lt;/td&gt;
+&lt;td&gt;
+39
+&lt;/td&gt;
+&lt;td&gt;
+39
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.221
+&lt;/td&gt;
+&lt;td&gt;
+0.279
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Adjusted R&lt;sup&gt;2&lt;/sup&gt;
+&lt;/td&gt;
+&lt;td&gt;
+0.178
+&lt;/td&gt;
+&lt;td&gt;
+0.194
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+Residual Std. Error
+&lt;/td&gt;
+&lt;td&gt;
+161.103 (df = 36)
+&lt;/td&gt;
+&lt;td&gt;
+159.569 (df = 34)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+F Statistic
+&lt;/td&gt;
+&lt;td&gt;
+5.119&lt;sup&gt;*&lt;/sup&gt; (df = 2; 36)
+&lt;/td&gt;
+&lt;td&gt;
+3.283&lt;sup&gt;*&lt;/sup&gt; (df = 4; 34)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&#34;3&#34; style=&#34;border-bottom: 1px solid black&#34;&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;
+&lt;em&gt;Note:&lt;/em&gt;
+&lt;/td&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;text-align:left&#34;&gt;
+This table reports ordinary least square regression models, with standard errors in brackets. * p&amp;lt;0.05, ** p&amp;lt;0.01, *** p&amp;lt;0.001.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;With or without the additional controls, the results are substantively the same: on average, AKP municipalities are predicted to receive about 250 million TL more than the CHP municipalities.&lt;/p&gt;
+&lt;p&gt;Besides, there is a negative relationship between AKP winning margin and the amount of investment: it seems that larger the AKP’s winning margin in a district, the less Mevlut Uygur is planning to invest there. This would indeed be strategically more meaningful if a party invest more in the districts that are marginal than very safe — something that we can see in Figure 2 above.&lt;/p&gt;
+&lt;p&gt;Both these results are statistically significant—that is, the possibility that these differences happen by chance is small enough by the standards of social sciences.&lt;/p&gt;
+&lt;p&gt;To increase our confidence in these results, we can repeat our analysis in the regression discontinuity models. These models focus on the difference between the threshold in Figure 2, making use of the margin variable. These models confirm the main result above, that there is a significant difference in terms of money invested AKP vs CHP districts.&lt;/p&gt;
+&lt;p&gt;If we plot the regression discontinuity estimates, we see this difference in a clear picture.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/rdd-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To sum it all up, there are significant differences between the mount of public money invested in the districts of Istanbul. It is clear that AKP districts are better off as they receive on average around 250 million TL more from the city.&lt;/p&gt;
+&lt;p&gt;The tests I offer above provide strong evidence that these differences are due to party politics. At the very least, such differences are something we would not expect to see among these districts that are similar in many respects—except that some has AKP municipality and the others do not.&lt;/p&gt;
+&lt;p&gt;What is at stake is not just the new metro lines; it is all over the whole investment plan.&lt;/p&gt;
+</description>
+        </item>
+        
+</channel>
+        </rss>
