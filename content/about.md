@@ -2,7 +2,10 @@
 title: "About me"
 ---
 
-I am a post-doctoral researcher in political science at the [University of Lucerne](https://www.unilu.ch). Previously, I was a researcher at the <a href="https://www.ihs.ac.at" target="_blank">Institute for Advanced Studies</a> and an adjunct lecturer at the <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>.
+I am a post-doctoral researcher in political science at [ARENA](https://www.sv.uio.no/arena/english/) Centre for European Studies, at the [University of Oslo](https://www.uio.no/english/).
+
+
+Previously, I worked at the [University of Lucerne](https://www.unilu.ch), <a href="https://www.ihs.ac.at" target="_blank">Institute for Advanced Studies</a> and at the <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>.
 
 I completed my PhD in 2017 at the <a href="https://www.univie.ac.at/en/" target="_blank">University of Vienna</a>.
 

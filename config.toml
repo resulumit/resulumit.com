@@ -37,8 +37,8 @@ highlightjsTheme = "github"
 [[params.social]]
 icon = "university"
 icon_pack = "fa"
-link = "https://www.unilu.ch/en/faculties/faculty-of-humanities-and-social-sciences/institutes-departements-and-research-centres/department-of-political-science/"
-text = "Department of Political Science, University of Lucerne, Frohburgstrasse 3, 6002 Lucerne, Switzerland."
+link = "https://www.sv.uio.no/arena/english/"
+text = "ARENA Centre for European Studies, University of Oslo, Gaustadalléen 30, 0373 Oslo, Norway."
 
 [[params.social]]
 icon = "envelope"
