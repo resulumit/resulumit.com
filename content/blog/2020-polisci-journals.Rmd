@@ -15,7 +15,8 @@ Some might find this dataset useful for teaching, if not for research. However, 
 
 Selecting a journal for submission is not always an easy task --- at least not for everyone or at every occasion. Journal scope and prestige are among the important criteria, but there are others. `psjournals` includes variables on article types and their length limits as well as on scope and prestige.
 
-To facilitate filtering through journals and variables, I have built a Shiny app, live at <https://resulumit.shinyapps.io/psjournals/>. It can be used here as well, in the window below.   
+To facilitate filtering through journals and variables, I have built a Shiny app, live at 
+<a href="https://resulumit.shinyapps.io/psjournals/" target="_blank">https://resulumit.shinyapps.io/psjournals/</a>. It can be used here as well, in the window below.   
 
 <br>
 <iframe width="100%" height="400" scrolling="yes" frameborder="no" src="https://resulumit.shinyapps.io/psjournals/"> </iframe>
@@ -39,4 +40,4 @@ subset(psjournals, type_category == "research_note")
 
 ```
 
-Any issues with the data, package, and/or app can be reported at https://github.com/resulumit/psjournals/issues.
+Any issues with the data, package, and/or app can be reported at <a href="https://github.com/resulumit/psjournals/issues/" target="_blank">https://github.com/resulumit/psjournals/issues/</a>.

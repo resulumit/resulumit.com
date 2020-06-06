@@ -19,11 +19,11 @@
 
 
 &lt;p&gt;This post introduces &lt;code&gt;LikeWise&lt;/code&gt; — a Shiny app that retrieves and filters users’ likes on Twitter. If you are looking for a quick direction, click &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the app.&lt;/p&gt;
-&lt;p&gt;I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; class=&#34;uri&#34;&gt;https://resulumit.shinyapps.io/likewise/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
+&lt;p&gt;I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; target=&#34;_blank&#34;&gt;https://resulumit.shinyapps.io/likewise/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;iframe width=&#34;100%&#34; height=&#34;400&#34; scrolling=&#34;yes&#34; frameborder=&#34;no&#34; src=&#34;https://resulumit.shinyapps.io/likewise/&#34;&gt; &lt;/iframe&gt;
 &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Any issues with the app can be reported at &lt;a href=&#34;https://github.com/resulumit/likewise/issues&#34; class=&#34;uri&#34;&gt;https://github.com/resulumit/likewise/issues&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Any issues with the app can be reported at &lt;a href=&#34;https://github.com/resulumit/likewise/issues/&#34; target=&#34;_blank&#34;&gt;https://github.com/resulumit/likewise/issues/&lt;/a&gt;.&lt;/p&gt;
 </description>
         </item>
         
@@ -39,7 +39,8 @@
 &lt;p&gt;This post introduces &lt;code&gt;psjournals&lt;/code&gt; — a new dataset on political science journals as well as an R package and a Shiny app that accompany the dataset. If you are looking for quick directions, click &lt;a href=&#34;https://github.com/resulumit/psjournals&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the package, &lt;a href=&#34;https://resulumit.shinyapps.io/psjournals/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the app.&lt;/p&gt;
 &lt;p&gt;Some might find this dataset useful for teaching, if not for research. However, many are likely to use &lt;code&gt;psjournals&lt;/code&gt; for selection purposes — to see where they can submit their manuscript for consideration.&lt;/p&gt;
 &lt;p&gt;Selecting a journal for submission is not always an easy task — at least not for everyone or at every occasion. Journal scope and prestige are among the important criteria, but there are others. &lt;code&gt;psjournals&lt;/code&gt; includes variables on article types and their length limits as well as on scope and prestige.&lt;/p&gt;
-&lt;p&gt;To facilitate filtering through journals and variables, I have built a Shiny app, live at &lt;a href=&#34;https://resulumit.shinyapps.io/psjournals/&#34; class=&#34;uri&#34;&gt;https://resulumit.shinyapps.io/psjournals/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
+&lt;p&gt;To facilitate filtering through journals and variables, I have built a Shiny app, live at
+&lt;a href=&#34;https://resulumit.shinyapps.io/psjournals/&#34; target=&#34;_blank&#34;&gt;https://resulumit.shinyapps.io/psjournals/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;iframe width=&#34;100%&#34; height=&#34;400&#34; scrolling=&#34;yes&#34; frameborder=&#34;no&#34; src=&#34;https://resulumit.shinyapps.io/psjournals/&#34;&gt; &lt;/iframe&gt;
 &lt;br&gt;&lt;/p&gt;
@@ -55,7 +56,7 @@ View(psjournals)
 
 # filter the dataset
 subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Any issues with the data, package, and/or app can be reported at &lt;a href=&#34;https://github.com/resulumit/psjournals/issues&#34; class=&#34;uri&#34;&gt;https://github.com/resulumit/psjournals/issues&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Any issues with the data, package, and/or app can be reported at &lt;a href=&#34;https://github.com/resulumit/psjournals/issues/&#34; target=&#34;_blank&#34;&gt;https://github.com/resulumit/psjournals/issues/&lt;/a&gt;.&lt;/p&gt;
 </description>
         </item>
         

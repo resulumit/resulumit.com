@@ -19,11 +19,11 @@
 
 
 &lt;p&gt;This post introduces &lt;code&gt;LikeWise&lt;/code&gt; — a Shiny app that retrieves and filters users’ likes on Twitter. If you are looking for a quick direction, click &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the app.&lt;/p&gt;
-&lt;p&gt;I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; class=&#34;uri&#34;&gt;https://resulumit.shinyapps.io/likewise/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
+&lt;p&gt;I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at &lt;a href=&#34;https://resulumit.shinyapps.io/likewise/&#34; target=&#34;_blank&#34;&gt;https://resulumit.shinyapps.io/likewise/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;iframe width=&#34;100%&#34; height=&#34;400&#34; scrolling=&#34;yes&#34; frameborder=&#34;no&#34; src=&#34;https://resulumit.shinyapps.io/likewise/&#34;&gt; &lt;/iframe&gt;
 &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;Any issues with the app can be reported at &lt;a href=&#34;https://github.com/resulumit/likewise/issues&#34; class=&#34;uri&#34;&gt;https://github.com/resulumit/likewise/issues&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Any issues with the app can be reported at &lt;a href=&#34;https://github.com/resulumit/likewise/issues/&#34; target=&#34;_blank&#34;&gt;https://github.com/resulumit/likewise/issues/&lt;/a&gt;.&lt;/p&gt;
 </description>
         </item>
         
