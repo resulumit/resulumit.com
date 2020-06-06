@@ -1,0 +1,20 @@
+---
+date: 2020-05-31
+slug: likewise-app
+title: "Search your Twitter likes"
+output: html_document
+runtime: shiny
+categories:
+        - software
+        - Twitter
+---
+
+This post introduces `LikeWise` --- a Shiny app that retrieves and filters users' likes on Twitter. If you are looking for a quick direction, click <a href="https://resulumit.shinyapps.io/likewise/" target="_blank"><b>here</b></a> for the app.
+
+I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at <https://resulumit.shinyapps.io/likewise/>. It can be used here as well, in the window below.   
+
+<br>
+<iframe width="100%" height="400" scrolling="yes" frameborder="no" src="https://resulumit.shinyapps.io/likewise/"> </iframe>
+<br>
+
+Any issues with the app can be reported at https://github.com/resulumit/likewise/issues.

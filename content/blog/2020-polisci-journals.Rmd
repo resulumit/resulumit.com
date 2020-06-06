@@ -1,0 +1,42 @@
+---
+date: 2020-05-11
+slug: polisci-journals
+title: "Political science journals"
+output: html_document
+runtime: shiny
+categories:
+        - journals
+        - software
+---
+
+This post introduces `psjournals` --- a new dataset on political science journals as well as an R package and a Shiny app that accompany the dataset. If you are looking for quick directions, click <a href="https://github.com/resulumit/psjournals" target="_blank"><b>here</b></a> for the package, <a href="https://resulumit.shinyapps.io/psjournals/" target="_blank"><b>here</b></a> for the app.
+
+Some might find this dataset useful for teaching, if not for research. However, many are likely to use `psjournals` for selection purposes --- to see where they can submit their manuscript for consideration. 
+
+Selecting a journal for submission is not always an easy task --- at least not for everyone or at every occasion. Journal scope and prestige are among the important criteria, but there are others. `psjournals` includes variables on article types and their length limits as well as on scope and prestige.
+
+To facilitate filtering through journals and variables, I have built a Shiny app, live at <https://resulumit.shinyapps.io/psjournals/>. It can be used here as well, in the window below.   
+
+<br>
+<iframe width="100%" height="400" scrolling="yes" frameborder="no" src="https://resulumit.shinyapps.io/psjournals/"> </iframe>
+<br>
+
+I have also created a simple package for the dataset in R, for those who may prefer to work with it locally on their device. The package, hosted on GitHub, can be installed and used as follows.
+
+```{r, eval=FALSE}
+
+# install the package
+devtools::install_github("resulumit/psjournals")
+
+# load the package
+library(psjournals)
+
+# view the dataset
+View(psjournals)
+
+# filter the dataset
+subset(psjournals, type_category == "research_note")
+
+```
+
+Any issues with the data, package, and/or app can be reported at https://github.com/resulumit/psjournals/issues.

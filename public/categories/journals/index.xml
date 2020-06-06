@@ -4,11 +4,43 @@
         <link>/categories/journals/</link>
         <description>Recent content in journals on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
-<lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
+<lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate>
 
 <atom:link href="/categories/journals/index.xml" rel="self" type="application/rss+xml" />
 
 
+<item>
+        <title>Political science journals</title>
+        <link>/blog/polisci-journals/</link>
+        <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+        
+<guid>/blog/polisci-journals/</guid>
+        <description>
+
+
+&lt;p&gt;This post introduces &lt;code&gt;psjournals&lt;/code&gt; — a new dataset on political science journals as well as an R package and a Shiny app that accompany the dataset. If you are looking for quick directions, click &lt;a href=&#34;https://github.com/resulumit/psjournals&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the package, &lt;a href=&#34;https://resulumit.shinyapps.io/psjournals/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the app.&lt;/p&gt;
+&lt;p&gt;Some might find this dataset useful for teaching, if not for research. However, many are likely to use &lt;code&gt;psjournals&lt;/code&gt; for selection purposes — to see where they can submit their manuscript for consideration.&lt;/p&gt;
+&lt;p&gt;Selecting a journal for submission is not always an easy task — at least not for everyone or at every occasion. Journal scope and prestige are among the important criteria, but there are others. &lt;code&gt;psjournals&lt;/code&gt; includes variables on article types and their length limits as well as on scope and prestige.&lt;/p&gt;
+&lt;p&gt;To facilitate filtering through journals and variables, I have built a Shiny app, live at &lt;a href=&#34;https://resulumit.shinyapps.io/psjournals/&#34; class=&#34;uri&#34;&gt;https://resulumit.shinyapps.io/psjournals/&lt;/a&gt;. It can be used here as well, in the window below.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;400&#34; scrolling=&#34;yes&#34; frameborder=&#34;no&#34; src=&#34;https://resulumit.shinyapps.io/psjournals/&#34;&gt; &lt;/iframe&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;I have also created a simple package for the dataset in R, for those who may prefer to work with it locally on their device. The package, hosted on GitHub, can be installed and used as follows.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install the package
+devtools::install_github(&amp;quot;resulumit/psjournals&amp;quot;)
+
+# load the package
+library(psjournals)
+
+# view the dataset
+View(psjournals)
+
+# filter the dataset
+subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Any issues with the data, package, and/or app can be reported at &lt;a href=&#34;https://github.com/resulumit/psjournals/issues&#34; class=&#34;uri&#34;&gt;https://github.com/resulumit/psjournals/issues&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
 <item>
         <title>Google Scholar ranking of political science journals</title>
         <link>/blog/polisci-google-scholar/</link>

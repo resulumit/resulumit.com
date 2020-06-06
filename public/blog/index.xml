@@ -5,10 +5,30 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Search your Twitter likes</title>
+      <link>/blog/likewise-app/</link>
+      <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/likewise-app/</guid>
+      <description>This post introduces LikeWise — a Shiny app that retrieves and filters users’ likes on Twitter. If you are looking for a quick direction, click here for the app.
+I use Twitter likes as bookmarks, but then struggle to find the one that I need among them all. Hence I have built an app. It is live at https://resulumit.shinyapps.io/likewise/. It can be used here as well, in the window below.</description>
+    </item>
+    
+    <item>
+      <title>Political science journals</title>
+      <link>/blog/polisci-journals/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/polisci-journals/</guid>
+      <description>This post introduces psjournals — a new dataset on political science journals as well as an R package and a Shiny app that accompany the dataset. If you are looking for quick directions, click here for the package, here for the app.
+Some might find this dataset useful for teaching, if not for research. However, many are likely to use psjournals for selection purposes — to see where they can submit their manuscript for consideration.</description>
+    </item>
     
     <item>
       <title>Writing reproducible research papers with R Markdown</title>
