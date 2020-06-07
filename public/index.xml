@@ -397,12 +397,23 @@ Curriculum Vitae&amp;nbsp; Twitter &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp
     </item>
     
     <item>
+      <title>Software I&#39;ve built</title>
+      <link>/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/software/</guid>
+      <description>psjournals An R data package on political science journals, with article types being the unit of observation. It comes with an R Shiny app designed to filter the data, to facilitate exploring journals and their article types for manuscript submission.
+ App Package Dataset  LikeWise A Shiny app that filters users&amp;rsquo; liked tweets.
+ App  </description>
+    </item>
+    
+    <item>
       <title>Teaching experience</title>
       <link>/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/teaching/</guid>
-      <description>Graduate course  Research design  University of Lucerne, Spring 2020 Syllabus    Undergraduate course  Research methods  Webster Vienna University, Fall 2017 Syllabus    Workshops  Reproducible research  Campus Luzern, March 2020 Syllabus Slides Materials      Academic websites  Campus Luzern, May 2020 Syllabus    </description>
+      <description>Graduate course  Research design in quantitative political science  University of Lucerne, Spring 2020 Syllabus    Undergraduate courses  Causality in law, economics, and politics  University of Lucerne, Spring 2020 With Alrik Thiem     Introduction to media research  Webster Vienna University, Fall 2017 Syllabus    Workshops  Reproducible research  Campus Luzern, March 2020 Syllabus Slides Materials     Academic websites  Campus Luzern, May 2020 Syllabus    </description>
     </item>
     
   </channel>
