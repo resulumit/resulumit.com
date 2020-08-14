@@ -43,8 +43,8 @@ text = "ARENA Centre for European Studies, University of Oslo, Gaustadalléen 30
 [[params.social]]
 icon = "envelope"
 icon_pack = "fa"
-link = "mailto:resul.umit@unilu.ch"
-text = "resul.umit@unilu.ch"
+link = "mailto:resuluy@uio.no"
+text = "resuluy@uio.no"
     
 [[params.social]]
 icon = "twitter"
