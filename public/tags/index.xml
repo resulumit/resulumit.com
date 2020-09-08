@@ -5,7 +5,7 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,27 @@
     <item>
       <title>brexit</title>
       <link>/tags/brexit/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/brexit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>referendum</title>
+      <link>/tags/referendum/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/referendum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UK</title>
+      <link>/tags/uk/</link>
+      <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/uk/</guid>
       <description></description>
     </item>
     
@@ -34,15 +52,6 @@
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/speeches/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>UK</title>
-      <link>/tags/uk/</link>
-      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/uk/</guid>
       <description></description>
     </item>
     
