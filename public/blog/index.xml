@@ -5,10 +5,20 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Internal links in xaringan presentations</title>
+      <link>/blog/internal-links-xaringan-presentations/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/internal-links-xaringan-presentations/</guid>
+      <description>I am currently revising the slides for the next iteration of my workshop on writing reproducible research papers with R Markdown. It will take place at Campus Luzern, over two full days in November 2020.
+There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with xaringan.</description>
+    </item>
     
     <item>
       <title>Search your Twitter likes</title>
@@ -37,7 +47,7 @@ Some might find this dataset useful for teaching, if not for research. However, 
       
       <guid>/blog/rmd-workshop/</guid>
       <description>Click here for the slides, here for all workshop materials.
-My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at Campus Luzern, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
+My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at Campus Luzern], to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
 Since then I have revised the workshop material, which you can find at GitHub. The slides are better viewed here at my website.</description>
     </item>
     
