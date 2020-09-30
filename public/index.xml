@@ -5,10 +5,19 @@
     <link>/</link>
     <description>Recent content on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parliamentary Communication Allowances: Good for Nothing</title>
+      <link>/publications/communication-allowances/</link>
+      <pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/communication-allowances/</guid>
+      <description>In many countries, members of parliament receive publicly-funded allowances to communicate with the electorate. Some hope that ensuing parliamentary communication engages the people with politics and increases electoral participation. Others worry that such use of public funds might create an unfair advantage for incumbents and affect electoral results. Yet, the consequences of this practice remain unknown. Data from the UK House of Commons suggests that both the hopes and the worries are baseless: there is no evidence that parliamentary communication allowances increase electoral turnout or affect incumbents&amp;rsquo; vote share.</description>
+    </item>
     
     <item>
       <title>Internal links in xaringan presentations</title>
@@ -116,15 +125,6 @@ Please bear in mind that this is not an exhaustive list and that editorial polic
       <guid>/blog/polisci-research-notes/</guid>
       <description>This blogpost has led to an app that filters data on political science journals, including article types. Try it out at https://resulumit.shinyapps.io/psjournals.
 In addition to ‘regular’ articles, some political science journals publish shorter manuscripts as well. They are often called research notes, but the name, and indeed the format itself, can differ from one journal to another. Yet, this definition, by Public Opinion Quarterly, covers a lot of common ground:</description>
-    </item>
-    
-    <item>
-      <title>Parliamentary Communication Allowances: Good for Nothing</title>
-      <link>/unpublished/communication-allowances/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/unpublished/communication-allowances/</guid>
-      <description>In many countries, members of parliament receive publicly-funded allowances to communicate with the electorate. Some hope that ensuing parliamentary communication engages the people with politics and increases electoral participation. Others worry that such use of public funds might create an unfair advantage for incumbents and affect electoral results. Yet, the consequences of this practice remain unknown. Data from the UK House of Commons suggests that both the hopes and the worries are baseless: there is no evidence that parliamentary communication allowances increase electoral turnout or affect incumbents&amp;rsquo; vote share.</description>
     </item>
     
     <item>

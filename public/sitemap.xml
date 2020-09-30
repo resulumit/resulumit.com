@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/allowances/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/communication/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publications/communication-allowances/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/parliaments/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publications/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url>
@@ -23,11 +58,6 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/xaringan/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url>
@@ -38,17 +68,7 @@
   </url>
   
   <url>
-    <loc>/publications/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/referendum/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -109,11 +129,6 @@
   
   <url>
     <loc>/publications/divergent-preferences/</loc>
-    <lastmod>2020-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/parliaments/</loc>
     <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -180,21 +195,6 @@
   <url>
     <loc>/blog/polisci-research-notes/</loc>
     <lastmod>2019-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/allowances/</loc>
-    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/communication/</loc>
-    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/unpublished/communication-allowances/</loc>
-    <lastmod>2019-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
