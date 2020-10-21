@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>panel data on Resul Umit</title>
+    <link>/tags/panel-data/</link>
+    <description>Recent content in panel data on Resul Umit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/panel-data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solar panels do not generate political attitudes</title>
+      <link>/unpublished/solar-attitudes/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/unpublished/solar-attitudes/</guid>
+      <description>In the fight against climate change, renewable energy has been subsidised in many countries. With the costs passed onto consumers, the governments are paying those, for example, who install domestic solar panels on top of their homes. Drawing on three panel datasets from Germany, UK, and Switzerland, this paper analyses whether installation of these solar panels causes meaningful changes in the households’ various political attitudes. Using fixed-effect models as the identification strategy, the paper reports null results&amp;mdash;solar installations do not seem to generate political attitudes.</description>
+    </item>
+    
+  </channel>
+</rss>

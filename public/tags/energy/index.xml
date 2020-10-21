@@ -5,10 +5,15 @@
     <link>/tags/energy/</link>
     <description>Recent content in energy on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/energy/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/energy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solar panels do not generate political attitudes</title>
+      <link>/unpublished/solar-attitudes/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/unpublished/solar-attitudes/</guid>
+      <description>In the fight against climate change, renewable energy has been subsidised in many countries. With the costs passed onto consumers, the governments are paying those, for example, who install domestic solar panels on top of their homes. Drawing on three panel datasets from Germany, UK, and Switzerland, this paper analyses whether installation of these solar panels causes meaningful changes in the households’ various political attitudes. Using fixed-effect models as the identification strategy, the paper reports null results&amp;mdash;solar installations do not seem to generate political attitudes.</description>
+    </item>
     
     <item>
       <title>Attitudes towards carbon taxes across Europe: The role of perceived uncertainty and self-interest</title>
@@ -34,7 +39,7 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/publications/energy-saving/</guid>
-      <description>Reducing consumers&amp;rsquo; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&amp;rsquo; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
+      <description>Reducing consumers&#39; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&#39; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
     </item>
     
     <item>

@@ -1,5 +1,5 @@
 ---
-author: Resul Umit, Lena Schaffer
+author: Resul Umit, Lena Maria Schaffer
 comments: false
 date: '2020-02-18'
 slug: wind-turbines

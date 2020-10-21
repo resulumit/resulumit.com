@@ -5,11 +5,7 @@
     <link>/tags/surveys/</link>
     <description>Recent content in surveys on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/surveys/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/surveys/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attitudes towards carbon taxes across Europe: The role of perceived uncertainty and self-interest</title>
       <link>/publications/carbon-taxes/</link>
@@ -25,7 +21,7 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/publications/energy-saving/</guid>
-      <description>Reducing consumers&amp;rsquo; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&amp;rsquo; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
+      <description>Reducing consumers&#39; demand for energy is on the agenda of various energy and climate policies. Although these policies are increasingly internationalised in Europe, our understanding of consumers&#39; energy saving behaviour remains fragmented with often contradicting findings from single case studies. Drawing on the latest round of the European Social Survey across 22 countries (n = 41,830), we find that many variables have the same relationship with different energy saving behaviours, except household income.</description>
     </item>
     
   </channel>

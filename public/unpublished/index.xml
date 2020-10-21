@@ -5,10 +5,15 @@
     <link>/unpublished/</link>
     <description>Recent content in Unpublished on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/unpublished/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/unpublished/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solar panels do not generate political attitudes</title>
+      <link>/unpublished/solar-attitudes/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/unpublished/solar-attitudes/</guid>
+      <description>In the fight against climate change, renewable energy has been subsidised in many countries. With the costs passed onto consumers, the governments are paying those, for example, who install domestic solar panels on top of their homes. Drawing on three panel datasets from Germany, UK, and Switzerland, this paper analyses whether installation of these solar panels causes meaningful changes in the households’ various political attitudes. Using fixed-effect models as the identification strategy, the paper reports null results&amp;mdash;solar installations do not seem to generate political attitudes.</description>
+    </item>
     
     <item>
       <title>Wind Turbines, Public Acceptance, and Electoral Outcomes</title>
@@ -25,7 +30,7 @@
       <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/unpublished/expectations/</guid>
-      <description>Every vote creates winners and losers, opening a satisfaction gap between the two. At a time when concerns are high for democracy, we do not know what exactly leaves substantial proportions of voters&amp;mdash;losers&amp;mdash;dissatisfied with the system. This paper provides causal evidence for the cognitive dissonance theory, which points at unfulfilled winning expectations. With a difference-in-differences design around the Brexit referendum, it finds that the result caused an additional 3% decrease in the Remainers&amp;rsquo; satisfaction if they were expecting to win the vote.</description>
+      <description>Every vote creates winners and losers, opening a satisfaction gap between the two. At a time when concerns are high for democracy, we do not know what exactly leaves substantial proportions of voters&amp;mdash;losers&amp;mdash;dissatisfied with the system. This paper provides causal evidence for the cognitive dissonance theory, which points at unfulfilled winning expectations. With a difference-in-differences design around the Brexit referendum, it finds that the result caused an additional 3% decrease in the Remainers&#39; satisfaction if they were expecting to win the vote.</description>
     </item>
     
     <item>

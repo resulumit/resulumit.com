@@ -5,10 +5,33 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>energy</title>
+      <link>/tags/energy/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/energy/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>panel data</title>
+      <link>/tags/panel-data/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/panel-data/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>political behaviour</title>
+      <link>/tags/political-behaviour/</link>
+      <pubDate>Mon, 19 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/political-behaviour/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>allowances</title>
@@ -70,15 +93,6 @@
       <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/speeches/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>energy</title>
-      <link>/tags/energy/</link>
-      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/energy/</guid>
       <description></description>
     </item>
     
