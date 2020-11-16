@@ -12,6 +12,12 @@ title: "Teaching experience"
 
 ## Undergraduate courses
 
+* *Electoral expectations*
+    - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Autumn 2020
+    - <a href="https://resulumit.com/syllabi/20autumn_ee.pdf" target="_blank">Syllabus</a>
+
+<br>
+
 * *Causality in law, economics, and politics*
     - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, Spring 2020
     - With <a href="http://www.alrik-thiem.net/" target="_blank">Alrik Thiem</a>
