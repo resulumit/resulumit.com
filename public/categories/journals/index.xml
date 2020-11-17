@@ -1319,6 +1319,8 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <guid>/blog/polisci-open-access/</guid>
         <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I have created a list of open access journals in political science—journals that make all of their articles freely accessible without delay.&lt;/p&gt;

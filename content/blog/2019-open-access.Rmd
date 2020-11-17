@@ -14,7 +14,7 @@ Please bear in mind that this is not an exhaustive list and that editorial polic
 Click on titles to learn more about the journals in the list and their open access policies.
 
 | Journal  | Publication charge   | SSCI rank   | h5-index   |
-|--------: | -------------------: |-----------: |----------: |
+|--------: |--------------------: |-----------: |----------: |
 | <a href='https://www.tandfonline.com/toc/rpas20/current'target='_blank'>Policy and Society</a> | No| 50/176 | 23 |
 | <a href='https://journals.sagepub.com/home/rap'target='_blank'>Research & Politics</a> | No* | *N/A* | 23 |
 | <a href='https://www.cogitatiopress.com/politicsandgovernance'target='_blank'>Politics and Governance</a>  | Yes | 94/176 | 19 |

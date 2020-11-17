@@ -15,8 +15,8 @@ In addition to 'regular' articles, some political science journals publish short
 
 I have gone through the 'author guidelines' of more than a hundred political science journals, and put together a list of journals that publish research notes. You can also click on the hyperlinks under *Format Name* to learn more about the format in each journal.
 
-| Journal  | Format Name   | Length   | h5-index   |
-|--------: | ------------: |--------: |----------: |
+| Journal  | Format Name   | Length    | h5-index   |
+|--------: | ------------: | --------: |----------: |
 | American Political Science Review | <a href='https://www.apsanet.org/APSR-Submission-Guidelines'target='_blank'>Letter</a> | 4k words | 58 |
 | Journal of Politics | <a href='https://www.journals.uchicago.edu/journals/jop/instruct'target='_blank'>Short Article</a> | 10 pages | 50 |
 | Journal of Common Market Studies | <a href='https://onlinelibrary.wiley.com/page/journal/14685965/homepage/forauthors.html'target='_blank'>Research Note</a> | 3.5k -- 5k words | 48 |
