@@ -1457,6 +1457,9 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <guid>/blog/polisci-research-notes/</guid>
         <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;em&gt;This blogpost has led to an app that filters data on political science journals, including article types. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -1723,7 +1726,7 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please &lt;a href=&#34;mailto: resul.umit@unilu.ch&#34;&gt;send me an email&lt;/a&gt;. I would be happy to hear from you.&lt;/p&gt;
+&lt;p&gt;Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please &lt;a href=&#34;mailto:resuluy@uio.no&#34;&gt;send me an email&lt;/a&gt;. I would be happy to hear from you.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;* Based on direct communication from editors.&lt;/p&gt;
 </description>
