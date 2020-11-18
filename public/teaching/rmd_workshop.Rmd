@@ -2,7 +2,7 @@
 title: "Writing Reproducible Research Papers with R Markdown"
 subtitle: "Resul Umit"
 institute: ""
-date: "September 2020"
+date: "November 2020"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -193,7 +193,7 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 - If you and/or your co-authors decide 
 
     - to reverse a re-coded variable to its previous/original measure
-    - and/or, to exclude a subgroup of observations from analaysis
+    - and/or, to exclude a subgroup of observations from analysis
 
 --
 
@@ -209,7 +209,7 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 - After your paper is published, if others, including your future self, would like to test how robust the results are
 
     - to reversing a re-coded variable to its previous/original measure
-    - and/or, to excluding a subgroup of observations from analaysis
+    - and/or, to excluding a subgroup of observations from analysis
 
 --
 
@@ -223,9 +223,9 @@ Now, with .yellow-h[R Markdown], I am ... happy!
 ---
 ## The Workshop &mdash; Overview
 
-- Two half days, on how to write reproducible research papers with R Markdown
+- Two days, on how to write reproducible research papers with R Markdown
 
-  - ideally, about ten hours
+  - 200+ slides, 40+ exercises, and time for converting a real project
 
 --
 
@@ -319,8 +319,28 @@ Slides with this background colour indicate that your action is required, for
     
 - completing the exercises
     - e.g., managing references in R Markdown
-    - there are 35 exercises
+    - there are 40+ exercises
     - these slides have countdown timers
+    
+    
+`r countdown(minutes = 3, seconds = 00, top = 0)`
+
+---
+## The Workshop &mdash; Organisation &mdash; Slides
+
+- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]
+    - long codes and texts will have their own line(s)
+
+````md
+`r ''````{r, scatterplot, fig.cap = "A scatterplot of journal metrics."}
+
+ggplot(data = df, mapping = aes(x = h5_median, y = h5_index, color = subfield)) +
+       geom_point() +
+       facet_wrap(. ~ branch) +
+       scale_colour_discrete(name = "Journal Type", breaks = c(0, 1), labels = c("Generalist", "Subfield"))    
+
+```
+````
 
 ---
 ## The Workshop &mdash; Organisation &mdash; Slides
@@ -331,8 +351,15 @@ Slides with this background colour indicate that your action is required, for
 - Results that come out in output files .out-t[appear as such &mdash; in the same font, on green background]
     - except very obvious results, such as figures and tables
     
+--
+    
 - Specific sections are .yellow-h[highlighted yellow as such] for emphasis
     - these could be for anything &mdash; codes and texts in input, results in output, and/or texts on slides
+    
+--
+
+- The slides are designed for self-study as much as for the workshop
+    - *accessible*, in substance and form, to go through on your own
 
 ---
 ## The Workshop &mdash; Aims
@@ -340,6 +367,8 @@ Slides with this background colour indicate that your action is required, for
 - To make you aware what is possible with R Markdown
 
   - we will cover a large breath of issues, not all of it is for long-term memory
+      - one reason why the slides are designed for self study as well    
+<br>
   - awareness of what is possible, `Google`, and perseverance are all we need
 
 --
@@ -357,16 +386,19 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
 ---
+name: download-zip
 class: action
+
 
 ## Course Materials &mdash; Download from the Internet
 
-Materials, available at <https://github.com/resulumit/rmd_workshop>, have the following structure
+Materials, available at <https://github.com/resulumit/rmd_workshop>,<sup>*</sup> have the following structure
+
 
 ```
 rmd_workshop
@@ -388,18 +420,25 @@ rmd_workshop
 
 ```
 
+
+.footnote[
+
+<sup>*</sup> On GitHub, follow `Code -> Download ZIP` to download.
+
+]
+
 ---
 ## Course Materials &mdash; Contents
 
 - `reproduce_this.pdf`
 
     - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
-    - randomly generated sentences, with figures and tables from randomly generated dataset<sup>*</sup>
-    - key sections in-need of attention are highlighted
+    - randomly generated sentences, with figures and tables from randomly a generated dataset<sup>*</sup>
+    - key sections in-need of attention are highlighted yellow
     
 .footnote[
 
-[*] The text, _Lorem ipsum_, is generated with the `stringi` package (Gagolewski, 2020) while the dataset is created with the `fabricatr` package (Blair et al., 2019). 
+<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package (Gagolewski, 2020) while the dataset is created with the `fabricatr` package (Blair et al., 2019). 
 
 ]
 
@@ -462,6 +501,7 @@ rmd_workshop
 
 ---
 class: action
+name: install-git
 
 ## Git &mdash; Download from the Internet and Install
 
@@ -502,20 +542,57 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex",  
-                   "dplyr", "stargazer", "ggplot2"))
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+--
+
+- `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
+
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+
+tinytex::install_tinytex() #<<
+
 ```
 
 - `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
 
 - `tinytex` (Xie, 2020), for PDF outputs
+    - requires an additional step to install
     - alternative: a TeX/LaTeX system installed on your computer
-    
+
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+
 - `dplyr` (Wickham, 2020a), for data manipulation
     - alternatives: e.g., `base`, `data.table` (Dowle & Srinivasan, 2019)
 
+--
+
 - `stargazer` (Hlavac, 2018), for tables
     - alternatives: e.g., `knitr` (Xie, 2020b), `kableExtra` (Zhu, 2019)
+    
+--
+
     
 - `ggplot2` (Wickham, 2020b), for figures
     - alternatives: e.g., `base`, `plotly` (Sievert et al., 2020)
@@ -530,14 +607,20 @@ name: rstudio-project
 
   - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
 
-- Create a new RStudio project for the existing directory `.../rmd_workshop/manucript` from the RStudio menu:
+- Create a new RStudio project for the existing<sup>*</sup> directory `.../rmd_workshop/manuscript` from the RStudio menu:
 
-> `File -> New Project -> Existing Directory -> Browse -> .../rmd_workshop/manucript -> Open`
+> `File -> New Project -> Existing Directory -> Browse -> .../rmd_workshop/manuscript -> Open`
 
 - Rename the `.Rproj` file into something more meaningful
 
   - the default RStudio behaviour is to name the projects after the existing directory
   - but, we don't want all our projects to be named `manusript.Rproj`
+  
+.footnote[
+
+<sup>*</sup> Recall that we have downloaded this earlier from GitHub. [Back to the relevant slide](#download-zip).
+
+]
 
 ---
 class: action
@@ -569,7 +652,7 @@ Downloading process can be initiated from within RStudio
    
 .footnote[
 
-[&#42;] During the workshop, R Markdown Cheat Sheet is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
+<sup>*</sup> During the workshop, R Markdown Cheat Sheet is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
 
 ]
 
@@ -581,7 +664,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -605,9 +688,9 @@ class: action
 
 .footnote[
 
-[*] This is for demonstration purposes only. Otherwise, we will work with `journals.Rmd`, which you have already downloaded, to save time.
+<sup>*</sup> This is for demonstration purposes only. Otherwise, we will work with `journals.Rmd`, which you have already downloaded, to save time.
 
-[**] Alternatively, use the `Save` button or the keyboard shortcut (e.g., `Ctrl + S` on Windows). For shortcuts, follow `Tools -> Keyboard Shortcuts Help` or `Tools -> Modify Keyboard Shortcuts...`.
+<sup>**</sup> Alternatively, use the `Save` button or the keyboard shortcut (e.g., `Ctrl + S` on Windows). For shortcuts, follow `Tools -> Keyboard Shortcuts Help` or `Tools -> Modify Keyboard Shortcuts...`.
 
 ]
 
@@ -698,9 +781,9 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 
 .footnote[
 
-[*] If you had not already have the `knitr` package, it would have been installed together with the `rmarkdown` package.
+<sup>*</sup> If you had not already have the `knitr` package, it would have been installed together with the `rmarkdown` package.
 
-[**] RStudio comes with a copy of `pandoc` ([http://pandoc.org](http://pandoc.org)), which is not an R package, so that you do not have to install it separately. 
+<sup>**</sup> RStudio comes with a copy of `pandoc` ([http://pandoc.org](http://pandoc.org)), which is not an R package, so that you do not have to install it separately. 
 
 ]
 
@@ -722,7 +805,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 
 .footnote[
 
-[*] Here we will focus on research papers only. In a separate workshop, I teach how to create professional websites with R Blogdown.
+<sup>*</sup> Here we will focus on research papers only. In a separate workshop, I teach how to create professional websites with R Blogdown.
 
 ]  
 
@@ -734,7 +817,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -757,9 +840,10 @@ output:
 
 .footnote[
 
-[*] Technically, we can place YAML anywhere in a .Rmd document. However, it is a good practice to start with YAML.
+<sup>*</sup> Technically, we can place YAML anywhere in a .Rmd document. However, it is a good practice to start with YAML so that the metadata is easly accessbile.
 
 ]
+
 ---
 ## YAML &mdash; Variables
 
@@ -973,9 +1057,10 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .footnote[
 
-[*] For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. see [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
+<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
 
 ]
+
 ---
 ## YAML &mdash; Strings
 
@@ -1260,7 +1345,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml6.png")
 
 - `link-citations`
     - the default is `no`
-    - the other option is `yes` &mdash; a click on an (part of) citation will take the screen to the relevant entry in the list of references
+    - the other option is `yes` &mdash; a click on an citation will take the screen to the relevant entry in the list of references
 
 ---
 class: action
@@ -1282,7 +1367,7 @@ class: action
 - you may wish to delete any trial files you have created so far
     - except, perhaps, journals.pdf, which we will keep re-creating   
 <br>
-- the original documents are `journals.Rmd`, `references.bib`, and `apa_tth.csl`
+- the original documents are `journals.Rmd`, `references.bib`, and `apa_7th.csl`
     
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
@@ -1294,7 +1379,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -1342,10 +1427,6 @@ This is another sentence on a new line.
 .out-t[This is a sentence followed by two spaces.  
 This is another sentence on a new line.]
  
-
-
-
-
 ---
 ## Syntax &mdash; Line Blocks
 
@@ -1410,7 +1491,7 @@ second sentence of that paragraph, which is followed by a blank line.
 
 .footnote[
 
-[*] Multiple blank lines between paragraphs reduced to one
+<sup>*</sup> Multiple blank lines between paragraphs reduce to one.
 
 ]
 
@@ -1596,7 +1677,7 @@ Multi-word headers need hyphenation
 
 .footnote[
 
-[*] We will cover links to references, figures, and tables later on.
+<sup>*</sup> The [links to references](#reference-links), [figures](#figure-links), and [tables](#table-links) are covered later on.
 
 ]
 
@@ -1605,17 +1686,17 @@ Multi-word headers need hyphenation
 
 You can link text to URLs
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;click here](https	&#58;//resulumit.com/)</span> becomes .out-t[[click here](https://resulumit.com/)]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;visit my website](https&#58;//resulumit.com/)</span> becomes .out-t[[visit my website](https://resulumit.com/)]
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//resulumit.com></span> becomes .out-t[<https://resulumit.com>]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//resulumit.com](https&#58;//resulumit.com/)</span> becomes .out-t[[https://resulumit.com](https://resulumit.com/)]
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//resulumit.com](https&#58;//resulumit.com/)</span> becomes .out-t[[https://resulumit.com](https://resulumit.com/)] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//resulumit.com></span> becomes .out-t[<https://resulumit.com>] as well
 
 --
 
 <br>
 
-You can also link text to email addresses
+You can also link text to an email address
 
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;resuluy@uio.no)</span><sup>*</sup> becomes .out-t[[email me](mailto:resuluy@uio.no)]
 
@@ -1623,7 +1704,7 @@ You can also link text to email addresses
 
 .footnote[
 
-[*] Notice the prefix .yellow-h[mailto:] in the second part of the construct
+<sup>*</sup> Notice the prefix .yellow-h[mailto:] in the syntax
 
 ]
 
@@ -1693,7 +1774,7 @@ For inline footnotes, use the .inline-c[^[footnote]] syntax
 
 .footnote[
 
-.out-t[[1] Corresponding author.]
+.out-t[<sup>1</sup> Corresponding author.]
 
 ]
 
@@ -1722,7 +1803,7 @@ Dr Doe holds a PhD in rock science.[^defence_date]
 
 .footnote[
 
-.out-t[[1] She defended her thesis in 2017.]
+.out-t[<sup>1</sup> She defended her thesis in 2017.]
 
 ]
 
@@ -1913,7 +1994,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -1982,7 +2063,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
     - this requires knowing the BibTeX format, entry types, tags, and related information about references to be cited
         - this is not efficient
     
-- A good alternative `Google Scholar`, which provides BibTeX entries
+- A good alternative is to use `Google Scholar`, which provides BibTeX entries
     - follow `cite -> BibTex` and copy
     - paste into .bib, edit if necessary, and save
     
@@ -1994,7 +2075,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 .pull-left-c[
 
 - Reference styles are defined in .csl files
-    - files for different styles are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
+    - files for different styles (e.g., APA) are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
 
 <br>
 
@@ -2006,7 +2087,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 <br>
 
 - .csl files affect the style only in outputs
-    - no matter which the style is used, the citation syntax in .Rmd documents is the same
+    - no matter which the style is used, the citation syntax in .Rmd documents remains the same
     
 ]
 
@@ -2021,7 +2102,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/csl.png")
 ---
 ## References &mdash; In-text Citation Syntax
 
-All citations keys take the 'at' sign .yellow-h[@], square brackets and/or minus signs introduce variation
+All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or minus signs introduce variation
 
 <br>
 
@@ -2049,8 +2130,8 @@ All citations keys take the 'at' sign .yellow-h[@], square brackets and/or minus
 ---
 ## Citations &mdash; Reference List
 
-The list of references is inserted after the last line of the document, with no section header. 
-- ending your .Rmd documents with a header for the list of references
+The list of references appears after the last line of the document, with no section header 
+- so that you can choose the header yourself, by ending .Rmd documents with a header of your choice
 
 ```{r eval=FALSE}
 This is the last sentence of the manuscript.
@@ -2071,13 +2152,15 @@ Gilbert, T. (2019). Turning wine into water. In M. Albert (Ed.), *The book of gr
 ]
 
 ---
+name: reference-links
+
 ## References &mdash; Internal Links
 
 For internal links from in-text citations to the reference list, set .inline-c[link-citations: yes] in YAML
 
-- a click on these links take the screen to the relevant entry in the list
+- a click on these links takes the screen to the relevant entry in the list
 - the `linkcolor` variable make these links explicit
-    - this is not necessary for the links to work
+    - setting this is not necessary for the links to work &mdash; the default is black
        
 ```{r, eval = FALSE}
 ---
@@ -2106,8 +2189,9 @@ class: action
 
 <br>
 
-19) Change reference style
-- download your .csl file for your favourite style from [https://www.zotero.org/styles](https://www.zotero.org/styles) 
+19) Change the reference style
+- download the .csl file for your favourite style from [https://www.zotero.org/styles](https://www.zotero.org/styles) 
+- put it into your working directory
 - update the YAML variable
 
 <br>
@@ -2124,7 +2208,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -2151,7 +2235,7 @@ df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>%
 ````
 
 Codes can also go in line with text
-- .e.g., code that result in a single statistic
+- e.g., code that results in a single statistic
 
 ```{r, eval=FALSE, tidy=FALSE}
 The average H5 Index for the journals in the dataset is \`r mean(df$h5_index)`.
@@ -2223,7 +2307,8 @@ df <- read_csv("data/journals.csv")
 Options have default values
 
 - e.g., for `echo`, the default is `TRUE`
-      - `echo`: should the source code printed in the output?  &mdash; yes   
+      - `echo`: should the source code printed in the output?
+      - `TRUE`: yes it should   
 <br>
 - therefore the following two chunks have the same function
 
@@ -2273,7 +2358,7 @@ head(df)
 Setting .inline-c[echo=FALSE] prevents the code from being displayed in the output document
 
 ````md
-`r ''````{r, `echo=FALSE`}
+`r ''````{r ... `echo=FALSE`}
 
 head(df)
 
@@ -2297,7 +2382,7 @@ head(df)
 Prevent the result(s) of the source code from being displayed in the output document
 
 ````md
-`r ''````{r, `results="hide"`}
+`r ''````{r ... `results="hide"`}
 
 head(df)
 
@@ -2312,7 +2397,7 @@ This chunk therefore prints one thing in the output document &mdash; the source 
 
 ]
 
-Setting .inline-c[results="asis"] passes the results as they are produced by the code. In creating tables for PDF output with the `stargazer` package,<sum>*</sup> it is a must.
+Setting .inline-c[results="asis"] passes the results as they are produced by the code &mdash; `pandoc` does not transform these. In creating tables for PDF output with the `stargazer` package, this option is a must.
 
 ---
 ## Code Chunks &mdash; Other Useful Options
@@ -2348,7 +2433,7 @@ Prevent messages and/or warnings from being displayed in the output
 ---
 ## Code Chunks &mdash; Other Useful Options
 
-Define the .yellow-h[actual] dimensions of figures, in inches
+Define the .yellow-h[actual dimensions] of figures, in inches
 
 ````md
 `r ''````{r ... `fig.height=6`, `fig.width=9`}
@@ -2358,7 +2443,7 @@ Define the .yellow-h[actual] dimensions of figures, in inches
 
 --
 
-Define the size of figures .yellow-h[in the output document], with `out.width` and/or `out.height`
+Define the size of figures .yellow-h[as they appear in the output document], with `out.width` and/or `out.height`
 
 ````md
 `r ''````{r ... `out.width="50%"`}
@@ -2455,7 +2540,7 @@ df <- df_raw `%>%`
 
 .footnote[
 
-[*] I will be using the pipe operator <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>%>%</code></span> and other functions from the `dplyr` package for such operations in the following slides.
+<sup>*</sup> I will be using the pipe operator <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>%>%</code></span> and other functions from the `dplyr` package for such operations in the following slides.
 
 ]
 
@@ -2590,7 +2675,7 @@ The syntax <span style="background-color: #e5e5e5; border-radius: 3px; padding: 
     
 .footnote[
 
-[*] Ideally, reproducible papers should produce their own images with data and code. However, there might be situations where this is not possible.
+<sup>*</sup> Ideally, reproducible papers should produce their own images with data and code. However, there might be situations where this is not possible.
 
 ]
 
@@ -3060,7 +3145,7 @@ A line starting with a colon, placed before or after tables, introduces captions
 
 .pull-left[
 
-```{r eval=FALSE, tidy=FALSE}
+```{r eval=FALSE, tidy=FALSE, collapse=FALSE}
 
     Centered         Right-Aligned 
 ----------------  ----------------
@@ -3069,7 +3154,7 @@ Second cell       Second cell
 Third cell        Third cell  
                                                                                
 : A hand-made table with R Markdown                                      #<<
-                                                                               
+    
 ```
 
 ]
@@ -3247,7 +3332,7 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 
 .footnote[
 
-[*] Use .yellow-h[:=] for left-aligned, .yellow-h[:=:] for centered, .yellow-h[=:] for right-aligned columns. 
+<sup>*</sup> Use .yellow-h[:=] for left-aligned, .yellow-h[:=:] for centered, .yellow-h[=:] for right-aligned columns. 
 
 ]
 
@@ -3301,7 +3386,8 @@ class: action
 <br>
   - workarounds available
       - `knit` to HTML as well as Word, copy the tables from HTML to Word
-      - `knit` to PDF as well as Word, open PDF as Word, and copy the tables accross
+      - `knit` to PDF, open the PDF in Word
+          - in Word, follow `File -> Open`
 
 --
 
@@ -3333,7 +3419,7 @@ class: action
 Table the first four rows of the dataset
 
 ````md
-`r ''````{r data_table, `echo=FALSE`, `results="asis"`}
+`r ''````{r, data_table, `echo=FALSE`, `results="asis"`}
 
 stargazer(data = head(df, n = 4), `type = "latex"`, `summary = FALSE`)
 
@@ -3361,7 +3447,7 @@ Notice the options of the chunk and the arguments of the function
 Table the first four rows of the dataset
 
 ````md
-`r ''````{r data_table, echo=FALSE, results="asis"}
+`r ''````{r, data_table, echo=FALSE, results="asis"}
 
 stargazer(data = head(df, n = 4), type = "latex", summary = FALSE)
 
@@ -3388,7 +3474,7 @@ stargazer(data = head(df, n = 4), type = "html", summary = FALSE)
 Set .inline-c[header = FALSE] to remove the note preceding tables
 
 ````md
-`r ''````{r data_table, echo=FALSE, results="asis"}
+`r ''````{r, data_table, echo=FALSE, results="asis"}
 
 stargazer(data = head(df, n = 4), type = "latex", summary = FALSE, `header = FALSE`)
 
@@ -3411,7 +3497,7 @@ stargazer(data = head(df, n = 4), type = "html", summary = FALSE, header = FALSE
 
 Define a caption with the `title` argument
 ````md
-`r ''````{r data_table, echo=FALSE, results="asis"}
+`r ''````{r, data_table, echo=FALSE, results="asis"}
 
 stargazer(data = head(df, n = 4), type = "latex", summary = FALSE, `header = FALSE`,
           `title = "First four rows of the dataset"`)
@@ -3436,7 +3522,7 @@ stargazer(data = head(df, n = 4), type = "html", summary = FALSE)
 Create a table of summary statistics instead, for the complete dataset
 
 ````md
-`r ''````{r summary_table, echo=FALSE, results="asis"}
+`r ''````{r, summary_table, echo=FALSE, results="asis"}
 
 stargazer(`data = df`, type = "latex", `summary = TRUE`, header = FALSE,
           title = "Descriptive statistics")
@@ -3461,7 +3547,7 @@ stargazer(data = df, type = "html", summary = TRUE)
 Keep only a selection of statistics
 
 ````md
-`r ''````{r summary_table, echo=FALSE, results="asis"}
+`r ''````{r, summary_table, echo=FALSE, results="asis"}
 
 stargazer(data = df, type = "latex", summary = TRUE, header = FALSE,
           title = "Descriptive statistics", `summary.stat = c("n", "mean", "sd", "min", "max")`)
@@ -3487,7 +3573,7 @@ stargazer(data = df, type = "html", summary = TRUE,
 Omit a selection of statistics for the same effect
 
 ````md
-`r ''````{r summary_table, echo=FALSE, results="asis"}
+`r ''````{r, summary_table, echo=FALSE, results="asis"}
 
 stargazer(data = df, type = "latex", summary = TRUE, header = FALSE,
           title = "Descriptive statistics", `omit.summary.stat = c("p25", "p75")`)
@@ -3513,7 +3599,7 @@ stargazer(data = df, type = "html", summary = TRUE,
 Flip the table
 
 ````md
-`r ''````{r summary_table, echo=FALSE, results="asis"}
+`r ''````{r, summary_table, echo=FALSE, results="asis"}
 
 stargazer(data = df, type = "latex", summary = TRUE, header = FALSE, `flip = TRUE`,
           title = "Descriptive statistics", omit.summary.stat = c("p25", "p75"))
@@ -3552,7 +3638,7 @@ class: action
 Create a table of regression models instead
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(`data = lm(h5_index ~ subfield, data = df)`, 
           type = "latex", header = FALSE,
@@ -3584,7 +3670,7 @@ stargazer(data = lm(h5_index ~ subfield, data = df), type = "html")
 Models can also be estimated outside the function first
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
  `lm1 <- lm(h5_index ~ subfield, data = df)`
 
@@ -3617,7 +3703,7 @@ stargazer(data = lm1, type = "html")
 Keep only a selection of statistics
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(data = lm1, type = "latex", header = FALSE,
           title = "Regression Results", 
@@ -3649,7 +3735,7 @@ stargazer(data = lm1, type = "html", keep.stat = c("n", "rsq"))
 Display multiple models in the same table
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(`data = list(lm1, lm2)`, type = "latex", 
           header = FALSE, title = "Regression Results", 
@@ -3681,7 +3767,7 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"))
 Change variable labels
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "latex", 
           header = FALSE, title = "Regression Results", 
@@ -3717,7 +3803,7 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
 Change significance levels
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "latex", 
           header = FALSE, title = "Regression Results", 
@@ -3755,7 +3841,7 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
 Label the table for in-text reference
 
 ````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "latex", 
           header = FALSE, title = "Regression Results", 
@@ -3799,6 +3885,8 @@ class: action
 `r countdown(minutes = 7, seconds = 30, top = 0)`
 
 ---
+name: table-links
+
 ## Tables &mdash; `stargazer` &mdash; Referring to Tables
 
 Refer to tables themselves with the .inline-c[\autoref{table_label}] syntax
@@ -3842,7 +3930,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -3868,6 +3956,8 @@ class: inverse, center, middle
     - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
 
 ---
+name: figure-links
+
 ## Functionality Gaps &mdash; Examples
 
 #### Problem:
@@ -3988,7 +4078,8 @@ header-includes:
 ```
 
 .footnote[
-[*] This can be reversed anywhere in text, with the `singlespacing` command.
+
+<sup>*</sup> This can be reversed anywhere in text, with the `singlespacing` command.
 
 ]
 
@@ -4034,7 +4125,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -4044,11 +4135,11 @@ class: inverse, center, middle
 - Research papers have many versions before publication
 
     - typically written over a long period of time, in numerous sittings
-    - at the end of every sitting, esentially a different version of the same manuscript is created<sup>*</sup>
+    - at the end of every sitting, essentially a different version of the same manuscript is created<sup>*</sup>
 
 .footnote[
 
-[*] They also often written by multiple authors and/or on different computers, increasing the number of versions created. Here I assume projects are single-authored on a single computer, leaving the topic of collaboration (including, with oneself) to the next section &mdash; Part 9.
+<sup>*</sup> They also often written by multiple authors and/or on different computers, increasing the number of versions created. Here I assume projects are single-authored on a single computer, leaving the topic of collaboration (including, with oneself) to the next section &mdash; Part 9.
 
 ]
 
@@ -4058,7 +4149,7 @@ class: inverse, center, middle
 - Research papers have many versions before publication
 
     - typically written over a long period of time, in numerous sittings
-    - at the end of every sitting, esentially a different version of the same manuscript is created
+    - at the end of every sitting, essentially a different version of the same manuscript is created
     
 
 - With many versions created over time, there emerges at least two challenges
@@ -4099,13 +4190,14 @@ manuscript
 
 - Git
     - a software that keeps track of versions of a set of files
-    - it is *local*, the records are kept on your computer
+    - it is *local* to you, the records are kept on your computer
 
 --
 
 - GitHub
     - a hosting service, or a website, that can keep the records
-    - it is *remote*, like the Dropbox website, but specifically structured to keep records with Git
+    - it is *remote* to you, like the Dropbox website
+    - but unlike Dropbox, GitHub is specifically structured to keep records with Git
 
 --
 
@@ -4118,19 +4210,19 @@ manuscript
 
 - To commit
     - to take a snaphot of, or to version, a repository
-    - it is like saving a new version of all changed files in your folder with a new name
+    - it is like saving a new version of all files and sub-folders in your project folder with a new name
     - it is local, the records are kept on your computer unless you `push`
 
 --
 
 - To push
     - to move the records from Git to GitHub, from your computer to online server
-    - it is like uploading (the new versions of) your files to a website, 
+    - it is like uploading (the new versions of) your files and sub-folders to a website, 
     - it also involves merging, if this not the first push
 
 .footnote[
 
-[*] For projects that are single-authored on a single computer, merging is typically automatic. It becomes an issue for collaborated projects, which we will cover in the next section &mdash; Part 9.
+<sup>*</sup> For projects that are single-authored on a single computer, merging is typically automatic. It becomes an issue for collaborated projects, which we will cover in the next section &mdash; Part 9.
 
 ]
 
@@ -4148,7 +4240,7 @@ Version control with Git and GitHub requires
 
 .footnote[
 
-[*] We have started this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub.
+<sup>*</sup> We have started this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub. [Back to the relevant slide](#install-git).
 
 ]
 
@@ -4227,7 +4319,7 @@ class: action
 
 .footnote[
 
-[*] These instructions presume there is an exiting RStudio project to be set up for version control. If not, or to start a new project, follow from [this slide](#rstudio-project) first.
+<sup>*</sup> These instructions presume there is an exiting RStudio project to be set up for version control. If not, or to start a new project, follow from [this slide](#rstudio-project) first.
 
 ]
 
@@ -4297,7 +4389,7 @@ name: version-control-workflow
 
 .footnote[
 
-[*] To stage is to add files to be comitted. It  allows us to commit one or more files together or separately.
+<sup>*</sup> To stage is to add files to be comitted. It allows us to commit files individually or together with other files.
 
 ]
 
@@ -4554,14 +4646,14 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
 ---
 ## Collaboration
 
-- Many research papers are written by multipe authors and/or on multiple computers
+- Many research papers are written by multiple authors and/or on multiple computers
 
     - yourself on a different computer (e.g., laptop at home, desktop at office), poses similar challenges as collaboration
     
@@ -4850,11 +4942,13 @@ class: action
 ## Colloboration &mdash; Git and Github &mdash; Workflow &mdash; Notes
 
 - It is possible to edit `.Rmd` documents directly on GitHub
+
     - click on any editable file, and `Edit this file`
     - commit changes, either as a direct commit or a pull request
 --
 
 - A GitHub account is enough for collaboration with co-authors who do not work with Git, R, or RStudio
+
     - not possible to knit to see the outcome
     - would suit co-authors whose contributions are plain text
 
@@ -4879,7 +4973,7 @@ class: inverse, center, middle
 
 .footnote[
 
-[Back to the contents slide.](#contents-slide)
+[Back to the contents slide](#contents-slide).
 
 ]
 
@@ -4889,22 +4983,20 @@ class: inverse, center, middle
 - Consider converting a real project to R Markdown
     - now, in the remainder of the workshop
 
-<br>
-
 - Choose an existing project, preferably
-    - single&ndash;authored
+    - single-authored
     - at an early stage
-    - but one that you will be working on in the very near future
-
-<br>
+    - but one that you are, will be, working on
 
 - Ask me for help
-    - with no more slides to go through, I will now focus on individual coaching
+    - with no more slides to go through, I will now focus on helping you start your first project in R Markdown
 
 ---
 class: middle, center
 
-## Thank You!
+## The workshop ends here.
+## Congradulations for making it this far, and
+## thank you for joining me!
 
 ---
 class: inverse, center, middle
