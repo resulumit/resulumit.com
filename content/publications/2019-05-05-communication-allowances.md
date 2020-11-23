@@ -10,6 +10,7 @@ tags:
 - communication
 - allowances
 citation: <em>Political Studies Review</em>
+doi: 10.1177/1478929920967588
 file: umit2020c.pdf
 ---
 
