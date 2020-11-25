@@ -12,7 +12,10 @@ output:
       highlightSpans: true
       countIncrementalSlides: false
       ratio: "16:9"
+    seal: false
 ---
+
+class: inverse, center, middle
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE, crayon.enabled = TRUE)
@@ -95,6 +98,21 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 </style>
 
 
+# Writing Reproducible Research Papers with R Markdown
+
+<br>
+
+### Resul Umit
+
+### November 2020
+
+.footnote[
+
+[Skip intro &mdash; To the contents slide](#contents-slide).
+
+]
+
+---
 ## Who am I?
 
 Resul Umit
@@ -1116,7 +1134,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml2.png")
 
 .pull-left-c[
 
-The syntax .inline-c[[^footnotes_go_here]] adds footnotes to strings
+The syntax .inline-c[^[footnotes_go_here]] adds footnotes to strings
 
 ```{r, eval = FALSE}
 ---
@@ -1333,6 +1351,8 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml6.png")
 ]
 
 ---
+name: yaml-further-settings
+
 ## YAML &mdash; Some Further Settings for PDF Outputs
 
 - `fontsize`
@@ -1355,19 +1375,18 @@ class: action
 1) Open `journals.Rmd` and fill in the YAML variables for the mock paper
 - take cues from `reproduce_this.pdf` and/or the slides
 
-2) Add and set one of the variables mentioned among *Some Further Settings for PDF Outputs*
+2) Add and set one of the variables mentioned as [further settings for PDF outputs](#yaml-further-settings) above
 - i.e., `fontsize`, `linkcolor`, `urlcolor`, `citecolor`, `link-citations`
 
 3) Add and set a completely new variable not covered so far
-- see R Markdown Cheat Sheet
+-  see, for example, the R Markdown Cheat Sheet
     
 4) `Knit` your `journals.Rmd`
-
-5) Consider tidying your working directory
+- consider tidying your working directory
 - you may wish to delete any trial files you have created so far
     - except, perhaps, journals.pdf, which we will keep re-creating   
 <br>
-- the original documents are `journals.Rmd`, `references.bib`, and `apa_7th.csl`
+- the original documents are `journals.Rmd`, `references.bib`, `apa_7th.csl`, and `reproduce_this.pdf`
     
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
@@ -1526,19 +1545,22 @@ class: action
 
 ## Exercises
 
-6) Hard Brakes
+5) Hard Brakes
 
 - see `reproduce_this.pdf`: page 1 
 - apply in `journals.Rmd`: paragraph 1
 
 <br>
 
-7) Line Blocks / Block Quotes
+6) Line Blocks / Block Quotes
 
 - see `reproduce_this.pdf`: page 1
-- apply in `journals.Rmd`: block quote, between paragraphs 1 and 2
-  
-`r countdown(minutes = 3, seconds = 00, top = 0)`  
+- apply in `journals.Rmd`: block quote, between paragraphs 1 and 2   
+<br>
+- see `reproduce_this.pdf`: page 5
+- apply in `journals.Rmd`: hypothesis 1, between paragraphs 14 and 15; hypothesis 2, between paragraphs 16 and 17
+
+`r countdown(minutes = 5, seconds = 00, top = 0)`  
 
 ---
 ## Syntax &mdash; Headers
@@ -1644,7 +1666,7 @@ class: action
 
 ## Exercises
 
-8) Headers
+7) Headers
 
 - see `reproduce_this.pdf`: pages 1 to 11
     - 11 headers, Abstract to References    
@@ -1653,7 +1675,7 @@ class: action
 
 <br>
 
-9) Emphases
+8) Emphases
 
 - see `reproduce_this.pdf`: pages 1 and 2
     - bold and italics    
@@ -1713,7 +1735,7 @@ class: action
 
 ## Exercises
 
-10) Links &mdash; Internal
+9) Links &mdash; Internal
 
 - see `reproduce_this.pdf`: page 2 
       - the link to the Literature Review section    
@@ -1722,7 +1744,7 @@ class: action
 
 <br>
 
-11) Links &mdash; External
+10) Links &mdash; External
 
 - see `reproduce_this.pdf`: page 1
     - email and website links in one of the footnotes    
@@ -1819,14 +1841,14 @@ class: action
 
 ## Exercises
 
-12) Equations
+11) Equations
 
 - see `reproduce_this.pdf`: page 7 
 - apply in `journals.Rmd`: paragraph 22; block equation, between paragraphs 22 and 23
 
 <br> 
 
-13) Footnotes
+12) Footnotes
 
 - see `reproduce_this.pdf`: page 2 
 - apply in `journals.Rmd`: paragraph 3
@@ -1916,7 +1938,7 @@ Three hyphens grouped together introduce an em-dash
 .inline-c[&#8208;&#8208;&#8208;] becomes .out-t[&mdash;]
 
 ---
-## Syntax &mdash; Sub- and Super-scripts
+## Syntax &mdash; Subscript and Superscript
 
 .pull-left[
 
@@ -1926,7 +1948,7 @@ A pair of tildes introduces subscript
 
 <br>
 
-A pair of carets introduces subscript
+A pair of carets introduces superscript
 
 .inline-c[R&#94;2&#94;] becomes .out-t[R<sup>2</sup>]
 
@@ -1965,21 +1987,21 @@ class: action
 
 ## Exercises
 
-14) Lists
+13) Lists
 
 - see `reproduce_this.pdf`: page 3 
 - apply in `journals.Rmd`: list, between paragraphs 10 and 11
 
 <br>
 
-15) Dashes
+14) Dashes
 
 - see `reproduce_this.pdf`: page 2
 - apply in `journals.Rmd`: paragraph 6
 
 <br>
 
-16) Sub- and Super-scripts
+15) Sub- and Super-scripts
 
   - see `reproduce_this.pdf`: page 2
   - apply in `journals.Rmd`: paragraph 5
@@ -2100,13 +2122,13 @@ knitr::include_graphics("rmd_workshop_files/images_data/csl.png")
 ]
 
 ---
-## References &mdash; In-text Citation Syntax
+## References &mdash; In-text Citation Syntax &mdash; Author-Date
 
 All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or minus signs introduce variation
 
 <br>
 
-.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)]
+.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)] in APA 7<sup>th</sup> edition
 
 .inline-c[@bennett2015] becomes .out-t[Bennett (2015)]
 
@@ -2126,6 +2148,27 @@ All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or 
 
 .inline-c[@bennett2015 [33-35]] becomes .out-t[Bennett (2015, pp. 33&ndash;35)]
 
+---
+## References &mdash; In-text Citation Syntax &mdash; Numerical
+
+All citations keys take the 'at' sign .yellow-h[@] 
+
+.inline-c[A clever sentence.[@bennett2015]] becomes .out-t[A clever sentence.<sup>[1]</sup>] in certain numerical sytles
+
+.inline-c[A clever sentence.[@bennett2015; @gilbert2019]] becomes .out-t[A clever sentence.<sup>[1,2]</sup>]
+
+
+<br>
+--
+Individual styles may or may not use additional information, such as page numbers
+
+.inline-c[A clever sentence.[@bennett2015 35]] might become .out-t[A clever sentence.<sup>[1]</sup>] as well
+
+<br>
+--
+Individual styles may or may not be sensitive to variation, such as square brackets
+
+.inline-c[A clever sentence. @bennett2015] might become .out-t[A clever sentence.<sup>[1]</sup>] as well
 
 ---
 ## Citations &mdash; Reference List
@@ -2134,14 +2177,14 @@ The list of references appears after the last line of the document, with no sect
 - so that you can choose the header yourself, by ending .Rmd documents with a header of your choice
 
 ```{r eval=FALSE}
-This is the last sentence of the manuscript.
+This is the last sentence of a manuscript with an APA style.
 
 ## References
 ```
 
 .out-t[
 
-This is the last sentence of the manuscript.
+This is the last sentence of a manuscript with an APA style.
 
 ### References
 
@@ -2178,25 +2221,25 @@ class: action
 
 ## Exercises
 
-17) Add an entry to `references.bib` for the following book
+16) Add an entry to `references.bib` for the following book
 - *R Markdown: The Definitive Guide* by Xie and co-authors
 
 <br>
 
-18) Reproduce the citations and reference list in the mock paper
+17) Reproduce the citations and reference list in the mock paper
 - see `reproduce_this.pdf`: pages 3 and 11
 - apply in `journals.Rmd`: paragraph 7 to 9
 
 <br>
 
-19) Change the reference style
+18) Change the reference style
 - download the .csl file for your favourite style from [https://www.zotero.org/styles](https://www.zotero.org/styles) 
 - put it into your working directory
 - update the YAML variable
 
 <br>
 
-20) Link the citations to the reference list
+19) Link the citations to the reference list
 
 `r countdown(minutes = 7, seconds = 30, top = 0)`
 
@@ -2635,21 +2678,21 @@ class: action
 
 ## Exercises
 
-21) Setup Chunk
+20) Setup Chunk
 - introduce a setup chunk with one or more defaults chunk options, with `knitr::opts_chunk$set()`
 - load the packages that we will need &mdash; `dplyr`, `ggplot2`, and `stargazer`
 - import raw data
 
 <br>
 
-22) Data Chunk
+21) Data Chunk
 - introduce a data chunk to transform `subfield` and `english` into factors
 - create a new variable `age`, based on `since`
 - drop `since` from the data frame
 
 <br>
 
-23) Inline code
+22) Inline code
 
 - see `reproduce_this.pdf`: page 6
     - i.e., 1091 observations    
@@ -2744,7 +2787,7 @@ The `knitr` package offers a capable alternative with the `include_graphics()` f
 ````md
 `r ''````{r, screenshot, echo=FALSE, fig.cap="A screenshot of the Google Scholar homepage."}
 
-knitr::include_graphics("../figures/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 
 ```
 ````
@@ -2764,7 +2807,7 @@ Size is defined with the chunk options `out.width` or `out.hight`
 ````md
 `r ''````{r ... `out.width="40%"`}
 
-knitr::include_graphics("../figures/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 
 ```
 ````
@@ -2785,7 +2828,7 @@ Most other chunk options are common with figures plotted within R Markdown, such
 ````md
 `r ''````{r ... `fig.align="center"`}
 
-knitr::include_graphics("../figures/google_scholar.png")
+knitr::include_graphics("../image/google_scholar.png")
 
 ```
 ````
@@ -2800,9 +2843,9 @@ knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
 ---
 class: action
 
-## Exercises
+## Exercise
 
-24) Images
+23) Images
 - see `reproduce_this.pdf`: figure 1 on page 10
 - apply in `journals.Rmd`: figure 1, between paragraphs 19 and 20
 
@@ -3049,13 +3092,13 @@ class: action
 
 ## Exercises
 
-25) Barplot
+24) Barplot
 - see `reproduce_this.pdf`: figure 2 on page 7
 - apply in `journals.Rmd`: figure 2, between paragraphs 21 and 22
 
 <br>
 
-26) Scatterplot
+25) Scatterplot
 - see `reproduce_this.pdf`: figure 3 on page 9
 - apply in `journals.Rmd`: figure 3, between paragraphs 27 and 28
 
@@ -3339,9 +3382,9 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 ---
 class: action
 
-## Exercises
+## Exercise
 
-27) Markdown Tables
+26) Markdown Tables
 - see `reproduce_this.pdf`: table 1 on page 4
 - apply in `journals.Rmd`: table 1, between paragraphs 11 and 12
 
@@ -3622,9 +3665,9 @@ stargazer(data = df, type = "html", summary = TRUE, flip = TRUE,
 ---
 class: action
 
-## Exercises
+## Exercise
 
-28) Summary Statistics Tables
+27) Summary Statistics Tables
 - see `reproduce_this.pdf`: table 2 on page 8
 - apply in `journals.Rmd`: table 2, between paragraphs 23 and 24
 
@@ -3834,93 +3877,15 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
 ]
 
 ---
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Label the table for in-text reference
-
-````md
-`r ''````{r, regression_table, echo=FALSE, results="asis"}
-
-stargazer(data = list(lm1, lm2), type = "latex", 
-          header = FALSE, title = "Regression Results", 
-          keep.stat = c("n", "rsq"),
-          dep.var.labels = "H5 Index",
-          covariate.labels = c("Issues", "English"),
-          star.cutoffs = c(0.05, 0.01, 0.001),
-          `label = "regression_results"`)
-
-```
-````
-
-]
-
-.pull-right-c[
-.medium[
-
-<center>Table 1: Regression Results</center> 
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
-          dep.var.labels = "H5 Index",
-          covariate.labels = c("Issues", "English"),
-          star.cutoffs = c(0.05, 0.01, 0.001),
-          label = "regression_results")
-
-```
-]
-]
-
----
 class: action
 
-## Exercises
+## Exercise
 
-29) Regression Tables
+28) Regression Tables
 - see `reproduce_this.pdf`: table 3 on page 10
 - apply in `journals.Rmd`: table 3, between paragraphs 30 and 31
 
 `r countdown(minutes = 7, seconds = 30, top = 0)`
-
----
-name: table-links
-
-## Tables &mdash; `stargazer` &mdash; Referring to Tables
-
-Refer to tables themselves with the .inline-c[\autoref{table_label}] syntax
-
-```{r eval=FALSE, tidy=FALSE}
-\autoref{regression_results} provides results from two OLS models.
-```
-
-.out-t[[Table 1]() provides results from two OLS models.]
-
---
-
-<br>
-
-Refer to specific results within tables with inline code
-
-```{r, eval=FALSE}
-In Model 1, the coefficient for _Issues_ is 
-`r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.
-
-```
-
-.out-t[In Model 1, the coefficient for _Issues_ is `r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.]
-
----
-class: action
-
-## Exercises
-
-30) Referring to Tables
-- see `reproduce_this.pdf`: pages 7 and 9
-- apply in `journals.Rmd`: paragraph 23 and 29
-
-`r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
 name: part7
@@ -3952,23 +3917,27 @@ class: inverse, center, middle
 
 - There are no exclusive list of gaps or workarounds
 
-    - these are gap- or problem-specific
+    - these are specific to the output you want to achieve, problems you encounter
     - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
 
 ---
-name: figure-links
-
 ## Functionality Gaps &mdash; Examples
 
 #### Problem:
 
-There is no chunk option for figures labels. Without these, we cannot refer to figures with a link within text.
+How can we cross-reference figures, tables, and equations in R Markdown? 
 
---
 
 #### Solution:
 
-Insert a LaTeX label into the `fig.caption` option, and use the .inline-c[\autoref{figure_caption}] syntax in text
+Insert a LaTeX label into the targets (figures, tables, and equations), and then use the .inline-c[\autoref{figure_caption}] syntax in text
+
+
+---
+name: figure-links
+## Functionality Gaps &mdash; Examples &mdash; Cross-references
+
+For .yellow-h[figures], insert a LaTeX label into the .yellow-h[`fig.caption`] option, and use the .inline-c[\autoref{latex_label}] syntax in text
 
 ````md
 `\autoref{scatter_plot}` visualises the relationship between the two journal metrics.
@@ -3989,17 +3958,11 @@ ggplot(data = df) +
 
 
 ---
-## Functionality Gaps &mdash; Examples
+name: table-links
 
-#### Problem:
+## Functionality Gaps &mdash; Examples &mdash; Cross-references
 
-Markdown tables do not have labels, which would otherwise allow us to refer to them in text
-
---
-
-#### Solution:
-
-Insert a LaTeX label after the table caption, and use the .inline-c[\autoref{table_caption}] syntax in text
+For .yellow-h[Markdown tables], insert a LaTeX label after the table caption, and use the .inline-c[\autoref{latex_label}] syntax in text
 
 ```md
 See `\autoref{handmade_table}` for further details.
@@ -4018,18 +3981,38 @@ See `\autoref{handmade_table}` for further details.
 
 .out-t[See [Table 1]() for further details.]
 
+
+---
+## Functionality Gaps &mdash; Examples &mdash; Cross-references &mdash; Note
+
+Note that there is a difference in the label syntax for figures and R Markdown tables
+
+- we use a double backslash .yellow-h[&#92; &#92;] to label figures
+
+    - e.i., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">\\\label{scatter_plot}</span> because the label goes into a string
+    
+    - the first is an escape operator for the second, LaTeX backslash
+    
+--
+   
+- we use single backslash .yellow-h[\] to label R Markdown tables
+
+    - e.i., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">\label{handmade_table}</span> because the label is not in any string
+    
+    - there is no need for the escape operator
+    
 ---
 class: action
 
 ## Exercises
 
-31) Referring to Figures
+29) Referring to Figures
 - see `reproduce_this.pdf`: pages 6 and 9
 - apply in `journals.Rmd`: paragraphs 19, 21, and 27
 
 <br>
 
-32) Referring to Markdown Tables
+30) Referring to Markdown Tables
 - see `reproduce_this.pdf`: page 4
 - apply in `journals.Rmd`: paragraph 11
 
@@ -4037,6 +4020,109 @@ class: action
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
+## Functionality Gaps &mdash; Examples &mdash; Cross-references
+
+For .yellow-h[`stargazer` tables], define a label with the `label` argument, and use the .inline-c[\autoref{latex_label}] syntax in text
+
+.pull-left-c[
+
+````md
+`r ''````{r, regression_table, echo=FALSE, results="asis"}
+
+stargazer(data = list(lm1, lm2), type = "latex", 
+          ...
+          `label = "regression_results"`)
+          
+```
+
+`\autoref{regression_results}` provides results from two OLS models.
+ 
+````
+.out-t[[Table 1]() provides results from two OLS models.]
+
+]
+
+.pull-right-c[
+.medium[
+
+<center>Table 1: Regression Results</center> 
+
+```{r echo = FALSE, results = "asis"}
+
+stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
+          dep.var.labels = "H5 Index",
+          covariate.labels = c("Issues", "English"),
+          star.cutoffs = c(0.05, 0.01, 0.001),
+          label = "regression_results")
+
+```
+]
+]
+
+
+---
+## Functionality Gaps &mdash; Examples &mdash; Cross-references &mdash; Note
+
+Note that we can cross-reference specific results in tables as well
+    
+- there is no gap here &mdash; this possible with inline code
+
+```{r, eval=FALSE}
+In Model 1, the coefficient for _Issues_ is 
+`r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.
+
+```
+
+.out-t[In Model 1, the coefficient for _Issues_ is `r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.]
+
+---
+## Functionality Gaps &mdash; Examples &mdash; Cross-references
+
+For .yellow-h[equations], insert a LaTeX label in an equation environment, and use the .inline-c[\autoref{latex_label}] syntax in text
+
+```md
+\begin{equation}
+\label{special_relativity}
+E = mc_{2}
+\end{equation}
+
+According to \autoref{special_relativity}, space and time are linked.
+
+```
+
+<br>
+
+.out-t[According to [Equation 1](), space and time are linked.]
+
+---
+class: action
+
+## Exercises
+
+31) Referring to Tables
+- see `reproduce_this.pdf`: pages 7 and 9
+- apply in `journals.Rmd`: paragraph 23 and 29
+
+
+<br>
+
+32) Referring to Results in Regression Tables
+- see `reproduce_this.pdf`: page 9
+- apply in `journals.Rmd`: paragraph 29
+    - hint: to extract the standard error from the model, use the column `Std. Error`
+
+<br>
+
+33) Referring to Equations
+- see `reproduce_this.pdf`: page 7
+- apply in `journals.Rmd`: paragraph 22
+   - hint: transform the existing equation from R Markdown to LaTeX syntax, to be able to insert the label
+
+
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+
 ## Functionality Gaps &mdash; Examples
 
 #### Problem:
@@ -4086,9 +4172,9 @@ header-includes:
 ---
 class: action
 
-## Exercises
+## Exercise
 
-33) Line Spacing
+34) Line Spacing
 - introduce 1.5 spacing to the manuscript
     - hint: the command is called `onehalfspacing`    
 <br>
@@ -4623,13 +4709,13 @@ class: action
 
 ## Exercises
 
-34) Reproducibility and Version Control
+35) Reproducibility and Version Control
 - imagine that, after producing all these tables and figures, and writing up your results, you have decided to exclude journals from Oceania from analysis
    - hint: use the `filter` function in the data chunk  
    - create a new version of the manuscript
    - comit and push to GitHub
    
-35) Gitignore
+36) Gitignore
 - stop tracking `journals.pdf`
     - change `.gitignore`
     - remove `journals.pdf` from cache
@@ -4778,17 +4864,17 @@ class: action
 
 ## Exercises
 
-36) Owner Setup
+37) Owner Setup
 - create a new version-controlled RStudio project, with Git and GitHub
 - add the default R Markdown template to your project
     - hint: click `File -> New File -> R Markdown -> OK` to create the template
     - another hint: name the project and the template in a way that they are easily distinguishable from your partner's project and template
 
-37) Invitation to Collaborate
+38) Invitation to Collaborate
 - invite the partner in your current group as a collaborator to your new project
     - hint: you will need their username, full name, or email address to do so
 
-38) Collaborator Setup
+39) Collaborator Setup
 - accepting the invitation from your partner, do the necessary arrangements so that you can collaborate on your partner's project
 
 
@@ -4815,9 +4901,9 @@ class: action
 ---
 class: action
 
-## Exercises
+## Exercise
 
-39) Non-simultaneous Collaboration
+40) Non-simultaneous Collaboration
 
 - take in turns with your partner to work on the same document (of the same project)
     - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
@@ -4836,9 +4922,9 @@ class: action
 ---
 class: action
 
-## Exercises
+## Exercise
 
-40) Simultaneous Collaboration &mdash; Different Lines
+41) Simultaneous Collaboration &mdash; Different Lines
 
 - work on the same document at the same time
     - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
@@ -4856,9 +4942,9 @@ class: action
 ---
 class: action
 
-## Exercises
+## Exercise
 
-41) Simultaneous Collaboration &mdash; Same Line
+42) Simultaneous Collaboration &mdash; Same Line
 
 - work on the same document at the same time
     - *owner*: edit the first header in the document again, save, commit, and push
@@ -4924,14 +5010,14 @@ class: action
 
 ## Exercises
 
-42) Pull request
+43) Pull request
 
 - create a pull request for your collaboration project
     - create a branch for yourself
     - edit any line, save, commit, and push
     - request your branch to be merged
     
-43) Merging
+44) Merging
 
 - view the pull request of your collaborator
 - take the necessary steps to merge it to *master*
@@ -4957,7 +5043,7 @@ class: action
 
 ## Exercises
 
-44) GitHub edit
+45) GitHub edit
 
 - create two edits on the `.Rmd` document in your collaboration project
 - commit one of the edits as a direct commit

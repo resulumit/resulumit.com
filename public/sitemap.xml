@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>/blog/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/communication/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
@@ -23,7 +33,17 @@
   </url>
   
   <url>
+    <loc>/categories/presentations/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/publications/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/representation/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,6 +54,11 @@
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/re-presentations/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,22 +88,7 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/internal-links-xaringan-presentations/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/presentations/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url>
   
