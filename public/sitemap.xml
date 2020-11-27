@@ -143,6 +143,11 @@
   </url>
   
   <url>
+    <loc>/blog/rmd-workshop/</loc>
+    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/rstats/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -154,11 +159,6 @@
   
   <url>
     <loc>/categories/workshop/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/rmd-workshop/</loc>
     <lastmod>2020-04-30T00:00:00+00:00</lastmod>
   </url>
   

@@ -9,7 +9,7 @@ categories:
         - rstats
 ---
 
-_This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at <a href='https://resulumit.shinyapps.io/psjournals/'target='_blank'>https://resulumit.shinyapps.io/psjournals</a>_.
+__This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at <a href='https://resulumit.shinyapps.io/psjournals/'target='_blank'>https://resulumit.shinyapps.io/psjournals</a>__.
 
 Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar. 
 

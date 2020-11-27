@@ -76,13 +76,13 @@ Some might find this dataset useful for teaching, if not for research. However, 
     </item>
     
     <item>
-      <title>Writing reproducible research papers with R Markdown</title>
+      <title>R Markdown workshop</title>
       <link>/blog/rmd-workshop/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/blog/rmd-workshop/</guid>
       <description>Click here for the slides, here for all workshop materials.
-My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at Campus Luzern], to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
+My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at Campus Luzern, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
 Since then I have revised the workshop material, which you can find at GitHub. The slides are better viewed here at my website.</description>
     </item>
     
@@ -121,7 +121,7 @@ Since then I have revised the workshop material, which you can find at GitHub. T
       <guid>/blog/polisci-google-scholar/</guid>
       <description>This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at https://resulumit.shinyapps.io/psjournals.
 Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar.
-Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals. I was wondering how the list looked below this number.</description>
+Google Scholar provides a similar list of top journals in political science, but this includes only the top 20 journals.</description>
     </item>
     
     <item>

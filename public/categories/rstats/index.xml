@@ -10,17 +10,18 @@
 
 
 <item>
-        <title>Writing reproducible research papers with R Markdown</title>
+        <title>R Markdown workshop</title>
         <link>/blog/rmd-workshop/</link>
         <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
         
 <guid>/blog/rmd-workshop/</guid>
         <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;em&gt;Click &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the slides, &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for all workshop materials.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;Campus Luzern]&lt;/b&gt;&lt;/a&gt;, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the slides, &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for all workshop materials.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;Campus Luzern&lt;/b&gt;&lt;/a&gt;, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.&lt;/p&gt;
 &lt;p&gt;Since then I have revised the workshop material, which you can find at &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. The slides are better viewed &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;here at my website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I would be happy if other instructors used my material for teaching. I would also be happy to deliver this workshop again at different institutions — or online during the lockdown. Would you be interested? Let me know.&lt;/p&gt;
 &lt;p&gt;My next workshop is again at Campus Luzern, this time on creating academic websites with &lt;code&gt;blogdown&lt;/code&gt;. I look forward to it.&lt;/p&gt;
@@ -34,9 +35,11 @@
         
 <guid>/blog/polisci-google-scholar/</guid>
         <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;em&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar.&lt;/p&gt;
 &lt;p&gt;Google Scholar provides a similar &lt;a href=&#39;https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=soc_politicalscience&#39;target=&#39;_blank&#39;&gt; list of top journals in political science&lt;/a&gt;, but this includes only the top 20 journals. I was wondering how the list looked below this number.&lt;/p&gt;
 &lt;p&gt;To see that, I have scraped Google Scholar for the journals in SSCI, with &lt;a href=&#39;https://github.com/tidyverse/rvest&#39;target=&#39;_blank&#39;&gt;the rvest package&lt;/a&gt; in R.&lt;/p&gt;

@@ -49,9 +49,11 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <guid>/blog/polisci-google-scholar/</guid>
         <description>
+&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;em&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Here is a list of all political science journals in the Social Science Citations Index (SSCI),* ranked according to their h5-index on Google Scholar.&lt;/p&gt;
 &lt;p&gt;Google Scholar provides a similar &lt;a href=&#39;https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=soc_politicalscience&#39;target=&#39;_blank&#39;&gt; list of top journals in political science&lt;/a&gt;, but this includes only the top 20 journals. I was wondering how the list looked below this number.&lt;/p&gt;
 &lt;p&gt;To see that, I have scraped Google Scholar for the journals in SSCI, with &lt;a href=&#39;https://github.com/tidyverse/rvest&#39;target=&#39;_blank&#39;&gt;the rvest package&lt;/a&gt; in R.&lt;/p&gt;
@@ -1463,7 +1465,7 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
 &lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;em&gt;This blogpost has led to an app that filters data on political science journals, including article types. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including article types. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;In addition to ‘regular’ articles, some political science journals publish shorter manuscripts as well. They are often called &lt;em&gt;research notes&lt;/em&gt;, but the name, and indeed the format itself, can differ from one journal to another. Yet, this definition, by &lt;a href=&#39;https://academic.oup.com/poq/pages/general_instructions&#39;target=&#39;_blank&#39;&gt;&lt;em&gt;Public Opinion Quarterly&lt;/em&gt;&lt;/a&gt;, covers a lot of common ground:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Research Notes are shorter reports … of single findings, important extensions or replications of previous research, or other major additions to the literature that warrant publication, and which can be communicated effectively without the more extended theoretical development or detailed analysis characteristic of regular articles.&lt;/p&gt;

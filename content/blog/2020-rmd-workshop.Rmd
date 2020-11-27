@@ -9,7 +9,7 @@ categories:
         - rstats
 ---
 
-*Click <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"><b>here</b></a> for the slides, <a href="https://github.com/resulumit/rmd_workshop" target="_blank"><b>here</b></a> for all workshop materials.*
+**Click <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"><b>here</b></a> for the slides, <a href="https://github.com/resulumit/rmd_workshop" target="_blank"><b>here</b></a> for all workshop materials.**
 
 My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at <a href="https://www.campus-luzern.ch/" target="_blank"><b>Campus Luzern</b></a>, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.
 
