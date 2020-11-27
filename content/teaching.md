@@ -34,7 +34,7 @@ title: "Teaching experience"
 
 * *Reproducible research*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, March 2020
-    - <a href="https://resulumit.com/syllabi/20march_markdown.pdf" target="_blank">Syllabus</a>
+    - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a>
     - <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a>
     - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
