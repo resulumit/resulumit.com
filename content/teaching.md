@@ -34,7 +34,7 @@ title: "Teaching experience"
 
 * *Reproducible research*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, November 2020
-        - Previuosly: March 2020
+        - Previuos iteration: March 2020
     - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a>
     - <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a>
     - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
@@ -43,5 +43,5 @@ title: "Teaching experience"
 
 * *Academic websites*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2020
-            - Next: April 2021
+        - Next iteration: April 2021
     - <a href="https://resulumit.com/syllabi/20spring_rbd.pdf" target="_blank">Syllabus</a>
