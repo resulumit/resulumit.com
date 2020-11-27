@@ -1,7 +1,7 @@
 ---
 date: 2020-04-30
 slug: rmd-workshop
-title: "Writing reproducible research papers with R Markdown"
+title: "R Markdown workshop"
 output: html_document
 categories:
         - teaching

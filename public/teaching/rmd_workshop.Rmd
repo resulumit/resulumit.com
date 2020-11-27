@@ -409,13 +409,9 @@ class: inverse, center, middle
 ]
 
 ---
-name: download-zip
-class: action
+## Course Materials &mdash; Overview
 
-
-## Course Materials &mdash; Download from the Internet
-
-Materials, available at <https://github.com/resulumit/rmd_workshop>,<sup>*</sup> have the following structure
+Materials, available at <https://github.com/resulumit/rmd_workshop>, have the following structure
 
 
 ```
@@ -423,9 +419,7 @@ rmd_workshop
    |
    |- manuscript
    |  |- journals.Rmd
-   |  |- references.bib
-   |  |- apa_7th.csl
-   |  |- reproduce_this.pdf
+   |  |- ...
    |
    |-data
    |  |- journals.csv
@@ -435,20 +429,43 @@ rmd_workshop
    |
    |-presentation
    |  |- rmd_workshop.pdf
-
+   |
+   |-test
+   |  |- run_this.R
+   |  |- ...
+   
 ```
 
+---
+name: download-zip
+class: action
 
-.footnote[
+## Course Materials &mdash; Download from the Internet
 
-<sup>*</sup> On GitHub, follow `Code -> Download ZIP` to download.
+- Download the materials from <https://github.com/resulumit/rmd_workshop>
 
-]
+  - on the webpage, follow
 
+> `Code -> Download ZIP`
+
+<br>
+
+- Unzip and rename the folder, remove two files
+
+  - unzip to a location that is not synced
+     - e.g., perhaps Documents, but not Dropbox
+  
+  - rename the folder as `YOURNAME-rmd`
+     - e.g., `resul-rmd`
+     - this will come handy in Part 9
+  
+  - delete `.gitignore` and `README.md`
+     - these are specific to my repository
+  
 ---
 ## Course Materials &mdash; Contents
 
-- `reproduce_this.pdf`
+- `manuscript\reproduce_this.pdf`
 
     - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
     - randomly generated sentences, with figures and tables from randomly a generated dataset<sup>*</sup>
@@ -463,32 +480,32 @@ rmd_workshop
 ---
 ## Course Materials &mdash; Contents
 
-- `reproduce_this.pdf`
+- `manuscript\reproduce_this.pdf`
     - the document, formatted in Word but saved as PDF, that we will re-create with R Markdown 
     - randomly generated sentences, with figures and tables from randomly generated dataset
     - key sections in-need of attention are highlighted
 
-- `journals.Rmd`
+- `manuscript\journals.Rmd`
     - the R Markdown document that we will work on
     - includes unformatted text from `reproduce_this.pdf` to save time
     - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
 
 --
 
-- `references.bib` 
+- `manuscript\references.bib` 
 
     - a BibTeX document with three fabricated references
 
 --
 
-- `apa_7th.csl`
+- `manuscript\apa_7th.csl`
 
     - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
 
 ---
 ## Course Materials &mdash; Contents  
 
-`journals.csv`
+`data\journals.csv`
 - a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the `Google Scholar` rankings of fictitious journals
     
 - includes the following variables 
@@ -505,17 +522,30 @@ rmd_workshop
 ---
 ## Course Materials &mdash; Contents  
 
-- `google_scholar.png`
+- `image\google_scholar.png`
 
     - a screeenshot image of the [Google Scholar homapage](https://scholar.google.ch/) 
 
 --
 
-- `rmd_workshop.pdf`
+- `presentation\rmd_workshop.pdf`
 
     - these slides in PDF format
     - HTML version is available at <https://resulumit.com/teaching/rmd_workshop.html>
         - offers, among others, the ability to scroll across long codes on some slides
+
+--
+
+- `test\run_this.R`
+    - an R script that 
+        - installs the packages needed for the workshop
+        - attempts to knit an R Markdown into PDF file
+    - useful for tasking participants with a pre-workshop setup
+
+--
+        
+- `test\the_test.Rmd`
+    - an R Markdown file, to be used for the attempt in `test\run_this.R`
 
 ---
 class: action
@@ -625,15 +655,13 @@ name: rstudio-project
 
   - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
 
-- Create a new RStudio project for the existing<sup>*</sup> directory `.../rmd_workshop/manuscript` from the RStudio menu:
+<br>
 
-> `File -> New Project -> Existing Directory -> Browse -> .../rmd_workshop/manuscript -> Open`
+- Create a new RStudio project for the existing<sup>*</sup> workshop directory `...\YOURNAME-rmd` from the RStudio menu:
 
-- Rename the `.Rproj` file into something more meaningful
+> `File -> New Project -> Existing Directory -> Browse -> ...\YOURNAME-rmd -> Open`
 
-  - the default RStudio behaviour is to name the projects after the existing directory
-  - but, we don't want all our projects to be named `manusript.Rproj`
-  
+
 .footnote[
 
 <sup>*</sup> Recall that we have downloaded this earlier from GitHub. [Back to the relevant slide](#download-zip).
@@ -1375,18 +1403,20 @@ class: action
 1) Open `journals.Rmd` and fill in the YAML variables for the mock paper
 - take cues from `reproduce_this.pdf` and/or the slides
 
+<br> 
+
 2) Add and set one of the variables mentioned as [further settings for PDF outputs](#yaml-further-settings) above
 - i.e., `fontsize`, `linkcolor`, `urlcolor`, `citecolor`, `link-citations`
 
+<br>
+
 3) Add and set a completely new variable not covered so far
 -  see, for example, the R Markdown Cheat Sheet
-    
-4) `Knit` your `journals.Rmd`
-- consider tidying your working directory
-- you may wish to delete any trial files you have created so far
-    - except, perhaps, journals.pdf, which we will keep re-creating   
+
 <br>
-- the original documents are `journals.Rmd`, `references.bib`, `apa_7th.csl`, and `reproduce_this.pdf`
+
+4) `Knit` your `journals.Rmd`
+- observe the outcome
     
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
@@ -4373,8 +4403,8 @@ class: action
 - enter the following lines in the Terminal, with the email address that you have used to sign up for GitHub
 
 ```yaml
-git config --global user.name "YOUR NAME" 
-git config --global user.email "YOUR EMAIL ADDRESS"
+git config --global user.name "YOUR-NAME" 
+git config --global user.email "YOUR-EMAIL-ADDRESS"
 ```
 
 - enter the following line in the Terminal, to observe whether the previous step was sucessful
@@ -4448,6 +4478,11 @@ git commit -m "first commit"
 git push -u origin master
 
 ```
+
+--
+
+- if this is your first time using GitHub with RStudio, you will be prompted to authenticate
+   - follow the instructions on your screen and in your email
 
 - observe that your project files are now online, listed on the GitHub repository
 
