@@ -2,7 +2,7 @@
 author: Resul Umit
 comments: false
 date: 2020-12-02
-title: 'Parliamentary communication allowances do not increase electoral turnout or affect incumbents’ vote share'
+title: 'Parliamentary communication allowances do not increase electoral turnout or affect incumbents’ vote share.'
 slug: communication-allowances
 tags:
 - Blogpost
