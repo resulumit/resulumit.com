@@ -5,7 +5,25 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blogpost</title>
+      <link>/tags/blogpost/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/blogpost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LSE</title>
+      <link>/tags/lse/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lse/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>allowances</title>
       <link>/tags/allowances/</link>
@@ -210,24 +228,6 @@
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/survey-research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blogpost</title>
-      <link>/tags/blogpost/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/blogpost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LSE</title>
-      <link>/tags/lse/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lse/</guid>
       <description></description>
     </item>
     
