@@ -263,7 +263,6 @@ Now, with .yellow-h[R Markdown], I am ... happy!
       - but not absolutely necessary &mdash; these skills can be developed after learning R Markdown as well
         
 ---
-
 ## The Workshop &mdash; Contents
 
 .pull-left[
@@ -1666,7 +1665,7 @@ A pair of double asterisk or underscores introduces bold
 
 These two rules can be combined
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#95;bolditalics&#95;&#42;&#42;</span> becomes .out-t[**_boldsitalics_**]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;&#95;bolditalics&#95;&#42;&#42;</span> becomes .out-t[**_bolditalics_**]
 
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#42;&#42;bolditalics&#42;&#42;&#95;</span> becomes .out-t[_**bolditalics**_]  as well
 
@@ -1715,21 +1714,23 @@ class: action
 `r countdown(minutes = 3, seconds = 00, top = 0)`
 
 ---
+name: internal-links
+
 ## Syntax &mdash; Links &mdash; Internal<sup>*</sup>
 
 You can link text to section headers in the same document
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Conclusion](#conclusion)</span> becomes .out-t[[Conclusion](#conclusion)], and a click takes the screen to that section
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Conclusion](#conclusion)</span> becomes .out-t[[Conclusion](#internal-links)], and a click takes the screen to that section
 
 <br>
 
 Multi-word headers need hyphenation
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Literature Review](#literature-review)</span> becomes .out-t[[Literature Review](#literature-review)], and it works only if the second part is hyphenated
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;Literature Review](#literature-review)</span> becomes .out-t[[Literature Review](#internal-links)], and it works only if the second part is hyphenated
 
 .footnote[
 
-<sup>*</sup> The [links to references](#reference-links), [figures](#figure-links), and [tables](#table-links) are covered later on.
+<sup>*</sup> The [links to references](#reference-links), [figures](#autoref-figures), and [tables](#autoref-tables) are covered later on.
 
 ]
 
@@ -3964,7 +3965,8 @@ Insert a LaTeX label into the targets (figures, tables, and equations), and then
 
 
 ---
-name: figure-links
+name: autoref-figures
+
 ## Functionality Gaps &mdash; Examples &mdash; Cross-references
 
 For .yellow-h[figures], insert a LaTeX label into the .yellow-h[`fig.caption`] option, and use the .inline-c[\autoref{latex_label}] syntax in text
@@ -3984,11 +3986,10 @@ ggplot(data = df) +
 
 <br>
 
-.out-t[[Figure 1]() visualises the relationship between the two journal metrics.]
-
+.out-t[[Figure 1](#autoref-figures) visualises the relationship between the two journal metrics.]
 
 ---
-name: table-links
+name: autoref-tables
 
 ## Functionality Gaps &mdash; Examples &mdash; Cross-references
 
@@ -4009,7 +4010,7 @@ See `\autoref{handmade_table}` for further details.
 
 <br>
 
-.out-t[See [Table 1]() for further details.]
+.out-t[See [Table 1](#autoref-tables) for further details.]
 
 
 ---
@@ -4050,6 +4051,8 @@ class: action
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
+name: autoref-tables-2
+
 ## Functionality Gaps &mdash; Examples &mdash; Cross-references
 
 For .yellow-h[`stargazer` tables], define a label with the `label` argument, and use the .inline-c[\autoref{latex_label}] syntax in text
@@ -4068,7 +4071,7 @@ stargazer(data = list(lm1, lm2), type = "latex",
 `\autoref{regression_results}` provides results from two OLS models.
  
 ````
-.out-t[[Table 1]() provides results from two OLS models.]
+.out-t[[Table 1](#autoref-tables-2) provides results from two OLS models.]
 
 ]
 
@@ -4106,6 +4109,8 @@ In Model 1, the coefficient for _Issues_ is
 .out-t[In Model 1, the coefficient for _Issues_ is `r round(coef(summary(lm1))["issues", "Estimate"], digits = 2)`.]
 
 ---
+name: autoref-equation
+
 ## Functionality Gaps &mdash; Examples &mdash; Cross-references
 
 For .yellow-h[equations], insert a LaTeX label in an equation environment, and use the .inline-c[\autoref{latex_label}] syntax in text
@@ -4122,7 +4127,7 @@ According to \autoref{special_relativity}, space and time are linked.
 
 <br>
 
-.out-t[According to [Equation 1](), space and time are linked.]
+.out-t[According to [Equation 1](#autoref-equation), space and time are linked.]
 
 ---
 class: action
@@ -5113,16 +5118,15 @@ class: inverse, center, middle
     - with no more slides to go through, I will now focus on helping you start your first project in R Markdown
 
 ---
-class: middle, center
-
-## The workshop ends here.
-## Congradulations for making it this far, and
-## thank you for joining me!
-
----
 class: inverse, center, middle
 
 # References
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
 
 ---
 ## References
@@ -5162,3 +5166,15 @@ Xie, Y., Allaire, J. J., and Grolemund, G. (2019). R markdown: The definitive gu
 
 Zhu, H. (2019). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.1.0.
 
+---
+class: middle, center
+
+## The workshop ends here.
+## Congradulations for making it this far, and
+## thank you for joining me!
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
