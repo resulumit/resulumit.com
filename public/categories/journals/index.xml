@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
         <title>journals on Resul Umit</title>
-        <link>/categories/journals/</link>
+        <link>https://resulumit.com/categories/journals/</link>
         <description>Recent content in journals on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
 <lastBuildDate>Mon, 11 May 2020 00:00:00 +0000</lastBuildDate>
 
-<atom:link href="/categories/journals/index.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://resulumit.com/categories/journals/index.xml" rel="self" type="application/rss+xml" />
 
 
 <item>
         <title>Political science journals</title>
-        <link>/blog/polisci-journals/</link>
+        <link>https://resulumit.com/blog/polisci-journals/</link>
         <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-journals/</guid>
+<guid>https://resulumit.com/blog/polisci-journals/</guid>
         <description>
 
 
@@ -44,13 +44,13 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <item>
         <title>Google Scholar ranking of political science journals</title>
-        <link>/blog/polisci-google-scholar/</link>
+        <link>https://resulumit.com/blog/polisci-google-scholar/</link>
         <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-google-scholar/</guid>
+<guid>https://resulumit.com/blog/polisci-google-scholar/</guid>
         <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -1316,13 +1316,13 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <item>
         <title>Open access journals in political science</title>
-        <link>/blog/polisci-open-access/</link>
+        <link>https://resulumit.com/blog/polisci-open-access/</link>
         <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-open-access/</guid>
+<guid>https://resulumit.com/blog/polisci-open-access/</guid>
         <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I have created a list of open access journals in political science—journals that make all of their articles freely accessible without delay.&lt;/p&gt;
@@ -1456,13 +1456,13 @@ subset(psjournals, type_category == &amp;quot;research_note&amp;quot;)&lt;/code&
         
 <item>
         <title>Research notes in political science journals</title>
-        <link>/blog/polisci-research-notes/</link>
+        <link>https://resulumit.com/blog/polisci-research-notes/</link>
         <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-research-notes/</guid>
+<guid>https://resulumit.com/blog/polisci-research-notes/</guid>
         <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including article types. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;

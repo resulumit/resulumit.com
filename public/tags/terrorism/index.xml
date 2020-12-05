@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>terrorism on Resul Umit</title>
-    <link>/tags/terrorism/</link>
+    <link>https://resulumit.com/tags/terrorism/</link>
     <description>Recent content in terrorism on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="/tags/terrorism/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://resulumit.com/tags/terrorism/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rallies around the flag-draped coffins: The electoral effects of security force casualties in terror attacks</title>
-      <link>/unpublished/flag-draped-coffins/</link>
+      <link>https://resulumit.com/unpublished/flag-draped-coffins/</link>
       <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/unpublished/flag-draped-coffins/</guid>
+      <guid>https://resulumit.com/unpublished/flag-draped-coffins/</guid>
       <description>Security forces have recently become the main target of political violence. I examine a natural experiment in Turkey to understand the effect of their casualties on vote choice. Between two general elections in 2015, Turkey experienced a series of attacks that killed 157 members of the security forces. Based on an exogenous variation of their hometowns across the country, I estimate that the government vote share increases in the burial places of terror victims.</description>
     </item>
     

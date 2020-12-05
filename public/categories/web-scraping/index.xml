@@ -1,23 +1,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
         <title>web scraping on Resul Umit</title>
-        <link>/categories/web-scraping/</link>
+        <link>https://resulumit.com/categories/web-scraping/</link>
         <description>Recent content in web scraping on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
 <lastBuildDate>Wed, 23 Oct 2019 00:00:00 +0000</lastBuildDate>
 
-<atom:link href="/categories/web-scraping/index.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://resulumit.com/categories/web-scraping/index.xml" rel="self" type="application/rss+xml" />
 
 
 <item>
         <title>Google Scholar ranking of political science journals</title>
-        <link>/blog/polisci-google-scholar/</link>
+        <link>https://resulumit.com/blog/polisci-google-scholar/</link>
         <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-google-scholar/</guid>
+<guid>https://resulumit.com/blog/polisci-google-scholar/</guid>
         <description>
-&lt;link href=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&lt;strong&gt;This blogpost has led to an app that filters data on political science journals, including the journal indexes covered here. Try it out at &lt;a href=&#39;https://resulumit.shinyapps.io/psjournals/&#39;target=&#39;_blank&#39;&gt;https://resulumit.shinyapps.io/psjournals&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;

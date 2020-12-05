@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
         <title>software on Resul Umit</title>
-        <link>/categories/software/</link>
+        <link>https://resulumit.com/categories/software/</link>
         <description>Recent content in software on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
 <lastBuildDate>Sun, 31 May 2020 00:00:00 +0000</lastBuildDate>
 
-<atom:link href="/categories/software/index.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://resulumit.com/categories/software/index.xml" rel="self" type="application/rss+xml" />
 
 
 <item>
         <title>Search your Twitter likes</title>
-        <link>/blog/likewise-app/</link>
+        <link>https://resulumit.com/blog/likewise-app/</link>
         <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
         
-<guid>/blog/likewise-app/</guid>
+<guid>https://resulumit.com/blog/likewise-app/</guid>
         <description>
 
 
@@ -29,10 +29,10 @@
         
 <item>
         <title>Political science journals</title>
-        <link>/blog/polisci-journals/</link>
+        <link>https://resulumit.com/blog/polisci-journals/</link>
         <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
         
-<guid>/blog/polisci-journals/</guid>
+<guid>https://resulumit.com/blog/polisci-journals/</guid>
         <description>
 
 

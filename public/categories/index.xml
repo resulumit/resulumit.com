@@ -2,178 +2,178 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Resul Umit</title>
-    <link>/categories/</link>
+    <link>https://resulumit.com/categories/</link>
     <description>Recent content in Categories on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://resulumit.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>presentations</title>
-      <link>/categories/presentations/</link>
+      <link>https://resulumit.com/categories/presentations/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/presentations/</guid>
+      <guid>https://resulumit.com/categories/presentations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>representation</title>
-      <link>/categories/representation/</link>
+      <link>https://resulumit.com/categories/representation/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/representation/</guid>
+      <guid>https://resulumit.com/categories/representation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>xaringan</title>
-      <link>/categories/xaringan/</link>
+      <link>https://resulumit.com/categories/xaringan/</link>
       <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/xaringan/</guid>
+      <guid>https://resulumit.com/categories/xaringan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>software</title>
-      <link>/categories/software/</link>
+      <link>https://resulumit.com/categories/software/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/software/</guid>
+      <guid>https://resulumit.com/categories/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Twitter</title>
-      <link>/categories/twitter/</link>
+      <link>https://resulumit.com/categories/twitter/</link>
       <pubDate>Sun, 31 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/twitter/</guid>
+      <guid>https://resulumit.com/categories/twitter/</guid>
       <description></description>
     </item>
     
     <item>
       <title>journals</title>
-      <link>/categories/journals/</link>
+      <link>https://resulumit.com/categories/journals/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/journals/</guid>
+      <guid>https://resulumit.com/categories/journals/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rstats</title>
-      <link>/categories/rstats/</link>
+      <link>https://resulumit.com/categories/rstats/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/rstats/</guid>
+      <guid>https://resulumit.com/categories/rstats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>teaching</title>
-      <link>/categories/teaching/</link>
+      <link>https://resulumit.com/categories/teaching/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/teaching/</guid>
+      <guid>https://resulumit.com/categories/teaching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>workshop</title>
-      <link>/categories/workshop/</link>
+      <link>https://resulumit.com/categories/workshop/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/workshop/</guid>
+      <guid>https://resulumit.com/categories/workshop/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web scraping</title>
-      <link>/categories/web-scraping/</link>
+      <link>https://resulumit.com/categories/web-scraping/</link>
       <pubDate>Wed, 23 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/web-scraping/</guid>
+      <guid>https://resulumit.com/categories/web-scraping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>surveys</title>
-      <link>/categories/surveys/</link>
+      <link>https://resulumit.com/categories/surveys/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/surveys/</guid>
+      <guid>https://resulumit.com/categories/surveys/</guid>
       <description></description>
     </item>
     
     <item>
       <title>EU</title>
-      <link>/categories/eu/</link>
+      <link>https://resulumit.com/categories/eu/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/eu/</guid>
+      <guid>https://resulumit.com/categories/eu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>progress reports</title>
-      <link>/categories/progress-reports/</link>
+      <link>https://resulumit.com/categories/progress-reports/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/progress-reports/</guid>
+      <guid>https://resulumit.com/categories/progress-reports/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text analyis</title>
-      <link>/categories/text-analyis/</link>
+      <link>https://resulumit.com/categories/text-analyis/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/text-analyis/</guid>
+      <guid>https://resulumit.com/categories/text-analyis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Turkey</title>
-      <link>/categories/turkey/</link>
+      <link>https://resulumit.com/categories/turkey/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/turkey/</guid>
+      <guid>https://resulumit.com/categories/turkey/</guid>
       <description></description>
     </item>
     
     <item>
       <title>elections</title>
-      <link>/categories/elections/</link>
+      <link>https://resulumit.com/categories/elections/</link>
       <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/elections/</guid>
+      <guid>https://resulumit.com/categories/elections/</guid>
       <description></description>
     </item>
     
     <item>
       <title>media</title>
-      <link>/categories/media/</link>
+      <link>https://resulumit.com/categories/media/</link>
       <pubDate>Sun, 05 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/media/</guid>
+      <guid>https://resulumit.com/categories/media/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data visualisation</title>
-      <link>/categories/data-visualisation/</link>
+      <link>https://resulumit.com/categories/data-visualisation/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/data-visualisation/</guid>
+      <guid>https://resulumit.com/categories/data-visualisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>public investments</title>
-      <link>/categories/public-investments/</link>
+      <link>https://resulumit.com/categories/public-investments/</link>
       <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/public-investments/</guid>
+      <guid>https://resulumit.com/categories/public-investments/</guid>
       <description></description>
     </item>
     

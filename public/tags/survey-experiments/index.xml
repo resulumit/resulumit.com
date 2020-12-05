@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>survey experiments on Resul Umit</title>
-    <link>/tags/survey-experiments/</link>
+    <link>https://resulumit.com/tags/survey-experiments/</link>
     <description>Recent content in survey experiments on Resul Umit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/survey-experiments/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://resulumit.com/tags/survey-experiments/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wind Turbines, Public Acceptance, and Electoral Outcomes</title>
-      <link>/unpublished/wind-turbines/</link>
+      <link>https://resulumit.com/unpublished/wind-turbines/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>/unpublished/wind-turbines/</guid>
+      <guid>https://resulumit.com/unpublished/wind-turbines/</guid>
       <description>We study the public acceptance of wind turbines, and its effect on electoral outcomes. Despite a widespread public support for wind energy in general, wind turbine proposals attract a considerable amount of public opposition&amp;mdash;a challenge for any government looking to invest in this source of renewable energy. Our analysis draws on a survey experiment in Switzerland, where the number of wind turbines will grow from a couple of dozens to over a thousand in the next three decades.</description>
     </item>
     

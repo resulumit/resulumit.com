@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
         <title>progress reports on Resul Umit</title>
-        <link>/categories/progress-reports/</link>
+        <link>https://resulumit.com/categories/progress-reports/</link>
         <description>Recent content in progress reports on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
 <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
 
-<atom:link href="/categories/progress-reports/index.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://resulumit.com/categories/progress-reports/index.xml" rel="self" type="application/rss+xml" />
 
 
 <item>
         <title>EU press releases differ from their reports on Turkey</title>
-        <link>/blog/eu-turkey-progress-reports/</link>
+        <link>https://resulumit.com/blog/eu-turkey-progress-reports/</link>
         <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
         
-<guid>/blog/eu-turkey-progress-reports/</guid>
+<guid>https://resulumit.com/blog/eu-turkey-progress-reports/</guid>
         <description>
 
 
@@ -23,12 +23,12 @@
 &lt;p&gt;To see if there is evidence for this claim, I analysed the sentiments in the EU reports on Turkey since 2005—the year the accession negotiations started. These reports are available from the EU websites, except for 2017 when the Commission did not publish one.&lt;/p&gt;
 &lt;p&gt;To quantify the negative sentiment in the reports, I use the &lt;a href=&#34;http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm&#34;&gt;NRC Word-Emotion Association Lexicon&lt;/a&gt;, which can match words in a text with two sentiments (negative and positive) and eight emotions (anger, anticipation, disgust, fear, joy, sadness, surprise, trust).&lt;/p&gt;
 &lt;p&gt;The figure below plots the share of words associated with negative sentiment in the EU reports on Turkey. It shows that, indeed, the 2018 report was clearly more negative than most of the previous reports. To be precise, excluding the stop words, 7.1% of the report was negative. This is only slightly behind the 2016 report, where the negativity share was 7.2%.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/blog/2018-progress-reports_files/figure-html/negative-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://resulumit.com/blog/2018-progress-reports_files/figure-html/negative-1.png&#34; width=&#34;75%&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I think it is safe to say that these reports have very limited readership. They are not only technical, but also lengthy documents. For example. the 2018 report on Turkey is 111-page long, and the average length is about 102 pages.&lt;/p&gt;
 &lt;p&gt;This is perhaps one of the reasons why the Commission publishes press releases together with reports. These releases are much shorter; for example the [latest press release]&lt;a href=&#34;http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf&#34; class=&#34;uri&#34;&gt;http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf&lt;/a&gt; on Turkey has only five pages. On average, they are about 3.5 pages long.&lt;sup&gt;1&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Considering that press releases are more widely-read than the reports (especially by the journalists, from whom most people would learn about the reports), I wanted to compare the two types with regards to the sentiments and emotions that they reveal.&lt;/p&gt;
 &lt;p&gt;The figure below plots the results.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/blog/2018-progress-reports_files/figure-html/comparison-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://resulumit.com/blog/2018-progress-reports_files/figure-html/comparison-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;We see that the reports have been relatively stable over the years in almost all sentiments or emotions. This is especially true for the negative half—the categories in the bottom row. In comparison, the press releases have been ‘all over the place’.&lt;/p&gt;
 &lt;p&gt;In the upper, positive row of categories, the lines representing the releases are generally over the line for reports. In the bottom row of negative categories, the opposite is the case: the releases were below the reports until very recently.&lt;/p&gt;
 &lt;p&gt;Overall, this suggests that EU press releases have for a long time been more positive and less negative than the reports on which they were based.&lt;/p&gt;

@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
         <title>data visualisation on Resul Umit</title>
-        <link>/categories/data-visualisation/</link>
+        <link>https://resulumit.com/categories/data-visualisation/</link>
         <description>Recent content in data visualisation on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
 <lastBuildDate>Sat, 24 Mar 2018 00:00:00 +0000</lastBuildDate>
 
-<atom:link href="/categories/data-visualisation/index.xml" rel="self" type="application/rss+xml" />
+<atom:link href="https://resulumit.com/categories/data-visualisation/index.xml" rel="self" type="application/rss+xml" />
 
 
 <item>
         <title>Istanbul puts the money where AKP voters are</title>
-        <link>/blog/public-investments-in-istanbul/</link>
+        <link>https://resulumit.com/blog/public-investments-in-istanbul/</link>
         <pubDate>Sat, 24 Mar 2018 00:00:00 +0000</pubDate>
         
-<guid>/blog/public-investments-in-istanbul/</guid>
+<guid>https://resulumit.com/blog/public-investments-in-istanbul/</guid>
         <description>
 
 
@@ -24,14 +24,14 @@
 &lt;p&gt;This is why I have analysed &lt;a href=&#34;https://www.ibb.istanbul/Uploads/2017/12/istanbul-Buyuksehir-Belediyesi-Performans-Esasli-Yatirim-Ve-Hizmet-Programi-2018.pdf&#34;&gt;the investment plan&lt;/a&gt; of the AKP’s Istanbul Metropolitan Municipality (IMM) for 2018, and found evidence that Mayor Uysal was probably right: Istanbul’s money seems to go where AKP voters are. In addition—as another signal that the public funds are used strategically for party political purposes—his administration invests more in the districts that AKP marginally won in 2014.&lt;/p&gt;
 &lt;p&gt;The plan lists 555 projects, with information on how much money will be invested in which districts. Some projects cover more than one district, and I calculated their share by simply dividing the total investment equally between them. I have ignored projects that lists the whole city, or the whole European or Asian sides as the target area, to cut the noise out.&lt;/p&gt;
 &lt;p&gt;Let’s have a look at how the investment is distributed among the 39 district municipalities in Istanbul, 25 of which governed by AKP and the remaining 14 by the main opposition, Republican People’s Party (CHP).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/barplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://resulumit.com/blog/2018-imm-investments_files/figure-html/barplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There are big differences among the district municipalities with regard to how much IMM invests in their territory. We should note that, while CHP has 36% of the districts, none of the top 5 most-invested districts are governed by the opposition party. In fact, we see only 4 CHP districts within the top 20.&lt;/p&gt;
 &lt;p&gt;Here I am interested in understanding whether how people vote explains these differences, and—if so—how much of the difference it accounts for.&lt;/p&gt;
 &lt;p&gt;There is probably very many reasons behind these differences, and not all would be party political. Once could think of economic reasons, for example, and if poorer districts tend to vote for AKP and the IMM tends to invest more in these poorer districts, then it would be misleading to suggest that the IMM prioritises to serve the voters of Erdogan’s party.&lt;/p&gt;
 &lt;p&gt;One way around the unobserved factors is to find a variable that would be a necessary and sufficient condition for party political decisions, but one that has nothing to distinguish the districts in any other way.&lt;/p&gt;
 &lt;p&gt;Winning vote margin is one such variable, often used in similar studies in political science. Here if we take the AKP margin of victory as a threshold, those districts immediately above have an AKP municipality and those immediately below have a CHP one. This allows us to go a step closer to detect if there are cause and effect relationships.&lt;/p&gt;
 &lt;p&gt;Let me explain with an example. In 2014, AKP won the Kucukcekmece district with a 2.3% cushion while it lost Kartal with a similar margin, 2.1% of the valid votes cast. We can assume that these two districts are similar in many ways, except that the former has an AKP administration while CHP governs the latter. If there is indeed only one difference between such districts on each side of the threshold, the differences that we see in their investment must be due to that difference. Let’s add this factor to our analysis.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/loess-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://resulumit.com/blog/2018-imm-investments_files/figure-html/loess-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There is a clear difference between the districts that AKP the AKP lost and won with small margins, and we would normally not expect to see this unless IMM treats AKP and CHP districts differently.&lt;/p&gt;
 &lt;p&gt;I will use two statistical tests to investigate these differences further.&lt;/p&gt;
 &lt;p&gt;First, we can see if there is a significant correlation between these electoral results and the investment in a linear regression. The table below report results from two models, with and without covariates. Specifically, the second model controls for the size of the districts, in terms of both the number of voters and the geographical area that they cover.&lt;/p&gt;
@@ -204,7 +204,7 @@ This table reports ordinary least square regression models, with standard errors
 &lt;p&gt;Both these results are statistically significant—that is, the possibility that these differences happen by chance is small enough by the standards of social sciences.&lt;/p&gt;
 &lt;p&gt;To increase our confidence in these results, we can repeat our analysis in the regression discontinuity models. These models focus on the difference between the threshold in Figure 2, making use of the margin variable. These models confirm the main result above, that there is a significant difference in terms of money invested AKP vs CHP districts.&lt;/p&gt;
 &lt;p&gt;If we plot the regression discontinuity estimates, we see this difference in a clear picture.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/blog/2018-imm-investments_files/figure-html/rdd-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://resulumit.com/blog/2018-imm-investments_files/figure-html/rdd-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;To sum it all up, there are significant differences between the mount of public money invested in the districts of Istanbul. It is clear that AKP districts are better off as they receive on average around 250 million TL more from the city.&lt;/p&gt;
 &lt;p&gt;The tests I offer above provide strong evidence that these differences are due to party politics. At the very least, such differences are something we would not expect to see among these districts that are similar in many respects—except that some has AKP municipality and the others do not.&lt;/p&gt;
 &lt;p&gt;What is at stake is not just the new metro lines; it is all over the whole investment plan.&lt;/p&gt;
