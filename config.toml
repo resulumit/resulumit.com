@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://resulumit.com/"
 title = "Resul Umit"
 author = "Resul Umit"
 canonifyurls = true
