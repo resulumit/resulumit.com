@@ -28,40 +28,5 @@
 </description>
         </item>
         
-<item>
-        <title>Internal links in xaringan presentations</title>
-        <link>https://resulumit.com/blog/internal-links-xaringan-presentations/</link>
-        <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-        
-<guid>https://resulumit.com/blog/internal-links-xaringan-presentations/</guid>
-        <description>
-&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;p&gt;I am currently revising the &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt; slides&lt;/a&gt; for the next iteration of my &lt;a href=&#34;ttps://resulumit.com/blog/rmd-workshop.html&#34;&gt;workshop&lt;/a&gt; on writing reproducible research papers with R Markdown. It will take place at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;Campus Luzern&lt;/a&gt;, over two full days in November 2020.&lt;/p&gt;
-&lt;p&gt;There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with &lt;a href=&#34;https://github.com/yihui/xaringan&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;xaringan&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;How can we introduce internal links in &lt;code&gt;xaringan&lt;/code&gt;? The linking syntax that you may be familiar with from R Markdown will not work here as we need to identify the target slides with the &lt;code&gt;name&lt;/code&gt; argument.&lt;/p&gt;
-&lt;p&gt;For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.&lt;/p&gt;
-&lt;p&gt;We first name the contents slide. Note that multi-word names require hyphenation.&lt;/p&gt;
-&lt;pre class=&#34;md&#34;&gt;&lt;code&gt;---
-name: contents-slide
-## Contents
-        
-- Introduction
-- Body
-- Conclusion
-
----&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can than link back to the target slide as we would do in R Markdown documents.&lt;/p&gt;
-&lt;pre class=&#34;md&#34;&gt;&lt;code&gt;---
-# Thank you!
-
-- Go [back to Contents](#contents-slide)
-
----&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This strategy can work in both directions—not only for linking backward but also forward in a presentation.&lt;/p&gt;
-</description>
-        </item>
-        
 </channel>
         </rss>

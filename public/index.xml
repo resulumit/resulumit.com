@@ -46,16 +46,6 @@ You can propose a presentation and register for events on the website of the ser
     </item>
     
     <item>
-      <title>Internal links in xaringan presentations</title>
-      <link>https://resulumit.com/blog/internal-links-xaringan-presentations/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://resulumit.com/blog/internal-links-xaringan-presentations/</guid>
-      <description>I am currently revising the slides for the next iteration of my workshop on writing reproducible research papers with R Markdown. It will take place at Campus Luzern, over two full days in November 2020.
-There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with xaringan.</description>
-    </item>
-    
-    <item>
       <title>Who&#39;s the Boss? An analysis of the vote on the &#39;European Union (Notice of Withdrawal) Bill&#39; in the House of Commons</title>
       <link>https://resulumit.com/publications/eu-bill/</link>
       <pubDate>Mon, 07 Sep 2020 00:00:00 +0000</pubDate>

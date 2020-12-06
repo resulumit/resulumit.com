@@ -1,9 +1,8 @@
 ---
 date: 2020-09-10
-slug: internal-links-xaringan-presentations
+slug: xaringan-links
 title: "Internal links in xaringan presentations"
 output: html_document
-runtime: shiny
 categories:
         - xaringan
         - presentations
