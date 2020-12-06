@@ -12,7 +12,7 @@ I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop
 
 There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank">`xaringan`</a>.
 
-How can we introduce internal links in `xaringan`? The linking syntax that you may be familiar with from R Markdown will not work here as we need to identify the target slides with the `name` argument. 
+The linking syntax in R Markdown will not work here in `xaringan` presentations as we need to identify the target slides with the `name` argument. 
 
 For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.
 

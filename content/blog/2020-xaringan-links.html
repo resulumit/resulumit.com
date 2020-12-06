@@ -1,0 +1,36 @@
+---
+date: 2020-09-10
+slug: xaringan-links
+title: "Internal links in xaringan presentations"
+output: html_document
+categories:
+        - xaringan
+        - presentations
+---
+
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<p>I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my <a href="ttps://resulumit.com/blog/rmd-workshop.html">workshop</a> on writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days in November 2020.</p>
+<p>There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank"><code>xaringan</code></a>.</p>
+<p>The linking syntax in R Markdown will not work here in <code>xaringan</code> presentations as we need to identify the target slides with the <code>name</code> argument.</p>
+<p>For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.</p>
+<p>We first name the contents slide. Note that multi-word names require hyphenation.</p>
+<pre class="md"><code>---
+name: contents-slide
+## Contents
+        
+- Introduction
+- Body
+- Conclusion
+
+---</code></pre>
+<p>We can than link back to the target slide as we would do in R Markdown documents.</p>
+<pre class="md"><code>---
+# Thank you!
+
+- Go [back to Contents](#contents-slide)
+
+---</code></pre>
+<p>This strategy can work in both directions—not only for linking backward but also forward in a presentation.</p>
