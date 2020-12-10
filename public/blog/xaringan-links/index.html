@@ -2,7 +2,7 @@
 <html class="no-js" lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀 — Online seminar series | Resul Umit</title>
+    <title>Internal links in xaringan presentations | Resul Umit</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Carlito|Source+Code+Pro|Droid+Serif" rel="stylesheet">
@@ -72,13 +72,13 @@
 <div class="wrapper">
 <div class="units-row" style='margin-bottom: 0px;'>
 <div class="unit-20">&nbsp;</div>
-<div class="unit-60"><h1>𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀 — Online seminar series</h1></div>
+<div class="unit-60"><h1>Internal links in xaringan presentations</h1></div>
 </div>
 <div class="units-row">
   <div class="unit-20 dateblock" style='text-align: right;'><h3 style='padding-top: .8ex;'><a href="https://resulumit.com/blog">Blog</a></h3>
       <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2020-11-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">23 November 2020</time>
+    <time datetime="2020-09-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">10 September 2020</time>
   </span>
   
   
@@ -86,7 +86,7 @@
   <span class="post-tags">
     <p><i class="fa fa-tags"></i>
     
-    <a class="post-tag" href="https://resulumit.com/categories/representation">representation</a>,
+    <a class="post-tag" href="https://resulumit.com/categories/xaringan">xaringan</a>,
      
     
     
@@ -105,43 +105,60 @@
 <script src="https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
-<p>With <a href="https://www.representations.online/author/lucy-kinski/" target="_blank">Lucy Kinski</a>, we are organising a new online seminar series on political representation: <a href="https://www.representations.online/" target="_blank"> 𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀</a>!</p>
-<p>The series aspires to facilitate an inclusive, supportive, and dynamic environment in which scholarly work on anything representation can be presented and discussed.</p>
-<p>Each online seminar will consist of a 30-minute presentation, followed by meaningful opportunities for the audience to be involved in the discussion.</p>
-<p>You can <a href="https://www.representations.online/proposal/" target="_blank">propose a presentation</a> and <a href="https://www.representations.online/registration/" target="_blank">register for events</a> on the website of the series. There is also a <a href="https://calendar.google.com/calendar/u/0?cid=ZWlndDJsZXJ0ajhoazQ3MWczbDBtODQ0ODBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" target="_blank">Google Calendar</a>, which we will be kept up-to-date with upcoming events.</p>
-<p>More information is available at <a href="https://www.representations.online/" target="_blank">www.representations.online</a>.</p>
+<p>I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my <a href="ttps://resulumit.com/blog/rmd-workshop.html">workshop</a> on writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days in November 2020.</p>
+<p>There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank"><code>xaringan</code></a>.</p>
+<p>The linking syntax in R Markdown will not work here in <code>xaringan</code> presentations as we need to identify the target slides with the <code>name</code> argument.</p>
+<p>For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.</p>
+<p>We first name the contents slide. Note that multi-word names require hyphenation.</p>
+<pre class="md"><code>---
+name: contents-slide
+## Contents
+        
+- Introduction
+- Body
+- Conclusion
+
+---</code></pre>
+<p>We can than link back to the target slide as we would do in R Markdown documents.</p>
+<pre class="md"><code>---
+# Thank you!
+
+- Go [back to Contents](#contents-slide)
+
+---</code></pre>
+<p>This strategy can work in both directions—not only for linking backward but also forward in a presentation.</p>
 
 
-      <meta itemprop="wordCount" content="96">
-      <meta itemprop="datePublished" content="2020-11-23">
-      <meta itemprop="url" content="https://resulumit.com/blog/re-presentations/">
+      <meta itemprop="wordCount" content="195">
+      <meta itemprop="datePublished" content="2020-09-10">
+      <meta itemprop="url" content="https://resulumit.com/blog/xaringan-links/">
 
 <div class='sans' style="background: #dddddd; padding: 2em;">
 <div style="padding-bottom: 1em" >
 <div class="share-box">
   <ul class="share">
     <li>
-      <a class="facebook" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fresulumit.com%2fblog%2fre-presentations%2f" target="_blank">
+      <a class="facebook" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fresulumit.com%2fblog%2fxaringan-links%2f" target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
-      <a class="twitter" href="https://twitter.com/intent/tweet?text=%f0%9d%99%8d%f0%9d%99%9a%3a%f0%9d%97%a3%f0%9d%97%bf%f0%9d%97%b2%f0%9d%98%80%f0%9d%97%b2%f0%9d%97%bb%f0%9d%98%81%f0%9d%97%ae%f0%9d%98%81%f0%9d%97%b6%f0%9d%97%bc%f0%9d%97%bb%f0%9d%98%80%20%e2%80%94%20Online%20seminar%20series. https%3a%2f%2fresulumit.com%2fblog%2fre-presentations%2f from @ResulUmit" target="_blank">
+      <a class="twitter" href="https://twitter.com/intent/tweet?text=Internal%20links%20in%20xaringan%20presentations. https%3a%2f%2fresulumit.com%2fblog%2fxaringan-links%2f from @ResulUmit" target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
-      <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fresulumit.com%2fblog%2fre-presentations%2f&amp;title=%f0%9d%99%8d%f0%9d%99%9a%3a%f0%9d%97%a3%f0%9d%97%bf%f0%9d%97%b2%f0%9d%98%80%f0%9d%97%b2%f0%9d%97%bb%f0%9d%98%81%f0%9d%97%ae%f0%9d%98%81%f0%9d%97%b6%f0%9d%97%bc%f0%9d%97%bb%f0%9d%98%80%20%e2%80%94%20Online%20seminar%20series" target="_blank">
+      <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fresulumit.com%2fblog%2fxaringan-links%2f&amp;title=Internal%20links%20in%20xaringan%20presentations" target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
-      <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fresulumit.com%2fblog%2fre-presentations%2f&amp;title=%f0%9d%99%8d%f0%9d%99%9a%3a%f0%9d%97%a3%f0%9d%97%bf%f0%9d%97%b2%f0%9d%98%80%f0%9d%97%b2%f0%9d%97%bb%f0%9d%98%81%f0%9d%97%ae%f0%9d%98%81%f0%9d%97%b6%f0%9d%97%bc%f0%9d%97%bb%f0%9d%98%80%20%e2%80%94%20Online%20seminar%20series" target="_blank">
+      <a class="weibo" href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fresulumit.com%2fblog%2fxaringan-links%2f&amp;title=Internal%20links%20in%20xaringan%20presentations" target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
-      <a class="email" href="mailto:?subject=%f0%9d%99%8d%f0%9d%99%9a%3a%f0%9d%97%a3%f0%9d%97%bf%f0%9d%97%b2%f0%9d%98%80%f0%9d%97%b2%f0%9d%97%bb%f0%9d%98%81%f0%9d%97%ae%f0%9d%98%81%f0%9d%97%b6%f0%9d%97%bc%f0%9d%97%bb%f0%9d%98%80%20%e2%80%94%20Online%20seminar%20series&amp;body=https%3a%2f%2fresulumit.com%2fblog%2fre-presentations%2f">
+      <a class="email" href="mailto:?subject=Internal%20links%20in%20xaringan%20presentations&amp;body=https%3a%2f%2fresulumit.com%2fblog%2fxaringan-links%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -153,8 +170,10 @@
 
     <ul class="pagination" role="navigation" aria-label="Pagination">
       
-      <li class="arrow" aria-disabled="true"><a href="https://resulumit.com/blog/xaringan-links/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Internal links in xaringan presentations</a></li>
+      <li class="arrow" aria-disabled="true"><a href="https://resulumit.com/blog/likewise-app/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Search your Twitter likes</a></li>
       
+      
+      <li class="arrow" aria-disabled="true"><a href="https://resulumit.com/blog/re-presentations/"><em>Next<span class="show-for-sr"> page</span></em>: 𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀 — Online seminar series&nbsp;&raquo;</a></li>
       
     </ul>
     <a href="https://resulumit.com/blog/">All blog posts by date</a>
