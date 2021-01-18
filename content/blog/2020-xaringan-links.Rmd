@@ -8,9 +8,9 @@ categories:
         - presentations
 ---
 
-I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my [workshop](ttps://resulumit.com/blog/rmd-workshop.html) on  writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days in November 2020.
+I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my [workshop](ttps://resulumit.com/blog/rmd-workshop.html) on  writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days, in November 2020.
 
-There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank">`xaringan`</a>.
+With over 200 slides in the presentation, I thought it is now time to introduce some internal links to facilitate the navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank">`xaringan`</a>.
 
 The linking syntax in R Markdown will not work here in `xaringan` presentations as we need to identify the target slides with the `name` argument. 
 
@@ -41,4 +41,4 @@ We can than link back to the target slide as we would do in R Markdown documents
 ---
 ```
 
-This strategy can work in both directions---not only for linking backward but also forward in a presentation.
+This strategy can work in both directions---not only for linking backwards, but also forwards in a presentation.
