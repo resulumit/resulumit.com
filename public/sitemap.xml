@@ -38,6 +38,16 @@
   </url>
   
   <url>
+    <loc>https://resulumit.com/blog/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://resulumit.com/categories/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://resulumit.com/tags/communication/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
@@ -53,7 +63,22 @@
   </url>
   
   <url>
+    <loc>https://resulumit.com/categories/presentations/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://resulumit.com/publications/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://resulumit.com/categories/representation/</loc>
+    <lastmod>2020-11-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://resulumit.com/blog/re-presentations/</loc>
     <lastmod>2020-11-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,22 +108,7 @@
   </url>
   
   <url>
-    <loc>https://resulumit.com/blog/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/categories/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://resulumit.com/blog/xaringan-links/</loc>
-    <lastmod>2020-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/categories/presentations/</loc>
     <lastmod>2020-09-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -153,26 +163,6 @@
   </url>
   
   <url>
-    <loc>https://resulumit.com/blog/rmd-workshop/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/categories/rstats/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/categories/teaching/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/categories/workshop/</loc>
-    <lastmod>2020-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://resulumit.com/publications/divergent-preferences/</loc>
     <lastmod>2020-02-22T00:00:00+00:00</lastmod>
   </url>
@@ -218,6 +208,11 @@
   </url>
   
   <url>
+    <loc>https://resulumit.com/categories/rstats/</loc>
+    <lastmod>2019-10-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://resulumit.com/categories/web-scraping/</loc>
     <lastmod>2019-10-23T00:00:00+00:00</lastmod>
   </url>
@@ -225,11 +220,6 @@
   <url>
     <loc>https://resulumit.com/blog/polisci-open-access/</loc>
     <lastmod>2019-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://resulumit.com/blog/polisci-research-notes/</loc>
-    <lastmod>2019-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>

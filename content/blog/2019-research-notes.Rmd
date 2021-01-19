@@ -13,7 +13,7 @@ In addition to 'regular' articles, some political science journals publish short
 
 > Research Notes are shorter reports ... of single findings, important extensions or replications of previous research, or other major additions to the literature that warrant publication, and which can be communicated effectively without the more extended theoretical development or detailed analysis characteristic of regular articles. 
 
-I have gone through the 'author guidelines' of more than three hundred political science journals, and put together a list of journals that publish research notes. You can also click on the hyperlinks under *Format Name* to learn more about the format in each journal.
+I have gone through the 'author guidelines' of more than three hundred political science journals and put together a list of journals that publish research notes. You can also click on the hyperlinks under *Format Name* to learn more about the format in each journal.
 
 | Journal  | Format Name   | Length    | h5-index   |
 |--------: | ------------: | --------: |----------: |
@@ -78,7 +78,7 @@ I have gone through the 'author guidelines' of more than three hundred political
 | Political Research Exchange | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=prxx20#prep'target='_blank'>Research Note</a> | 5k -- 8k words | *N/A* |
 | Political Science | <a href='https://www.tandfonline.com/toc/rpnz20/current'target='_blank'>Research Note</a> | *N/A* | *N/A* |
 
-Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing or that one or more existing entries need updating, please <a href="mailto:resuluy@uio.no">send me an email</a>. I would be happy to hear from you.
+Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing, or that one or more existing entries need updating, please <a href="mailto:resuluy@uio.no">send me an email</a>. I would be happy to hear from you.
 
 _____
 

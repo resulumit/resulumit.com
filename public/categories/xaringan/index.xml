@@ -16,12 +16,10 @@
         
 <guid>https://resulumit.com/blog/xaringan-links/</guid>
         <description>
-&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;I am currently revising the &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt; slides&lt;/a&gt; for the next iteration of my &lt;a href=&#34;ttps://resulumit.com/blog/rmd-workshop.html&#34;&gt;workshop&lt;/a&gt; on writing reproducible research papers with R Markdown. It will take place at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;Campus Luzern&lt;/a&gt;, over two full days in November 2020.&lt;/p&gt;
-&lt;p&gt;There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with &lt;a href=&#34;https://github.com/yihui/xaringan&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;xaringan&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am currently revising the &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt; slides&lt;/a&gt; for the next iteration of my &lt;a href=&#34;ttps://resulumit.com/blog/rmd-workshop.html&#34;&gt;workshop&lt;/a&gt; on writing reproducible research papers with R Markdown. It will take place at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;Campus Luzern&lt;/a&gt;, over two full days, in November 2020.&lt;/p&gt;
+&lt;p&gt;With over 200 slides in the presentation, I thought it is now time to introduce some internal links to facilitate the navigation across the different parts of the presentation, which is written with &lt;a href=&#34;https://github.com/yihui/xaringan&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;xaringan&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The linking syntax in R Markdown will not work here in &lt;code&gt;xaringan&lt;/code&gt; presentations as we need to identify the target slides with the &lt;code&gt;name&lt;/code&gt; argument.&lt;/p&gt;
 &lt;p&gt;For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.&lt;/p&gt;
 &lt;p&gt;We first name the contents slide. Note that multi-word names require hyphenation.&lt;/p&gt;
@@ -41,7 +39,7 @@ name: contents-slide
 - Go [back to Contents](#contents-slide)
 
 ---&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This strategy can work in both directions—not only for linking backward but also forward in a presentation.&lt;/p&gt;
+&lt;p&gt;This strategy can work in both directions—not only for linking backwards, but also forwards in a presentation.&lt;/p&gt;
 </description>
         </item>
         

@@ -4,11 +4,28 @@
         <link>https://resulumit.com/categories/presentations/</link>
         <description>Recent content in presentations on Resul Umit</description>
         <generator>Hugo -- gohugo.io</generator>
-<lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+<lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
 
 <atom:link href="https://resulumit.com/categories/presentations/index.xml" rel="self" type="application/rss+xml" />
 
 
+<item>
+        <title>𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀 — Online seminar series</title>
+        <link>https://resulumit.com/blog/re-presentations/</link>
+        <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+        
+<guid>https://resulumit.com/blog/re-presentations/</guid>
+        <description>
+
+
+&lt;p&gt;Together with &lt;a href=&#34;https://www.representations.online/author/lucy-kinski/&#34; target=&#34;_blank&#34;&gt;Lucy Kinski&lt;/a&gt;, we are organising a new online seminar series on political representation: &lt;a href=&#34;https://www.representations.online/&#34; target=&#34;_blank&#34;&gt; 𝙍𝙚:𝗣𝗿𝗲𝘀𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻𝘀&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;The series aspires to facilitate an inclusive, supportive, and dynamic environment in which scholarly work on anything related to representation can be presented and discussed.&lt;/p&gt;
+&lt;p&gt;Each online seminar will consist of a 30-minute presentation, followed by meaningful opportunities for the audience to be involved in the discussion.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&#34;https://www.representations.online/proposal/&#34; target=&#34;_blank&#34;&gt;propose a presentation&lt;/a&gt; and &lt;a href=&#34;https://www.representations.online/registration/&#34; target=&#34;_blank&#34;&gt;register for events&lt;/a&gt; on the website of the series. There is also a &lt;a href=&#34;https://calendar.google.com/calendar/u/0?cid=ZWlndDJsZXJ0ajhoazQ3MWczbDBtODQ0ODBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&#34; target=&#34;_blank&#34;&gt;Google Calendar&lt;/a&gt;, which we keep up-to-date with upcoming events.&lt;/p&gt;
+&lt;p&gt;More information is available at &lt;a href=&#34;https://www.representations.online/&#34; target=&#34;_blank&#34;&gt;www.representations.online&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
 <item>
         <title>Internal links in xaringan presentations</title>
         <link>https://resulumit.com/blog/xaringan-links/</link>
@@ -16,12 +33,10 @@
         
 <guid>https://resulumit.com/blog/xaringan-links/</guid>
         <description>
-&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;I am currently revising the &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt; slides&lt;/a&gt; for the next iteration of my &lt;a href=&#34;ttps://resulumit.com/blog/rmd-workshop.html&#34;&gt;workshop&lt;/a&gt; on writing reproducible research papers with R Markdown. It will take place at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;Campus Luzern&lt;/a&gt;, over two full days in November 2020.&lt;/p&gt;
-&lt;p&gt;There are now over 200 slides in the presentation, and I thought it is now past time to introduce some internal links to facilitate navigation across the different parts of the presentation, which is written with &lt;a href=&#34;https://github.com/yihui/xaringan&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;xaringan&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am currently revising the &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt; slides&lt;/a&gt; for the next iteration of my &lt;a href=&#34;ttps://resulumit.com/blog/rmd-workshop.html&#34;&gt;workshop&lt;/a&gt; on writing reproducible research papers with R Markdown. It will take place at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;Campus Luzern&lt;/a&gt;, over two full days, in November 2020.&lt;/p&gt;
+&lt;p&gt;With over 200 slides in the presentation, I thought it is now time to introduce some internal links to facilitate the navigation across the different parts of the presentation, which is written with &lt;a href=&#34;https://github.com/yihui/xaringan&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;xaringan&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The linking syntax in R Markdown will not work here in &lt;code&gt;xaringan&lt;/code&gt; presentations as we need to identify the target slides with the &lt;code&gt;name&lt;/code&gt; argument.&lt;/p&gt;
 &lt;p&gt;For example, assume that our presentation has a contents slide, to which we would like to link back from certain other slides, such as the final slides of each section.&lt;/p&gt;
 &lt;p&gt;We first name the contents slide. Note that multi-word names require hyphenation.&lt;/p&gt;
@@ -41,7 +56,7 @@ name: contents-slide
 - Go [back to Contents](#contents-slide)
 
 ---&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This strategy can work in both directions—not only for linking backward but also forward in a presentation.&lt;/p&gt;
+&lt;p&gt;This strategy can work in both directions—not only for linking backwards, but also forwards in a presentation.&lt;/p&gt;
 </description>
         </item>
         
