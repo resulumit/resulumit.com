@@ -16,14 +16,14 @@
         
 <guid>https://resulumit.com/blog/rmd-workshop/</guid>
         <description>
-&lt;link href=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://resulumit.com/rmarkdown-libs/anchor-sections/anchor-sections.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the slides, &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for all workshop materials.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for the slides, and &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt; for all the workshop materials.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;My writing workflow has been based on R Markdown for some time. In March 2020, I organised a full-day workshop at &lt;a href=&#34;https://www.campus-luzern.ch/&#34; target=&#34;_blank&#34;&gt;&lt;b&gt;Campus Luzern&lt;/b&gt;&lt;/a&gt;, to share my experience with researchers from the three universities in the Swiss Canton of Lucerne. It went very well.&lt;/p&gt;
-&lt;p&gt;Since then I have revised the workshop material, which you can find at &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. The slides are better viewed &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;here on my website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since then I have revised the workshop material, which you can find at &lt;a href=&#34;https://github.com/resulumit/rmd_workshop&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;. The slides are better viewed &lt;a href=&#34;https://resulumit.com/teaching/rmd_workshop.html&#34; target=&#34;_blank&#34;&gt;here on my website&lt;/a&gt;.*&lt;/p&gt;
 &lt;p&gt;I would be happy to organise this workshop again. &lt;a href=&#34;mailto:resuluy@uio.no?subject=R Markdown workshop&#34;&gt;Let me know&lt;/a&gt; if this might be possible at your institution.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;* These HTML slides crash for some Safari users. If using a different browser application, such as Chrome or Firefox, is not an option for you, I recommend viewing the &lt;a href=&#34;https://github.com/resulumit/rmd_workshop/blob/master/presentation/rmd_workshop.pdf&#34;&gt;PDF version of the slides&lt;/a&gt; on GitHub.&lt;/p&gt;
 </description>
         </item>
         

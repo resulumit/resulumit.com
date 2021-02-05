@@ -1472,7 +1472,7 @@ Spaces in lines starting with a vertical line .yellow-h[|] are kept
 ---
 ## Syntax &mdash; Block Quotes
 
-Lines starting with the grater-than sign .yellow-h[&#62;] introduce block quotes
+Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes
 
 ```{r, eval=FALSE}
 > In God, we trust. All others must bring data. 
@@ -4329,7 +4329,7 @@ Version control with Git and GitHub requires
 
 1. .yellow-h[initial setup], done once<sup>*</sup>
     - unless for a new computer or, if ever, a new GitHub account
-    - a bit technical, but worth the hussle
+    - a bit technical, but worth the hassle
     
 2. .yellow-h[project setup], repeated for every paper
     - shorter, less complicated
@@ -5117,6 +5117,8 @@ Dowle, M. and Srinivasan, A. (2019). [data.table: Extension of 'data.frame'](htt
 Gagolewski, M. (2020). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.4.6.
 
 Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
+
+Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2020). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.9.3.
 
 Wickham, H. and Grolemund, G. (2019). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
 
