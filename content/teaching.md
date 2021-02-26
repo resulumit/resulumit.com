@@ -13,7 +13,7 @@ title: "Teaching experience"
 ## Undergraduate courses
 
 * *Electoral expectations*
-    - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Autumn 2020
+    - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Autumn 2020     
             - Previuos iteration: March 2020
 
     - <a href="https://resulumit.com/syllabi/21spring_ee.pdf" target="_blank">Syllabus</a>
