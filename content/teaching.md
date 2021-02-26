@@ -14,7 +14,9 @@ title: "Teaching experience"
 
 * *Electoral expectations*
     - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Autumn 2020
-    - <a href="https://resulumit.com/syllabi/20autumn_ee.pdf" target="_blank">Syllabus</a>
+            - Previuos iteration: March 2020
+
+    - <a href="https://resulumit.com/syllabi/21spring_ee.pdf" target="_blank">Syllabus</a>
 
 <br>
 
@@ -40,6 +42,11 @@ title: "Teaching experience"
     - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
 <br>
+
+* *Twitter data*
+    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
+    - <a href="https://resulumit.com/syllabi/21spring_twtr.pdf" target="_blank">Syllabus</a>
+    
 
 * *Academic websites*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2020
