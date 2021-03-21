@@ -1,0 +1,2615 @@
+---
+title: "Version Control and Collaboration with Git and GitHub"
+subtitle: "Resul Umit"
+institute: ""
+date: "March 2021"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+name: title-slide
+class: inverse, center, middle
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE, crayon.enabled = TRUE)
+
+library(crayon)
+library(fansi)
+library(dplyr)
+library(ggplot2)
+library(stargazer)
+library(countdown)
+```
+
+<style type="text/css">
+
+.hljs-github .hljs {
+    background: #e5e5e5;
+}
+
+.inline-c, remark-inline-code {
+   background: #e5e5e5;
+   border-radius: 3px;
+   padding: 4px;
+   font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+}
+
+
+.yellow-h{
+   background: #ffff88;
+}
+
+
+.out-t, remark-inline-code {
+   background: #9fff9f;
+   border-radius: 3px;
+   padding: 4px;
+   
+}
+
+.pull-left-c {
+    float: left;
+    width: 58%;
+    
+}
+
+.pull-right-c {
+    float: right;
+    width: 38%;
+    
+}
+
+.pull-left-d {
+    float: left;
+    width: 38%;
+    
+}
+
+.pull-right-d {
+    float: right;
+    width: 58%;
+    
+}
+
+.medium {
+    font-size: 75%
+    
+}
+
+.small {
+    font-size: 50%
+    }
+
+.action {
+    background-color: #f2eecb;
+  
+}
+
+
+</style>
+
+
+# Version Control and Collaboration with Git and GitHub
+
+<br>
+
+### Resul Umit
+
+### 22 March 2021
+
+.footnote[
+
+[Skip intro &mdash; To the contents slide](#contents-slide).
+
+]
+
+---
+## Who am I?
+
+Resul Umit
+
+- post-doctoral researcher at the University of Oslo
+
+- interested in representation, elections, and parliaments
+    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
+    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
+
+--
+
+<br>
+
+- teaching workshops also on
+
+  - [writing reproducible research papers with R](https://resulumit.com/blog/rmd-workshop/)
+  - [working with Twitter data in R](https://resulumit.com/syllabi/21spring_twtr.pdf)
+  - [creating professional websites with R](https://resulumit.com/syllabi/20spring_rbd.pdf)
+    
+--
+
+<br>
+
+- more information available at [resulumit.com](https://resulumit.com/)
+
+---
+## The Workshop &mdash; Overview
+
+- Half a day, on how to 
+
+  - version our academic work
+  - store the different versions securely &mdash; in multiple places
+  - collaborate with co-authors &mdash; in writing as well as versioning and storing
+
+--
+
+<br>
+
+- Using Git and GitHub, through
+   
+  - command line tools
+  - GitHub Desktop, RStudio
+  
+--
+
+<br>
+
+- Most useful for those working with pain text
+
+   - e.g., Markdown, rather than Microsoft Word
+   - but not exclusively so 
+       - projects based on binary files would also benefit
+       - you may switch to plain text in the future
+        
+---
+## The Workshop &mdash; Motivation
+
+- Research projects have many versions, as they are typically completed
+
+  - over a long period of time
+  - in numerous sittings
+  - by multiple authors 
+  - on multiple computers
+
+--
+
+<br>
+
+- With many versions created over time, in different sittings ..., there emerges various challenges
+
+   - keeping track of changes and versions
+   - reverting to a previous version when necessary
+   - storing versions safely in multiple locations
+   - communicating the versions to other authors and/or computers
+   - working on the same project with co-authors at the same time
+
+--
+
+<br>
+
+- We all have to deal with these challenges on daily basis
+   
+   - efficient workflows can save precious resources
+      - e.g., time, but also money and work itself from being wasted
+   
+---
+## The Workshop &mdash; Worklow
+
+- Using Git and GitHub 
+
+   - originally designed for software development, but can be adopted to academic work
+       - Git creates, saves, and tracks versions
+           - can also save them elsewhere, such as on GitHub
+       - Github keeps a copy online
+           - allowing for safe storage, collaboration
+  - might be daunting to beginners, but offers many benefits over alternatives
+--
+
+<br>
+
+- Alternatives are easier to learn at the beginning, but sub-optimal in the long run
+
+   - e.g., editing, renaming, saving, and emailing
+   - e.g., using applications or websites such as Dropbox, Google Docs, Overleaf
+   
+---
+name: contents-slide
+
+## The Workshop &mdash; Contents
+
+.pull-left[
+
+[Part 1. Introduction](#title-slide)
+   - e.g., getting ready to work together
+
+[Part 2. Tools](#part2)
+   - e.g., downloading workshop material
+
+[Part 3. Version Control](#part3)
+   - .e.g, versioning by typing commands
+   
+]   
+
+.pull-right[
+
+[Part 4. What to Version](#part4)
+   - e.g., using a `.gitignore` file
+   
+[Part 5. Collaboration](#part5)
+   - e.g., working on the same remote repository
+
+[Part 6. Third-Party Applications](#part6)
+   - e.g., using GitHub Desktop
+
+]
+
+---
+## The Workshop &mdash; Organisation
+
+- ~~Sit in groups of two~~
+
+  - participants learn as much from their partner as from instructors
+  - play the role of co-authors
+  
+--
+
+<br>
+
+- Type, rather than copy and paste, the code that you will find on these slides
+
+  - typing is a part of the learning process
+  - keyboard shortcuts for copy/paste does not work in the shell
+  
+--
+
+<br>
+
+- When you have a question
+
+  - ~~ask your partner~~
+  - ~~google together~~
+  - if it cannot wait, turn your microphone on and ask
+  - if it can wait, type it in the chat
+
+---
+class: action
+
+## The Workshop &mdash; Organisation &mdash; Slides<sup>*</sup>
+
+Slides with this background colour indicate that your action is required, for
+
+- setting the workshop up
+    - e.g., downloading course material 
+    
+- completing the exercises
+    - e.g., saving a different version of a file
+    - there are 30+ exercises
+    - these slides have countdown timers
+    
+.footnote[
+
+<sup>*</sup> These slides are and will remain available at  <https://resulumit.com/teaching/git_workshop.html>.
+
+]    
+
+    
+`r countdown(minutes = 1, seconds = 00, top = 0)`
+
+---
+## The Workshop &mdash; Organisation &mdash; Slides
+
+- Codes and texts that go in .inline-c[appear as such &mdash; in a different font, on gray background]
+
+--
+
+<br>
+
+- Results that come out in .out-t[appear as such &mdash; in the same font, on green background]
+    
+--
+
+<br>
+    
+- Specific sections are .yellow-h[highlighted yellow as such] for emphasis
+    
+--
+
+<br>
+
+- The slides are designed for self-study as much as for the workshop
+    - *accessible*, in substance and form, to go through on your own
+    
+---
+## The Workshop &mdash; Aims
+
+- To make you aware what is possible with Git and GitHub
+
+  - we will cover a large breath of issues, not all of it is for long-term memory
+      - one reason why the slides are designed for self study as well    
+<br>
+  - awareness of what is possible, `Google`, and perseverance are all we need
+
+--
+
+- To encourage you to convert into the Git and GitHub workflow 
+
+  - practice with a mock project, co-author
+  - start converting a real one right after the workshop
+      - happy to help via emails afterwards
+    
+---
+name: part2
+class: inverse, center, middle
+
+# Part 2. Tools
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Workshop Materials &mdash; Overview
+
+.pull-left[
+
+- Materials mimic a simple academic project
+
+  - imagined to introduce a new dataset 
+      - on the Google Scholar rankings of fictitious journals
+      - with a short manuscript
+
+  - in the structure shown on the right
+
+]
+
+.pull-right[
+
+```md
+git_workshop-materials
+   |
+   |- data
+   |  |
+   |  |- journals.csv
+   |
+   |- manuscript
+   |  |
+   |  |- journals.docx
+   |  |- journals.pdf
+   |  |- journals.Rmd
+   |
+   |- README.md
+
+```
+]
+
+---
+name: download-zip
+class: action
+
+## Workshop Materials &mdash; Download from the Internet
+
+- Download the materials from <https://github.com/resulumit/git_workshop/tree/materials>
+
+  - on the webpage, follow
+
+> `Code -> Download ZIP`
+
+<br>
+
+- Unzip and rename the folder
+
+  - unzip to a location that is not synced
+     - e.g., perhaps Documents, but not Dropbox
+  
+  - rename the folder as `YOURNAME_git_workshop`
+     - e.g., `resul_git_workshop`
+     - this renaming will come handy later on
+  
+---
+## Workshop Materials &mdash; Contents &mdash; Data
+
+`data\journals.csv`
+- a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the `Google Scholar` rankings of fictitious journals
+    
+- includes the following variables 
+    - **name**: journals (1090 random titles)
+    - **origin**: geographic origins (five continents)
+    - **branch**: major discipline of journals (four branches)
+    - **since**: time of first publication (years)
+    - **h5_index**: H5 Index (integers)
+    - **h5_median**: H5 Median (integers)
+    - **english**: English (1) *vs.* other-language (0) journals
+    - **subfield**: subfield (1) *vs.* generalist (0) journals
+    - **issues**: number of issues published per year (integers)
+
+---
+## Workshop Materials &mdash; Contents &mdash; Manuscript
+
+- `manuscript\journals.docx`
+
+    - the Microsoft Word document, holding the text for the manuscript of the project
+
+--
+
+<br>
+
+- There are two other versions of `paper.docx` in the same folder
+   
+   - saved in PDF and R Markdwon formats respectively    
+   
+       - `manuscript\journals.pdf`
+       - `manuscript\journals.Rmd`
+       
+---
+## Workshop Materials &mdash; Contents &mdash; README
+
+`README.md`
+
+- a Markdown document, holding the basic information about the project
+
+---
+class: action
+name: install-git
+
+## Git &mdash; Download from the Internet and Install
+
+- Git is a software that
+
+   - keeps track of versions of a set of files
+   - is *local* to you, the records are kept on your computer
+   - is free
+
+--
+
+<br>
+
+- To get this software
+
+   - on Windows, install 'Git for Windows', downloading from [https://gitforwindows.org](https://gitforwindows.org/)
+       - select 'Git from the command line and also from 3rd-party software'   
+<br>
+   - on Mac, install 'Git', downloading from [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+---
+class: action
+
+## GitHub &mdash; Open an Account
+
+- GitHub is a hosting service, or a website, that
+
+  - keeps a copy of the versions created by Git
+  - is *remote* to you, like the Dropbox website
+  - is, mostly, free
+  
+--
+
+<br>
+
+- To sign up for this service
+
+   - register an account at [https://github.com](https://github.com/)
+       - registering an account is free
+       - usernames are public, editable
+           - either choose an anonymous username for now
+           - or choose one carefully &mdash; it becomes a part of users' online presence
+
+---
+class: action
+
+## GitHub &mdash; Create a new GitHub repository
+
+- Repository is a folder, or directory, which can keep files and other folders containing files under version control
+    - a set of files whose records are kept together 
+    - repo is a popular abbreviation for repository
+
+--
+name: create-github-repo
+
+<br>
+
+- To create a repo, on GitHub, follow:
+
+> `Repositories -> New -> Repository name (e.g., "git_workshop") -> Public -> Create repository`
+
+- observe that
+
+    - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
+    
+        - this is the address to view the repository online
+        - for use in the `Terminal`, the address gets the `.git` extension
+            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
+
+---
+## GitHub &mdash; Create a new GitHub repository &mdash; Notes
+
+There are two types of repositories
+
+- public repositories
+  
+   - free for all to create
+   - free for everyone else to see, copy, *propose* changes
+   
+--
+
+<br>
+
+- private repositories
+
+   - in general, a paid service 
+   - with [GitHub Education](https://education.github.com/), it free for academics, students
+      - requires a separate application
+
+---
+## GitHub &mdash; Create a personal access token
+
+- Accessing GitHub through the shell requires using a password
+   - not the same password to login to GitHub website
+   - personal access token (PAT) is the new generation of passwords
+
+--
+
+<br>
+
+- Generate a PAT at <https://github.com/settings/tokens>
+   - note it down for now
+   - on how to caching PATs safely, see <https://happygitwithr.com/credential-caching.html>
+
+---
+class: action
+
+## GitHub Desktop &mdash; Download from the Internet and Install
+
+- GitHub Desktop is a software that
+
+   - makes working with Git and GitHub easier
+
+--
+name: install-git
+
+<br>
+
+- To get this software
+
+   - download the file for your operating system from <https://desktop.github.com/>
+   - and install
+
+---
+## Other Resources<sup>*</sup>
+
+- Git Reference Manual
+
+   - available at <https://git-scm.com/docs>
+
+- Pro Git (Chacon and Straub, 2021)
+
+   - open access at <https://git-scm.com/book/en/v2>
+    
+
+- Git Cheat Sheet
+  
+   - available at <https://training.github.com/downloads/github-git-cheat-sheet.pdf>
+   
+- Git Visual Cheat Sheet
+   
+  - available at <https://ndpsoftware.com/git-cheatsheet.html>
+
+---
+name: part3
+class: inverse, center, middle
+
+# Part 3. Version Control
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+---
+## Version Control &mdash; Shell
+
+.pull-left[
+
+Type, and enter, your commands into the shell
+
+- also called command line interpreters
+- depends on your operating system
+    - on Windows, use the Git Bash app
+    - on Mac, use the Terminal
+- does not accept keyboard shortcuts
+  - e.g., `ctrl + v` will not paste into shell
+  - but mouse buttons and clicks will work
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, out.width="95%"}
+knitr::include_graphics("git_workshop_files/images_data/git_bash.png")
+```
+
+
+]
+
+---
+## Version Control &mdash; Git Command Structure
+
+.pull-left[
+
+Git commands 
+- .yellow-h[start with the pre-fix `git`]
+
+]
+
+
+.pull-right[
+
+```md
+
+$ `git`
+
+```
+
+
+]
+
+
+---
+## Version Control &mdash; Git Command Structure
+
+.pull-left[
+
+Git commands 
+- start with the pre-fix `git`
+- might continue with
+  - <span style="background-color: #ffff88;">a command</span>
+
+]
+
+
+.pull-right[
+
+```md
+
+$ git `push`
+
+```
+
+]
+
+---
+## Version Control &mdash; Git Command Structure
+
+.pull-left[
+
+Git commands 
+- start with the pre-fix `git`
+- might continue with
+  - a command
+  - <span style="background-color: #ffff88;">an option</span>
+
+]
+
+
+.pull-right[
+
+```md
+
+$ git `--version`
+
+```
+
+]
+
+---
+## Version Control &mdash; Git Command Structure
+
+.pull-left[
+
+Git commands 
+- start with the pre-fix `git`
+- might continue with
+  - a command
+  - an option   
+<br>
+- might take
+  - <span style="background-color: #ffff88;">one or more arguments</span>
+
+]
+
+
+.pull-right[
+
+```md
+
+$ git push `origin` `master`
+
+```
+
+]
+
+---
+## Version Control &mdash; Git Command Structure
+
+.pull-left-d[
+
+Git commands 
+- start with the pre-fix `git`
+- might continue with
+  - a command
+  - an option   
+<br>
+- might take
+  - one or more arguments
+  - <span style="background-color: #ffff88;">one or more flags</span>
+
+]
+
+
+.pull-right-d[
+
+```md
+$ git commit `-m` "I revised the abstract"
+```
+
+]
+
+---
+class: action
+name: git-config
+
+## Version Control &mdash; config
+
+- Use the `config` command to introduce yourself to Git
+   - with the email address that you have used to sign up for GitHub
+
+```md
+git config --global user.name "YOUR-NAME" 
+git config --global user.email "YOUR-EMAIL-ADDRESS"
+```
+<br>
+
+- enter the following line in the shell, to observe whether the previous step was successful
+
+```md
+git config --global --list
+```
+
+---
+## Version Control &mdash; `cd`
+
+.pull-left[
+
+Use the `cd` command to
+
+- .yellow-h[see which directory] are you currently in
+
+]
+
+.pull-right[
+
+```md
+$ `cd`
+```
+
+.out-t[
+/m
+]
+
+]
+
+---
+## Version Control &mdash; `cd`
+
+.pull-left[
+
+Use the `cd` command to
+
+- see which directory are you currently in
+- .yellow-h[move into a directory] that you prefer
+
+]
+
+.pull-right[
+
+```md
+$ cd `../pc/Desktop/resul_git_workshop`
+```
+
+.out-t[
+../pc/Desktop/resul_git_workshop
+]
+
+]
+
+--
+
+<br>
+
+Note that
+
+   - `cd` is not a git command
+       - it does not start with `git`    
+<br>
+   - you can drag and drop the directory onto the shell
+       - instead of typing the full path
+
+---
+## Version Control &mdash; `ls`
+
+.pull-left[
+
+Use the `ls` command to list the contents of
+
+- .yellow-h[the current directory]
+
+]
+
+.pull-right[
+
+```md
+$ ls
+```
+
+.out-t[
+
+data/ &nbsp;  manuscript/  &nbsp; README.md
+
+]
+
+]
+
+---
+## Version Control &mdash; `ls`
+
+.pull-left[
+
+Use the `ls` command to list the contents of
+
+- the current directory
+- .yellow-h[a sub-directory]
+
+]
+
+.pull-right[
+
+```md
+$ ls `data/`
+```
+
+.out-t[
+
+journals.csv
+
+]
+
+]
+
+---
+class: action
+
+## Exercises
+
+1) Move into the directory holding the workshop materials
+   - using the `cd` command
+   - hint: after a space, drag and drop the folder onto the shell
+
+<br> 
+
+2) See the contents of the folder in the shell
+   - using the `ls` command
+    
+`r countdown(minutes = 2, seconds = 00, top = 0)`
+
+---
+## Version Control &mdash; `git` `init`
+
+Use the `git` `init` command to turn a directory into a git repository directory
+
+```md
+$ git init
+```
+
+.out-t[
+
+Initialized empty Git .yellow-h[repository] in ../resul_git_workshop/.git/
+
+]
+
+---
+## Version Control &mdash; `git` `init` &mdash; Notes
+
+.pull-left-c[
+
+The `git` `init` command creates a .yellow-h[hidden] `.git` subdirectory, with the structure on the right
+
+- currently mostly empty
+    - as nothing is being tracked yet
+
+- not visible with `ls`
+    - but visible with `ls` `-al`
+    - on, on Windows, follow 
+> `File Explorer -> View -> Hidden items`
+
+- hidden, so that it is harder to delete or alter by mistake
+
+]
+
+.pull-right-c[
+
+```md
+
+.git
+  ├── refs
+  │   ├── tags
+  │   └── heads
+  ├── objects
+  │   ├── pack
+  │   └── info
+  ├── info
+  │   └── exclude
+  ├── hooks
+  │   (12 files)
+  ├── HEAD
+  ├── config
+  └── description
+
+```
+]
+
+
+---
+## Version Control &mdash; `git` `add`
+
+.pull-left-d[
+
+Use the `git` `add` command to start tracking
+
+ - .yellow-h[a specific file]
+
+]
+
+.pull-right-d[
+
+```md
+$ git add README.md
+```
+
+.out-t[
+
+.git     
+&nbsp;&nbsp; │     
+&nbsp;&nbsp; ...     
+&nbsp;&nbsp;  ├── objects    
+&nbsp;&nbsp;  │ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ├── pack     
+&nbsp;&nbsp;  │ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ├── info     
+&nbsp;&nbsp;  │ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; └── .yellow-h[8f]    
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; └── .yellow-h[ec6eb5b06dc535825227bd0e6883882075639b]     
+&nbsp;&nbsp; │     
+&nbsp;&nbsp; ├── .yellow-h[index]     
+&nbsp;&nbsp; ... 
+
+]
+
+]
+
+---
+## Version Control &mdash; `git` `add`
+
+.pull-left-d[
+
+Use the `git` `add` command to start tracking
+
+ - a specific file
+ - .yellow-h[multiple files]
+]
+
+.pull-right-d[
+
+```md
+$ git add README.md  data/journals.csv
+```
+
+]
+
+---
+## Version Control &mdash; `git` `add`
+
+.pull-left-d[
+
+Use the `git` `add` command to start tracking
+
+ - a specific file
+ - multiple files
+ - .yellow-h[everything] in the directory
+]
+
+.pull-right-d[
+
+```md
+$ git add `.`
+```
+
+]
+
+---
+## Version Control &mdash; `git` `add`  &mdash; Notes
+
+- The `git` `add` command alone does not create a version
+   - it must be followed by the `git` `commit` command, without which 
+       - there is no version saved yet
+       - the tracked files are said to be .yellow-h[staged], or in the .yellow-h[staging area]
+
+--
+
+<br>
+
+- Use the `git` `add ` command (and then, the `git` `commit` command)
+    - not only to add a new file to be versioned
+    - but also, once that file changes, to snapshot a new version of that file every time
+   
+--
+
+<br>
+
+- A file in the staging area can be taken back, before its commit
+   - by one of the following, depending on whether they have been versioned before
+
+```md
+$ git rm --cached README.md
+```
+   
+```md
+$ git rm --staged README.md
+```
+
+---
+## Version Control &mdash; `git` `commit`
+
+Use the `git` `commit` command to take a snaphot of, or to version, a repository
+
+```md
+$ git commit -m "adding the README file"
+```
+
+--
+.out-t[
+
+.git     
+&nbsp;&nbsp; │     
+&nbsp;&nbsp; ...     
+&nbsp;&nbsp;  ├── objects    
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── pack     
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── info     
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── 8f          
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── ec6eb5b06dc535825227bd0e6883882075639b      
+&nbsp;&nbsp; │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │         
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ├── b2     
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 1ac00c3e97d186c3797908a79846dcde0b305a      
+&nbsp;&nbsp; │  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; │         
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── fd           
+&nbsp;&nbsp;  │ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── cb0ad247419c81076c8aec4021091f3ed630b0     
+&nbsp;&nbsp; ... 
+
+]
+
+---
+## Version Control &mdash; `git` `commit`
+
+Use the `git` `commit` command to take a snaphot of, or to version, a repository
+- with the changes in the staging area
+
+```md
+$ git commit -m `"adding the README file"`
+```
+
+<br>
+
+Note that 
+- committing requires .yellow-h[registering a message]
+    - to yourself and to co-authors to indicate what has changed
+
+---
+## Version Control &mdash; `git` `commit`
+
+Use the `git` `commit` command to take a snaphot of, or to version, a repository
+- with the changes in the staging area
+
+```md
+$ git commit `-m` "adding the README file"
+```
+
+<br>
+
+Note that 
+- committing requires registering a message
+    - to yourself and to co-authors to indicate what has changed
+    - typed after the <span style="background-color: #ffff88;">&ndash;m</span> flag
+    
+--
+
+<br>
+
+Recall that
+- committing requires one or more files in the staging area in the first place
+   - staged with the `git` `add` command
+
+---
+class: action
+
+## Exercises
+
+3) Start tracking the README.md file
+   - using the `git` `add` command
+
+<br> 
+
+4) Take a snapshot of the current version of the file
+   - using the `git` `commit` command
+    
+`r countdown(minutes = 3, seconds = 00, top = 0)`
+
+---
+## Version Control &mdash; `git` `status`
+
+Use the `git` `status` command to check the status of your repository
+   - e.g., are there any untracked, modified, deleted, staged etc. files?
+
+```md
+$ git status
+```
+
+.out-t[
+
+On branch master    
+
+Untracked files:    
+&nbsp;&nbsp;&nbsp;&nbsp;  (use "git add <file>..." to include in what will be committed)    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        data/    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        manuscript/    
+
+no changes added to commit (use "git add" and/or "git commit -a")    
+
+]
+
+---
+class: action
+
+## Exercises
+
+5) Check the status of your repository
+- using the `git` `status` command
+
+<br>
+
+6) Make a change to the `README.md` file, and save
+- e.g., edit the first sentence on the list
+
+<br>
+
+7) Check the status of your repository again
+
+<br>
+
+8) Commit the new version
+   - recall the combination of commands needed
+    
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+## Version Control &mdash; `git` `log`
+
+Use the `git` `log` command to see the changes in reverse order
+
+```md
+$ git log
+```
+
+--
+.out-t[
+
+commit 241b7285a00d47d69655d4a4afcd50989d5b50a8 (HEAD -> master)     
+Author: Resul Umit &#60;resulumit@gmail.com>    
+Date:   Sat Mar 6 09:27:32 2021 +0100    
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;correct the maths error     
+
+commit fdcb0ad247419c81076c8aec4021091f3ed630b0     
+Author: Resul Umit &#60;resulumit@gmail.com>     
+Date:   Sat Mar 6 08:55:21 2021 +0100     
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adding the README file     
+
+]
+
+---
+## Version Control &mdash; `git` `log`
+
+Use the `git` `log` command to see the changes in reverse order
+- the `oneline` flag returns a summary
+
+```md
+$ git log `--oneline`
+```
+
+.out-t[
+
+241b728 (HEAD -> master) correct the maths error    
+fdcb0ad adding the README file
+
+]
+
+--
+
+<br>
+
+Note that
+
+- commit hash is abbreviated to the first 7 digits, enough to uniquely identify each commit
+    - i.e., 241b728 from 241b7285a00d47d69655d4a4afcd50989d5b50a8
+- `HEAD` refers to the snapshot of your last commit
+- `master` is the default branch name
+    - we have only one branch at the moment, but can have multiple
+    - think of a branch as a version of versions, or a copy of the whole repository
+    
+---
+## Version Control &mdash; `git` `branch`
+
+Use the `git` `branch` command to create a copy of your repository, on your local machine
+
+```md
+$ git branch `coding_branch`
+```
+.out-t[
+
+```
+
+              add &          add &
+             commit         commit
+master: c1 ----------> c2 ----------> c3
+                                      |                            
+                                      |                            
+                                     b|                              
+                                     r|                            
+                                     a|                              
+                                     n|                            
+                                     c|                            
+                                     h|                            
+                                      |  
+                                      v    
+                      `coding_branch`:  c3 
+```
+]
+
+---
+## Version Control &mdash; `git` `branch`
+
+Use the `git` `branch` command to create a copy of your repository, on your local machine
+
+```md
+$ git branch `coding_branch`
+```
+
+<br>
+
+Note that 
+
+- this line takes an argument for .yellow-h[branch name]
+    - the default repository is called master
+
+---
+## Version Control &mdash; `git` `branch`
+
+Use the `git` `branch` command to create a copy of your repository, on your local machine
+
+```md
+$ git branch coding_branch
+```
+
+<br>
+
+Note that 
+
+- this line takes an argument for branch name
+    - the default repository is called master     
+<br>
+- we are still in the master branch
+   - check which branch are you in with the following command
+
+```md
+$ git branch -v
+```
+
+---
+## Version Control &mdash; `git` `branch` &mdash; Notes
+
+- Branches can be developped
+   - .yellow-h[one at a time]
+
+```
+              add &          add &
+             commit         commit
+master: c1 ----------> c2 ----------> c3
+                                      |                             
+                                      |                             
+                                     b|                               
+                                     r|                             
+                                     a|                               
+                                     n|                             
+                                     c|                             
+                                     h|                             
+                                      |    add &          add &     
+                                      v   commit         commit     
+                     coding_branch:   c3 ----------> c4 ----------> c5
+                              
+```
+
+---
+## Version Control &mdash; `git` `branch` &mdash; Notes
+
+- Branches can be developped
+   - one at a time
+   - .yellow-h[at the same time]
+
+
+```
+
+              add &          add &          add &
+             commit         commit         commit
+master: c1 ----------> c2 ----------> c3 ----------> c5
+                                      |                             
+                                      |                             
+                                     b|                               
+                                     r|                             
+                                     a|                               
+                                     n|                             
+                                     c|                             
+                                     h|                             
+                                      |    add &          add &     
+                                      v   commit         commit     
+                     coding_branch:   c3 ----------> c4 ----------> c5
+                              
+
+
+```
+
+---
+## Version Control &mdash; `git` `diff`
+
+Use the `git` `diff` command to see what has changed, for changes
+- .yellow-h[not staged or committed yet]
+
+
+```md
+$ git diff
+```
+
+.out-t[
+
+diff --git a/README.md b/README.md     
+
+...
+
+--- a/README.md    
++++ b/README.md    
+
+
+...
+
+.yellow-h[-]1. Two times two makes .yellow-h[five].    
+.yellow-h[+]1. Two times two makes .yellow-h[four].
+
+]
+
+---
+## Version Control &mdash; `git` `diff`
+
+.pull-left[
+Use the `git` `diff` command to see what has changed, for changes
+- not staged or committed yet
+- .yellow-h[staged but not committed yet]
+
+]
+
+.pull-right[
+
+```md
+$ git diff `--staged`
+```
+
+]
+
+---
+## Version Control &mdash; `git` `diff`
+
+.pull-left[
+Use the `git` `diff` command to see what has changed, for changes
+- not staged or committed yet
+- staged but not committed yet
+- .yellow-h[committed since a specific commit]
+
+]
+
+.pull-right[
+
+```md
+$ git diff `fdcb0ad`
+```
+
+```md
+$ git diff `HEAD~2`
+```
+
+]
+
+---
+## Version Control &mdash; `git` `diff`
+
+.pull-left[
+Use the `git` `diff` command to see what has , for changes
+- not staged or committed yet
+- staged but not committed yet
+- committed since a specific commit
+- .yellow-h[between different commits]
+
+]
+
+.pull-right[
+
+```md
+$ git diff `241b728` `1dfb2a5`
+```
+
+```md
+$ git diff `HEAD~1` `HEAD~2`
+```
+
+]
+
+---
+## Version Control &mdash; `git` `diff`
+
+.pull-left[
+Use the `git` `diff` command to see what has changed, for changes
+- not staged or committed yet
+- staged but not committed yet
+- committed since a specific commit
+- between different commits
+- between different commits .yellow-h[in one or more specific files]
+
+]
+
+.pull-right[
+
+```md
+$ git diff 241b728 1dfb2a5 `README.md`
+```
+
+```md
+$ git diff HEAD~1 HEAD~2 `README.md`
+
+```
+]
+
+---
+## Version Control &mdash; `git` `diff`
+
+.pull-left[
+Use the `git` `diff` command to see what has changed, for changes
+- not staged or committed yet
+- staged but not committed yet
+- committed since a specific commit
+- between different commits
+- between different commits in one or more specific files
+- between different .yellow-h[branches]
+
+]
+
+.pull-right[
+
+```md
+$ git diff `master..coding_branch`
+```
+]
+
+
+---
+## Version Control &mdash; `git` `checkout`
+
+.pull-left[
+Use the `git` `checkout` command to switch to
+- .yellow-h[a different version off all files in the same branch]
+
+]
+
+.pull-right[
+
+```md
+$ git checkout `241b728`
+```
+
+```md
+$ git diff `HEAD~1`
+```
+]
+
+---
+## Version Control &mdash; `git` `checkout`
+
+.pull-left[
+Use the `git` `checkout` command to switch to
+- a different version off all files in the same branch
+- .yellow-h[a different version of one ore more specific files]
+
+]
+
+.pull-right[
+
+```md
+$ git checkout 241b728 `README.md`
+```
+
+```md
+$ git checkout HEAD~1 `README.md`
+```
+]
+
+---
+## Version Control &mdash; `git` `checkout`
+
+.pull-left[
+Use the `git` `checkout` command to switch to
+- a different version off all files in the same branch
+- a different version of one ore more specific files
+- .yellow-h[a different branch]
+
+]
+
+.pull-right[
+
+```md
+$ git checkout coding_branch
+```
+]
+
+---
+class: action
+
+## Exercises
+
+9) Make sure there is nothing to commit in the master branch
+- using the `git` `status` command to see
+
+10) Make a new branch and switch to it
+- using the `git` `branch` and  `git` `checkout` commands
+
+11) Start tracking the `data/journals.csv` file in this new branch
+
+12) Commit the new version to this branch
+
+13) Rename the first variable of the dataset, stage, and commit
+- e.g., from `name` to `journal_name`
+- both in `README.md` and `data/journals.csv`
+
+14) Switch back to the master branch
+
+15) Check the differences between the branches
+- using the `git` `diff` command
+    
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+## Version Control &mdash; `git` `merge`
+
+Use the `git` `merge` command to integrate different versions of your repository into a single version
+
+```md
+$ git merge coding_branch
+```
+
+
+.out-t[
+```
+              add &          add &
+             commit         commit
+master: c1 ----------> c2 ----------> c3 ------------------------> c6
+                                      |                             ^
+                                      |                             |
+                                     b|                             |m  
+                                     r|                             |e
+                                     a|                             |r  
+                                     n|                             |g
+                                     c|                             |e
+                                     h|                             |
+                                      |    add &          add &     |
+                                      v   commit         commit     |
+                     coding_branch:   c3 ----------> c4 ----------> c5
+                              
+
+
+```
+]
+
+---
+## Version Control &mdash; `git` `merge`
+
+Use the `git` `merge` command to integrate different versions of your repository into a single version
+
+```md
+$ git merge `coding_branch`
+```
+
+<br>
+
+Note that
+
+- this line includes one argument
+   - <span style="background-color: #ffff88;">from where</span> to merge
+   
+---
+## Version Control &mdash; `git` `merge`
+
+Use the `git` `merge` command to integrate different versions of your repository into a single version
+
+```md
+$ git merge `coding_branch`
+```
+
+<br>
+
+Note that
+
+- this line includes one argument
+   - <span style="background-color: #ffff88;">from where</span> to merge      
+<br>
+- this merges into the current branch
+    - move into the desired branch first
+        - using the `git` `checkout` command
+
+---
+## Version Control &mdash; `git` `merge` &mdash; Conflicts
+
+- Merge is done automatically if there are no conflicts
+   - conflicts emerge when versions to be merged include edits *on the same line of the same file*
+  - edits on different lines are not a problem as changes are tracked line by line    
+   
+--
+
+<br>
+
+- Merge conflicts require human intervention
+   - by editing the conflicting lines
+       - after the merge attempt
+       - marked in the document with the conflict
+   - and commiting the corrected file 
+   
+
+.out-t[
+&#60;&#60;&#60;&#60;&#60;&#60;&#60;&#60; HEAD       
+1&#46; Two times two makes five.         
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;         
+1&#46; Two times two makes tree.       
+&#62;&#62;&#62;&#62;&#62;&#62;&#62;&#62; new_branch     
+
+]
+
+---
+class: action
+
+## Exercises
+
+16) Merge the coding_branch into the master branch
+
+<br>
+
+17) Make a change on the same line of the README.md in both branches
+
+<br>
+
+18) Try to merge the coding_branch into the master branch
+- hint: this will lead to a merge conflict
+
+<br>
+
+19) Solve the conflict and commit
+
+    
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+## Version Control &mdash; `git` `remote` `add`
+
+
+Use the `git` `remote` `add` command to define a different place, to save an backup of your repositories
+   - e.g., a repository on GitHub
+       - could also be a directory on an external hard drive
+
+
+```md
+$ git remote add origin https://github.com/resulumit/git_workshop.git 
+```
+
+---
+## Version Control &mdash; `git` `remote` `add`
+
+
+Use the `git` `remote` `add` command to define a different place, to save an external copy of your repositories
+   - e.g., a repository on GitHub
+       - could also be a directory on an external hard drive
+
+
+```md
+$ git remote add origin `https://github.com/resulumit/git_workshop.git` 
+```
+
+<br>
+
+Note that this includes
+- a valid .yellow-h[address for the external copy]
+    - e.g., there is a repository on my GitHub account called `git_workshop`
+    
+---
+## Version Control &mdash; `git` `remote` `add`
+
+Use the `git` `remote` `add` command to define a different place, to save an external copy of your repositories
+   - e.g., a repository on GitHub
+       - could also be a directory on an external hard drive
+
+
+```md
+$ git remote add `origin` https://github.com/resulumit/git_workshop.git
+```
+
+<br>
+
+Note that this line includes
+- a valid address for the external copy to be saved
+    - e.g., there is a repository on my GitHub account called `git_workshop`
+- an .yellow-h[arbitrary name for this external repository]
+    - traditionally called `origin`, could also be anything else
+
+---
+## Version Control &mdash; `git` `push`
+
+Use the `git` `push` command to save a copy of your .yellow-h[local] repository to its .yellow-h[remote] repository
+
+```md
+$ git push origin master
+```
+
+---
+## Version Control &mdash; `git` `push`
+
+Use the `git` `push` command to save a copy of your local repository to its remote repository 
+
+```md
+$ git push `origin` master
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - <span style="background-color: #ffff88;">where</span> to push
+        - already defined with the `git` `remote` `add` command
+    
+---
+## Version Control &mdash; `git` `push`
+
+Use the `git` `push` command to save a copy of your local repository to its remote repository 
+
+```md
+$ git push origin `master`
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - where and <span style="background-color: #ffff88;">what</span> to push
+        - could be any branch
+  
+---
+## Version Control &mdash; `git` `push`
+
+Use the `git` `push` command to save a copy of your local repository to its remote repository
+
+```md
+$ git push `origin` master
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - where and what to push    
+<br>
+- pushing will be rejected if the remote repository has edits that the local repository does not
+    - necessitating a pull first
+
+---
+## Version Control &mdash; `git` `push`
+
+Use the `git` `push` command to save a copy of your local repository to its remote repository
+
+```md
+$ git push `origin` master
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - where and what to push     
+<br>
+- pushing will be rejected if the remote repository has edits that the local repository does not
+    - necessitating a pull first     
+<br>
+- if this is your first time using GitHub, you will be prompted to authenticate
+    - follow the instructions on your screen and in your email
+        - using the PAT that you created in Part 2
+
+---
+## Version Control &mdash; `git` `pull`
+
+Use the `git` `pull` command to get a copy of the .yellow-h[remote] repository, and merge it into the .yellow-h[local] repository
+
+```md
+$ git pull origin master
+
+```
+
+---
+## Version Control &mdash; `git` `pull`
+
+Use the `git` `pull` command to get a copy of the remote repository, and merge it into the local repository
+
+```md
+$ git pull `origin` master
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - <span style="background-color: #ffff88;">where</span> to pull from
+        - already defined with the `git` `remote` `add` command
+
+---
+## Version Control &mdash; `git` `pull`
+
+Use the `git` `pull` command to get a copy of the remote repository, and merge it into the local repository
+
+```md
+$ git pull origin `master`
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - where and <span style="background-color: #ffff88;">what</span> to pull from
+        - could be any branch
+
+---
+## Version Control &mdash; `git` `pull`
+
+Use the `git` `pull` command to get a copy of the remote repository, and merge it into the local repository
+
+```md
+$ git pull origin `master`
+
+```
+
+<br>
+
+Note that
+
+- this line includes two arguments
+    - where and what to pull from    
+<br>
+- pulling involves fetching and merging
+    - might lead to conflicts, and necessitate solving them manually
+
+---
+class: action
+
+## Exercises
+
+20) Add a remote repository
+- e.g., the [GitHub repository that you have already created](#create-github-repo)
+- using the `git` `remote` `add` command
+
+21) Push the master branch to GitHub
+- using the `git` `push` command
+- observe the repository on GitHub
+
+22) Commit a change to the README.md file on GitHub
+- by clicking on the pen symbol
+
+
+23) Pull the changes to the local repository
+- using the `git` `pull` command
+    
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+name: part4
+class: inverse, center, middle
+
+# Part 4. What to Version
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## What to Version &mdash; Overview
+
+There might be good reasons to exclude some others from versioning
+
+- for local-only repositories
+
+  - files that we (re-)create automatically as outputs
+      - e.g., `paper.pdf`, as opposed to paper.Rmd
+      
+--
+
+<br>
+
+- for repositories that are also on GitHub
+
+  - files that contain information that we do not want others to see
+      - e.g., personal API keys    
+
+    - files that we do not have the right to share with others
+        - e.g., secondary data with user agreements otherwise    
+
+    - files that are too large
+        - individual files cannot be larger than 100MB
+
+---
+## What to Version &mdash; `.gitignore`
+
+- `.gitignore` specifies which file(s) and/or folder(s) should be excluded from version control
+
+  - is a file itself, to be saved in the root directory
+  - allowing for us to use the .inline-c[git add .] shortcut
+
+--
+
+<br>
+
+- `.gitignore` lists one item per line
+
+  - each line has a pattern, which determines whether one or more files or folders are to be ignored
+
+--
+
+<br>
+
+- See these
+
+   - documentation at <https://git-scm.com/docs/gitignore> 
+   - templates at <https://github.com/github/gitignore> 
+
+---
+## What to Version &mdash; `.gitignore` &mdash; Examples
+
+.pull-left[
+
+You can ignore, for example,
+
+- <span style="background-color: #ffff88;">a specific folder</span>, relative to the root directory
+
+]
+
+.pull-right[
+
+```{r, eval = FALSE}
+/manuscript/      #<<
+```
+
+]
+
+---
+## What to Version &mdash; `.gitignore`
+
+.pull-left[
+
+You can ignore, for example,
+
+- a specific folder, relative to the root directory
+
+- <span style="background-color: #ffff88;">a specific file in a specific folder</span>, relative to the root directory
+
+]
+
+.pull-right[
+
+```{r, eval = FALSE}
+/manuscript/
+/manuscript/paper.pdf         #<<
+```
+
+]
+
+---
+## What to Version &mdash; `.gitignore`
+
+.pull-left[
+
+You can ignore, for example,
+
+- a specific folder, relative to the root directory
+
+- a specific file in a specific folder, relative to the root directory
+
+- <span style="background-color: #ffff88;">a specific file in any folder</span>
+
+]
+
+.pull-right[
+
+```{r, eval = FALSE}
+/manuscript/
+/manuscript/paper.pdf
+paper.pdf               #<<
+```
+
+]
+
+---
+## What to Version &mdash; `.gitignore`
+
+.pull-left[
+
+.pull-left[
+
+You can ignore, for example,
+
+- a specific subdirectory, relative to the root directory
+
+- a specific file in a specific subdirectory, relative to the root directory
+
+- a specific file in any subdirectory
+    
+- <span style="background-color: #ffff88;">all files with a specific extension</span>, anywhere in the repository
+
+]
+
+.pull-right[
+
+```{r, eval = FALSE}
+/manuscript/
+/manuscript/journals.pdf
+journals.pdf               
+**.pdf
+```
+
+]
+
+---
+## What to Version &mdash; `.gitignore` &mdash; Notes
+
+- There are many other pattern formats    
+
+    - see the documentation at <https://git-scm.com/docs/gitignore>
+
+--
+
+- Starting to ignore a file or folder that is already being tracked requires clearing the cache
+
+  - after changing and saving `.gitignore`, enter the following line in the shell
+  - with your speficic `/path/to/file`
+
+```md
+git rm --cached /path/to/file
+
+```
+--
+
+- The following command clears *all* cache
+
+  - might be useful after changes to `.gitignore` that involves several files or folders
+  - but should be used with care, on an otherwise up-to-date repository  
+    
+```md
+git rm -r --cached .
+
+```
+
+---
+class: action
+
+## Exercises
+
+24) Create a `.gitignore` file on GitHub
+- to ignore the paper.pdf file
+- save and commit
+
+25) Pull the changes to the local repository
+- using the `git` `pull` command
+
+26) Start tracking everything
+- using the .inline-c[git add .]
+- and commit
+
+27) Push the canges to the remote repository
+- observe the repository on GitHub to confirm `.gitignore` work as intended
+    
+`r countdown(minutes = 7, seconds = 30, top = 0)`
+
+---
+name: part5
+class: inverse, center, middle
+
+# Part 5. Collaboration
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Collaboration &mdash; Project Setup
+
+- The setup depends on the users' role, on whether they are
+    - the *owner* who creates the GitHub repository, or
+    - the *collaborator* who is then added to that repository
+
+--
+
+- Once the project is setup
+    - it continues to be associated with the owner's GitHub profile
+    - at the same time, it is listed under the collaborator's profile as well
+    - both the owner and the collaborator have the same rights, unless otherwise restricted
+
+---
+## Collaboration &mdash; Project Setup &mdash; Owner
+
+- The setup for the owner is largely the same as in any single-author, single-computer scenario
+    - introduce version control to a local project with Git,
+    - create a remote repository for that project on GitHub, and
+    - associate the local project with the remote repository
+
+--
+
+<br>
+
+- As an additional step, the owner needs to invite their collaborator(s) to the project
+- following, from the relevant GitHub repository, 
+
+> `Settings -> Manage access -> Invite a collaborator`
+
+
+---
+## Collaboration &mdash; Project Setup &mdash; Collaborator
+
+- Notice that the remote part of the setup is done by the owner for the collaborator
+   - subject to acceptance of the invitation
+       - invitations are available directly at <https://github.com/notifications>, but also sent via email
+       - on acceptance, projects appear among the repositories of the collaborator
+        
+--
+
+<br>
+
+
+-  The local part of the setup still needs to be done
+   - by using the `git` `clone` command with the repository address
+   
+   
+```md
+$ git clone https://github.com/USER_NAME/REPOSITORY_NAME.git
+```
+
+---
+class: action
+
+## Exercises
+
+
+28) Prepare for collaboration
+- by assuming the role of first and second co-authors in your group
+
+
+- Owners:
+   - invite your activity party ion to collaborate
+   - hint: you will need their username, full name, or email address to do so
+
+- Collaborators:
+   - accept the invitation from your co-author
+   - clone the project to your a local repository
+       - using the `git` `clone` command
+
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
+
+---
+## Colloboration &mdash; Workflow
+
+1) Pull
+
+- on the Git tab in RStudio, click `Pull` to move the up-to-date records from GitHub to your computer
+    - if your collaborator has not pushed anything since your last pull, you will be noticed that `Already up-to-date`.
+    - collaborative projects require pulling as well as pushing because your collaborator(s) might have pushed their commits to GitHub
+    - pulling frequently minimises the risk of merge conflicts
+
+--
+
+2) Edit and save; commit and push
+
+- the same procedure as in any single-author, single-computer scenario
+    - as described on [this slide](#git-github-basic-workflow) forward
+- pushing frequently minimises the risk of merge conflicts
+
+---
+class: action
+
+## Exercise
+
+29) Non-simultaneous Collaboration
+
+- take in turns with your partner to work on the same document (of the same project)
+    - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
+    - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
+        - click on the relevant commit message on GitHub and observe the commit
+    - *collaborator*: pull, revert the header back to original, save, commit, and push
+
+`r countdown(minutes = 5, seconds = 00, top = 0)`
+
+--
+
+- notice that you have not encountered any errors and/or merge conflicts
+    - because everyone edited and merged with an up-to-date document
+    - this is the default scenario in single-author, multiple computer scenario
+
+---
+class: action
+
+## Exercise
+
+30) Simultaneous Collaboration &mdash; Different Lines
+
+- work on the same document at the same time
+    - *owners*: edit the first header in a document, save, commit, and push
+    - *collaborators*: edit the second header in the document (i.e., "Including Plots"), save, commit, and push
+        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
+
+--
+
+- notice that you have encountered an error but not a merge conflict
+    - pulling before pushing solves the problem because the edits are not on the same line
+    - the merge takes place automatically, on the *local* repository of the last pusher
+
+---
+class: action
+
+## Exercise
+
+31) Simultaneous Collaboration &mdash; Same Line
+
+- work on the same document at the same time
+    - *owners*: edit the first header in the document again, save, commit, and push
+    - *collaborators*: edit the first header in the document as well, save, commit, and push
+        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
+
+--
+
+- notice that you have encountered not only an error but also a merge conflict
+    - pulling before pushing alone does not solve the problem because the edits are on the same line
+        - the conflict cannot be solved automatically &mdash; it needs human intervention
+        - by pulling first, you can view the conflict directly on the file
+            - marked between less than <span style="background-color: #ffff88;">&lt;</span> and greater than <span style="background-color: #ffff88;">&gt;</span> signs, divided by the equal signs
+            - solution is to accept the remote version, by deleting your edit and or moving that edit to a different line
+    - merging takes place on the *local* repository of the last pusher
+
+---
+## Colloboration &mdash; Workflow &mdash; Alternative
+
+- The workflow above is rather simple, but has some disadvantages, including
+    - not easy, albeit still possible, to see the edits of the collaborators
+    - not clear who is in charge of the overall progress
+    - not possible to discuss edits
+    - not possible to compromise on conflicting edits
+
+--
+
+- An alternative workflow exits
+    - work on different branches of the same project
+    - version control to your own branch
+    - create pull requests with comments
+    - merge the branch into master
+
+
+---
+## Colloboration &mdash; Workflow &mdash; Alternative
+
+1) Branch
+- using the `git` `branch` command to create a branch
+
+
+
+2) Edit and save; commit and push
+- the same procedure as in any single-author, single-computer scenario
+- except that now pushing into a branch
+- notice, on GitHub, that your commit is in the new branch, while *master* remains unchanged
+
+3) Pull request
+
+- On GitHub, click 
+> `Pull requests -> New pull request`
+
+- choose what is to be pulled, and write a note to your collaborator who can accept or reject the merge
+    - if there are merge conflicts, the collaborator solves them on GitHub before merging
+
+---
+class: action
+
+## Exercises
+
+32) Pull request
+
+- create a pull request for your collaboration project
+    - create a branch for yourself
+    - edit any line, save, commit, and push
+    - request your branch to be merged
+    
+33) Merging
+
+- view the pull request of your collaborator on GitHub
+- merge it to *master*
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
+
+---
+name: part6
+class: inverse, center, middle
+
+# Part 6. Third-Party Applications
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Applications &mdash; RStudio
+
+Integrating RStudio into the workflow requires
+
+1. .yellow-h[initial setup], done once<sup>*</sup>
+    - unless for a new computer or, if ever, a new GitHub account
+    - a bit technical, but worth the hassle
+    
+2. .yellow-h[project setup], repeated for every project
+    - shorter, less complicated
+
+.footnote[
+
+<sup>*</sup> We have started this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub. [Back to the relevant slide](#install-git).
+
+]
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Inital Setup
+
+1) Enable version control with RStudio
+
+- from the RStudio menu, follow:
+
+> `Tools -> Global Options -> Git/SNV -> Enable version control interface for RStudio projects`
+
+- RStudio will likely find Git automatically. In case it cannot, Git is likely to be at
+
+    - `c:/Program Files/Git/bin/git.exe` on Windows
+
+    - `/usr/local/git/bin/git` on Mac
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Inital Setup
+
+
+2) Set Git Bash as your shell (Windows-only step)
+
+- from the RStudio menu, follow:
+
+> `Tools -> Global Options -> Terminal -> New terminals open with: Git Bash`
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Inital Setup<sup>*</sup>
+
+3) Introduce yourself to Git
+
+- from the RStudio menu, follow:
+
+> `Tools -> Terminal -> New Terminal`
+
+- enter the following lines in the Terminal, with the email address that you have used to sign up for GitHub
+
+```yaml
+git config --global user.name "YOUR-NAME" 
+git config --global user.email "YOUR-EMAIL-ADDRESS"
+```
+
+- enter the following line in the Terminal, to observe whether the previous step was successful
+
+```yaml
+git config --global --list
+
+```
+
+.footnote[
+
+<sup>*</sup> This repeats the process on [this slide](#git-config) in Part 3. Repeating it is unnecessary, but will not cause any problems.
+
+]
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Project Setup
+
+1) Create an RStudio project
+
+
+- RStudio allows for dividing your work with R into separate projects, each with own history etc.
+
+  - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
+
+<br>
+
+- Create a new RStudio project, following from the RStudio menu:
+
+> `File -> New Project`
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Project Setup
+
+2) Initiate local version control with Git
+
+- from the RStudio menu, follow:
+
+> `Tools -> Version Control -> Project Setup... -> Version Control System -> Git`
+
+--
+
+<br>
+
+- after confirming your new repository, and restarting the session, observe that 
+
+   - now there is now a Git tab in RStudio, with buttons for various git commands
+   
+   - your project now includes a `.gitignore` file
+       - untracking some project-specific files
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Project Setup
+
+3) Create a new GitHub repository
+
+- on GitHub, follow:
+
+> `Repositories -> New -> Repository name (e.g., "git_workshop") -> Public -> Create repository`
+
+- observe that
+
+  - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
+    
+      - this is the address to view the repository online
+      - for use in the `Terminal`, the address gets the `.git` extension
+            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
+
+---
+class: action
+
+## Applications &mdash; RStudio &mdash; Project Setup
+
+3) Push an existing repository for the first time
+
+- from the RStudio menu, follow:
+
+> `Tools -> Terminal -> New Terminal`
+
+- enter the following lines in the `Terminal`, with your username and repository name
+
+```md
+git remote add origin https://github.com/USER_NAME/REPOSITORY_NAME.git
+git add .
+git commit -m "first commit"
+git push -u origin master
+
+```
+
+--
+
+- if this is your first time using GitHub with RStudio, you will be prompted to authenticate
+   - follow the instructions on your screen and in your email
+
+- observe that your project files are now online, listed on the GitHub repository
+
+---
+## Applications &mdash; RStudio &mdash; Notes
+
+- The principles covered in [Part 3](#part3) to [Part 5](#part5) remain the same
+
+   - e.g., add, commit, and push
+   
+--
+
+<br>
+
+- There are now two alternative ways to proceed
+
+  - typing git commands in the Terminal
+    - as opposed to in a stand alone shell
+    
+  - clicking the buttons on the Git tab
+    - e.g., Diff, Commit
+
+---
+class: inverse, center, middle
+
+# References
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## References
+
+Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2019). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.10.0.
+
+
+---
+class: middle, center
+
+## The workshop ends here.
+## Congratulations for making it this far, and
+## thank you for joining me!
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
