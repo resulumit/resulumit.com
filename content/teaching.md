@@ -17,7 +17,7 @@ title: "Teaching experience"
         - Previuos iteration: Autumn 2020
     - <a href="https://resulumit.com/syllabi/21spring_ee.pdf" target="_blank">Syllabus</a>
 
-<br>
+<br style="line-height: 5px" />
 
 * *Causality in law, economics, and politics*
     - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, Spring 2020
@@ -40,7 +40,7 @@ title: "Teaching experience"
     - <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a>
     - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
-<br>
+<br style="line-height: 5px" />
 
 * *Git and GitHub*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, March 2021
@@ -48,13 +48,13 @@ title: "Teaching experience"
     - <a href="https://resulumit.com/teaching/git_workshop.html" target="_blank">Slides</a>
     - <a href="https://github.com/resulumit/git_workshop" target="_blank">Materials</a>
     
-<br>    
+<br style="line-height: 5px" />   
 
 * *Twitter data*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
     - <a href="https://resulumit.com/syllabi/21spring_twtr.pdf" target="_blank">Syllabus</a>
     
-<br>
+<br style="line-height: 5px" />
 
 * *Academic websites*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2020
