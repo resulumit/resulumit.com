@@ -33,7 +33,7 @@ title: "Teaching experience"
 
 ## Workshops
 
-* *Reproducible research*
+* *R Markdown*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, November 2020
         - Previuos iteration: March 2020
     - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a>
@@ -41,6 +41,14 @@ title: "Teaching experience"
     - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
 <br>
+
+* *Git and GitHub*
+    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, March 2021
+    - <a href="https://resulumit.com/syllabi/21spring_git.pdf" target="_blank">Syllabus</a>
+    - <a href="https://resulumit.com/teaching/git_workshop.html" target="_blank">Slides</a>
+    - <a href="https://github.com/resulumit/git_workshop" target="_blank">Materials</a>
+    
+<br>    
 
 * *Twitter data*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
