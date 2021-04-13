@@ -7,8 +7,6 @@ title: 'The role of income in energy efficiency and curtailment behaviours: Find
 kind: article
 tags:
 - energy
-- efficiency
-- curltailment
 - surveys
 citation: <em>Energy Research & Social Science, 53</em>, 206–214
 doi: 10.1016/j.erss.2019.02.025

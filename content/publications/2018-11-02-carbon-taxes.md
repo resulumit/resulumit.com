@@ -7,7 +7,6 @@ title: 'Attitudes towards carbon taxes across Europe: The role of perceived unce
 kind: article
 tags:
 - energy
-- taxes
 - surveys
 citation: <em>Energy Policy, 140</em>
 file: umit2020a.pdf

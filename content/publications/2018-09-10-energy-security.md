@@ -7,8 +7,7 @@ title: 'National context is a key determinant of energy security concerns across
 kind: article
 tags:
 - energy
-- survey research
-- europe
+- surveys
 citation: <em>Nature Energy, 3</em>, 882–888
 doi: 10.1038/s41560-018-0235-8
 file: demski2018.pdf

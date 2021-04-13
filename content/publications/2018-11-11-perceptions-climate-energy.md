@@ -7,7 +7,7 @@ title: 'Public perceptions on climate change and energy in Europe and Russia: Ev
 kind: report
 tags:
 - report
-- ESS
+- surveys
 - Europe
 - Russia
 citation: 'London: European Research Infrastructure Consortium'
