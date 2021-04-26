@@ -1,8 +1,4 @@
 ---
-title: "Creating Professional Websites with R Blogdown"
-subtitle: "Resul Umit"
-institute: ""
-date: "May 2020"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -12,7 +8,10 @@ output:
       highlightSpans: true
       countIncrementalSlides: false
       ratio: "16:9"
+    seal: false
 ---
+name: title-slide
+class: inverse, center, middle
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE, crayon.enabled = TRUE)
@@ -21,16 +20,12 @@ library(crayon)
 library(fansi)
 library(dplyr)
 library(ggplot2)
-library(stargazer)
+library(knitr)
 library(countdown)
 
 # data
 df <- mtcars %>%
       mutate(disp_litre = disp / 61.0237)
-
-# regresion models
-lm1 <- lm(mpg ~ cyl, data = df)
-lm2 <- lm(mpg ~ cyl + disp_litre, data = df)
 
 ```
 
@@ -89,25 +84,51 @@ lm2 <- lm(mpg ~ cyl + disp_litre, data = df)
 
 </style>
 
+# Creating Academic Websites with R
 
+<br>
+
+## Resul Umit
+## April 2021
+
+.footnote[
+
+[Skip intro &mdash; To the contents slide](#contents-slide).]
+
+---
 ## Who am I?
 
 Resul Umit
 
-- post-doctoral researcher and lecturer at the Department of Political Science, University of Lucerne
+- post-doctoral researcher at the University of Oslo
 
-- interested in representation, elections, and parliaments
-    - [most recent publication](https://doi.org/10.1080/17457289.2019.1604529):
-    When members of parliament disagree with their principals (country, constituency, party), how do they justify this to them?    
+- teaching and studying representation, elections, and parliaments
+    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
+    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
 
-- more information and work available at [resulumit.com](https://resulumit.com/)
+--
+
+<br>
+
+- teaching workshops, also on
+
+  - [writing reproducible research papers](https://resulumit.com/blog/rmd-workshop/)
+  - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
+  - [working with Twitter data](https://resulumit.com/syllabi/21spring_twtr.pdf)
+  - [web scraping](https://www.campus-luzern.ch/files/2020/12/FS21_Web-Scraping-with-R.pdf)
+    
+--
+
+<br>
+
+- more information available at [resulumit.com](https://resulumit.com/)
 
 ---
 ## My First Website
 
 Using WordPress
 
-- opened just before starting my PhD in 2013, at [https://wordpress.com/](https://wordpress.com/)
+- opened just before starting my PhD in 2013, at [wordpress.com](https://wordpress.com/)
 
 - at first, with rare updates
     - none based on data
@@ -116,19 +137,20 @@ Using WordPress
 
 - then, with more frequent blogposts
     - frustrations with posts based on data 
-        - slow to write and edit
+        - slow to write and edit    
+<br>
     - still required getting used to at every login
     
 ---
 ## My Current Website
 
-Using `blogdown`, based on `Hugo`, `rmarkdown`, and the `Finite` theme
+Using R
 
 - migrated from WordPress in 2018
 
 - ~~frustrations with blogposts based on data~~ 
     - ~~slow to write and edit~~
-    - `rmarkdown` makes quantitative academic writing efficient
+    - `blogdown` ([Xie et al., 2021a](https://cran.r-project.org/web/packages/blogdown/index.html)) makes quantitative academic writing efficient
 
 - ~~required getting used to at every login~~
     - ~~a system used only for website updates~~
@@ -136,226 +158,289 @@ Using `blogdown`, based on `Hugo`, `rmarkdown`, and the `Finite` theme
         - cleaning and analysing data, writing results for publication
 
 ---
-## Websites for Academics &mdash; Motivations
-
-- Academic outreach
-    - make your work easily accessible to other academics
-      - all work in one address
-      - versions without paywall
-            - e.g., pre-prints
-
---
-
-- Public outreach
-    - make your work easily accessible to non-academics, in two senses
-      - by removing paywalls
-          - e.g., pre-prints
-      - by writing for non-academic audience in mind
-          - e.g., blogposts
-            
---
-
-- Impression management
-    - manage your online presence yourself
-        - otherwise, others will
-            - e.g., your (past and present) university
-    - provide a concrete example of your skills
-        - with R, Git 
-
----
 ## The Workshop &mdash; Overview
 
-- Two half days, on how to create websites for academics with R
+- One full day, on how to create websites for academics with R
 
-  - 09.15 &ndash; 17:00
-
---
-
-- Based on personalising the example site of the `Academic` theme
-  
   - building a minimal working site
   - version-controlling and deploying it
   - adding new content to the site
 
 --
 
+<br>
+
+- Based on personalising the [example website](https://academic-demo.netlify.app/) of the `Academic` theme, with two options
+  
+  - using real material, creating your website now
+  - using mock material, re-creating the [demonstration website of the workshop](https://janejdoe.netlify.app/)<sip>*</sup>
+     - as a practice for creating your website afterwards
+
+
+.footnote[
+
+<sip>*</sup> I will refer to this demonstration as <span style="background-color: #ffff88;">JJD's website</span> here, to distinguish it from the example website of the theme.
+
+]
+---
+## The Workshop &mdash; Overview
+
+- One full day, on how to create websites for academics with R
+
+  - building a minimal working site
+  - version-controlling and deploying it
+  - adding new content to the site
+
+<br>
+
+- Based on personalising the [example website](https://academic-demo.netlify.app/) of the `Academic` theme, with two options
+  
+  - using real material, creating your website now
+  - using mock material, re-creating the [demonstration website of the workshop](https://janejdoe.netlify.app/)
+     - as a practice for creating your website afterwards
+
+<br>
+
 - Designed for researchers with basic knowledge of R programming language
 
   - ability to work with R and RStudio will be very helpful
-      - but not absolutely necessary &mdash; these skills can be developed after learning R Blogdown as well    
+      - but not absolutely necessary &mdash; these skills can be developed after the workshop as well    
 
 ---
-## The Workshop &mdash; Limitations
+## The Workshop &mdash; Motivations
 
-- Covers static websites, as generated by `Hugo`, as integrated into R by `blogdown`
-    - limited by what this setting offers
-        - they offer a lot, but not everything is possible
-        - e.g., ~~dynamic websites~~
+- Academic outreach
+
+  - make your work easily accessible to other academics
+    - keep all academic work at one address
+    - offer versions without paywall
+          - e.g., pre-prints
 
 --
 
-- Does not cover structural (HMTL, CSS, or JavaScript) customisation
-    - ~~changing the entire appearance and functionality of the theme, writing a new one~~
-    - but, you can always switch to another Hugo theme
-        - see 300+ options at [https://themes.gohugo.io/](https://themes.gohugo.io/)
-     
---
+<br>
 
-- Does not cover multi-language or multi-author websites
-    - but, these are possible, and well documented in `Academic`
-        - e.g, for multi-lingual websites, see [https://sourcethemes.com/academic/docs/language/](https://sourcethemes.com/academic/docs/language/)
+- Public outreach
+
+  - make your work easily accessible to non-academics, in two senses
+    - by removing paywalls
+        - e.g., pre-prints     
+<br>          
+    - by writing for non-academic audience in mind
+          - e.g., blogposts
+            
+---
+## The Workshop &mdash; Motivations &mdash; Impression Management
+
+- What do people see when they google your name?
+
+  - google your name now, and scroll through
+     - is this exactly what you want people to see?
         
----
-## The Workshop &mdash; Organisation
-
-- Originally planned as a face-to-face workshop
-    - now digital, with its own challenges
-
 --
 
-- We will be building websites
-    - I will share my screen, and talk over my own edits
-    - some of these edits are self explanatory, thanks to the documentation in `Academic`
-        - feel free to mute me during your edits
-
---
-
-- When you have a problem, don't get stuck and suffer in silence
-    - turn your microphone on and interrupt
-    - or, type in Zoom Chat *for everyone*
-        - help if you know the solution to someone else's problem
-
---
-
-- I will use Zoom Breakup Rooms for specific problems that need a closer look
-    - e.g., when you need to share your screen with me
-    - while the others continue working on their websites
-
-
---
-
-- We need a system to indicate you are ready to move on
-    - when asked, please indicate either way
-        - just say, nod/shake your head, give thumbs up
-        - I will also try Zoom Polls   
-
----
-class: action
-
-## The Workshop &mdash; Organisation &mdash; Slides
-
-- Slides with this background colour indicate that your action is required, for
-    - setting the workshop up
-      - e.g., installing software
-    
-    - personalising the website
-       - e.g., putting in your own contact details
-    
-    - completing the exercises
-       - e.g., adding content to your website
-
----
-class: action
-
-## The Workshop &mdash; Organisation &mdash; Slides
-
-- Slides with this background colour indicate that your action is required, for
-    - setting the workshop up
-      - e.g., installing software
-    
-    - personalising the website
-       - e.g., putting in your own contact details
-    
-    - completing the exercises
-       - e.g., adding content to your website
-       
-- Some of these slides have countdown timers
-    - for guidance only
-
-`r countdown(minutes = 1, seconds = 00, top = 0)`
-
----
-## The Workshop &mdash; Organisation &mdash; Slides
-
-- Codes and texts that go in (R) Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]
-    - long codes and texts will have their own line(s)
-
---
-
-- Results that come out in output files .out-t[appear as such &mdash; in the same font, on green background]
-    - except very obvious results, such as figures and tables
-
---
- 
-- Specific sections are .yellow-h[highlighted yellow as such] for emphasis
-    - these could be for anything &mdash; codes and texts in input, results in output, and/or texts on slides
-
---
-
-- Names for items such as files, folders, variables are in `typefont`.
-    - typefont with a trailing slash indicates a directory, known also as folder
-        - e.g., `content/` is a directory
-
+<br>
+          
+- Websites are an impression management tool   
+<br>
+  - manage your online presence yourself
+      - otherwise, others --- e.g., your (past and present) university --- will     
+<br>
+  - provide a concrete example of your skills
+          - e.g., working with R, Git
+        
 ---
 ## The Workshop &mdash; Aims
 
 - To leave you with a website
     
   - working, continuously deployed from RStudio
-  - albeit minimal
+  - albeit minimal and/or mock    
 
 --
+
+<br>
+
 
 - To make you aware what else is possible
 
   - so that you can update your website after the workshop
   - awareness of what is possible, `Google`, and perseverance are all you need
 
+        
+---
+## The Workshop &mdash; Limitations
+
+This workshop does not cover
+
+- dynamic websites
+
+   - e.g., visitors cannot sort a table that your website might have
+   - it covers static websites, as generated by `Hugo`, as integrated into R by `blogdown`
+       - this setting offers what most academics would need
+
+--
+
+- structural (HMTL, CSS, or JavaScript) customisation
+
+  - e.g., changing the entire appearance and functionality of a theme, writing a new one
+  - switching to another `Hugo` theme is an option
+        - see 300+ options at [https://themes.gohugo.io/](https://themes.gohugo.io/)
+     
+--
+
+- multi-language or multi-author websites
+
+  - these are possible, and well documented elsewhere
+      - e.g, for multi-lingual websites, see [https://sourcethemes.com/academic/docs/language/](https://sourcethemes.com/academic/docs/language/)
+      - e.g., for multi-author websites, see my [workshop on collaboration](https://resulumit.com/teaching/git_workshop.html#1)
+        
+---
+## The Workshop &mdash; Organisation
+
+- ~~Sit in groups of two~~
+
+  - participants learn as much from their partner as from instructors
+  - play the role of co-authors
+  
+--
+
+<br>
+
+- Type, rather than copy and paste, the code that you will find on these slides
+
+  - typing is a part of the learning process
+  - but do copy the text from [JJD's website](https://janejdoe.netlify.app/), if you are re-creating it
+  
+--
+
+<br>
+
+- When you have a question
+
+  - ~~ask your partner~~
+  - ~~google together~~
+  - turn your microphone on and ask, or
+  - type it in the chat
+
+---
+class: action
+
+## The Workshop &mdash; Organisation &mdash; Slides<sup>*</sup>
+
+- Slides with this background colour indicate that your action is required, for
+  - setting the workshop up
+     - e.g., installing software    
+<br>
+    - personalising the website
+       - e.g., putting in your own contact details    
+<br>
+    - completing the exercises
+       - e.g., adding content to your website    
+<br>       
+- Some of these slides have countdown timers
+    - for guidance only
+    
+.footnote[
+
+<sup>*</sup> These slides are, and will remain, available at  <https://resulumit.com/teaching/rbd_workshop.html>.
+
+] 
+
+`r countdown(minutes = 1, seconds = 00, top = 0)`
+
+---
+## The Workshop &mdash; Organisation &mdash; Slides
+
+- Codes and texts that go in as input .inline-c[appear as such &mdash; in a different font, on gray background]
+    - long codes and texts will have their own line(s)
+    
+```{r, eval=FALSE}
+
+ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
+  geom_point(size = 2) +
+  scale_colour_gradient(name = "Cylinders", high = "#132B43", low = "#56B1F7",
+                        breaks = c(4, 6, 8)) +
+  theme_bw() +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 20),
+        legend.title = element_text(size = 20),
+        legend.text = element_text(size = 20)) +
+  labs(x = "\nWeight", y = "Miles/Gallon\n") 
+
+```
+
+---
+## The Workshop &mdash; Organisation &mdash; Slides
+
+- Codes and texts that go in as input .inline-c[appear as such &mdash; in a different font, on gray background]
+    - long codes and texts will have their own line(s)
+
+<br>
+
+- Results that come out as output .out-t[appear as such &mdash; in the same font, on green background]
+    - except very obvious results, such as figures and tables
+
+--
+<br>
+
+- Specific sections are .yellow-h[highlighted yellow as such] for emphasis
+    - these could be for anything &mdash; codes and texts in input, results in output, and/or texts on slides
+
+--
+<br>
+
+- Names for items such as files, folders, variables are in `typefont`.
+    - typefont with a trailing slash indicates a directory, known also as folder
+        - e.g., `content/` is a directory
+
 ---
 ## The Workshop &mdash; Contents
 
 .pull-left[
 
-**Part 1. Getting the Tools Ready**
+[Part 1. Getting the Tools Ready](#part1)
    - e.g., installing software
 
-**Part 2. Website Front End**
+[Part 2. Website Front End](#part2)
    - e.g., the look in a browser
 
-**Part 3. Website Back End**
+[Part 3. Website Back End](#part3)
    - e.g., the look in RStudio
 
-**Part 4. Configuration**
+[Part 4. Configuration](#part4)
    - e.g., overall organisation and settings
-   
-**Part 5. Managing Content**
-   - e.g., adding pages and sections
 
 ]
 
 --
+name: contents-slide
 
 .pull-right[
 
-
    
-**Part 6. Version Control**
-   - e.g., integrating Git and GitHub  
+[Part 5. Managing Structure](#part5)
+   - e.g., organisation of pages and sections
 
-**Part 7. Deployment**
-   - e.g., integrating Netlify
+[Part 6. Deployment](#part6)
+   - e.g., publishing your website online 
 
-**Part 8. Adding Text-Based Content**
-   - e.g., plain Markdown syntax
-   - includes time for individual work
+[Part 7. Adding Content](#part7)
+   - e.g., adding text and images
    
-**Part 9. Adding Data-Based Content**
-   - e.g., R Markdown syntax
-   - includes time for individual work
+[Part 8. R Markdown](#part8)
+   - e.g., adding tables and figures
+
+]
+
+.footnote[
+
+[Back to the title slide](#title-slide). [Forward to the bibliography section](#references). 
 
 ]
 
 ---
+name: part1
 class: inverse, center, middle
 
 # Part 1. Getting the Tools Ready
@@ -365,58 +450,86 @@ class: action
 
 ## Git &mdash; Download from the Internet and Install
 
-- We need Git to version control our websites
-    - and to deploy them continuously
+- Git is a software that
+
+   - keeps track of versions of a set of files
+   - is .yellow-h[local] to you, the records are kept on your computer
+   - is free
 
 --
 
-- For Windows, install 'Git for Windows', downloading from [https://gitforwindows.org](https://gitforwindows.org/)
-       - select 'Git from the command line and also from 3<sup>rd</sup>-party software'
-       
-- For Mac, install 'Git', downloading from [https://git-scm.com/downloads](https://git-scm.com/downloads)
+<br>
+
+- To get this software
+
+   - on Windows, install 'Git for Windows', downloading from [https://gitforwindows.org](https://gitforwindows.org/)
+       - select 'Git from the command line and also from 3rd-party software'   
+<br>
+   - on Mac, install 'Git', downloading from [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 ---
 class: action
 
 ## GitHub &mdash; Open an Account
 
-- We need a GitHub account to keep a copy of website on the cloud
-   - and to version control it, to deploy it continuously
+- GitHub is a hosting service, or a website, that
 
+  - keeps a copy of the versions created by Git
+  - is .yellow-h[remote] to you, like the Dropbox website
+  - is, mostly, free
+  
 --
 
-- Sign up for GitHub at [https://github.com](https://github.com/)
+<br>
 
-   - registering an account is free
+- To sign up for this service
 
-   - usernames are public
-      - either choose an anonymous username (e.g., `asdf029348`)
-      - or choose one carefully &mdash; it becomes a part of users online presence
-      
-   - usernames can be changed later
+   - register an account at [https://github.com](https://github.com/)
+       - registering an account is free
+       - usernames are public, editable
+           - either choose an anonymous username for now
+           - or choose one carefully &mdash; it becomes a part of users' online presence
 
 ---
 class: action
 
 ## Netlify &mdash; Open an Account
 
-- We need a Netlify account to deploy our websites
+- Netlify is a hosting service that
+
+  - builds your website out of individual files, using `Hugo`
+  - hosts your website on its servers, making it available online
+  - is, mostly, free
 
 --
 
-- Sign up for Netlify at [https://www.netlify.com/](https://www.netlify.com/)
+<br>
 
-   - registering an account is free
+- To sign up for this service
 
-   - you can use your GitHub account to register
+   - register an account at [https://www.netlify.com](https://www.netlify.com/)
+       - registering an account is free
+       - you can use your GitHub account to register
         
 ---
 class: action
 
 ## R and RStudio &mdash; Download from the Internet and Install
 
+- R is a programming language that
+
+  - does or facilitates many things, e.g., creating a website
+  - provides the engine for RStudio &mdash; an IDE, or dashboard
+  - is free
+
+--
+
+<br>  
+
 - Download R from [https://cloud.r-project.org](https://cloud.r-project.org)
     - choose the version for your operating system
+
+<br>
 
 - Download RStudio from [https://rstudio.com/products/rstudio/download](https://rstudio.com/products/rstudio/download)
     - choose the free version
@@ -429,19 +542,19 @@ class: action
 Install the following R packages, using the code below
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
+install.packages(c("blogdown", "dplyr", "ggplot2"))
 ```
 
-- `blogdown` (Xie, 2020d), for creating websites
+<br>
 
-- `dplyr` (Wickham, 2020a), for data manipulation
-    - alternatives: e.g., `base`, `data.table` (Dowle & Srinivasan, 2019)
-    
-- `stargazer` (Hlavac, 2018), for tables
-    - alternatives: e.g., `knitr` (Xie, 2020b), `kableExtra` (Zhu, 2019)
-    
-- `ggplot2` (Wickham, 2020b), for figures
-    - alternatives: e.g., `base`, `plotly` (Sievert et al., 2020)
+- `blogdown` ([Xie et al., 2021a](https://cran.r-project.org/web/packages/blogdown/index.html)), for creating websites
+    - comes with, among others, the `knitr` package ([Xie, 2021](https://cran.r-project.org/web/packages/knitr/index.html)), which we will use for tabling data     
+<br>
+- `dplyr` ([Wickham et al., 2021](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - alternatives: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))    
+<br>
+- `ggplot2` ([Wickham et al., 2020b](-https://cran.r-project.org/web/packages/ggplot2/index.html)), for plotting data
+    - alternatives: e.g., `base`, `plotly` ([Sievert et al., 2021](https://cran.r-project.org/web/packages/plotly/index.html))
 
 ---
 ## `blogdown` &mdash; Overview
@@ -456,7 +569,7 @@ install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
     - most importantly `Hugo` for generating sites
     - (R) Markdown for text formatting
     - `pandoc` for transforming Markdown files into HTML
-    - `TOML` and `YAML` syntaxes for configuration and front matter
+    - `YAML` syntaxes for configuration and front matter
 
 --
 
@@ -466,8 +579,8 @@ install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
 --
 
 - Comes with a book
-   - *blogdown: Creating Websites with R Markdown* (Xie et al., 2018)
-       - open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/)
+   - *blogdown: Creating Websites with R Markdown* ([Xie et al., 2021b](https://bookdown.org/yihui/blogdown/))
+       - open access at [https://bookdown.org/yihui/blogdown/](https://bookdown.org/yihui/blogdown/)
        - also has a confusing name, as R Markdown is not central to creating websites
 
 ---
@@ -475,8 +588,8 @@ install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
 
 .pull-left-c[
 
-- Observe that, since you've installed `blogdown`, RStudio includes six new addins
-    - e.g., `Serve Site`
+- Observe that, after installing `blogdown`, RStudio includes six new addins
+    - e.g., `Serve` `Site`
     - mouse over in RStudio to read their definitions
 
 - Each addin has a corresponding function
@@ -492,7 +605,7 @@ install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
 
 .footnote[
 
-[*] Not all `blogdown` functions are exported. In practice, this means we would need to call `blogdown:::` (with the triple-colon operator) for some functions, such `blogdown:::touch_file()`.
+[*] Not all `blogdown` functions are exported. In practice, this means we would need to call `blogdown`.yellow-h[:::] (with the triple-colon operator) for some functions, such `blogdown:::touch_file()`.
 
 ]
 
@@ -502,27 +615,30 @@ install.packages(c("blogdown", "dplyr", "ggplot2", "stargazer"))
 - `blogdown` provides functions to facilitate interacting with `Hugo` from within R, including
     - `blogdown::install_hugo()`
     - `blogdown::serve_site()`
-    - `blogdown::build_site()`
+
+<br>
 
 - It is customary to call `blogdown` functions with the double colon operator .yellow-h[::]
    - the usual way would also work
       - i.e., load `library(blogdown)` first
 
+<br>
+
 - To see the list of exported functions, type `blogdown::` in the `Console`
-    - hit the `tab` key if necessary
+    - hit the `tab` key on your keyboard
 
 ---
 class: action
 
-## Hugo &mdash; Install from within RStudio
+## `Hugo` &mdash; Install from within RStudio
 
-Install Hugo, with the following code
+Install `Hugo`, with the following code
 
 ```{r eval=FALSE, tidy=FALSE}
 blogdown::install_hugo()
 ```
 
-- `Hugo` is a *static* website generator
+- `Hugo` is a .yellow-h[static] website generator
     - static websites are a collection of pages
     - pages display the same information to all visitors
     
@@ -553,9 +669,16 @@ blogdown::install_hugo()
    - open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/)
    
 ---
+name: part2
 class: inverse, center, middle
 
 # Part 2. Website Frontend
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
 
 ---
 ## `Academic` &mdash; Overview
@@ -566,7 +689,7 @@ class: inverse, center, middle
 
     - demonstration website is live at <https://themes.gohugo.io/theme/academic/>
     
-    - documentaion is available at <https://sourcethemes.com/academic/docs/>  
+    - documentaion is available at <https://wowchemy.com/docs/>  
     
 ]
 
@@ -579,34 +702,43 @@ class: inverse, center, middle
 ---
 class: action
 
-## `Academic` &mdash; Demonstration Site
+## Demonstration Sites
 
-- Visit [https://themes.gohugo.io//theme/academic/](https://themes.gohugo.io//theme/academic/), and explore the site
+- Visit three demonstration websites
+    - website of the theme that we will be using, at <https://themes.gohugo.io/theme/academic>
+    - website of this workshop that you may wish to re-create, at <https://janejdoe.netlify.app>
+    - website of any other theme, listed at at <https://themes.gohugo.io>
 
-- Pay attention to
-    - what is on the homepage
-    - how the homepage compares to the `Courses` section
-    - the behaviour when one clicks on `Posts` versus `Courses`
+- Pay attention to the similarities and differences
+    - between the websites and/or themes
+    - between the behaviour of the menu items
 
-`r countdown(minutes = 3, seconds = 00, top = 0)`
+
+`r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
 ## `Academic` &mdash; Demonstration Site
 
 - The homepage is composed of different parts, called widgets
-    - e.g., the sections titled `Academic`, `Demos`, `Biography` etc.
+    - e.g., the sections titled `Biography`, `Experience`, `Accomplishments` *etc*.
 
 --
+
+<br>
 
 - Some menu items direct the screen to different widgets on the homepage
-    - e.g., `Demo`, `Posts`, `Projects` etc.
+    - e.g., `Demo`, `Posts`, `Projects` *etc*.
 
 --
+
+<br>
 
 - Other menu items direct to stand alone sections
     - e.g., `Courses`
 
 --
+
+<br>
 
 - The menu also has a search function and a day/night mode switch
     
@@ -619,17 +751,20 @@ class: action
 
 --
 
+<br>
+
 - Well looked after
-    - last updated a few days ago
-        - `Hugo` released v0.71.1 on Monday (25 May), which broke the theme
-        - `Academic` got updated on Tuesday with a fix
+    - gets updated very frequently
+        - `Hugo` released v0.71.1 on Monday 25 May 2020, which broke the theme
+        - `Academic` got updated the next day with a fix
     - has a lively community of users and developers behind it
     
-
 --
 
+<br>
+
 - Well documented
-    - every line of code in the example site is commented
+    - every line of code in the example site is commented in the backend
     - more documentation available at [https://sourcethemes.com/academic/docs/](https://sourcethemes.com/academic/docs/)
 
 ---
@@ -642,10 +777,12 @@ class: action
 
 --
 
+<br>
+
 - Popular
 
   - over 100,000 websites use this theme
-  - hard to stand out in this crowd with the look
+  - hard to stand out in this crowd
     
 ---
 ## `Academic` &mdash; Disadvantages
@@ -655,21 +792,30 @@ class: action
     - its widgets can at first be overwhelming
     - **you can handle it on your own**
 
+<br>
+
 - Popular **but with room for personalisation**
     - over 100,000 websites use this theme
-    - hard to stand out in this crowd with the look
+    - hard to stand out in this crowd
     - **it comes with different colour schemes, fonts** 
     - **there are many potential combinations of widgets**
 
 ---
+name: part3
 class: inverse, center, middle
 
 # Part 3. Website Backend
 
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
 ---
 class: action
 
-## Website Project &mdash; Create from within RStudio
+## Website Backend &mdash; Create from within RStudio
 
 .pull-left-c[
 
@@ -680,8 +826,8 @@ class: action
 - Give your project a name with `Directory Name`
 
 - Choose a location for the project with `Browse...`
-    - synced locations, e.g., `Dropbox`, are likely to cause problems
-        - pause syncing, or add an exclusion
+    - synced locations, e.g., `Dropbox`, are likely to cause warning/error messages
+        - pause syncing, or add an sync exclusion on `Dropbox`
         
 ]
 
@@ -693,7 +839,7 @@ class: action
 ---
 class: action
 
-## Website Project &mdash; Create from within RStudio
+## Website Backend &mdash; Create from within RStudio
 
 .pull-left-c[
 
@@ -701,9 +847,14 @@ class: action
     - this has the format `GiTHubUserName/RepoName`
     - located at [https://github.com/yihui/hugo-lithium](https://github.com/yihui/hugo-lithium)
 
-- Change the theme to `gcushen/hugo-academic`
+<br>
+
+- Change the theme to `wowchemy/starter-academic`
     - this is the `Academic` theme
-        
+    - located at <https://github.com/wowchemy/starter-academic>
+
+<br>
+
 - Click `Create Project` to start
 
 ]
@@ -715,11 +866,11 @@ class: action
 ]
 
 ---
-## Website Project &mdash; Directory Structure
+## Website Backend &mdash; Directory Structure
 
 .pull-left-c[
 
-Observe that the .yellow-h[root directory]<sup>*</sup> is now populated with website files
+Observe that the .yellow-h[root directory]<sup>*</sup> is now populated with files for the theme and the example website
 
 ]
 
@@ -731,22 +882,23 @@ Observe that the .yellow-h[root directory]<sup>*</sup> is now populated with web
 
 .footnote[
 
-[*] The root directory is the main directory of your website project. It is often referred with a single slash .yellow-h[/].
+[*] The root directory is the main directory of your website project. It is often referred with a single slash .yellow-h[/]. For example .yellow-h[/config.yaml] indicates that there is a file called `config.yaml` directly under the root directory &mdash; e.i., it is not in any other sub-directory.
 
 ]
 
 ---
-## Website Project &mdash; Directory Structure
+## Website Backend &mdash; Directory Structure
 
 .pull-left-c[
 
-Observe that the root directory is now populated with website files
-- .yellow-h[`config.toml`] and other configuration files under .yellow-h[`config/`]
+Observe that the root directory is now populated with files, including
+- .yellow-h[`/config.yaml`] and other configuration files under .yellow-h[`/config/`]
 
     - sets global configurations
         - e.g., title, decription, navigation menu
-    - uses the TOML syntax
-        - learn more about it at [https://github.com/toml-lang/toml](https://github.com/toml-lang/toml)
+    - uses the YAML syntax
+        - documented at [https://yaml.org/spec/1.2/spec.html](https://yaml.org/spec/1.2/spec.html)
+        - will be covered [here](#yaml-syntax) later on
 ]
 
 .pull-right-c[
@@ -756,17 +908,17 @@ Observe that the root directory is now populated with website files
 ]
 
 ---
-## Website Project &mdash; Directory Structure
+## Website Backend &mdash; Directory Structure
 
 .pull-left-c[
 
-Observe that the root directory is now populated with website files
-- `config.toml`, `config/*`
-- .yellow-h[`content/`]
+Observe that the root directory is now populated with files, including
+- `/config.yaml`, `/config/`
+- .yellow-h[`/content/`]
 
     - includes files to be transformed into HTML pages
-    - each directory under `content/` is a section of a website
-        - e.g., `content/post/` corresponds to `https://example.com/post/`
+    - each directory under `/content/` is a section of a website
+        - e.g., `/content/post/` can be viewed at `https://janejdoe.netlify.app/post/`
 ]
 
 .pull-right-c[
@@ -776,9 +928,9 @@ Observe that the root directory is now populated with website files
 ]
 
 ---
-## Website Project &mdash; Directory Structure &mdash; `content/`
+## Website Backend &mdash; Directory Structure &mdash; `/content/`
 
-- Observe that the files under `content/` are typically Markdown files
+- Observe that the files under `/content/` are typically Markdown files
 
     - with the `.md` extension
 
@@ -786,36 +938,27 @@ Observe that the root directory is now populated with website files
 
 - These files have typically two sections
 
-    - a "front matter" with TOML or YAML syntax
-       - TOML goes between a pair of three plus signs +++
-       - YAML goes between a pair of three hyphens ---
-    - and some text
-       - using Markdown syntax
-    
---
-
-- `Academic` uses
-
-    - TOML front matter for widgets
-      - these are under `home/`
-    - YAML front matter for all other `.md` files
-      - e.g., under `post/`
+  - a .yellow-h[front matter] with the YAML syntax
+      - YAML goes between a pair of three hyphens ---    
+<br>      
+  - and some text
+      - using Markdown syntax
 
 ---
-## Website Project &mdash; Directory Structure
+## Website Backend &mdash; Directory Structure
 
 .pull-left-c[
 
-Observe that the root directory is now populated with website files
-- `config.toml`, `config/*`
-- `content/`
-- .yellow-h[`static/`]
+Observe that the root directory is now populated with files, including
+- `/config.yaml`, `/config/`
+- `/content/`
+- .yellow-h[`/static/`]
 
-    - contains files that should appear on websites as is
-        - e.g., images, PDF files
-        - these can be orginised within seperate directories
-            - e.g., images can be put in `static/img`
-    - Hugo does not transform the files in this folder
+  - contains files that should appear on websites as is
+      - e.g., images, PDF files
+      - these can be organised within separate directories
+          - e.g., images can be put in `static/media/`
+  - `Hugo` does not transform the files in this folder while generating websites
 
 ]
 
@@ -826,25 +969,43 @@ Observe that the root directory is now populated with website files
 ]
 
 ---
-## Website Project &mdash; Directory Structure &mdash; Notes
+## Website Backend &mdash; Directory Structure &mdash; Notes
 
-- Hugo websites follow a certain structure
-    - see the Hugo documentation for directory structure at <https://gohugo.io/getting-started/directory-structure/>
+- `Hugo` websites follow more or less the same directory structure
 
-- Directory structure might look slightly different in different themes
-    - e.g., less complex themes have one configuration file only, without `config/`
-    
-- Other files and folders are equally important
-    - e.g., `themes/` hold one or more themes
-    - but you are less likely to work with them, at this stage
-    
+  - see the `Hugo` documentation for directory structure at <https://gohugo.io/getting-started/directory-structure/>
+  - structure might look slightly different in different themes
+       - e.g., less complex themes have one configuration file only, without `/config/`
+
+<br>
+
+- The structure, as well as other technical details, might change
+
+   - changes come with a new `Hugo` version
+   - a change may or may not break a theme
+   - themes are designed, and websites are generated, with a certain version
+      - these two versions do not have to be the same, but compatible
+
 ---
 class: action
 
-## Website Project &mdash; `Serve Site`
+## Website Backend &mdash; Set `Hugo` Version
+
+Set `blogdown.hugo.version` in `/.Rprofile` to the latest `Hugo` version that you have
+
+- `Hugo` version in `/.Rprofile` is often out of date
+- first check the installed `Hugo` versions that you have
+    - by running `blogdown::find_hugo("all")` in the `Console`     
+<br>     
+- changes to `.Rprofile` take affect only after saving the file, and restarting R
+    - after saving, follow `Session -> Restart R`
+---
+class: action
+
+## Website Backend &mdash; `Serve` `Site`
 
 .pull-left-c[
-- Click the `Addins -> Serve Site` to preview the site 
+- Click the `Addins` `->` `Serve` `Site` to preview the site 
     - this is equivalent to typing `blogdown::serve_site()` in the `Console`
     
 - Observe that the website is live in the `Viewer` tab
@@ -861,11 +1022,27 @@ knitr::include_graphics("rbd_workshop_files/images_data/viewer.png")
 ]
 
 ---
-## Website Project &mdash; `Serve Site` &mdash; View in Browser
 
-```{r, echo = FALSE, out.width = "60%", fig.align="center"}
+class: action
+
+## Website Backend &mdash; `Serve` `Site`
+
+.pull-left-c[
+- Click the `Addins` `->` `Serve` `Site` to preview the site 
+    - this is equivalent to typing `blogdown::serve_site()` in the `Console`
+    
+- Observe that the website is live in the `Viewer` tab
+    - this can be viewed with a browser, by clicking on the window icon
+            
+]
+
+.pull-right-c[
+
+```{r, echo = FALSE, out.width = "100%"}
 knitr::include_graphics("rbd_workshop_files/images_data/browser.png")
 ```
+
+]
 
 ---
 class: action
@@ -880,7 +1057,7 @@ class: action
     - this can be viewed with a browser, by clicking on the window icon
     
 - You can make live edits in this state
-    - e.g., in `config.toml`, change <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">title = "Academic"</span>, and save
+    - e.g., in `/config.yaml`, change <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">title = "Academic"</span>, and save
         - e.g., to <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">title = "YourName"</span>
         - observe the live change in the website
             
@@ -893,62 +1070,55 @@ knitr::include_graphics("rbd_workshop_files/images_data/viewer2.png")
 ```
 
 ]
----
-## Website Project &mdash; Directory Structure &mdash; `public/`
-
-.pull-left-c[
-
-- Observe that the root directory now includes `public/`
-    - since you served the site
-    
-- Websites are rendered into this directory
-    - it includes everything web servers need
-    
-- It gets recreated every time a website is served or built
-    - e.g., you can delete it before each build, which is actually recommended
-
-]
-
-.pull-right-c[
-
-```{r, echo = FALSE, out.width = "100%"}
-knitr::include_graphics("rbd_workshop_files/images_data/root_directory2.png")
-```
-
-]
 
 ---
+name: part4
 class: inverse, center, middle
 
 ## Part 4. Configuration
 
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
 ---
 ## Configuration &mdash; Overview
 
-- There are four main configuration files in the theme
-    - `config.toml`
-    - `config/_default/languages.toml`
-    - `config/_default/menus.toml`
-    - `config/_default/params.toml`
+- There are four configuration files in the theme
+
+  - `/config.yaml`
+  - `/config/_default/languages.yaml`
+  - `/config/_default/menus.yaml`
+  - `/config/_default/params.yaml`
 
 --
+
+<br>
+
+- These files are for overall definitions, settings, and organisation
+  
+  - e.g., creating menu items; defining font, language
+  - these files are written with the YAML syntax
+
+--
+
+<br>
 
 - We will work with the existing options of in these files
-    - for the complete list options that one can use in configuration files, see <https://gohugo.io/getting-started/configuration>
-    
---
 
-- Use these files for definitions, settings, and overall organisation
-   - this requires working with the TOML syntax
+  - for the complete list of options that you can use in configuration files, see <https://gohugo.io/getting-started/configuration>
 
 ---
-## Configuration &mdash; TOML Syntax
+name: yaml-syntax
+## Configuration &mdash; YAML Syntax
 
 .pull-left[
 
-- TOML uses `key = value` pairs
+- YAML uses <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
 
-   - keys are pre-defined &mdash; mostly by Hugo, but also by each theme
+   - keys are pre-defined &mdash; mostly by `Hugo`, but also by each theme
        - e.g., `title`
    - users supply the values 
        - e.g., "Name Surname"
@@ -958,41 +1128,47 @@ class: inverse, center, middle
 .pull-right[
 
 ```r
- title = "Resul Umit"
+ title: "Jane J. Doe"
 ```
 
 ]
 ---
-## Configuration &mdash; TOML Syntax
+## Configuration &mdash; YAML Syntax
 
 .pull-left[
 
-- TOML uses `key = value` pairs
-   - keys are pre-defined &mdash; mostly by Hugo, themes
+- YAML uses <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
+   - keys are pre-defined &mdash; mostly by `Hugo`, but also by each theme
        - e.g., `title`
    - users supply the values
        - e.g., "Name Surname"
 
 - Values can take
-    - <span style="background-color: #ffff88;">strings, in quotation marks</span>
+    - <span style="background-color: #ffff88;">strings</span><span>*</span>
 
 ]
 
 .pull-right[
 
 ```r
- `title = "Resul Umit"`
+ `title: "Jane J. Doe"`
 ```
 
 ]
 
+.footnote[
+
+<span>*</span> String do not need quotation marks unless they include special characters, such as a colon. Once I spent half a day trying to understand why my website would not build, only to figure this nuance out. I therefore recommend using quotations marks for all strings, just in case.
+
+]
+
 ---
-## Configuration &mdash; TOML Syntax
+## Configuration &mdash; YAML Syntax
 
 .pull-left[
 
-- TOML uses `key = value` pairs &mdash; mostly by Hugo, themes
-   - keys are pre-defined
+- YAML uses <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
+   - keys are pre-defined &mdash; mostly by `Hugo`, but also by each theme
        - e.g., `title`
    - users supply the values
        - e.g., "Name Surname"
@@ -1006,19 +1182,19 @@ class: inverse, center, middle
 .pull-right[
 
 ```r
- title = "Resul Umit"
- `summaryLength = 30`
+ title: "Jane J. Doe"
+ `summaryLength: 30`
 ```
 
 ]
 
 ---
-## Configuration &mdash; TOML Syntax
+## Configuration &mdash; YAML Syntax
 
 .pull-left[
 
-- TOML uses `key = value` pairs &mdash; mostly by Hugo, themes
-   - keys are pre-defined
+- YAML uses <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
+   - keys are pre-defined &mdash; mostly by `Hugo`, but also by each theme
        - e.g., `title`
    - users supply the values
        - e.g., "Name Surname"
@@ -1033,20 +1209,20 @@ class: inverse, center, middle
 .pull-right[
 
 ```r
- title = "Resul Umit"
- summaryLength = 30
- `enableEmoji = true`
+ title: "Jane J. Doe"
+ summaryLength: 30
+ `enableEmoji: true`
 ```
 
 ]
 
 ---
-## Configuration &mdash; TOML Syntax
+## Configuration &mdash; YAML Syntax
 
 .pull-left[
 
-- TOML uses `key = value` pairs &mdash; mostly by Hugo, themes
-   - keys are pre-defined
+- YAML uses <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
+   - keys are pre-defined &mdash; mostly by `Hugo`, but also by each theme
        - e.g., `title`
    - users supply the values
        - e.g., "Name Surname"
@@ -1055,114 +1231,73 @@ class: inverse, center, middle
     - strings, in quotation marks
     - numbers, bare
     - Boolean values, in lower case, bare
-    - <span style="background-color: #ffff88;">array of values</span>
+    - <span style="background-color: #ffff88;">sequence of values with a hyphen each</span>
 
 ]
 
 .pull-right[
 
 ```r
- title = "Resul Umit"
- summaryLength = 30
- enableEmoji = true
- `office_hours = ["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]`
+ title: "Jane J. Doe"
+ summaryLength: 30
+ enableEmoji: true
+ `interests:`
+  `- Party politics`
+  `- Public policy`
+  `- International polities`
  
 ```
 
 ]
 
 ---
-## Configuration &mdash; TOML Syntax
+## Configuration &mdash; YAML Syntax &mdash; Notes
 
-.pull-left[
 
-- .yellow-h[Values in single square brackets] are tables
-
-]
-
-.pull-right[
+There is an alternative way to write sequence of values 
+- in square brackets, separated by comma
 
 ```r
- title = "Resul Umit"
- summaryLength = 30
- enableEmoji = true
- office_hours = ["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
- 
- `[social]`
-    `twitter = "https://twitter.com/resulumit"`
-    `github  = "https://github.com/resulumit"`
-```
-
-]
-
----
-## Configuration &mdash; TOML Syntax
-
-.pull-left[
-
-- Values in single square brackets are tables
-
-- .yellow-h[Values in double square brackets] are arrays of tables
-    - these create menu items
-
-]
-
-.pull-right[
-
-```r
- title = "Resul Umit"
- summaryLength = 30
- enableEmoji = true
- office_hours = ["Monday 10:00 to 13:00", "Wednesday 09:00 to 10:00"]
- 
- [social]
-    twitter = "https://twitter.com/resulumit"
-    github  = "https://github.com/resulumit"
-    
- `[[menu]]`
-    `name   = "Blog"`
-    `url    = "blog/"`
-    `weight = 2`
-```
-
-]
-
----
-## Configuration &mdash; TOML Syntax &mdash; Notes
-
-There is an alternative way to write tables
-
-```r
-social = { twitter = "https://twitter.com/resulumit", github  = "https://github.com/resulumit"  }
-```
-
---
-
-There is also an alternative way to write arrays of tables
-
-```r 
-menu = [ {name = "Home", url = "/", weight = 1},
-         {name = "Blog", url = "blog/", weight = 2},
-         {name = "Publications", url = "publications/", weight = 3},
-         {name = "About", url = "about/", weight = 4} ]
+ title: "Jane J. Doe"
+ summaryLength: 30
+ enableEmoji: true
+ `interests: [Party politics, Public policy, International polities]`
 ```
 
 ---
-## Configuration &mdash; TOML Syntax &mdash; Notes
+## Configuration &mdash; YAML Syntax &mdash; Notes
+  
+Multiple nesting of keys and sequences is also possible
+- requires indentation with four spaces for the first nesting, and an hyphen for the second
 
-Disable an option in TOML files, you can
+```r
+
+ education:
+ `    `courses:
+ `        - `course: PhD in Political Science
+           institution: University of Vienna
+           year: 2017
+ `        - `course: MSSc in European Studies
+           institution: University of Tampere
+           year: 2009
+```
+---
+## Configuration &mdash; YAML Syntax &mdash; Notes
+
+To disable an option in YAML, you can
 
 - comment its line out with a hash
 
 ```r
-# title = "Resul Umit"
+# title: "Jane J. Doe"
 ```
 --
 
 - set it to `[]`
+   - this may not work in nests
 
 ```r
-title = []
+title: []
 ```
 
 --
@@ -1170,162 +1305,156 @@ title = []
 - set it to ""
 
 ```r
-title = ""
+title: ""
 ```
 
 --
 
-- ~~delete it altogether~~
-    - not recommended as you might need that key in the future
-
----
-class: action
-
-## Configuration &mdash; `config.toml`
-
-.pull-left[
-
-- Notice that this file is in the root directory
-
-- Change `title`
-
-- Change `baseurl` only if you have a custom domain name
-    - remember to keep the trailing slash
+- delete it altogether
+    - not recommended, as you might need that key in the future
     
-- Add `copyright` if you prefer to have a note 
-    - `&copy;` is the HTML code for the copyright symbol <span style="background-color: #ffff88;">&copy;</span>
-    - `{year}` yields the current year, so that you don't have to update this every year
-
-- Scroll through the advanced settings
-
-]
-
-.pull-right[
-
 ```r
-title = "Resul Umit"
-
-...
-
-baseurl = "https://resulumit.com/"
-
-...
-
-copyright = "Resul Umit &copy; 2013 -- {year}"
 
 ```
-
-]
-
-`r countdown(minutes = 4, seconds = 00, top = 0)`  
 
 ---
 class: action
 
-## Configuration &mdash; `params.toml`
+## Exercises &mdash; Configuration &mdash; `/config.yaml`
 
-- Notice that this and remaining configuration files are under `config/_default/`
+- Edit one or more values in the `/config.yaml` file
+  - locate the file under the root directory
+  - edit at least the `title` and `copyright`<sup>*</sup> keys, with
+      - your information, or
+      - information on [JJD's website](https://janejdoe.netlify.app/)    
+<br>
+  - remember to save the file
+      - and observe the changes in the RStudio Viewer and/or on a browser
+      
 
-- Define various parameters for your website
-  - contact details are the part you should change
-  - other sections are optional and/or can be left as they are
+<br>
 
-- Colour schemes and fonts are defined in this file
-  - an important opportunity to personalise
-  - see what is available at <https://sourcethemes.com/academic/themes/>
-  
-- Icons are available from various packages
-  - see the list at <https://sourcethemes.com/academic/docs/page-builder/#icons>
+- Scroll through the other keys
+    - to see what else is available that you may wish to edit 
+    - once your website is online, you should also edit `baseurl` in this file
+          - remember to keep the trailing slash
+          - e.g. https://janejdoe.netlify.app<span style="background-color: #ffff88;">/</span>
 
-`r countdown(minutes = 10, seconds = 00, top = 0)`  
+.footnote[
+
+<sup>*</sup> `&copy;` is the HTML code for the copyright symbol <span style="background-color: #ffff88;">&copy;</span>. `{year}` turns into the current year, so that you don't have to update this every year.
+
+]
+
+`r countdown(minutes = 5, seconds = 00, top = 0)`  
 
 ---
-## Configuration &mdash; `menus.toml`
+class: action
 
-- Use this file to organise the main menu
-    - create and order menu items
-    - direct them with links
+## Exercises &mdash; Configuration &mdash; `params.yaml`
 
---
+- Edit one or more values in the `params.yaml` file
+   - locate it under `/config/_default/`
+   - edit at least the values for contact details
+   - observe the changes in the RStudio Viewer and/or on a browser
 
-- We will edit this file throughout the workshop
-    - menu will change as we personalise the website and add content
+<br>
+
+- Scroll through the other keys in other sections
+
+  - colour schemes and fonts are defined in this file as well
+     - an important opportunity to personalise
+     - see what is available at <https://sourcethemes.com/academic/themes/>     
+<br>
+  - icons are available from various packages
+     - see the list at <https://sourcethemes.com/academic/docs/page-builder/#icons>
+
+`r countdown(minutes = 15, seconds = 00, top = 0)`  
 
 ---
-## Configuration &mdash; `menus.toml`
+## Configuration &mdash; `menus.yaml`
+
+This file configures the website menu
+
+  - creates and orders menu items
+  - directs them 
+     - to a specific section on the homepage
+         - e.g., to a widget such as Contact at the bottom of the homepage   
+<br>         
+     - to a specific page
+         - e.g., to a page that lists the titles of all blogposts
+         - e.g., to a specific blogpost
+
+---
+## Configuration &mdash; `menus.yaml`
 
 .pull-left-c[
 
 - Define menu items 
-    - under separate <span style="background-color: #ffff88;">[[main]]</span>
+    - as a list, with the `name` argument
 
 ]
 
 .pull-right-c[
 
 ```r
-[[main]]
-  name = "Posts"
+main
+  - `name`: "Posts"
   
   
-
-[[main]]
-  name = "Courses"
+  - name: "Courses"
   
   
-  
-[[main]]
-  name = "Twitter"
+  - name: "Twitter"
   
   
-  
-[[main]]
-  name = "CV"
+  - name: "CV"
   
   
 ```
 ]
 
 ---
-## Configuration &mdash; `menus.toml`
+## Configuration &mdash; `menus.yaml`
 
 .pull-left-c[
 
 - Define menu items 
 - Order the items
     - with the `weight` argument
+   
+<br>   
+    
+- Note that
+   - the order, not the actual value, matters
+       - you could use 1, 4, 9 ... instead     
+<br>
+   - using the same value for two or more items should be avoided
 
 ]
 
 .pull-right-c[
 
 ```r
-[[main]]
-  name = "Posts"
-  `weight = 1`
+main
+  - name: "Posts"
+    `weight`: 10
   
-
-[[main]]
-  name = "Courses"
-  `weight = 2`
+  - name: "Courses"
+    weight: 30
   
+  - name: "Twitter"
+    weight: 20
   
-[[main]]
-  name = "Twitter"
-  `weight = 3`
-  
-  
-[[main]]
-  name = "CV"
-  `weight = 4`
-  
+  - name: "CV"
+    weight: 40
   
 ```
 
 ]
 
 ---
-## Configuration &mdash; `menus.toml`
+## Configuration &mdash; `menus.yaml`
 
 .pull-left-c[
 
@@ -1334,42 +1463,36 @@ class: action
 - Link them to destinations
     - with the `url` argument    
 <br>
-        - with a hash <span style="background-color: #ffff88;">#</span> to widgets
-        - these are defined under `content/home/`   
+        - with a number sign <span style="background-color: #ffff88;">#</span> to a widget on the homepage
+            - these match a file name under `/content/home/`   
 <br>
        - with a trailing slash <span style="background-color: #ffff88;">/</span> to sections
-       - these sections are defined under `content/`, in their own sub-directory  
+            - these match a file or folder name under `/content/`
 <br>
        - with URLs to external sites
-       - e.g., Twitter    
+           - e.g., Twitter    
 <br>
-       - with paths relative to the `static/` sub-directory
-       - `files/cv.pdf` suggests my cv is under `static/files/cv.pdf`
+       - with paths relative to the `/static/` sub-directory
+           - `files/cv.pdf` suggests cv is under `/static/files/cv.pdf`
 ]   
 
 
 .pull-right-c[
 
 ```r
-[[main]]
-  name = "Posts"
-  weight = 1
-  `url = "#posts"`
-
-[[main]]
-  name = "Courses"
-  weight = 2
-  `url = "courses/"`
-  
-[[main]]
-  name = "Twitter"
-  weight = 3
-  `url = "https://twitter.com/resulumit"`
-  
-[[main]]
-  name = "CV"
-  weight = 4
-  `url = "files/cv.pdf"`
+main:
+  - name = "Posts"
+    weight = 10
+    `url = "#posts"`
+  - name = "Courses"
+    weight = 30
+    `url = "courses/"`
+  - name = "Twitter"
+    weight = 20
+    `url = "https://twitter.com/resulumit"`
+  - name = "CV"
+    weight = 40
+    `url = "files/cv.pdf"`
  
 ```
 ]
@@ -1377,300 +1500,399 @@ class: action
 ---
 class: action
 
-## Configuration &mdash; `menus.toml` &mdash; Exercises
+## Exercises &mdash; Configuration &mdash; `menus.yaml`
 
-- Direct the menu item `Post` to the related content section
-    - rather than the related widget
-    
-- Change the order of `Projects` and `Publications`
-    - so that the former comes after the latter
+- Edit the `menus.yaml` file, as much as possible now<sup>*</sup>
+   
+   - create, order, and direct menu items
+   - observe the changes in the RStudio Viewer and/or on a browser
 
-- Comment out `Contact` to hide it  
 
-`r countdown(minutes = 3, seconds = 00, top = 0)`  
+
+.footnote[
+
+<sup>*</sup> You are likely to edit this file throughout the workshop, as your website evolves. 
+
+]
+
+`r countdown(minutes = 5, seconds = 00, top = 0)`  
 
 ---
-## Configuration &mdash; `languages.toml`
+## Configuration &mdash; `languages.yaml`
 
-Use this file 
+This file 
 
-- to define the language of the website
-    - the default is English
-    - see the list of languages and their codes at [https://sourcethemes.com/academic/docs/language/](https://sourcethemes.com/academic/docs/language/)
-    - if you are to change `languageCode` in `languages.toml`, remember to change `defaultContentLanguage` in `config.toml` as well
+- defines the language of the website
 
---
+  - the default is English
 
-- to make the site multi-lingual
-    - we will not cover it in this workshop
-    - instructions available at the above link as well
+
+- can make the site multi-lingual
+
+  - we will not cover it in this workshop
+  - instructions available at the above link as well
     
 ---
 ## Configuration &mdash; Multi-lingual Sites    
 
-- Considerations
-    - Who is your target audience?
-        - would they be lost if your website was only in one language? If no, perhaps it is not worth the hassle
+- Considerations     
+<br>
+    - who is your target audience?
+        - would they be lost if your website was only in one language? 
+            - if not, perhaps it is not worth the hassle     
+<br>
     - what will be in multiple languages?
-        - all website, or some blogposts? Remember, even in a single language setting, blogposts can be in different languages.
+        - all website, or some widgets and/or pages? 
+            - even in a single language setting, widgets and pages can be written in different languages
 
 --
+
+<br>
 
 - Strategy
-    - build your website in full in one language, than add the second
-        - rather then building it multiple languages in tandem
-        - hence not covered in the workshop
 
----
-class: inverse, center, middle
-
-## Part 5. Managing Content
-
----
-## Content &mdash; Overview
-
-- Most website content goes into the `content/` directory
-    - except those go in `static/`
-
---
-
-- This content is saved in (R) Markdown files
-    - each file has a front matter &mdash; TOML or YAML
-    - and often some text &mdash; Markdown text
-
---
-
-- Content is organised in sections 
-    - sections can include only one or more pages
-        - each page corresponding to a .md file
-
-- Multi-page sections are organised in directories under `content/`
-   - e.g. `content/post/`
-   - .md files for single-page sections can alternatively be saved directly under `content/`
-        - e.g., `content/about.md`
-        
----
-## Content &mdash; Directory Structure &mdash; Single-Page Sections
-
-A single page section, created with a file directly under `content/`
-
-```r
-.
-└── content/
-    |
-    └── privacy.md       # <- https://example.com/privacy/
-        
-```
----
-## Content &mdash; Directory Structure &mdash; Single-Page Sections
-
-A single page section, in its own directory under `content/`
-
-```r
-.
-└── content/
-    |
-    └── privacy.md       # <- https://example.com/privacy/
-    |
-    └── `about/`
-        └── `index.md`    # <- https://example.com/about/
-        
-```
----
-## Content &mdash; Directory Structure &mdash; Single-Page Sections
-
-Notice that `index.md` is a special file name, that `Hugo` treats them differently
-
-```r
-.
-└── content/
-    |
-    └── privacy.md       # <- https://example.com/privacy/
-    |
-    └── `about/`
-    |   └── `index.md`     # <- https://example.com/`about`/
-    |
-    └── `cv/`              # <- https://example.com/`cv`/
-        └── `long-cv.md`   # <- https://example.com/`cv/long-cv`/
-        
-```
-
---
-Notice that
-
-- `https://example.com/about/` is a content page, showing `index.md`
-- `https://example.com/cv/long-cv/` is a content page, showing `long-cv.md`
-- `https://example.com/cv/` is an index page, showing a link to `https://example.com/cv/long-cv/`
-
----
-## Content &mdash; Directory Structure &mdash; Index Pages
-
-- Index pages are meaningful rather for multi-page sections
-    - avoid creating index pages for single-page sections
-    
---
-
-- <span style="background-color: #ffff88;">&#95;</span>`index.md` is a special file because
-    - they create sections under sections
-       - e.g., `publications/journal_articles/_index.md` creates a section at `https://example.com/publications/journal_articles`
-          - this can then have its own index page
-          
-    - they define variables for section index pages
-        - e.g., index pages are by default titled as the plural of section names
-            - e.g., `publication/` is titled as `Publications`
-        - change this behaviour and others with `_index.md`
-
----
-## Content &mdash; Directory Structure &mdash; Multi-Page Sections
-
-Principles from single-page sections apply here as well
-
-```r
-.
-└── content/
-    |
-    └── post/                # <- https://example.com/post/ # section page (default organisation)
-        |
-        ├── hello-world.md   # <- https://example.com/post/hello-word/
-        |
-        ├── new-job/
-        |   |
-        |   └── index.md     # <- https://example.com/post/new-job/
-        |
-        └── publications/                                   # no section page at https://example.com/post/publications/
-            |
-            └── ajps.md      # <- https://example.com/post/publications/ajps/
-        
-```
-
----
-## Content &mdash; Directory Structure &mdash; Multi-Page Sections
-
-Add `_index.md` to `post/` to organise its content
-
-```r
-.
-└── content/
-    |
-    └── post/                  
-        ├── `_index.md`       # <- https://example.com/post/   # section page (modified organisation)
-        |
-        ├── hello-world.md   # <- https://example.com/post/hello-word/
-        |
-        ├── new-job/
-        |   |
-        |   └── index.md     # <- https://example.com/post/new-job/
-        |
-        └── publications/                                     # no section page at https://example.com/post/publications/
-            |
-            └── ajps.md      # <- https://example.com/post/publications/ajps/
-```    
-
----
-## Content &mdash; Directory Structure &mdash; Multi-Page Sections
-
-Add `_index.md` to `post/publications/` to create section and organise it
-
-```r
-.
-└── content/
-    |
-    └── post/
-        |
-        ├── _index.md         # <- https://example.com/post/   # section page (modified organisation)
-        |
-        ├── hello-world.md    # <- https://example.com/post/hello-word/
-        |
-        ├── new-job/
-        |   |
-        |   └── index.md      # <- https://example.com/post/new-job/
-        |
-        └── publications/ 
-            |
-            ├── `_index.md`     # <- https://example.com/post/publications/   # section page (modified organisation)
-            |
-            └── ajps.md       # <- https://example.com/post/publications/ajps/
-```   
+  - build your website in full in one language first, than add the second
+      - rather then building it multiple languages in tandem
+      - hence not covered in the workshop
 
 ---
 class: action
 
-## Content &mdash; Directory Structure &mdash; Example Site
+## Exercises &mdash; Configuration &mdash; `languages.yaml`
 
-- Explore the directory structure of the `Academic` example site
-    - how many sections are there?
-    - are there any subsections?
-        - hint: look at `authors/` and `courses/` carefully
+- This exercise is optional
+
+   - only if your preferred language is not English
+   - see the list of language options and their codes at <https://wowchemy.com/docs/guide/language/> 
+
+<br>
+
+- Change the langauge of your website, in two steps
+
+  - in `languages.yaml`: 
+      - provide a different value to the `languageCode` key
+<br>       
+  - in `/config.yaml`:
+       - edit the value for `defaultContentLanguage` 
+
+`r countdown(minutes = 3, seconds = 00, top = 0)`  
+
+---
+name: part5
+class: inverse, center, middle
+
+## Part 5. Managing Structure
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Structure &mdash; Overview
+
+- Structure depends mostly on the way the `/content/` directory is organised, including
+
+   - individual pages, such as a homepage
+   - sections (collections of pages), such as a blog 
+
+<br>
+
+- Each page at the fronted corresponds to a Markdown file at the backend
+
+   - changing the content and/or the position of these files at the backend will change the frontend
+
+<br>
+
+- Sections are organised in separate directories under `/content/`
+
+   - first-level sub-directories become a section by default
+      - e.g. `content/post/` is a section (for all blogposts)    
+<br>       
+   - creating a section under a section requires manual input
+        - by adding a file named `_index.md` under the second-level directory
+
+
+---
+## Structure &mdash; Examples
+
+A website with a single page
+
+```r
+.
+└── /content/
+    |
+    └── home.md          # <- https://janejdoe.netlify.app/home/
+        
+```
+---
+## Structure &mdash; Examples
+
+A website with two single pages
+
+```r
+.
+└── /content/
+    |
+    ├── home.md          # <- https://janejdoe.netlify.app/home/
+    |
+    └── `about.md`         # <- https://janejdoe.netlify.app/about/
+        
+```
+
+---
+## Structure &mdash; Examples
+
+A website with five pages
+
+```r
+.
+└── /content/
+    |
+    ├── home.md             # <- https://janejdoe.netlify.app/home/
+    |
+    ├── about.md            # <- https://janejdoe.netlify.app/about/
+    |
+    └── `blog/`               # <- https://janejdoe.netlify.app/blog/
+        |
+        ├── `first-post.md`   # <- https://janejdoe.netlify.app/blog/first-post/
+        |
+        └── `second-post.md`  # <- https://janejdoe.netlify.app/blog/second-post/
+        
+```
+
+Note that there are
+   - four single pages: home, about, first-post, second-post     
+   - one section page: blog
+       - because it is a first order sub-directory
+       - by default, this section page is tiled Blog, showing the links to the two posts
+
+---
+## Structure &mdash; Examples
+
+A website with three pages
+
+```r
+.
+└── /content/
+    |
+    ├── home.md             # <- https://janejdoe.netlify.app/home/
+    |
+    ├── about.md            # <- https://janejdoe.netlify.app/about/
+    |
+    └── `blog/index.md`       # <- https://janejdoe.netlify.app/blog/
+        
+```
+<br>
+
+Note that
+   - `index.md` is a special file name for `Hugo` &mdash; it creates a page matching its directory name
+   - there are three single pages: home, about, blog    
+   - blog is not a section page, but a simple page, showing a blogpost
+
+---
+## Structure &mdash; Examples
+
+A website with five pages: three three single pages and two nested section pages
+
+```r
+.
+└── /content/
+    |
+    ├── home.md              # <- https://janejdoe.netlify.app/`home`/
+    |
+    └── blog/                # <- https://janejdoe.netlify.app/`blog`/
+        |
+        ├── first-post.md    # <- https://janejdoe.netlify.app/blog/`first-post`/
+        |
+        └── academic/        # <- https://janejdoe.netlify.app/blog/`academic`/
+          |
+          ├── _index.md   
+          |
+          └── second-post.md    # <- https://janejdoe.netlify.app/blog/academic/`second-post`/
+```
+
+---
+## Structure &mdash; Examples
+
+A website with five pages: .yellow-h[three single pages] and two nested section pages
+
+```r
+.
+└── /content/
+    |
+    ├── home.md              # <- https://janejdoe.netlify.app/`home`/
+    |
+    └── blog/                # <- https://janejdoe.netlify.app/blog/
+        |
+        ├── first-post.md    # <- https://janejdoe.netlify.app/blog/`first-post`/
+        |
+        └── academic/        # <- https://janejdoe.netlify.app/blog/academic/
+          |
+          ├── _index.md   
+          |
+          └── second-post.md    # <- https://janejdoe.netlify.app/blog/academic/`second-post`/
+```
+
+---
+## Structure &mdash; Examples
+
+A website with five pages: three single pages and .yellow-h[two nested section pages]
+
+```r
+.
+└── /content/
+    |
+    ├── home.md              # <- https://janejdoe.netlify.app/home/
+    |
+    └── blog/                # <- https://janejdoe.netlify.app/`blog`/
+        |
+        ├── first-post.md    # <- https://janejdoe.netlify.app/blog/first-post/
+        |
+        └── academic/        # <- https://janejdoe.netlify.app/`blog/academic`/
+          |
+          ├── _index.md  
+          |
+          └── second-post.md    # <- https://janejdoe.netlify.app/blog/academic/second-post/
+```
+---
+## Structure &mdash; Examples
+
+A website with five pages: three single pages, .yellow-h[two nested section pages]
+
+```r
+.
+└── /content/
+    |
+    ├── home.md              # <- https://janejdoe.netlify.app/home/
+    |
+    └── blog/                # <- https://janejdoe.netlify.app/blog/
+        |
+        ├── first-post.md    # <- https://janejdoe.netlify.app/blog/first-post/
+        |
+        └── academic/        # <- https://janejdoe.netlify.app/`blog/academic`/
+          |
+          ├── `_index.md`  
+          |
+          └── second-post.md    # <- https://janejdoe.netlify.app/blog/academic/second-post/
+```
+
+Notice that
+   - `_index.md`, with underscore, is a special file name for `Hugo` &mdash; it creates sections
+
+
+---
+## Structure &mdash; Examples
+
+Having `_index.md` in first-order sub-directories is optional, but may be helpful
+
+- can add metadata and/or text to section pages
+    - e.g., these are by default titled as the plural of section names
+          - e.g., the page `publication/` is titled as `Publications`
+    - change this behaviour with `_index.md`
+
+```r
+.
+└── /content/
+    |
+    └── home.md             # <- https://janejdoe.netlify.app/home/
+    |
+    └── about.md            # <- https://janejdoe.netlify.app/about/
+    |
+    └── `blog/`               # <- https://janejdoe.netlify.app/blog/
+        |
+        ├── `_index.md`
+        |
+        ├── first-post.md   # <- https://janejdoe.netlify.app/blog/first-post/
+        |
+        └── second-post.md  # <- https://janejdoe.netlify.app/blog/second-post/
+        
+```
+
+---
+class: action
+
+## Exercises &mdash; Structure
+
+- Explore the directory structure of your website in RStudio
+
+  - how many pages and sections are there?
+  - are there any subsections?
+      - hint: see `courses/`
+      
+<br>
 
 - Do a matching exercise
-    - open the example site on a browser
-    - try and find the front end of the following file
-        - `content/publication/journal-article/index.md`
+    
+  - open the example site on a browser
+  - try and find the front end of the following file
+        - `/content/publication/journal-article/index.md`    
+<br>        
     - compare the back end with front end
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
 ---
-## Content &mdash; Example Site &mdash; Personalisation
+## Structure &mdash; `home/` &mdash; Overview
 
-- The example site has many sections and a few subsections
-    - not all would be desirable for everyone to have 
+- The homepage in `Academic` does not exactly follow the structure above
 
---
-
-- To facilitate coordination, we will first strip the site down to basics
-    - keeping only the must-have sections
-    - and personalising the information on these sections
+  - every file under `home/` is not a stand alone page
+  - these files, called widgets, are rather stitched under one another
+       - considered as one of the strengths of the theme
+       - some academics prefer to have only this page    
 
 --
 
-- In Part 8 and 9, we will cover how to add new content
-    - with time for individual work
-    
----
-## Content &mdash; Homepage &mdash; Overview
+<br>
 
-- The homepage in `Academic` is typically composed of several parts, called `widgets`
-    - considered as one of the strengths of the theme
-        - some websites have only this page
+- Widgets are complicated Markdown files
 
-   - see `content/home/`
+   - can be stitched under one another
+   - can get text from files elsewhere
+      - e.g., the `contact.md` widget gets the address information from `params.yaml`
    
 --
 
-- A homepage can have none, one, or all widgets
-    - widgets can be repeated for different purposes
-        - e.g., the `pages` widget can summarise publications, courses, talks
-    - they can be re-ordered as well
+<br>
 
---
+- A homepage can have one, more, or all widgets
 
-- Recall that menu items can direct to a specific widget on the homepage
-    - e.g., as does `Contacts` in the demonstration site
+  - widgets can be deactivated or repeated
+  - they can be re-ordered as well
+
     
 ---
-## Content &mdash; Homapage &mdash; Widgets
+## Structure &mdash; `home/` &mdash; Widgets
 
 - There are 13 types of pre-defined widgets
-    - for detailed explanations, see [https://sourcethemes.com/academic/docs/page-builder/](https://sourcethemes.com/academic/docs/page-builder/)
-    - you can build your own widget as well
+
+  - for detailed explanations, see [https://sourcethemes.com/academic/docs/page-builder/](https://sourcethemes.com/academic/docs/page-builder/)
+  - you can build your own widget as well
 
 --
+
+<br>
 
 - Widgets are in fact Markdown files, with .md extension
-      - each has TOML syntax as the front matter
-      - some has Markdown text as well
-          - e.g., `demo.md`
-      - because they can have both variables and text, TOML goes between a pair of three plus signs +
+
+  - each has YAML syntax as the front matter
+  - some has Markdown text as well
+        - e.g., `demo.md`
+  - because they can have both variables and text, YAML goes between a pair of three hashes
 
 --
 
-- The widgets are located under `content/home/` in the example site
-    - except `index.md`, each file is a widget &mdash; some duplicates of the same type
+<br>
+
+- Widgets are located under `/content/home/`
+
+  - except `index.md`, each file is a widget &mdash; some duplicates of the same type
   
   
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 
 .pull-left-c[
@@ -1686,14 +1908,14 @@ class: action
 .pull-right-c[
 
 ```r
- `widget = "pages"`
+ `widget: "pages"`
 
 ```
 
 ]
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 
 .pull-left-c[
@@ -1701,7 +1923,7 @@ class: action
 - Some keys are common across all widgets
 
     - Indicate the type of the widget
-    - <span style="background-color: #ffff88;">(De-)Activate a widget</span>
+    - <span style="background-color: #ffff88;">De-activate a widget</span>
 
 ]
 
@@ -1709,15 +1931,15 @@ class: action
 .pull-right-c[
 
 ```r
- widget = "pages"
- `active = true`
+ widget: "pages"
+ `active: false`
 
 ```
 
 ]
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 
 .pull-left-c[
@@ -1725,7 +1947,7 @@ class: action
 - Some keys are common across all widgets
 
     - Indicate the type of the widget
-    - (De-)Activate a widget
+    - De-activate a widget
     - <span style="background-color: #ffff88;">Order a widget in relation to other widgets</span>
 
 ]
@@ -1734,9 +1956,9 @@ class: action
 .pull-right-c[
 
 ```r
- widget = "pages"
- active = true
- `weight = 9` 
+ widget: "pages"
+ active: false
+ `weight: 9` 
 
 ```
 
@@ -1744,7 +1966,7 @@ class: action
 
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 
 .pull-left-c[
@@ -1752,9 +1974,9 @@ class: action
 - Some keys are common across all widgets
 
     - Indicate the type of the widget
-    - (De-)Activate a widget
+    - De-activate a widget
     - Order a widget in relation to other widgets
-    - <span style="background-color: #ffff88;">Title and/or subsitle it</span>
+    - <span style="background-color: #ffff88;">Title and/or subtitle it</span>
 
 ]
 
@@ -1762,31 +1984,31 @@ class: action
 .pull-right-c[
 
 ```r
- widget = "pages"
- active = true
- weight = 9
- `title = "Recent Publications"`
- `subtitle = ""`
+ widget: "pages"
+ active: false
+ weight: 9
+ `title: "Recent Publications"`
+ `subtitle: ""`
 
 ```
 
 ]
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 .pull-left-c[
 
 - Some keys are common across all widgets
 
     - Indicate the type of the widget
-    - (De-)Activate it
+    - De-activate it
     - Order it in relation to other widgets
     - Title and/or subsitle it
     
 - Some keys are widget specific
 
-    - <span style="background-color: #ffff88;">Link it to a content page</span>
+    - <span style="background-color: #ffff88;">Link it to a content section</span>
 
 ]
 
@@ -1794,32 +2016,32 @@ class: action
 .pull-right-c[
 
 ```r
- widget = "pages"
- active = true
- weight = 9
- title = "Recent Publications"
- subtitle = ""
- `page_type = "publication"`
+ widget: "pages"
+ active: false
+ weight: 9
+ title: "Recent Publications"
+ subtitle: ""
+ `page_type: "publication"`
 
 ```
 
 ]
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Important Keys
+## Structure &mdash; Homapage &mdash; Widgets &mdash; Important Keys
 
 .pull-left-c[
 
 - Some keys are common across all widgets
 
     - Indicate the type of the widget
-    - (De-)Activate it
+    - De-activate it
     - Order it in relation to other widgets
     - Title and/or subsitle it
     
 - Some keys are widget specific
 
-    - <span style="background-color: #ffff88;">Link it to a content page</span>
+    - <span style="background-color: #ffff88;">Link it to a content section</span>
 
 - Widgets in the example site come with many keys and detailed definitions
     - further documentation is available at <https://sourcethemes.com/academic/docs/page-builder/>
@@ -1830,408 +2052,216 @@ class: action
 .pull-right-c[
 
 ```r
- widget = "pages"
- active = true
- weight = 9
- title = "Recent Publications"
- subtitle = ""
- `page_type = "publication"`
+ widget: "pages"
+ active: false
+ weight: 9
+ title: "Recent Publications"
+ subtitle: ""
+ `page_type: "publication"`
 
 ```
 
 ]
 
 ---
-## Content &mdash; Homapage &mdash; Widgets &mdash; Further Notes
+## Structure &mdash; Adding
 
-- At this stage of the workshop, we will build the homepage with two widgets only
-    - `About` and `Contact`, because
-       - these are the sections that all websites should have
-       - beyond these, it is unlikely that we will all need the *same* widgets
-       
---
+- There are at least three ways to add new pages and sections
 
-- We will return back to personalising the homepage further with additional widgets
-    - in Part 8 and 9
+  - create new files and directories, respecting the directory structure of `Hugo` and `Academic`
+  - rename and edit the existing files and folders for your purposes
+  - duplicate, rename, and edit the existing files and folders that are in use
+    
+<br>
 
---
+- RStudio has helpful buttons for these purposes
+    - to create, duplicate, and/or rename
+    - alternatively, use your operating system 
 
-- The form in the `Contact` widget, which is optional, requires a third party service
-    - see `home/contact.md`
-    - at Netlify, 100 messages per month is free<sup>*</sup>
-        - no additional setup needed (after deployment of the site to Netlify in Part 7)
-    - at Formspree, this limit is 50
-        - requires a simple registration at first contact
-
-.footnote[
-
-[*] I recommend using Netlify. The limit would be enough for most personal websites. If you do reach the limit, you can consider your options then.
-
-]
 ---
 class: action
 
-## Content &mdash; Homapage &mdash; Widgets
+## Exercises &mdash; Structure &mdash; Adding
 
-- Deactivate all but `about.md` and `contact.md`
-    - by setting `active = false` in the front matter in each widget file under `content/home/`
-        - remember that `index.md` is not a widget
-        - `people.md` and `slider.md` come already deactivated
+Rename one or more blogposts and publications on your website
+  - observe the changes in RStudio Viewer
+  
 
-- Check if the homepage looks and works as expected
-    - do all the buttons behave as expected?
+<br>
 
-- Edit as necessary
-    - `config/_default/menus.toml` for the menu items
-    - `config/_default/params.toml` for contact details
+Hint:
+
+- this exercise is about structure, not the content
+   - we will cover editing the content in [Part 8](#part8) and [Part 9](#part9)     
+<br>
+- JJD's website has the following 
+   - two blogposts
+      - <https://janejdoe.netlify.app/post/academic-websites/>
+      - <https://janejdoe.netlify.app/post/cabinet-size/>     
+<br>
+   - two publications
+      - <https://janejdoe.netlify.app/publication/parties-politics/>
+      - <https://janejdoe.netlify.app/publication/parties-social-media/>
+
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
 ---
-## Content &mdash; Authors &mdash; Overview
+## Structure &mdash; Removing
 
-- The example site comes with two pre-defined author profiles    
+There are at least two ways to remove pages and sections
+
+- delete them, respecting the directory structure of `Hugo` and `Academic`
+    - perhaps, you are sure there will not be two authors on your website
+       - the example site comes with two author profiles,  under `/content/authors/`
+       - with usernames `admin` (main) and `吳恩達` (secondary)
+       - it is safe to delete the latter    
 <br>
-    - these profiles are under `content/authors/`
-    - with usernames `admin` and `吳恩達`
-        - note that each has its own directory
-
---
-
-- The profiles are defined in `_index.md` files   
-<br>
-    - these are Markdown files
-        - start<sup>*</sup> with YAML syntax for variables
-            - has the same function with TOML syntax in configuration files
-            - YAML documentation is available at [https://yaml.org/spec/1.2/spec.html](https://yaml.org/spec/1.2/spec.html)
-        - after YAML, documents continue with Markdown syntax for text
-
-.footnote[
-
-[*] Technically, we can place YAML anywhere in a markdown document. However, it is a good practice to start with YAML.
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-- YAML uses `key: value` pairs
-   - notice the difference with TOML, using `key = value` pairs
-   - keys are pre-defined
-       - e.g., `title`
-   - users define their own values 
-       - e.g., "Name Surname"
-
-- YAML is written between a pair of three hyphens
-    - to distinguish it from the text that may follow
-
-]
-
-.pull-right[
-
-```r
- ---
- title: About Me
- ---
- 
- Resul Umit is a post-doctoral researcher at the University of Lucerne.
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-Values can take
-- <span style="background-color: #ffff88;">strings</span>
-
-]
-
-.pull-right[
-
-```r
- ---
- `title: About Me`
- ---
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-Values can take
-- strings
-   - <span style="background-color: #ffff88;">strings with special characters</span>, such as colons, require quotation marks
-
-
-]
-
-.pull-right[
-
-```r
- ---
- title: About Me
- `role: "University of Lucerne: Post-doctoral Researcher"`
- ---
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-Values can take
-- strings
-   - strings with special characters, such as colons, require quotation marks
-- <span style="background-color: #ffff88;">numbers</span>, bare
-
-]
-
-.pull-right[
-
-```r
- ---
- title: About Me
- role: "University of Lucerne: Post-doctoral Researcher"
- `year: 2020`
- ---
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-Values can take
-- strings
-   - strings with special characters, such as colons, require quotation marks
-- numbers, bare
-- <span style="background-color: #ffff88;">Boolean values</span>, in lower case, bare
-
-]
-
-.pull-right[
-
-```r
- ---
- title: About Me
- role: "University of Lucerne: Post-doctoral Researcher"
- year: 2020
- `superuser: true`
- ---
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax
-
-.pull-left[
-
-Values can take
-- strings
-   - strings with special characters, such as colons, require quotation marks
-- numbers, bare
-- Boolean values, in lower case, bare
-- <span style="background-color: #ffff88;">sequence of values</span> with a hyphen
-
-]
-
-.pull-right[
-
-```r
- ---
- title: About Me
- role: "University of Lucerne: Post-doctoral Researcher"
- year: 2020
- superuser: true
- `interests:`
- `- Representation`
- `- Elections`
- `- Parliaments`
- ---
-```
-
-]
-
----
-## Content &mdash; Authors &mdash; YAML Syntax &mdash; Notes
-
-Multiple nesting of keys and sequences is also possible
-- requires indentation with four spaces
-
-```r
- ---
- education:
-     courses:
-     - course: PhD in Political Science
-       institution: University of Vienna
-       year: 2017
-     - course: MSSc in European Studies
-       institution: University of Tampere
-       year: 2009
- ---
-```
-
----
-## Content &mdash; Authors &mdash; YAML Syntax &mdash; Notes
-
-- Disable a key by 
-    - commenting it out with a hash
-    - setting it to empty string with "" or []
-        - [] may not work in nests
-    - ~~deleting it altogether~~
-        - you may need that key in the future
-
---
-
-- Deactivate an author by 
-    - adding `draft: true` to the YAML of its `_index.md`
-    - or, deleting the related directory
-        - here deleting is fine, assuming a personal website
-            - e.g., delete the second author `吳恩達`
-
---
-
-- The related documentation is available at <https://sourcethemes.com/academic/docs/get-started/#introduce-yourself>
+- turn them into drafts, by setting
+    - <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">active: false</span> in the YAML of widgets
+    - <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: true</span> in the YAML of other Markdown files
+    - perhaps, you think you may need a section in the future
 
 ---
 class: action
 
-# Content &mdash; Authors
+## Exercises &mdash; Structure &mdash; Removing &mdash; Widgets
 
-- Delete the subdirectory for the second author (`吳恩達`) profile 
+- Keep only the widgets that you would like to have on your website
 
-- Under `admin/`
-    - personalise `_index.md`
-    - replace `avatar.jpg` with your profile picture
-        - still call it `avatar.jpg`
+  - set <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">active: false</span> in the front matter of the undesired widget
+  - re-order the desired widgets if necessary
+  - check if the homepage looks and works as expected
 
-- Optional
-    - add a button for CV to the `About` widget, with the following code, assuming that
-        - your CV document is called `cv.pdf`
-        - and, it is under `static/files/`
+<br>
 
-```r
-- icon: cv
-  icon_pack: ai
-  link: "files/cv.pdf"
-```
+- Hint:
 
-`r countdown(minutes = 10, seconds = 00, top = 0)`  
+  - `/content/home/index.md` is not a widget
+     - although it is under the same directory with all widgets   
+<br>
+  - on [JJD's website](https://janejdoe.netlify.app/), the following widgets are active
+       - hero, about, experience, publications, posts, contact    
+<br>
+  - you may need to configure the menu in parallel
+      - by editing `/config/_default/menus.yaml`
 
----
-class: action
-
-## Content &mdash; Authors &mdash; Username
-
-- You may wish to change the default username
-    - from `admin` to something more personal
-        - e.g., `yourname-surname`
-
---
-
-- To do so
-    - rename `admin/` to `yourname-surname/`
-    - update any references to this directory, including
-        - the front matter in `content/home/about.md`
-        
----
-## Content &mdash; Other Sections in Example Site
-
-- We have so far worked with `home/` and `authors/`
-    - but there are many other content sections, subsections, and pages
-    
---
-
-- As with widgets, we will strip the example site to bare minimum  at this stage of the workshop
-    - we will return to adding content later on
-
---
-
-- You can remove a content section by
-    - deleting the related files or directories under `content/`
-        - perhaps, you are sure you don't want a section for, say, talks?
-    - or, adding `draft: true` to the YAML of a file
-        - perhaps, you think you may need a section in the future
+`r countdown(minutes = 10, seconds = 00, top = 0)`
 
 ---
-## Content &mdash; Other Sections in Example Site &mdash; `draft: true`
+## Structure &mdash; Removing &mdash; Non-Widget Markdown
 
-- Draft pages and therefore sections are still visible to you in live preview
-    - e.g., when you use `blogdown::serve_site`
-    - but not to the visitors of your website
-        - e.g., when you use `blogdown::build_site`
+- You can deactivate a specific page in a section
 
-- Adding `draft: true` to `_index.md` is enough to disable the whole section
-    - some sections already has this file
-        - e.g., `courses/`
-    - others don't
-        - e.g., `courses/`
-        - you can add one, following
+   - add <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: true</span> to file of that page
+   - e.g., `/content/publication/journal-article/index.md`
+   
+<br>
+
+- You can deactivate whole sections in one go
+   
+   - add <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: true</span> to file of that section
+   - e.g., `/content/publication/_index.md`     
+
+<br>
+
+- You can deactivate whole sections except one or more pages
+   
+   - add <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: true</span> to file of that section
+   - e.g., `/content/publication/_index.md`    
+<br> 
+   - add <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: false</span> to the file of a page
+   - e.g., `/content/publication/journal-article/index.md`   
+
+---
+## Structure &mdash; Removing &mdash; Non-Widget Markdown
+
+- Not all sections have `_index.md` to start with
+
+  - e.g., `/content/project/`
+  - you can add one, following
 
 > `File -> New File -> R Script`
 
---
+<br>
 
-- If a section has several pages of the same sort, you can use a combination of deleting and adding `draft: true`
-    - e.g., `publications/` has three examples articles
-        - you may wish to keep only one
+- Draft pages and  sections are still visible to you in live preview
 
+  - e.i., when you use `blogdown::serve_site`
+  - but not to the visitors of your website
+        - e.i., if you publish your site
+        
 ---
 class: action
 
-## Content &mdash; Other Sections in Example Site &mdash; `draft: true`
+## Exercises &mdash; Structure &mdash; Non-Widget Markdown
 
-- Remove or deactivate all but `home/` and `authors/`
-   - delete
-   - turn into draft
-   - or, use both strategies
+- Keep only the sections and pages that you would like to have on your website
 
-`r countdown(minutes = 10, seconds = 00, bottom = 0, left = 0)`
+  - set the `draft` key to `true` or  `false` in the front matter of relevant files
+  - check if the website looks and works as expected
+
+<br>
+
+- Hint:
+
+  - on [JJD's website](https://janejdoe.netlify.app/), the following sections are active
+       - home, authors, post, publication
+       - `admin` is the only author   
+<br>
+  - you may need to configure the menu in parallel
+      - by editing `/config/_default/menus.yaml`
+
+`r countdown(minutes = 10, seconds = 00, top = 0)`
 
 ---
+name: part6
 class: inverse, center, middle
 
-# Part 6. Version Control
+# Part 6. Deployment
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
 
 ---
-## Version Control &mdash; Overview
+## Deployment &mdash; Overview
 
-- Projects based on code typically have many versions
-    - especially true for website projects, edited over time
+- Deployment of your website onto a web server makes it visible online
 
---
+  - your website is currently available on your computer only
 
-- With many versions created over time, possibly on different computers, there emerges at least two challenges
-   - keeping track of changes and versions
-   - communicating these changes between computers
+<br>
 
---
+- You can deploy your website at any web server that you prefer
 
-- We all version control, in different ways, such as
-   - edit, rename, save
-   - use applications or websites such as Dropbox, Google Docs, Overleaf
-   - use distributed version control systems such as Git and GitHub
-
---
-
-- Version controlling with Git and GitHub has a extra benefit for website projects
-   - i.e., allowing for continuous deployment
+  - [Netlify](https://www.netlify.com/) is a popular choice as a web server
+      - easy to set up
+      - includes a free plan    
+      - recommended by the authors of the `blogdown` package and the `Academic` theme
 
 ---
-## Version Control &mdash; Git and GitHub &mdash; Definitions
+## Deployment &mdash; Workflow
+
+Deployment occurs in two steps
+
+- we push the website files, from our computer, into a GitHub repository
+
+   - for the first time, and after one or more edits
+   - with commands or clicks in RStudio
+   
+<br>
+
+- Netlify does the rest automatically, in a minute or so
+    
+  - (re-)retrieves the files
+  - generates the website with `Hugo`
+  - (re-)publishes the website
+
+---
+## Deployment &mdash; GitHub &mdash; Definitions
 
 - Git
     - a software that keeps track of versions of a set of files
@@ -2250,7 +2280,7 @@ class: inverse, center, middle
     - it is like a folder, which can keep files and other folders containing files
 
 ---
-## Version Control &mdash; Git and GitHub &mdash; Definitions
+## Deployment &mdash; GitHub &mdash; Definitions
 
 - To commit
     - to take a snapshot of, to version a repository
@@ -2271,26 +2301,28 @@ class: inverse, center, middle
     - it is like downloading a zipped folder of files, and merging with the ones on your computer
 
 ---
-## Version Control &mdash; Git and GitHub
+## Deployment &mdash; GitHub &mdash; Workflow
 
-Version control with Git and GitHub requires
+Working with with Git and GitHub requires
 
-1. .yellow-h[initial setup], done once<sup>*</sup>
+- .yellow-h[initial setup], done once<sup>*</sup>
     - unless for a new computer or, if ever, a new GitHub account
     - a bit technical, but worth the hassle
+
+<br>
     
-2. .yellow-h[project setup], repeated for every paper
+- .yellow-h[project setup], repeated for every RStudio project
     - shorter, less complicated
 
 .footnote[
 
-[*] We have started this process already, in Part 1 of the workshop, by downloading and installing Git and signing up for GitHub.
+[*] We have started this process already, in [Part 1](#part1) of the workshop, by downloading and installing Git and signing up for GitHub.
 
 ]
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Deployment &mdash; GitHub &mdash; Inital Setup
 
 1) Enable version control with RStudio
 
@@ -2311,7 +2343,7 @@ class: action
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Deployment &mdash; GitHub &mdash; Inital Setup
 
 
 2) Set Git Bash as your shell (Windows-only step)
@@ -2323,7 +2355,7 @@ class: action
 ---
 class: action
 
-## Version Control &mdash; Git &mdash; Inital Setup
+## Deployment &mdash; GitHub &mdash; Inital Setup
 
 3) Introduce yourself to Git
 
@@ -2343,7 +2375,7 @@ git config --global --list
 ---
 class: action
 
-## Version Control &mdash; Git and Github &mdash; Project Setup
+## Deployment &mdash; GitHub &mdash; Project Setup
 
 1) Initiate local version control with Git
 
@@ -2355,55 +2387,9 @@ class: action
     - this is where you can list files and/or folders to be excluded from being tracked
 
 ---
-## Version Control &mdash; Git and Github &mdash; Project Setup &mdash; `.gitignore`
-
-- `.gitignore` specifies which file(s) and/or folder(s) should be excluded from version control
-
-    - a set of files and directories are ignored by default &mdash; see your `.gitignore` file
-
---
-
-- There might be good reasons to ignore some files, including files
-
-    - that contain information that we do not want others to see
-        - e.g., personal API keys    
-<br>
-    - that we do not have the right to share with others
-        - e.g., secondary data with user agreements otherwise    
-<br>
-    - that get re-created automatically
-        - e.g., `public/` is built by Netlify during deployment
-        
---
-
-- See the documentation at <https://git-scm.com/docs/gitignore> for further details
-
----
 class: action
 
-## Version Control &mdash; Git and Github &mdash; Project Setup &mdash; `.gitignore`
-
-- Add `public/` to `.gitignore`
-
-```r
-# files ignored by default
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-
-# add the public directory
-
-/public/
-
-```
-
-`r countdown(minutes = 1, seconds = 00, bottom = 0, left = 0)`
-
----
-class: action
-
-## Version Control &mdash; Git and Github &mdash; Project Setup
+## Deployment &mdash; GitHub &mdash; Project Setup
 
 2) Create a new GitHub repository
 
@@ -2411,13 +2397,15 @@ class: action
 
 > `Repositories -> New -> Repository name (e.g., "my_website") -> Public -> Create repository`
 
+<br>
+
 - observe that
 
-    - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
+  - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
     
-        - this is the address to view the repository online
-        - for use in the `Terminal`, the address gets the `.git` extension
-            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
+      - this is the address to view the repository online
+      - for use in the `Terminal`, the address gets the `.git` extension
+          - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
 
 ---
 class: action
@@ -2433,36 +2421,75 @@ class: action
 - enter the following lines in the `Terminal`, with your username and repository name
 
 ```yaml
-git remote add origin https://github.com/USER_NAME/REPOSITORY_NAME.git
+git remote add origin https://github.com/`USER_NAME/REPOSITORY_NAME`.git
 git add .
 git commit -m "initial commit"
 git push -u origin master
 
 ```
-- observe that your files are now at your GitHub repository
-    - visit `https://github.com/USER_NAME/REPOSITORY_NAME`
 
-- restart R by following from the RStudio menu:
+<br>
 
-> `Session -> Restart R`
+- Notice that
+   - your files are now online at your GitHub repository
+   - we have completed the first step in deployment
 
 ---
 class: action
 
-## Version Control &mdash; Git and Github &mdash; Workflow
+## Deployment &mdash; Netlify &mdash; Initial Setup
 
-1) Edit and save a under version control
-- e.g., delete the first sentence in a content section file that you are keeping
 
---
+1) After logging in to Netlify, follow
+
+> `New site from Git -> GitHub`
+
+<br>
+
+- complete the authorisation process
+    - so that GitHub allows Netlify to access your repository
+    - once completed, pick your repository from the list, and click `Deploy site`
+        - the default settings should work
+
+---
+class: action
+
+## Deployment &mdash; Netlify &mdash; Initial Setup
+
+
+2) While on the `Site overview` page, click on `Domain settings`
+
+- change the name of your site to something more meaningful
+    - by default, Netlify assigns a random name
+       - e.g., hus324n.netlify.app     
+<br>  
+- if you have a custom domain name
+    - e.g., you have purchased yournamesurname.com
+    - click on `Add custom domain` and follow the instructions     
+<br>
+- if you don't have a custom domain name, 
+    - click on `Options` to change the random address to something more meaningful
+        - e.g., yournamesurname.netlify.app
+    
+---
+class: action
+
+## Deployment &mdash; Workflow &mdash; In Practice
+
+1) In RStudio, edit your site with the its URL
+- this is done through the `baseurl` key in `/config.yaml` 
+- set it to `https://yournamesurname.netlify.app/`
+      - including the trailing slash
+- observe whether the site still builds, in Viewer
+
 <br>
 
 2) Commit and Push
-- under the Git tab on RStudio, find the list of files edited
-    - these will have `M`, for modified, as `Status`    
+- under the Git tab in RStudio, find the file
+    - it will have `M`, for modified, as `Status`    
 <br>
-- tick `Staged`<sup>*</sup>  for one or more files that you would like to commit
-   - enter a `Commit message` that summarises the edits
+- tick `Staged`<sup>*</sup>  for that file, and click `Commit`
+   - enter a `Commit message` that summarises the edit
    - click `Commit` to create a record of the new version locally to your computer
    - click `Close -> Push` to push the version to GitHub
 
@@ -2471,376 +2498,243 @@ class: action
 ]
 
 ---
-## Version Control &mdash; Git and Github &mdash; Workflow &mdash; Revert
+## Deployment &mdash; Notes
 
 - Avoid pushing your project to GitHub without checking it works locally first
-    - use `blogdown::serve_site()` for your advantage
-    
+    - use `blogdown` for your advantage, observe it in Viewer
+
 --
 
-- If things go wrong, you can revert back to the version on GitHub
+<br>
+
+- If things still go wrong, you can revert back to the version on GitHub
     - `git checkout HEAD PATH/TO/FOLDER/OR/FILE` reverts a specific folder or file
     - `git reset --hard` reverts all
     
 --
 
+<br>
+
 - Note that
     - reverting as above gets rid of good as well as bad edits
         - more nuanced approaches are possible
     - reverting further back to one of the previous versions also possible
+    - see my [workshop materials on working with with Git and GitHub](https://resulumit.com/teaching/git_workshop.html) for more information
     
 ---
-class: action
+## Exercises &mdash; Deployment
 
-## Version Control &mdash; Git and Github &mdash; Workflow &mdash; Revert
+- Practice deployment one more time
+   
+  - edit a piece of text that is visible on your website, and save
+     - e.g., the `title` key in `/config.yaml`     
+<br>     
+  - observe the change locally, in Viewer
+  - stage, commit, push
+  - observe the change online, in a browser
+    
 
-- Delete `themes/`
-    - observe that your site does not build any more
-        - and that there are changes listed in the `Git` tab
-
-- Revert to the version on GitHub
-   - hint:
-       - use `git checkout HEAD themes/` or `git reset --hard`
-   - observe that there now no changes listed in the `Git` tab
-
-`r countdown(minutes = 2, seconds = 00, top = 0)`
+`r countdown(minutes = 3, seconds = 00, top = 0)`
 
 ---
+name: part7
 class: inverse, center, middle
 
-# Part 7. Deployment
+# Part 7. Adding Content
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
 
 ---
-## Deployment &mdash; Overview
+## Content &mdash; Overview
 
-- Deployment of your website onto a web server makes it visitable online
-    - your website is currently available on your computer only
+Most of what is visible at website frontend is stored in three directories at the backend
 
---
+- some files are under the `/assets/` directory
+    - most importantly, the website icon
 
-- You can deploy your website at any web server
-    - [Netlify](https://www.netlify.com/) is a popular choice
-        - well integrated with GitHub
-        - easy to set up
-        - includes a free plan
-            - from the directory to Netlify    
 <br>
-   - recommended by many
-       - including the authors of `blogdown` and `Academic`
-        
+
+- other display-as-is materials are under the `/static/` directory
+    - e.g., PDFs, images
+
+<br>
+
+- most materials are under the `/content/` directory
+    - e.g., Markdown files matching pages, widgets for the homapage
+
+
 ---
-## Deployment &mdash; Types
+## Content &mdash; `/assets/`
 
-- There are two types of deployment
-    - manual deployment, which involves
-        - deleting the old `public/`, just in case
-        - running the `blogdown::build_site()` function to create a brand new `public/`
-        - drag and drop of the resulting new `public/` by hand
-            - from the directory to Netlify    
+- This directory stores non-textual files to be processed 
+   - by `Hugo` to generate the website
+   - e.g., images
+   
+<br>   
+   
+- By default, files under `/assets/` do not have a matching URL
+   - visitors will not be able to view them unprocessed on a browser
+   
 <br>
-    - automatic deployment, which involves
-        - simply a push to GitHub
+
+- Adding a file to `/assets/` is straightforward
+   - move or copy into it as normal
+   
+<br>
+
+- `Academic` looks in `/assets/media/` for a website icon
+   - it appears, e.g., on web browser tabs
+   - it must be named `icon.png`
+   - if not, `Academic` uses the default icon
 
 ---
 class: action
 
-## Deployment &mdash; Manual
+## Exercises &mdash; Content &mdash; `/assets/`
 
-- Delete `public/`, if it exists
-    - especially important if you have draft pages
+Change your website icon
 
-- Type `blogdown::build_site()` in the the `Console`
-    - observe that, unlike `blogdown::serve_site()`, this function does not output to `Viewer`
-    - it also does not publish draft pages into `public/`
+  - by placing an image named `icon.png` to `/assets/media/`
+  - stage, commit, push
+  - observe the change online, in a browser
 
---
+<br>
 
-- Login to your Netlify account
-    - at <https://www.netlify.com/>
+Hint:
 
---
+- website icons are not visible in RStudio Viewer
+- images are best saved as a square 512x512 pixel
+- JJD's icon is the same as her profile picture
+    - available for [download here](https://github.com/resulumit/workshop_website/raw/master/assets/media/icon.png)
 
-- Drag and drop the `public/` folder from the root directory to `Netlify`
-    - your website will be published within a minute
-        - with a random component before `.netlify.app`
-        - click on the link to observe
-        
---
 
-- You may wish to delete this site as we will deploy continuously
-    - follow `Site Settings -> Delete Site`
+`r countdown(minutes = 3, seconds = 00, top = 0)`
 
 ---
-## Deployment &mdash; Continuous
+## Content &mdash; `/static/`
 
-Continuous deployment 
-
-- avoids repeating the above steps by hand
-    - anything that can be automated, should be automated
-
---
-
-- avoids potential mistake in the manual process
-    - e.g., deploying `public/` generated by `blogdown::serve_site()` instead of `blogdown::build_site()`
-        - which disregards draft pages, release dates
+- This directory stores non-textual files .yellow[not] to be processed 
+   - `Hugo` simply copies these files over to frontend
+   - e.g., images
 
 --
 
-- requires an initial setup
-    - done once per website
-    
----
-class: action
-
-## Deployment &mdash; Continuous &mdash; Initial Setup
-
-.pull-left-c[
-
-1) Create a two-line file
+<br>   
+   
+- By default, files under `/static/` have a matching URL
+   - visitors will be able to view them unprocessed on a browser
+ 
 
 ```r
-[context.production.environment]
-HUGO_VERSION = "0.70.0"
-```
+.
+└── /static/
+    |
+    └── pfofile-photo.jpg     # <- https://janejdoe.netlify.app`/`pfofile-photo.jpg 
+    |
+    └── `files/`                           
+        |
+        └── cv.pdf         # <- https://janejdoe.netlify.app/`files`/cv.pdf
 
-- save it as `netlify.toml` to the root directory
+```     
+ 
+ 
+---
+## Content &mdash; `/static/`
 
-- commit and push
+- This directory stores non-textual files .yellow[not] to be processed 
+   - `Hugo` simply copies these files over to frontend
+   - e.g., images
 
-]
 
-.pull-right-c[
+<br>   
+   
+- By default, files under `/static/` have a matching URL
+   - visitors will be able to view them unprocessed on a browser
 
-![](rbd_workshop_files/images_data/static.png)
+<br>
 
-]
+- Adding a file to `/static/` is straightforward
+   - move or copy into it as normal
+   
+<br>
+
+- `/static/` is the right directory to store PDFs
+   - e.g., cv, publications
+
 
 ---
 class: action
 
-## Deployment &mdash; Continuous &mdash; Initial Setup
+## Exercises &mdash; Content &mdash; `/static/`
+
+Make one or more files available as-is on your website
+
+  - by placing them under `/static/`
+     - directly, or under a sub-directory
+  - stage, commit, push
+  - observe the change online, in a browser
+
+<br>
+
+Hint:
+
+- static files are not visible in RStudio Viewer
+- [JJD's website](https://janejdoe.netlify.app/) has her cv and two publications available to view as-is
+    - download them from her website
 
 
-2) On Netlify, follow
+`r countdown(minutes = 5, seconds = 00, top = 0)`
 
-> `New site from Git -> GitHub -> Autorizing Netlify by Netlify -> Install`
+---
+## Content &mdash; `/content/`
 
-- once installed, pick your repository, and click `Deploy site`
-    - keep `Build command` as `Hugo`, `Publish directory` as `public`
+- This directory stores mostly textual files to be processed 
 
+   - mostly by `Hugo`, some by `blogdown`
+   - e.g., Markdown files
 
-3) On Netlify, click on `Domain management`
+<br>
 
-- if you don't have a custom domain name, click on `Options` to change the random address to something more meaningful
-    - e.g., yournamesurname.netlify.app
+- Most files under this directory are .yellow-h[plain] Markdown files
+
+  - with the `.md` extension
+  - transformed by `Blackfriday` &mdash; `Hugo`'s Markdown rendering engine, so is Netlify's &mdash; into HTML
+      - no need for `blogdown`, but cannot execute any code
     
-- if you have a custom domain name, click on `Add custom domain` and follow the instructions
-
----
-class: inverse, center, middle
-
-# Part 8. Adding Text-Based Content
-
----
-## New Content &mdash; Overview
-
-- Adding as-is content (e.g., a PDF document) to `static/` is rather straightforward
-    - no different than adding files to any other folder on your computer
-
---
-
-- Here we focus on adding files to `content/`
-    - these get transformed in the building process
-        - from Markdown to HTML
     
---
+<br>
 
-- This process has 3 &ndash; 4 steps
-    - add a new Markdown file to `content/`
-        - in line with the directory structure in `Hugo`
-    - define the front matter in YAML syntax
-    - add text in Markdown syntax
-    - if this is an R Markdown file, build the site 
+- Some are .yellow-h[R] Markdown files
 
---
-
-- This part is about adding text-based content
-    - these should work with both `.md` and `.Rmd` files
-    - Part 9 is about adding data-based content
-        - this works only with `.Rmd` files
-        
----
-## New Content &mdash; Markdown
-
-- Markdown is a plain-text formatting syntax
-    - the third syntax we are working with
-        - in addition to TOML and YAML
-    - much easier to write than HTML
-        - versatile, can be transformed into many different formats, including HTML
-   
-- Most files in the example site are *plain* Markdown files
-    - with the `.md` extension
-    - transformed by `Blackfriday` &mdash; `Hugo`'s Markdown rendering engine, so is Netlify's
-        - no need to build site locally for `.md` documents before pushing to GitHub
-    - cannot execute any R code
---
-
-- R Markdown documents can execute R code
-    - with either `.Rmd` or `.Rmarkdown` extension
-        - minimal differences between the two
-        - but `blogdown` recommends the `.Rmarkdown` extension
-    -transformed by `pandoc` &mdash; `blogdown`'s rendering engine
-        - therefore requires building the site locally before pushing
+  - with either `.Rmd` or `.Rmarkdown` extension
+      - transformed by `pandoc` &mdash; `blogdown`'s rendering engine
+           - therefore can execute code, thanks to `blogdown`
+      - we will cover these in [Part 8](#part8)  
 
 ---
-## New Content &mdash; Adding New Page &mdash; Manually from Blank
+## Content &mdash; Markdown Syntax &mdash; Overview
 
-One can add a new page in various ways, including starting with blank files
+- Markdown is a plain-text file
 
-- Use the RStudio buttons to start fresh from a blank script
-  - follow `File -> New File -> R Script`
-  - fill in YAML information
-  - add text
-  - save with an appropriate name and extension to an appropriate location under `content/`
-    - e.g., choose between `.md` and `.Rmd`
---
-
-- Notice that this is not an efficient way
-
----
-## New Content &mdash; Adding New Page &mdash; Manually from Existing Files
-
-A more efficient way involves making use of existing files
-
-- Use an existing file as a template
-    - e.g., a file from the example site, which we have turned into draft
-        - set <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">draft: false</span>, and change all that needs to change, including
-            - file and folder names
-            - YAML metadata
-            - text
-    - or, one can duplicate an existing even if active file, and follow the same steps as above
-    
---
-
-- Notice that RStudio offers convenient buttons under the `Files` tab, including
-
-> `Files -> Rename`
-        
-> `Files -> More -> Copy`
-
----
-## New Content &mdash; Adding New Page &mdash; `New Post`
-
-.pull-left-c[
-
-- `blogdown` offers a very convenient alternative with the `New Post` addin
-    - follow from the `Addin` from within RStudio
-    - this is equilevant to typing `blogdown::new_post()` in the `Console`
-        - but this requires typing in the arguments
-
-- This addin facilitates creating a new page with appropriate
-    - location
-    - YAML metadata
-    - filename and extension
-
-]
-
-.pull-right-c[
-
-
-![](rbd_workshop_files/images_data/new_post.png)
-
-]
-
----
-## New Content &mdash; Adding New Page &mdash; `New Post`
-
-.pull-left-c[
-
-Note that
-
-- Depending on the `Archetype`, the addin populates documents with different YAML keys
-   - e.g., includes `url_pdf` for `publication/`, but not for `post/`
-        
-]
-
-.pull-right-c[
-
-
-![](rbd_workshop_files/images_data/new_post.png)
-
-]
-
----
-## New Content &mdash; Adding New Page &mdash; `New Post`
-
-.pull-left-c[
-
-Note that
-
-- Depending on the `Archetype`, the addin populates documents with different YAML keys
-   - e.g., includes `url_pdf` for `publication/`, but not for `post/`
-   
-- The addin populates `author` in YAML while `Academic` uses `authors` (notice the plural s) key
-   - fill in the right key in the resulting document instead
-        
-]
-
-.pull-right-c[
-
-
-![](rbd_workshop_files/images_data/new_post.png)
-
-]
-
----
-## New Content &mdash; YAML MetaData &mdash; Overview
-
-- Recall that 
-
-    - we use YAML to set the metadata of pages
-        - e.g., title, author
-
-    - YAML is written between a pair of three hyphens    
-    
-    - and, it is based on <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">key: value</span> pairs
-       - all keys are pre-defined, some keys are optional
-       - we supply the values
-    
-
----
-## New Content &mdash; YAML MetaData &mdash; Important Keys
-
-- `draft`
-    - set this key to `true` for draft pages 
-        - remember that after `blogdown::serve_site()`, draft pages will be visible to you
+  - with its own syntax
+      - much easier to write than HTML
+      - the differences between plain and R Markdown syntaxes are minimal
+  - versatile, can be transformed into many different formats, including HTML
 
 --
 
-- `publishdate`
-    - set this key to a future date for pages to be published in the future
-    - these pages will nevertheless be visible after `blogdown::serve_site()` to you
-
---
-
-- `slug`
-    - this key defines the tail of the URLs
-    - by default, it is the file name
-    - e.g., `post/new-job.md` with a <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">slug: index</span> would behave as if it is `post/index.md`
-
----
-## New Content &mdash; Markdown Syntax &mdash; Overview
-
-- The syntax depends on the type of Markdown
-
-  - but the differences are minimal
-    
---
+<br>
 
 - Plain Markdown (`.md`) follows `Blackfriday`'s Markdown syntax
 
   - a useful guide to the basic MArkdown syntax is available at <https://www.markdownguide.org/basic-syntax/>
   - a small number of `Blackfriday`-specific extensions are available at <https://github.com/russross/blackfriday>
+
+<br>
 
 - R Markdown (`.Rmd` and `.Rmarkdown`) follows the syntax in Pandoc's Markdown 
 
@@ -2848,28 +2742,30 @@ Note that
    - for a useful summary of the syntax, see the R Markdown Cheat Sheet
 
 ---
----
-## New Content &mdash; Markdown Syntax &mdash; Strategy
+## Content &mdash; Markdown Syntax &mdash; Strategies
 
-There are a few strategies to deal with `.md` versus `.Rmd` dilemma
+- There are at least two different strategies to deal with `.md` versus `.Rmd` dilemma
 
-- use `.md` for pages with no data, `.Rmd` for pages with data
-    - maximises the functionality from each
-    - requires learning the differences
+  - use `.md` for pages with no data, `.Rmd` for pages with data
+      - maximises the functionality from each
+      - requires learning the small differences if necessary
     
-- use `.Rmd` for all pages
-    - requires learning only one syntax
-    - misses the additional functionality in `.md`
-    - folders get cluttered with intermediate files
+  - use `.Rmd` for all pages
+      - requires learning only one syntax
+      - misses the additional functionality in `.md`
+      - folders get cluttered with intermediate files
 
 --
 
+<br>
+
 - The syntax in the following slides of this section will work with both types
-    - unless otherwise stated
-        - e.g., see tasks lists
+
+  - unless otherwise stated
+      - e.g., see [tasks lists](#task-lists)
     
 ---
-## New Content &mdash; Markdown Syntax &mdash; Lines
+## Content &mdash; Markdown Syntax &mdash; Lines
 
 Multiple spaces on a given line are reduced to one
 
@@ -2892,7 +2788,7 @@ This is another sentence on a new line.
 .out-t[This is a sentence followed by one space. This is another sentence on a new line.]
 
 ---
-## New Content &mdash; Markdown Syntax &mdash; Hard Brakes
+## Content &mdash; Markdown Syntax &mdash; Hard Brakes
 
 Two or more spaces at the end of lines introduce hard brakes, forcing a new line
 
@@ -2905,7 +2801,7 @@ This is another sentence on a new line.
 This is another sentence on a new line.]
  
 ---
-## Syntax &mdash; Block Quotes
+## Content &mdash; Markdown Syntax &mdash; Block Quotes
 
 Lines starting with the grater-than sign .yellow-h[&#62;] introduce block quotes
 
@@ -2923,7 +2819,7 @@ Lines starting with the grater-than sign .yellow-h[&#62;] introduce block quotes
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &mdash; Anonymous
 ]
 ---
-## Syntax &mdash; Paragraphs
+## Content &mdash; Markdown Syntax &mdash; Paragraphs
 
 One or more<sup>*</sup> blank lines introduce a new paragraph
 
@@ -2949,12 +2845,12 @@ second sentence of that paragraph, which is followed by a blank line.
 
 .footnote[
 
-[*] Multiple blank lines between paragraphs reduced to one
+[*] Multiple blank lines between paragraphs reduced to one.
 
 ]
 
 ---
-## Syntax &mdash; Comments
+## Content &mdash; Markdown Syntax &mdash; Comments
 
 Text with the syntax .inline-c[<!--].inline-c[comments -->] is omitted from output
 
@@ -2980,7 +2876,7 @@ second sentence of that paragraph, which is followed by a blank line.
 ]
 
 ---
-## Syntax &mdash; Headers
+## Content &mdash; Markdown Syntax &mdash; Headers
 
 The number sign .yellow-h[&#x23;] introduces headers; lower levels are created with additional signs &mdash; up to total five levels
 
@@ -3033,9 +2929,9 @@ The number sign .yellow-h[&#x23;] introduces headers; lower levels are created w
 ]
 
 ---
-## Syntax &mdash; Emphases 
+## Content &mdash; Markdown Syntax &mdash; Emphases 
 
-A pair of single asterisk .yellow-h[&#42;] or underscores .yellow-h[&#95;] introduces italics
+A pair of single asterisk .yellow-h[&#42;] or underscore .yellow-h[&#95;] introduces italics
 
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;italics&#42;</span> becomes .out-t[*italics*]    
 
@@ -3043,7 +2939,7 @@ A pair of single asterisk .yellow-h[&#42;] or underscores .yellow-h[&#95;] intro
 
 <br>
 
-A pair of double asterisk or underscores introduces bold  
+A pair of double asterisks or underscores introduces bold  
 
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#42;&#42;bold&#42;&#42;</span> becomes .out-t[**bold**]
 
@@ -3058,7 +2954,7 @@ These two rules can be combined
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#95;&#42;&#42;bolditalics&#42;&#42;&#95;</span> becomes .out-t[_**bolditalics**_]  as well
 
 ---
-## Syntax &mdash; Strikethrough
+## Content &mdash; Markdown Syntax &mdash; Strikethrough
 
 A pair of double tildes .yellow-h[~] introduces strikethrough
 
@@ -3079,7 +2975,7 @@ Strikethrough can be combined with italics or bold
 <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#42;strikeitalitcs&#42;&#126;&#126;</span> or <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#126;&#126;&#95;strikeitalitcs&#95;&#126;&#126;</span>, they both become .out-t[*~~strikeitalitcs~~*] as well
 
 ---
-## Syntax &mdash; Links &mdash; Internal<sup>*</sup>
+## Content &mdash; Markdown Syntax &mdash; Links &mdash; Internal<sup>*</sup>
 
 You can link text to section headers in the same document
 
@@ -3098,15 +2994,17 @@ Multi-word headers need hyphenation
 ]
 
 ---
-## Syntax &mdash; Links &mdash; External
+## Content &mdash; Markdown Syntax &mdash; Links &mdash; External
 
 You can link text to URLs
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;click here](https	&#58;//resulumit.com/)</span> becomes .out-t[[click here](https://resulumit.com/)]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;click here](https&#58;//janejdoe.netlify.app/)</span> becomes .out-t[[click here](https://janejdoe.netlify.app/)]
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//resulumit.com></span> becomes .out-t[<https://resulumit.com>]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;https&#58;//janejdoe.netlify.app></span> becomes .out-t[<https://janejdoe.netlify.app>]
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//resulumit.com](https&#58;//resulumit.com/)</span> becomes .out-t[[https://resulumit.com](https://resulumit.com/)] as well
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;https&#58;//janejdoe.netlify.app](https&#58;//janejdoe.netlify.app/)</span> becomes 
+
+.out-t[[https://janejdoe.netlify.app](https://janejdoe.netlify.app/)] as well
 
 --
 
@@ -3114,9 +3012,9 @@ You can link text to URLs
 
 You can also link text to email addresses
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;resul.umit@unilu.ch)</span><sup>*</sup> becomes .out-t[[email me](mailto:resul.umit@unilu.ch)]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#91;email me](mailto&#58;j.j.doe@kriens.edu)</span><sup>*</sup> becomes .out-t[[email me](mailto:j.j.doe@kriens.edu)]
 
-<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;resul.umit@unilu.ch&#62;</span> becomes .out-t[<resul.umit@unilu.ch>]
+<span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">&#60;j.j.doe@kriens.edu&#62;</span> becomes .out-t[<j.j.doe@kriens.edu>]
 
 .footnote[
 
@@ -3125,14 +3023,14 @@ You can also link text to email addresses
 ]
 
 ---
-## Syntax &mdash; Footnotes &mdash
+## Content &mdash; Markdown Syntax &mdash; Footnotes
 
-An alternative is to use the .inline-c[[^identifier]] syntax, with identifiers defined elsewhere in the same document
+Use the .inline-c[[^identifier]] syntax, with identifiers defined elsewhere in the same document, to create a footnote
 
 ```{r eval = FALSE}
-Dr Doe holds a PhD in rock science.[^defence_date]
+Dr Doe holds a PhD in rock science.[^1]
 
-[^defence_date]: She defended her thesis in 2017.
+[^1]: She defended her thesis in 2017.
 ```
 
 .out-t[Dr Doe holds a PhD in rock science.<sup>1</sup>] 
@@ -3145,15 +3043,8 @@ Dr Doe holds a PhD in rock science.[^defence_date]
 
 ]
 
---
-
-Notice that 
-
-- the caret sign comes .yellow-h[after] the left square bracket
-- this syntax works in text, but not in YAML
-
 ---
-## Syntax &mdash; Lists
+## Content &mdash; Markdown Syntax &mdash; Lists
 
 Lines starting with asterisk .yellow-h[&#42;] as well as plus .yellow-h[&#43;] or minus .yellow-h[&#8722;] signs introduce lists
 
@@ -3172,7 +3063,7 @@ Lines starting with asterisk .yellow-h[&#42;] as well as plus .yellow-h[&#43;] o
 ]
 
 ---
-## Syntax &mdash; Lists &mdash; Nesting
+## Content &mdash; Markdown Syntax &mdash; Lists &mdash; Nesting
 
 Lists can be nested within each other, with indentation
 
@@ -3197,7 +3088,7 @@ Lists can be nested within each other, with indentation
 ]
 
 ---
-## Syntax &mdash; Lists &mdash; Numbering
+## Content &mdash; Markdown Syntax &mdash; Lists &mdash; Numbering
 
 List items can be numbered
 
@@ -3222,7 +3113,7 @@ List items can be numbered
 ]
 
 ---
-## Syntax &mdash; Lists &mdash; Numbering
+## Content &mdash; Markdown Syntax &mdash; Lists &mdash; Numbering
 
 List items can be numbered
 
@@ -3247,9 +3138,11 @@ List items can be numbered
 ]
 
 ---
-## Syntax &mdash; Lists &mdash; Tasks Lists
+name: task-lists
 
-Task lists can be created in Markdown, but not in R Markdown
+## Content &mdash; Markdown Syntax &mdash; Lists &mdash; Tasks Lists
+
+Task lists can be created .yellow-h[in plain Markdown, but not in R Markdown]
 
 ```{r eval=FALSE}
 - [x] books
@@ -3263,7 +3156,7 @@ Task lists can be created in Markdown, but not in R Markdown
 
 
 ---
-## Syntax &mdash; Dashes
+## Content &mdash; Markdown Syntax &mdash; Dashes
 
 Two hyphens grouped together introduce an en-dash
 
@@ -3276,7 +3169,7 @@ Three hyphens grouped together introduce an em-dash
 .inline-c[&#8208;&#8208;&#8208;] becomes .out-t[&mdash;]
 
 ---
-## Syntax &mdash; Highlithing
+## Content &mdash; Markdown Syntax &mdash; Highlithing
 
 Highlight any piece of text, by putting it in between a pair of backticks <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>&grave;</code></span>
 
@@ -3305,44 +3198,155 @@ df <- mtcars %>%
 ```
 
 ---
+## Content &mdash; Markdown Syntax &mdash; Tables
+
+The following syntax introduces hand-made tables
+
+.pull-left[
+
+<br>
+
+```{r eval=FALSE, tidy=FALSE}
+
+|First Column | Second Column | 
+|------------ | ------------- |
+|First cell   | First cell    |  
+|Second cell  | Second cell   |
+|Third cell   | Third cell    |
+ 
+```
+
+]
+
+.pull-right[
+
+<br>
+
+|  First Column | Second Column |                     
+|:------------- |:--------------| 
+| First cell |  First cell |            
+| Second cell |  Second cell |         
+| Third cell |  Third cell |          
+
+
+]
+
+
+--
+
+<br>
+
+Note that
+
+- .yellow-h[R] Markdown makes it possible to customise hand-made tables futher
+    - we will cover these in [Part 8](#rmd-tables)
+
+---
+## Content &mdash; Markdown Syntax &mdash; Images
+
+The syntax <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;&#93;(figurename.extension)</span> embeds images into HTML outputs
+ 
+- similar to the link syntax, only this time it is preceded by an exclamation mark .yellow-h[!]
+- goes a new line, separate from the text
+- assumes the figure is in the same folder with the Markdown file<sup>*</sup>
+
+.footnote[
+
+[*] If the image is in `static/`, use a path relative to that directory, e.g., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;&#93;(/media/figure.extension)</span>
+
+]
+
+---
+## Content &mdash; Images &mdash; Markdown Syntax
+
+```{r, eval=FALSE}
+![](/media/boards.jpg)
+```
+
+```{r, echo=FALSE, fig.align="center", out.width="40%"}
+
+knitr::include_graphics("rbd_workshop_files/images_data/boards.jpg")
+```
+
+---
+## Content &mdash; Images &mdash; Notes
+
+- Images can also be added through YAML
+   - e.g., to blogposts, publications
+   - using the `image` key
+
+<br>
+
+- These images must be saved in the same directory
+   - as `featured.jpg`
+   - rename or remove it if having them is not desireble
+      - removing the `image` key in YAML is not effective 
+
+---
 class: action
 
-## Adding Text-Based Content &mdash; Individual Work
+## Exercises &mdash; Content
 
-Ideas
+- Edit one or more Markdown files in your website project
 
-- migrate an exiting post into your site
-- start a new page or section
-   - e.g., a stand alone section summarising your CV
-       - which could still link to a PDF
-- start a mock post
-    - e.g., use `stringi::stri_rand_lipsum` to create mock text
-    - apply the syntax that we have covered above
-- continue building other parts of your website
+  - observe the change locally, in Viewer
+  - stage, commit, push
+  - observe the change online, in a browser
+  
+<br>  
+
+- Hint, if you are re-creating [JJD's website](https://janejdoe.netlify.app/):
+
+  - add and/or edit one or more of the following files
+       - `/content/home/hero.md`, matching [this widget](https://janejdoe.netlify.app/#hero)
+       - `/content/author/admin/index.md`, matching [this widget](https://janejdoe.netlify.app/#about)
+       - `/content/blog/academic-websites/index.md`, matching [this post](https://janejdoe.netlify.app/blog/academic-websites/)
+       
+ - by copy the text from the website to save time
+      - paste into Markdown, and add the syntax
+
 
 
 `r countdown(minutes = 30, seconds = 00, top = 0)`
----
 
+---
+name: part8
 class: inverse, center, middle
 
-# Part 9. Adding Data-Based Content
+# Part 8. R Markdown
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
 
 ---
-Data-Based Content &mdash; Overview
+## R Markdown &mdash; Overview
 
-- Recall that we need to use R Markdown files for pages based on data
-    - e.g., pages with data analysis
-    - these have the `.Rmd` extension
-    - plain Markdown cannot run R code
+- R Markdown is a special type of Markdown
+   - can run code, and embed the results from data into HTML
+   - have the `.Rmd` or `.Rmarkdown` extension
+   
+--
+
+<br>
+
+- `Hugo` cannot transform R Markdown into HTML
+   - that is why we need the `blogdown` package
+   - transformation of these files takes places locally on your computer
+   - not remotely at the server &mdash; e.g., Netlify
+
+--
+
+<br>
+
+- R Markdown is very similar to Markdown in terms of syntax
+   - except that it includes code
+      - mostly R code, but could also be python
 
 ---
-class: center, middle
-
-# Code, in and outside Chunks
-
----
-## Code &mdash; Overview
+## R Markdown &mdash; Code &mdash; Overview
 
 Most codes go inside code chunks
 - e.g., code that imports and cleans data, and/or produces tables and/or figures 
@@ -3364,7 +3368,7 @@ The average engine displacement of the cars in the dataset is \`r mean(df$disp_l
 ```
 
 ---
-## Code Chunks &mdash; Overview
+## R Markdown &mdash; Code Chunks &mdash; Overview
 
 - Code chunks are delimited spaces between a pair of three backticks
     - below is an empty chunk for R code
@@ -3392,25 +3396,34 @@ The average engine displacement of the cars in the dataset is \`r mean(df$disp_l
 
 ]
 ---
-## Code Chunks &mdash; Labels
+## R Markdown &mdash; Code Chunks &mdash; Labels
 
-It is recommended to label the code chunks, which are otherwise automatically numbered
-- informative labels can be helpful for navigating through error messages as well as filenames of plots and cache
-    - in the example below, the chunk is labelled as `data_import`  
-<br>
-- but note that duplicate labels lead to an error
+Label the code chunks right after r
 
 
 ````md
-`r ''````{r, `data_import`}
+`r ''````{r, `tidydata`}
 
-df <- mtcars
+df <- mtcars %>%
+      mutate(disp_litre = disp / 61.0237)
 
 ```
 ````
 
+--
+
+<br>
+
+Note that
+
+- labels are optional, but recommended because they
+    - can be used in text, to refer to tables or figures that code chunks produce
+    - can help with navigating through error messages     
+<br>    
+- duplicate labels lead to an error
+
 ---
-## Code Chunks &mdash; Options
+## R Markdown &mdash; Code Chunks &mdash; Options
 
 - Code chunks take options, listed on the same line with the first delimiter, in curly brackets
 
@@ -3421,7 +3434,7 @@ df <- mtcars
         - with this option and value, nothing from this chunk will be included in the output document
 
 ````md
-`r ''````{r, setup, `include=FALSE`}
+`r ''````{r, tidydata, `include=FALSE`}
 
 ```
 ````
@@ -3429,11 +3442,11 @@ df <- mtcars
 
 - The list of options is available at <https://yihui.org/knitr/options>
 
-    - R Markdown Cheat Sheet provides a helpful list as well
+    - [R Markdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) provides a helpful list as well
 
 
 ---
-## Code Chunks &mdash; Options &mdash; Defaults
+## R Markdown &mdash; Code Chunks &mdash; Options &mdash; Defaults
 
 Options have default values
 
@@ -3443,23 +3456,23 @@ Options have default values
 - therefore the following two chunks have the same function
 
 ````md
-`r ''````{r}
+`r ''````{r, tidydata}
 
 ```
 ````
 
 ````md
-`r ''````{r, `echo=TRUE`}
+`r ''````{r, tidydata, `echo=TRUE`}
 
 ```
 ````
 ---
-## Code Chunks &mdash; Options &mdash; Defaults
+## R Markdown &mdash; Code Chunks &mdash; Options &mdash; Defaults
 
 This chunk prints two things in the output document &mdash; (a) the code and (b) the head of the data frame
 
 ````md
-`r ''````{r}
+`r ''````{r, headdata}
 
 head(df)
 
@@ -3483,12 +3496,12 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Options
+## R Markdown &mdash; Code Chunks &mdash; Options
 
 Setting .inline-c[echo=FALSE] prevents the code from being displayed in the output document
 
 ````md
-`r ''````{r, `echo=FALSE`}
+`r ''````{r, headdata, `echo=FALSE`}
 
 head(df)
 
@@ -3507,12 +3520,12 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## R Markdown &mdash; Code Chunks &mdash; Other Useful Options
 
 Prevent the result(s) of the source code from being displayed in the output document
 
 ````md
-`r ''````{r, `results="hide"`}
+`r ''````{r, headdata, `results="hide"`}
 
 head(df)
 
@@ -3527,10 +3540,8 @@ This chunk therefore prints one thing in the output document &mdash; the source 
 
 ]
 
-Setting .inline-c[results="asis"] passes the results as they are produced by the code. In creating tables for HTML output with the `stargazer` package,<sum>*</sup> it is a must.
-
 ---
-## Code Chunks &mdash; Other Useful Options
+## R Markdown &mdash; Code Chunks &mdash; Other Useful Options
 
 Cache results for future compilations 
 
@@ -3561,7 +3572,7 @@ Prevent messages and/or warnings from being displayed in the output
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## R Markdown &mdash; Code Chunks &mdash; Other Useful Options
 
 Define the .yellow-h[actual] dimensions of figures, in inches
 
@@ -3592,7 +3603,7 @@ Define the alignment of figures &mdash; `left`, `right`, or `center`
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## R Markdown &mdash; Code Chunks &mdash; Other Useful Options
 
 Define captions for figures
 
@@ -3623,7 +3634,7 @@ Set extra options, which `rmarkdown` will write into the `<img />` tag
 ````
 
 ---
-## Code Chunks &mdash; The Setup Chunk
+## R Markdown &mdash; Code Chunks &mdash; The Setup Chunk
 
 It is recommended to use the first code chunk for general setup, where you can
 
@@ -3643,7 +3654,7 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE)
 # `packages`
 library(dplyr)
 library(ggplot2)
-library(stargazer)
+library(knitr)
 
 # `data`
 df_raw <- mtcars
@@ -3652,7 +3663,26 @@ df_raw <- mtcars
 ````
 
 ---
-## Code Chunks &mdash; The Data Chunk
+## R Markdown &mdash; Code Chunks &mdash; The Setup Chunk &mdash; Data
+
+Note that the data source can be anywhere that R can access
+
+````md
+`r ''````{r, setup, include=FALSE}
+
+...
+
+# this dataset is `available online`
+df_online <- read.csv("http://www.parlgov.org/static/data/development-cp1252/view_party.csv")
+
+# this dataset is `in the same directory as my .Rmd file`
+df_local <- read.csv("view_cabinet.csv")
+
+```
+````
+
+---
+## R Markdown &mdash; Code Chunks &mdash; The Data Chunk
 
 I recommend using the second chunk for the main operations<sup>*</sup> on raw data
 - e.g., for data cleaning and other transformations
@@ -3668,25 +3698,20 @@ df <- df_raw `%>%`
 ```
 ````
 
-.footnote[
-
-[*] I will be using the pipe operator <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>%>%</code></span> and other functions from the `dplyr` package for such operations in the following slides.
-
-]
-
 ---
-## Inline Code &mdash; Overview
+## R Markdown &mdash; Inline Code &mdash; Overview
 
 Code can also be incorporated in text, with the <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>&grave;r &grave;</code></span> syntax
 
-- unline chunks, these do not take options   
+- unlike chunks, these do not take options   
 <br>
 - the output document will display the result of the code
     - in the exact place of the source code   
 <br>
 - the result of the code will have the same formatting with the text
+
 ---
-## Inline Code &mdash; Examples
+## R Markdown &mdash; Inline Code &mdash; Examples
 
 ```{r, eval=FALSE, tidy=FALSE}
 If we multiply _pi_ by 5, we get \`r pi * 5`.
@@ -3702,7 +3727,7 @@ The average the engine displacement of the cars in the dataset is \`r mean(df$di
 litres, which would round to \`r round(mean(df$disp_litre), digits = 1)`.
 ```
 
-.out-t[TThe average the engine displacment of the cars in the dataset is `r mean(df$disp_litre)`, which would round to `r round(mean(df$disp_litre), digits = 1)`.]
+.out-t[The average the engine displacement of the cars in the dataset is `r mean(df$disp_litre)`, which would round to `r round(mean(df$disp_litre), digits = 1)`.]
 
 <hr style="height:10px; visibility:hidden;" />
 
@@ -3713,220 +3738,21 @@ __Only \`r nrow(subset(df, gear == 5))` cars__ in the dataset have five forward 
 .out-t[__Only `r nrow(subset(df, gear == 5))` cars__ in the dataset have five forward gears.]
 
 ---
+## R Markdown &mdash; Figures
 
-class: center, middle
-
-# Figures
-
----
-## Figures &mdash; Images &mdash; Markdown Syntax
-
-The syntax <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(figure.extension)</span> embeds images into HTML outputs
- 
-- similar to the link syntax, only this time it is preceded by an exclamation mark .yellow-h[!]
-- goes outside code chunks, on a new line
-- assumes the figure is in the same folder with the .Rmd file<sup>*</sup>
-- simple, but not very customisable
-
-.footnote[
-
-[*] If the image is in `static/`, use a path relative to that directory, e.g., <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">!&#91;Figure Caption&#93;(/img/figure.extension)</span>
-
-]
-
----
-## Figures &mdash; Images &mdash; Markdown Syntax
-
-```{r, eval=FALSE}
-![Some shiny boards](/img/boards.jpg)
-```
-
-```{r, echo=FALSE, fig.align="center", out.width="40%"}
-
-knitr::include_graphics("rbd_workshop_files/images_data/boards.jpg")
-```
-
-Some shiny boards
-
----
-## Figures &mdash; Images &mdash; Markdown Syntax
-
-The syntax can accept `width` or `height` attributes as follows
-
-```{r, eval=FALSE}
-[Some shiny boards](/img/boards.jpg)`{ width=40% }`
-```
-
-```{r, echo=FALSE, fig.align="center", out.width="20%"}
-
-knitr::include_graphics("rbd_workshop_files/images_data/boards.jpg")
-```
-
-Some shiny boards
-
----
-## Figures &mdash; Images &mdash; `knitr`
-
-The `knitr` package offers a capable alternative with the `include_graphics()` function
-
-- this goes inside code chunks
-    - use the function with the double-colon operator <span style="background-color: #ffff88">::</span>     
-        - e.g., `knitr::include_graphics("figure.extension")`    
---
-<br>
-
-- this is more customisable, through the use of code chunks
-    - size is defined with the `out.width` or `out.hight` options
-        - rather than `fig.height` and/or `fig.width`
---
-<br>
-
-- If the image is in `static/`, rather than in the same directory with the `.Rmd` file
-    - use a path relative to that directory,
-    - and set <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">error = FALSE</span> in the function
-
----
-## Figures &mdash; Images &mdash; `knitr`
-
-The `knitr` package offers a capable alternative with the `include_graphics()` function
-
-````md
-`r ''````{r, screenshot, echo=FALSE, fig.cap="Some shiny boards"}
-
-knitr::include_graphics("/img/boards.jpg", error = FALSE)
-
-```
-````
-
-```{r, echo=FALSE, out.width="25%"}
-
-knitr::include_graphics("rbd_workshop_files/images_data/boards.jpg")
-```
-
-Some shiny boards
-
----
-## Figures &mdash; Images &mdash; `knitr`
-
-Size is defined with the chunk options `out.width` or `out.hight` 
-
-````md
-`r ''````{r ... `out.width="40%"`}
-
-knitr::include_graphics("/img/boards.jpg", error = FALSE)
-
-```
-````
---
-
-Most other chunk options are common with figures plotted within R Markdown, such as `fig.align`
-
-
-````md
-`r ''````{r ... `fig.align="center"`}
-
-knitr::include_graphics("/img/boards.jpg", error = FALSE)
-
-```
-````
----
-## Figures &mdash; `ggplot2` &mdash; Overview
-
-- A powerful package for visualising data 
-
-- Used widely, not only by academics, but also by large corporations such as the New York Times
-
-- A huge amount is written on this package. See, for example, 
-
-    - the [package documentation](https://www.rdocumentation.org/packages/ggplot2/versions/3.2.1)
-    - this [book](https://ggplot2-book.org/) by its creator Hadley Wickham
-    - this [reference page](https://ggplot2.tidyverse.org/reference/)
-    - this [webinar](https://www.youtube.com/watch?v=h29g21z0a68) by one of its authors, Thomas Lin Pedersen  
-    - these [futher extensions](https://www.rdocumentation.org/packages/ggplot2/versions/3.2.1), maintained by the `ggplot2` community
-
-- Among its alternatives are the `base` and `plotly` packages
-
----
-## Figures &mdash; `ggplot2` &mdash; Basics
-
-1) The `ggplot` function and the `data` argument
-- specify a data frame in the main `ggplot` function
-
-```{r, eval=FALSE, tidy=FALSE}
-ggplot(data = df)
-```
-
---
-
-2) The mapping aesthetics, or .yellow-h[aes]; most importantly, the variable(s) that we want to plot
-- specify as an additional argument in the same `ggplot` function
-
-```{r, eval=FALSE, tidy=FALSE}
-ggplot(data = df, `mapping = aes(x = wt, y = mpg, color = cyl)`)
-```
-
---
-
-3) The geometric objects, or .yellow-h[geom]; the visual representations
-- specify, after a plus sign .yellow-h[+], as an additional function
-
-```{r, eval=FALSE, tidy=FALSE}
-ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) `+`
-  geom_point() #<<
-```
-
----
-## Figures &mdash; `ggplot2`
-
-Put the code in a chunk, and give it a caption
+Place code that produces figures in code chunks
 
 .pull-left-c[
 
 ````md
-`r ''````{r, scatterplot, `fig.cap = "A scatterplot of cars."`}
+`r ''````{r, scatterplot, fig.cap = "A scatterplot of cars.", echo=FALSE}
 
 ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
-  geom_point()
-
-```
-````
-
-]
-
-.pull-right-c[
-
-```{r, echo=FALSE, fig.height=6, fig.width=9}
-
-ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
-       geom_point(size = 4) + 
-       theme(axis.title = element_text(size = 20),
-             axis.text = element_text(size = 20),
-             legend.title = element_text(size = 20),
-             legend.text = element_text(size = 20))
-
-```
-
-Figure 1. A scatterplot of cars.
-
-]
-
----
-## Figures &mdash; `ggplot2`
-
-Improve the figure
-
-
-.pull-left-c[
-
-````md
-`r ''````{r, scatterplot, fig.cap = "A scatterplot of cars."}
-
-ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
-  geom_point() `+`
-  `scale_colour_gradient(name = "Cylinders", high = "#132B43", low = "#56B1F7",`
-                        `breaks = c(4, 6, 8)) +`
-  `labs(x = "Weight", y = "Miles/Gallon") +`
-  `theme_bw()`
+  geom_point() +
+  scale_colour_gradient(name = "Cylinders", high = "#132B43", low = "#56B1F7",
+                        breaks = c(4, 6, 8)) +
+  labs(x = "Weight", y = "Miles/Gallon") +
+  theme_bw()
 
 ```
 ````
@@ -3954,27 +3780,122 @@ Figure 1. A scatterplot of cars.
 
 ]
 
+---
+name: cr-figure
+
+## R Markdown &mdash; Figures &mdash; Cross-References
+
+Use the following syntax to refer to figures
+
+.pull-left-c[
+
+```{r, eval=FALSE, tidy=FALSE}
+See Figure `\@ref`(`fig`:`scatterplot`) below.
+
+```
+
+````md
+`r ''````{r, `scatterplot`, fig.cap = "A scatterplot of cars.", echo=FALSE}
+
+ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
+  geom_point() +
+  scale_colour_gradient(name = "Cylinders", high = "#132B43", low = "#56B1F7",
+                        breaks = c(4, 6, 8)) +
+  labs(x = "Weight", y = "Miles/Gallon") +
+  theme_bw()
+
+```
+````
+
+]
+
+.pull-right-c[
+
+.out-t[See Figure [1](#cr-figure) below.]
+
+```{r, echo=FALSE, fig.height=6, fig.width=9}
+
+ggplot(data = df, mapping = aes(x = wt, y = mpg, color = cyl)) +
+  geom_point(size = 2) +
+  scale_colour_gradient(name = "Cylinders", high = "#132B43", low = "#56B1F7",
+                        breaks = c(4, 6, 8)) +
+  theme_bw() +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 20),
+        legend.title = element_text(size = 20),
+        legend.text = element_text(size = 20)) +
+  labs(x = "\nWeight", y = "Miles/Gallon\n")
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 1. A scatterplot of cars.
+
+]
 
 ---
+## R Markdown &mdash; Tables &mdash;
 
-## Figures &mdash; `ggplot2` &mdash; Notes
+Place code that produces .yellow-h[HTML] tables in code chunks
 
-`geom_point` is one of many geoms available
-- see this <https://ggplot2.tidyverse.org/reference> for other options, including
-    - `geom_bar` for bar charts
-    - `geom_boxplot` for box and whiskers plots
+````md
+`r ''````{r, headdata, echo=FALSE}
+
+kable(head(df, 3), caption = "First three rows in the dataset")
+
+```
+````
+
+<br>
+
+```{r, echo=FALSE}
+
+kable(head(df, 3))
+
+```
+
+Table 1. First three rows in the dataset.
+
 
 ---
+name: cr-table
 
-class: center, middle
+## R Markdown &mdash; Tables &mdash; Cross-References
 
-# Tables
+Use the following syntax to refer to tables
+
+
+```{r, eval=FALSE, tidy=FALSE}
+See Table \@ref(`tab`:`headdata`) below.
+
+```
+
+````md
+`r ''````{r, `headdata`, echo=FALSE}
+
+kable(head(df, 3), caption = "First three rows in the dataset")
+
+```
+````
+
+<br>
+
+.out-t[See Table [1](#cr-table) below.]
+
+```{r, echo=FALSE}
+
+kable(head(df, 3))
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table 1. First three rows in the dataset.
 
 ---
-## Tables &mdash; Markdown Syntax
+name: rmd-tables
 
-The following syntax, outside code chunks, introduces tables that `pandoc` can recognise
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
+The following syntax, outside code chunks, introduces tables<sup>*</sup>
+  
 .pull-left[
 
 <br>
@@ -4004,8 +3925,14 @@ Third cell    Third cell
 
 ]
 
+
+.footnote[
+
+<sup>*</sup>  The table syntax on this and following seven slides will work in R Markdown files only &mdash; they will not work in plain Markdown.
+
+]
 ---
-## Tables &mdash; Markdown Syntax
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
 The position of headers, relative to their line underneath, defines column alignments
 
@@ -4039,7 +3966,7 @@ Third cell        Third cell
 ]
 
 ---
-## Tables &mdash; Markdown Syntax
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
 A line starting with a colon, placed before or after tables, introduces captions
 
@@ -4047,7 +3974,7 @@ A line starting with a colon, placed before or after tables, introduces captions
 
 .pull-left[
 
-```{r eval=FALSE, tidy=FALSE}
+```{r eval=FALSE, tidy=FALSE, collapse=FALSE}
 
     Centered         Right-Aligned 
 ----------------  ----------------
@@ -4056,14 +3983,14 @@ Second cell       Second cell
 Third cell        Third cell  
                                                                                
 : A hand-made table with R Markdown                                      #<<
-                                                                               
+    
 ```
 
 ]
 
 .pull-right[
 
-<center>A hand-made table with R Markdown</center> 
+<center>Table 1: A hand-made table with R Markdown</center> 
 <br>
 
 | &nbsp;&nbsp;&nbsp; Centered  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right-Aligned |               
@@ -4076,7 +4003,7 @@ Third cell        Third cell
 ]
 
 ---
-## Tables &mdash; Markdown Syntax
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
 The caption line itself needs to be surrounded by empty lines
 
@@ -4100,7 +4027,7 @@ Third cell        Third cell
 
 .pull-right[
 
-<center>A hand-made table with R Markdown</center> 
+<center>Table 1: A hand-made table with R Markdown</center> 
 <br>
 
 | &nbsp;&nbsp;&nbsp; Centered  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right-Aligned |               
@@ -4113,7 +4040,44 @@ Third cell        Third cell
 ]
 
 ---
-## Tables &mdash; Markdown Syntax
+## R Markdown &mdash; Tables &mdash; Hand-Made
+
+Tables are numbered automatically
+
+<br>
+
+.pull-left[
+
+```{r eval=FALSE, tidy=FALSE}
+
+: A hand-made table with R Markdown 
+
+    Centered         Right-Aligned 
+----------------  ----------------
+First cell        First cell      
+Second cell       Second cell   
+Third cell        Third cell  
+                                                                               
+```
+
+]
+
+.pull-right[
+
+<center>.yellow-h[Table 1]: A hand-made table with R Markdown</center> 
+<br>
+
+| &nbsp;&nbsp;&nbsp; Centered  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right-Aligned |               
+|:----------------------------------------------: | --------------------------------------------------: | 
+| First cell | First cell | 
+| Second cell| Second cell | 
+| Third cell | Third  cell |       
+
+
+]
+
+---
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
 Grid tables, with the following syntax, can handle complex cells with multiple lines and/or lists
 
@@ -4142,7 +4106,7 @@ Grid tables, with the following syntax, can handle complex cells with multiple l
 .pull-right[
 
 <br>
-<center>A grid table with multi-line cells</center> 
+<center>Table 1: A grid table with multi-line cells</center> 
 <br>
 
 | First Column &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Second Column &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
@@ -4154,7 +4118,7 @@ Grid tables, with the following syntax, can handle complex cells with multiple l
 ]
 
 ---
-## Tables &mdash; Markdown Syntax
+## R Markdown &mdash; Tables &mdash; Hand-Made
 
 Grid tables can be aligned as well, with colons at the boundaries of the header separator<sup>*</sup>
 
@@ -4183,7 +4147,7 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 .pull-right[
 
 <br>
-<center>A grid table with multi-line cells</center> 
+<center>Table 1: A grid table with multi-line cells</center> 
 <br>
 
 | Left-Aligned &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;Centered &nbsp;&nbsp; |
@@ -4197,456 +4161,118 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 
 .footnote[
 
-[*] Use .yellow-h[:=] for left-aligned, .yellow-h[:=:] for centered, .yellow-h[=:] for right-aligned columns. 
+<sup>*</sup> Use .yellow-h[:=] for left-aligned, .yellow-h[:=:] for centered, .yellow-h[=:] for right-aligned columns. 
 
 ]
 
 ---
-## Tables &mdash; `stargazer` &mdash; Overview
+name: hm-table
+## R Markdown &mdash; Tables &mdash; Hand-Made &mdash; Cross-References
 
-- A capable package for creating tables to present
+Use the following syntax to refer to hand-made tables
 
-    - data in columns and rows
-    - descriptive/summary statistics
-    - regression models
 
-- Used widely by academics
+.pull-left[
 
-- Creates LaTeX code, HTML/CSS code, and ASCII text to be knitted
-
-- A lot is written on this package. See, for example, 
-
-    - the [package documentation](https://www.rdocumentation.org/packages/stargazer/versions/5.2.2)
-    - this [vignette](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) by its author Marek Hlavac
-    - this [tutorial](https://www.jakeruss.com/cheatsheets/stargazer/) by Jake Russ
-
----
-## Tables &mdash; `stargazer` &mdash; Notes
-
-- We must
-
-  - set the chunk option .inline-c[results="asis"] for chunks with stargazer tables  
-<br>
-  - set the argument <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span> in the `stargazer()` function
-
----
-## Tables &mdash; `stargazer` &mdash; Basics
-
-- The `stargazer()` function
-
-    - this is probably the only fuction you will ever use from this package
-        - but it accepts many, many arguments to customise tables
-
---
-
-- The `data` argument of that function, with two main options
-
-    1. a data frame for data or summary statistics tables
-        - e.g., `df`, here originating from `mtcars`
-<br>
-    2. one or more regression models for regression tables
-        - e.g., `lm1`, here coming from <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">lm1 <- lm(mpg ~ cyl, data = df)</span> 
-    
----
-## Tables &mdash; `stargazer` &mdash; Data Tables
-
-Table the first four rows of the dataset
-
-````md
-`r ''````{r data_table, `echo=FALSE`, `results="asis"`}
-
-stargazer(data = head(df, n = 4), `type = "html"`, `summary = FALSE`)
+```{r, eval=FALSE, tidy=FALSE}
+See Table \@ref(`tab`:`handmade`) below.
 
 ```
-````
---
 
-Notice the options of the chunk and the arguments of the function
+```{r eval=FALSE, tidy=FALSE}
 
-- with .inline-c[echo=FALSE], the code will not be displayed in the output document
-
---
-
-- with .inline-c[results="asis"], `knitr` will pass through results without reformatting them 
-    - these results are produced in HTML, due to <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span>
-    - they should be HTML because our outcome is a website page
-    
---
-
-- with .inline-c[summary = FALSE], the table will present the data, not its descriptive statistics
-
----
-## Tables &mdash; `stargazer` &mdash; Data Tables 
-
-Table the first four rows of the dataset
-
-````md
-`r ''````{r data_table, echo=FALSE, results="asis"}
-
-stargazer(data = head(df, n = 4), type = "html", summary = FALSE)
-
-```
-````
-.medium[
-
-```{r, echo=FALSE, results="asis"}
-
-stargazer(data = head(df, n = 4), type = "html", summary = FALSE)
-
+    Centered         Right-Aligned 
+----------------  ----------------
+First cell        First cell      
+Second cell       Second cell   
+Third cell        Third cell  
+                                                                              
+: `(\#tab:handmade)` A hand-made table with R Markdown                                      
 ```
 
 ]
 
----
-## Tables &mdash; `stargazer` &mdash; Data Tables 
+.pull-right[
 
-Define a caption with the `title` argument
-````md
-`r ''````{r data_table, echo=FALSE, results="asis"}
-
-stargazer(data = head(df, n = 4), type = "html", summary = FALSE,
-          `title = "First four rows of the dataset"`)
-
-```
-````
-
-.medium[
-
-```{r, echo=FALSE, results="asis"}
-
-stargazer(data = head(df, n = 4), type = "html", summary = FALSE)
-
-```
+.out-t[See Table [1](#mh-table) below.]
 
 <br>
 
-<center>First four rows of the dataset</center> 
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Summary Statistics Tables 
-
-Create a table of summary statistics instead, for the complete dataset
-
-````md
-`r ''````{r summary_table, echo=FALSE, results="asis"}
-
-stargazer(data = df, type = "html", `summary = TRUE`, flip = TRUE,
-          title = "Descriptive statistics", omit.summary.stat = c("p25", "p75"))
-
-```
-````
-
-.medium[
-
-
-```{r, echo=FALSE, results="asis"}
-
-stargazer(data = df, type = "html", summary = TRUE, flip = TRUE,
-          omit.summary.stat = c("p25", "p75"))
-
-```
+| &nbsp;&nbsp;&nbsp; Centered  &nbsp;&nbsp;&nbsp; |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right-Aligned |               
+|:----------------------------------------------: | --------------------------------------------------: | 
+| First cell | First cell | 
+| Second cell| Second cell | 
+| Third cell | Third  cell |       
 
 <br>
-
-<center>Descriptive statistics</center> 
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Create a table of regression models instead
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
-stargazer(`data = lm(mpg ~ cyl, data = df)`, 
-          type = "html", title = "Regression Results")
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = lm(mpg ~ cyl, data = df), type = "html")
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Models can also be estimated outside the function first
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
- `lm1 <- lm(mpg ~ cyl, data = df)`
-
- stargazer(`data = lm1`, type = "html",
-           title = "Regression Results")
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = lm1, type = "html")
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Keep only a selection of statistics
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
-stargazer(data = lm1, type = "html",
-          title = "Regression Results", 
-          `keep.stat = c("n", "rsq")`)
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = lm1, type = "html", keep.stat = c("n", "rsq"))
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables 
-
-.pull-left-c[
-
-Display multiple models in the same table
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
-stargazer(`data = list(lm1, lm2)`, type = "html", 
-          title = "Regression Results", 
-          keep.stat = c("n", "rsq"))
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"))
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Change variable labels
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", 
-          title = "Regression Results", 
-          keep.stat = c("n", "rsq"),
-          `dep.var.labels = "Miles/Gallon"`,
-          `covariate.labels = c("Cylinders", "Displacement")`)
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
-          dep.var.labels = "Miles/Gallon",
-          covariate.labels = c("Cylinders", "Displacement"))
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
-
-]
-
----
-## Tables &mdash; `stargazer` &mdash; Regression Tables
-
-.pull-left-c[
-
-Change significance levels
-
-````md
-`r ''````{r regression_table, echo=FALSE, results="asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", 
-          title = "Regression Results", 
-          keep.stat = c("n", "rsq"),
-          dep.var.labels = "Miles/Gallon",
-          covariate.labels = c("Cylinders", "Displacement"),
-          `star.cutoffs = c(0.05, 0.01, 0.001)`)
-
-```
-````
-
-]
-
-.pull-right-c[
-
-.medium[
-
-```{r echo = FALSE, results = "asis"}
-
-stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
-          dep.var.labels = "Miles/Gallon",
-          covariate.labels = c("Cylinders", "Displacement"),
-          star.cutoffs = c(0.05, 0.01, 0.001))
-
-```
-
-<br>
-
-<center>Regression Results</center> 
-
-]
+<center>Table 1: A hand-made table with R Markdown</center> 
 
 ]
 
 ---
 class: action
 
-## Adding Data-Based Content &mdash; Individual Work
+## Exercises &mdash; R Markdown
 
-Ideas
+- Add and/or edit one or more R Markdown files in your website project
 
-- migrate an exiting data-based post into your site
-- start a new data-based post
-- start a mock data-based post
-    - e.g., use one of R's built-in datasets
-        - use the `data()` function to see the list
-- continue building other parts of your website
+  - observe the change locally, in Viewer
+  - stage, commit, push
+  - observe the change online, in a browser
+  
+<br>  
+
+- Hint, if you are re-creating [JJD's website](https://janejdoe.netlify.app/):
+
+  - add and edit the following file
+       - `/content/post/cabinet-size/index.Rmd`, matching [this blogpost](https://janejdoe.netlify.app/post/cabinet-size/)
+       
+ - by copy the text from the website to save time
+      - paste into R Markdown, and add the code and syntax
 
 
 `r countdown(minutes = 30, seconds = 00, top = 0)`
 
 ---
-class: inverse, center, middle 
-
-## That's it &mdash; we have done it!
-
----
-class: center, middle 
-
-## Thank you!
-
----
+name: references
 class: inverse, center, middle
 
 # References
 
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
 ---
 ## References
 
-Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2020). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.1.
+Dowle, M. and Srinivasan, A. (2021). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.14.0.
 
-Dowle, M. and Srinivasan, A. (2019). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.12.8.
-
-Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
+Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2021). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.9.3.
 
 Wickham, H. and Grolemund, G. (2019). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
 
-Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2020a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 0.8.5.
+Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2021). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.5.
 
-Wickham, H., François, W., Henry L. and Müller, K. (2020b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 0.8.5.
+Wickham, H., François, W., Henry L. and Müller, K. (2020). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 3.3.3.
 
-Xie, Y. (2020b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.28.
+Xie, Y. (2021). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.33.
 
-Xie, Y. (2020c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.18.
+Xie, Y., Dervieux, C., and  Hill, A. P. (2021a). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 1.3.
+
+Xie, Y., Thomas, A., and Hill, A. P. (2021b). blogdown: Creating Websites with R Markdown. Open access at [https://bookdown.org/yihui/blogdown](https://bookdown.org/yihui/blogdown/).
 
 ---
-## References
+class: middle, center
 
-Xie, Y. (2020d). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 0.18.
+## The workshop ends here.
+## Congratulations for making it this far, and
+## thank you for joining me!
 
-Xie, Y., Thomas, A., and Hill, A. P. (2018). blogdown: Creating Websites with R Markdown. Open access at [https://bookdown.org/yihui/blogdown/](https://bookdown.org/yihui/blogdown/).
+.footnote[
 
-Xie, Y., Allaire, J. J., and Grolemund, G. (2019). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
+[Back to the contents slide](#contents-slide).
 
-Zhu, H. (2019). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.1.0.
-
+]
