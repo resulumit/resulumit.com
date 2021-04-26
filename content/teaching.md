@@ -70,3 +70,6 @@ title: "Teaching experience"
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2020
         - Next iteration: April 2021
     - <a href="https://resulumit.com/syllabi/20spring_rbd.pdf" target="_blank">Syllabus</a>
+    - <a href="https://resulumit.com/teaching/rbd_workshop.html" target="_blank">Slides</a>
+    - <a href="https://github.com/resulumit/workshop_website" target="_blank">Materials</a>
+    - <a href="https://janejdoe.netlify.app/" target="_blank">Demonstration site</a>
