@@ -97,8 +97,6 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 </style>
 
---metadata title = "R Markdown Workshop"
-
 
 # Writing Reproducible Research Papers with R Markdown
 

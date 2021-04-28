@@ -1,4 +1,8 @@
 ---
+title: "Creating Academic Websites with R"
+subtitle: "Resul Umit"
+institute: ""
+date: "April 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
