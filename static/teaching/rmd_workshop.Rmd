@@ -97,6 +97,8 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 </style>
 
+--metadata title = "R Markdown Workshop"
+
 
 # Writing Reproducible Research Papers with R Markdown
 
@@ -4380,14 +4382,21 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- enter the following lines in the Terminal, with the email address that you have used to sign up for GitHub
+<br>
+
+- enter the following lines in the Terminal
+   - replacing the relevant parts with .yellow-h[your personal information]
+       - e.g., the email address that you have used to sign up for GitHub
 
 ```yaml
-git config --global user.name "YOUR-NAME" 
-git config --global user.email "YOUR-EMAIL-ADDRESS"
+git config --global user.name `"YOUR NAME"` 
+git config --global user.email `"YOUR EMAIL ADDRESS"`
 ```
 
-- enter the following line in the Terminal, to observe whether the previous step was sucessful
+<br>
+
+- enter the following line in the Terminal
+   - to observe whether the previous step was successful
 
 ```yaml
 git config --global --list
@@ -4408,8 +4417,10 @@ class: action
 
 - after confirming your new repository, and restarting the session, observe that 
 
-   - now there is now a Git tab in RStudio, documenting the differences between you local repository and the one on GitHub. When you change a file, it will appear here.  
-   
+   - now there is now a Git tab in RStudio, 
+        - documenting the differences between you local repository and the one on GitHub
+        - when you change a file, it will appear here    
+<br>
    - your project now includes a `.gitignore` file
        - this is where you can list files and/or folders to be excluded from being tracked
 
@@ -4430,6 +4441,8 @@ class: action
 
 > `Repositories -> New -> Repository name (e.g., "rwd_workshop") -> Public -> Create repository`
 
+<br>
+
 - observe that
 
     - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
@@ -4449,7 +4462,8 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- enter the following lines in the `Terminal`, with your username and repository name
+- enter the following lines in the `Terminal`
+    - with .yellow-h[your] username and repository name
 
 ```yaml
 git remote add origin https://github.com/USER_NAME/REPOSITORY_NAME.git

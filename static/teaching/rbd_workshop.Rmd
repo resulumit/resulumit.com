@@ -93,7 +93,10 @@ df <- mtcars %>%
 
 .footnote[
 
-[Skip intro &mdash; To the contents slide](#contents-slide).]
+[Skip intro &mdash; To the contents slide](#contents-slide). &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:resuluy@uio.no?subject=R Blogdown workshop">I can teach this workshop at your institution &mdash; Email me</a>.
+
+]
+
 
 ---
 ## Who am I?
@@ -2261,7 +2264,7 @@ Deployment occurs in two steps
   - (re-)publishes the website
 
 ---
-## Deployment &mdash; GitHub &mdash; Definitions
+## Deployment &mdash; Git and GitHub &mdash; Definitions
 
 - Git
     - a software that keeps track of versions of a set of files
@@ -2280,7 +2283,7 @@ Deployment occurs in two steps
     - it is like a folder, which can keep files and other folders containing files
 
 ---
-## Deployment &mdash; GitHub &mdash; Definitions
+## Deployment &mdash; Git and GitHub &mdash; Definitions
 
 - To commit
     - to take a snapshot of, to version a repository
@@ -2301,7 +2304,7 @@ Deployment occurs in two steps
     - it is like downloading a zipped folder of files, and merging with the ones on your computer
 
 ---
-## Deployment &mdash; GitHub &mdash; Workflow
+## Deployment &mdash; Git and GitHub &mdash; Workflow
 
 Working with with Git and GitHub requires
 
@@ -2322,7 +2325,7 @@ Working with with Git and GitHub requires
 ---
 class: action
 
-## Deployment &mdash; GitHub &mdash; Inital Setup
+## Deployment &mdash; Git and Github &mdash; Inital Setup
 
 1) Enable version control with RStudio
 
@@ -2336,14 +2339,10 @@ class: action
 
     - `/usr/local/git/bin/git` on Mac
 
-- observe that now there is a Git tab in RStudio
-    - documents the differences between you local repository and the one on GitHub
-    - when you change a file, it will appear here
-
 ---
 class: action
 
-## Deployment &mdash; GitHub &mdash; Inital Setup
+## Deployment &mdash; Git and Github &mdash; Inital Setup
 
 
 2) Set Git Bash as your shell (Windows-only step)
@@ -2355,7 +2354,7 @@ class: action
 ---
 class: action
 
-## Deployment &mdash; GitHub &mdash; Inital Setup
+## Deployment &mdash; Git and Github &mdash; Inital Setup
 
 3) Introduce yourself to Git
 
@@ -2363,19 +2362,30 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- Enter the following lines in the Terminal, with the email address that you have used to sign up for GitHub
+<br>
+
+- enter the following lines in the Terminal
+   - replacing the relevant parts with .yellow-h[your personal information]
+       - e.g., the email address that you have used to sign up for GitHub
 
 ```yaml
-git config --global user.name "YOUR NAME" 
-git config --global user.email "YOUR EMAIL ADDRESS"
+git config --global user.name `"YOUR NAME"` 
+git config --global user.email `"YOUR EMAIL ADDRESS"`
+```
+
+<br>
+
+- enter the following line in the Terminal
+   - to observe whether the previous step was successful
+
+```yaml
 git config --global --list
 
 ```
-
 ---
 class: action
 
-## Deployment &mdash; GitHub &mdash; Project Setup
+## Deployment &mdash; Git and Github &mdash; Project Setup
 
 1) Initiate local version control with Git
 
@@ -2383,13 +2393,21 @@ class: action
 
 > `Tools -> Version Control -> Project Setup... -> Version Control System -> Git`
 
-- observe that the project directory now includes a `.gitignore` file
-    - this is where you can list files and/or folders to be excluded from being tracked
+<br>
+
+- after confirming your new repository, and restarting the session, observe that 
+
+   - now there is now a Git tab in RStudio, 
+        - documenting the differences between you local repository and the one on GitHub
+        - when you change a file, it will appear here    
+<br>
+   - your project now includes a `.gitignore` file
+       - this is where you can list files and/or folders to be excluded from being tracked
 
 ---
 class: action
 
-## Deployment &mdash; GitHub &mdash; Project Setup
+## Deployment &mdash; Git and Github &mdash; Project Setup
 
 2) Create a new GitHub repository
 
@@ -2418,7 +2436,8 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- enter the following lines in the `Terminal`, with your username and repository name
+- enter the following lines in the `Terminal`
+    - with .yellow-h[your] username and repository name
 
 ```yaml
 git remote add origin https://github.com/`USER_NAME/REPOSITORY_NAME`.git
@@ -2437,7 +2456,7 @@ git push -u origin master
 ---
 class: action
 
-## Deployment &mdash; Netlify &mdash; Initial Setup
+## Deployment &mdash; Netlify &mdash; Setup
 
 
 1) After logging in to Netlify, follow
@@ -2454,7 +2473,7 @@ class: action
 ---
 class: action
 
-## Deployment &mdash; Netlify &mdash; Initial Setup
+## Deployment &mdash; Netlify &mdash; Setup
 
 
 2) While on the `Site overview` page, click on `Domain settings`
@@ -2522,6 +2541,8 @@ class: action
     - see my [workshop materials on working with with Git and GitHub](https://resulumit.com/teaching/git_workshop.html) for more information
     
 ---
+class: action
+
 ## Exercises &mdash; Deployment
 
 - Practice deployment one more time

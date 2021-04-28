@@ -40,9 +40,7 @@ title: "Teaching experience"
 * *R Markdown*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, November 2020
         - Previuos iteration: March 2020
-    - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a>
-    - <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a>
-    - <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
+    - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
 <div style = "line-height: 50%;">
     <br>
@@ -50,9 +48,7 @@ title: "Teaching experience"
 
 * *Git and GitHub*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, March 2021
-    - <a href="https://resulumit.com/syllabi/21spring_git.pdf" target="_blank">Syllabus</a>
-    - <a href="https://resulumit.com/teaching/git_workshop.html" target="_blank">Slides</a>
-    - <a href="https://github.com/resulumit/git_workshop" target="_blank">Materials</a>
+    - <a href="https://resulumit.com/syllabi/21spring_git.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/git_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/git_workshop" target="_blank">Materials</a>
 
 <div style = "line-height: 50%;">
     <br>
@@ -60,16 +56,21 @@ title: "Teaching experience"
 
 * *Twitter data*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
-    - <a href="https://resulumit.com/syllabi/21spring_twtr.pdf" target="_blank">Syllabus</a>
+    - <a href="https://resulumit.com/syllabi/21spring_twtr.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/twtr_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/twtr_workshop" target="_blank">Materials</a>
     
 <div style = "line-height: 50%;">
     <br>
 </div>
 
 * *Academic websites*
-    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2020
-        - Next iteration: April 2021
-    - <a href="https://resulumit.com/syllabi/20spring_rbd.pdf" target="_blank">Syllabus</a>
-    - <a href="https://resulumit.com/teaching/rbd_workshop.html" target="_blank">Slides</a>
-    - <a href="https://github.com/resulumit/workshop_website" target="_blank">Materials</a>
-    - <a href="https://janejdoe.netlify.app/" target="_blank">Demonstration site</a>
+    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, April 2021
+        - Previous iteration: May 2020
+    - <a href="https://resulumit.com/syllabi/21spring_rbd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rbd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/workshop_website" target="_blank">Materials</a> | <a href="https://janejdoe.netlify.app/" target="_blank">Demonstration site</a>
+    
+<div style = "line-height: 50%;">
+    <br>
+</div>
+    
+* *Web scraping*
+    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
+    - <a href="https://resulumit.com/syllabi/20spring_ws.pdf" target="_blank">Syllabus</a>
