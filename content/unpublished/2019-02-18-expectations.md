@@ -10,6 +10,7 @@ tags:
 - democracy
 - quasi experiment
 file: expectations.pdf
+doi: 10.31219/osf.io/vzcrf
 ---
 
 

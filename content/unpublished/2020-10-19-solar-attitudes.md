@@ -10,6 +10,7 @@ tags:
 - political behaviour
 - panel data
 file: solar_attitudes.pdf
+doi: 10.31219/osf.io/qjr5y
 ---
 
 
