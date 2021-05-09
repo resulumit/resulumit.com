@@ -3,7 +3,7 @@ author: Resul Umit
 comments: false
 date: '2020-10-19'
 slug: solar-attitudes
-title: 'Solar panels do not generate political attitudes'
+title: 'Solar panels and political attitudes'
 kind: unpublished
 tags:
 - energy
