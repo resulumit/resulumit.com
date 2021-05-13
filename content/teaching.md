@@ -73,4 +73,4 @@ title: "Teaching experience"
     
 * *Web scraping*
     - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
-    - <a href="https://resulumit.com/syllabi/20spring_ws.pdf" target="_blank">Syllabus</a>
+    - <a href="https://resulumit.com/syllabi/21spring_ws.pdf" target="_blank">Syllabus</a>
