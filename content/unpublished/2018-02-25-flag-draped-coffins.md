@@ -13,5 +13,5 @@ file: fd_coffins.pdf
 ---
 
 
-Security forces are one of the main targets of political violence. This article examines the effect of their casualties on elections. Between two general elections in 2015, Turkey experienced a series of attacks that killed 153 members of the security forces. Based on the as-if random variation of their funerals across the country, I estimate that the government vote share increases in the burial places of terror victims. However, in the towns with recurring funerals, the support decreases by a similar percentage, cancelling the immediate rally behind the government out. These results provide strong evidence for the rally theory.
+Security forces are one of the main targets of political violence. This article examines the effect of their casualties on electoral outcomes. Between two general elections in 2015, Turkey experienced a series of attacks that killed 153 members of its security forces. Based on the as-if random assignment of their funerals across the country, I estimate that government vote share increases in the funeral places of security force terror victims. However, in the localities with recurring funerals, it decreases by a similar percentage. These non-linear changes provide strong evidence for the rally theory.
 
