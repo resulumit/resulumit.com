@@ -1,0 +1,4258 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Automated Web Scraping with R</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: inverse, center, middle
+
+
+
+&lt;style type="text/css"&gt;
+
+.hljs-github .hljs {
+    background: #e5e5e5;
+}
+
+.inline-c, remark-inline-code {
+   background: #e5e5e5;
+   border-radius: 3px;
+   padding: 4px;
+   font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;
+}
+
+
+.yellow-h{
+   background: #ffff88;
+}
+
+
+.out-t, remark-inline-code {
+   background: #9fff9f;
+   border-radius: 3px;
+   padding: 4px;
+   
+}
+
+.pull-left-c {
+    float: left;
+    width: 58%;
+    
+}
+
+.pull-right-c {
+    float: right;
+    width: 38%;
+    
+}
+
+.medium {
+    font-size: 75%
+    
+}
+
+.small {
+    font-size: 50%
+    }
+
+.action {
+    background-color: #f2eecb;
+  
+}
+
+.remark-code {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: #333;
+  background: #9fff9f;
+}
+
+
+&lt;/style&gt;
+
+
+# Automated Web Scraping with R
+
+&lt;br&gt;
+
+### Resul Umit
+
+### May 2021
+
+.footnote[
+
+[Skip intro &amp;mdash; To the contents slide](#contents-slide).]
+
+---
+## Who am I?
+
+Resul Umit
+
+- post-doctoral researcher in political science at the University of Oslo
+
+- teaching and studying representation, elections, and parliaments
+    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
+    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
+
+--
+
+&lt;br&gt;
+
+- teaching workshops, also on
+
+  - [writing reproducible research papers](https://resulumit.com/blog/rmd-workshop/)
+  - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
+  - [working with Twitter data](https://resulumit.com/teaching/twtr_workshop.html)
+  - [creating academic websites](https://resulumit.com/teaching/rbd_workshop.html)
+    
+--
+
+&lt;br&gt;
+
+- more information available at [resulumit.com](https://resulumit.com/)
+
+---
+## The Workshop &amp;mdash; Overview
+
+- One day, on how to automate the process of extracting data from websites
+
+  - 150+ slides, 15+ exercises
+  - a [demonstration website](https://luzpar.netlify.app/) for practice
+
+--
+
+&lt;br&gt;
+
+- Designed for researchers with basic knowledge of R programming language
+
+  - does not cover programming with R
+      - e.g., we will use existing functions and packages   
+&lt;br&gt;
+  - ability to work with R will be very helpful
+      - but not absolutely necessary &amp;mdash; this ability can be developed during and after the workshop as well
+        
+---
+## The Workshop &amp;mdash; Motivation
+
+- Data available on websites provide attractive opportunities for academic research
+
+  - e.g., parliamentary websites were the main source of data for my PhD
+
+--
+
+&lt;br&gt;
+
+- Acquiring such data requires 
+
+  - either a lot of resources, such as time
+  - or a set of skills, such as automated web scraping
+
+--
+
+&lt;br&gt;
+
+- Typically, such skills are not part of academic training
+
+  - for my PhD, I hand-visited close to 3000 webpages to collect data manually
+      - on members of ten parliaments
+      - multiple times, to update the dataset as needed
+
+---
+## The Workshop &amp;mdash; Motivation &amp;mdash; Aims
+
+- To provide you with an understanding of what is ethically possible
+
+  - we will cover a large breath of issues, not all of it is for long-term memory
+      - hence the slides are designed for self study as well    
+&lt;br&gt;
+  - awareness of what is ethical and possible, `Google`, and perseverance are all you need
+
+--
+
+&lt;br&gt;
+
+- To start you with acquiring and practicing the skills needed 
+
+  - practice with the demonstration website
+     - plenty of data, stable structure, and an ethical playground
+  - start working on a real project
+
+---
+name: contents-slide
+
+## The Workshop &amp;mdash; Contents
+
+&lt;br&gt;
+
+.pull-left[
+
+[Part 1. Getting the Tools Ready](#part1)
+   - e.g., installing software
+   
+[Part 2. Preliminary Considerations](#part2)
+   - e.g., ethics of web scraping
+
+[Part 3. Webpage Source Code](#part3)
+   - e.g., elements and selectors
+
+]
+
+.pull-right[
+   
+
+[Part 4. Scraping Static Pages](#part4)
+   - e.g., getting text from an element
+   - by using `rvest`
+  
+[Part 5. Scraping Dynamic Pages](#part5)
+   - e.g., clicking before scraping
+   - by using `RSelenium` and `rvest`
+   
+]
+
+.footnote[
+
+[To the list of references](#reference-slide).
+
+] 
+
+---
+## The Workshop &amp;mdash; Organisation
+
+- Breakout in groups of two for exercises
+
+  - participants learn as much from their partner as from instructors
+  - switch partners after every other part
+  - leave your breakout room manually, when everyone in the group is ready
+
+&lt;br&gt; 
+
+- Type, rather than copy and paste, the code that you will find on these slides
+
+  - typing is a part of the learning process
+  - slides are, and will remain, available at [resulumit.com/teaching/scrp_workshop.html](https://resulumit.com/teaching/scrp_workshop.html)
+
+&lt;br&gt; 
+
+- When you have a question
+
+  - ask your partner
+  - google together
+  - ask me
+
+---
+class: action
+
+## The Workshop &amp;mdash; Organisation &amp;mdash; Slides
+
+Slides with this background colour indicate that your action is required, for
+
+- setting the workshop up
+    - e.g., installing R 
+    
+- completing the exercises
+    - e.g., checking website protocols
+    - these slides have countdown timers
+        - as a guide, not to be followed strictly
+    
+<div class="countdown" id="timer_60ab4850" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## The Workshop &amp;mdash; Organisation &amp;mdash; Slides
+
+- Code and text that go in R console or scripts .inline-c[appear as such &amp;mdash; in a different font, on gray background]    
+
+    - long codes and texts will have their own line(s)
+
+
+```r
+bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "td+ td a") %&gt;% 
+  html_attr("href") %&gt;% 
+  url_absolute(base = "https://luzpar.netlify.app/")
+```
+
+---
+## The Workshop &amp;mdash; Organisation &amp;mdash; Slides
+
+- Codes and texts that go in R console or scripts .inline-c[appear as such &amp;mdash; in a different font, on gray background]    
+
+    - long codes and texts will have their own line(s)
+
+&lt;br&gt;
+
+- Results that come out as output .out-t[appear as such &amp;mdash; in the same font, on green background]    
+
+  - with some results, such as browsers popping up
+    
+--
+
+&lt;br&gt;
+
+    
+- Specific sections are .yellow-h[highlighted yellow as such] for emphasis
+
+  - these could be for anything &amp;mdash; codes and texts in input, results in output, and/or texts on slides
+    
+--
+
+&lt;br&gt;
+
+- The slides are designed for self-study as much as for the workshop
+
+    - *accessible*, in substance and form, to go through on your own
+
+---
+name: part1
+class: inverse, center, middle
+
+# Part 1. Getting the Tools Ready
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+class: action
+
+## Workshop Slides &amp;mdash; Access on Your Browser
+
+- Having the workshop slides&lt;sup&gt;*&lt;/sup&gt; on your own machine might be helpful
+
+  - flexibility to go back and forward on your own
+      - especially while in a breakout room
+  - ability to scroll across long codes on some slides
+
+&lt;br&gt;
+
+- Access at &lt;https://resulumit.com/teaching/scrp_workshop.html&gt;
+
+  - will remain accessible after the workshop
+  - might crash for some Safari users
+      - if using a different browser application is not an option, view the [PDF version of the slides](https://github.com/resulumit/scrp_workshop/blob/master/presentation/scrp_workshop.pdf) on GitHub
+  
+.footnote[
+
+&lt;sup&gt;*&lt;/sup&gt; These slides are produced in R, with the `xaringan` package ([Xie, 2020](https://cran.r-project.org/web/packages/xaringan/xaringan.pdf)).
+
+]
+
+---
+class: action
+
+## Demonstration Website &amp;mdash; Explore on Your Browser
+
+- There is a demonstration website for this workshop
+
+   - available at &lt;https://luzpar.netlify.app/&gt;
+   - includes fabricated data on the imaginary Parliament of Luzland
+   - provides us with plenty of data, stable structure, and an ethical playground
+
+&lt;br&gt;
+
+- Using this demonstration website for practice is recommended
+
+   - tailored to exercises, no ethical concern
+   - but not compulsory &amp;mdash; use a different one if you prefer so
+
+&lt;br&gt;
+ 
+- Explore the website now
+
+   - click on the links to see an individual page for 
+       - states, constituencies, members, and documents
+   - notice that the documents section is different than the rest
+       - it is a page with dynamic frame
+
+<div class="countdown" id="timer_60ab4a0f" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+   
+---
+class: action
+
+## R &amp;mdash; Download from the Internet and Install
+
+- Programming language of this workshop
+
+  - created for data analysis, extending for other purposes
+      - e.g., accessing websites
+  - allows for all three steps in one environment
+      - accessing websites; scraping and processing data
+  - an alternative: [python](https://www.python.org/)
+
+&lt;br&gt;
+
+- Download R from [https://cloud.r-project.org](https://cloud.r-project.org)
+
+  - optional, if you have it already installed &amp;mdash; but then consider updating&lt;sup&gt;*&lt;/sup&gt;
+      - the `R.version.string` command checks the version of your copy
+      - compare with the latest official release at [https://cran.r-project.org/sources.html](https://cran.r-project.org/sources.html)
+
+
+
+.footnote[
+
+&lt;sup&gt;*&lt;/sup&gt; The same applies to all software that follows &amp;mdash; consider updating if you have them already installed. This ensures everyone works with the latest, exactly the same, tools.
+
+]
+
+---
+class: action
+
+## RStudio &amp;mdash; Download from the Internet and Install
+
+- Optional, but highly recommended
+
+  - facilitates working with R
+
+&lt;br&gt;
+
+- A popular integrated development environment (IDE) for R
+
+  - an alternative: [GNU Emacs](https://www.gnu.org/software/emacs/)
+
+&lt;br&gt;
+
+- Download RStudio from [https://rstudio.com/products/rstudio/download](https://rstudio.com/products/rstudio/download)
+
+  - choose the free version
+  - to check for any updates, follow from the RStudio menu:
+
+&gt; `Help -&gt; Check for Updates`
+
+---
+class: action
+name: rstudio-project
+
+## RStudio Project &amp;mdash; Create from within RStudio 
+
+- RStudio allows for dividing your work with R into separate projects
+
+  - each project gets dedicated workspace, history, and source documents
+  - [this page](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) has more information on why projects are recommended
+
+&lt;br&gt;
+
+- Create a new RStudio project for for this workshop, following from the RStudio menu:
+
+&gt; `File -&gt; New Project -&gt; New Directory -&gt; New Project`
+
+&lt;br&gt;
+
+- Choose a location for the project with `Browse...`
+
+  - avoid choosing a synced location, e.g., `Dropbox`
+      - likely to cause warning and/or error messages
+      - if you must, pause syncing, or add an sync exclusion
+
+---
+class: action
+
+## R Packages &amp;mdash; Install from within RStudio&lt;sup&gt;*&lt;/sup&gt;
+
+Install the packages that we need
+
+
+```r
+install.packages(c("rvest", "RSelenium", "robotstxt", "polite", "dplyr"))
+```
+
+
+.footnote[
+
+&lt;sup&gt;*&lt;/sup&gt; You may already have a copy of one or more of these packages. In that case, I recommend updating by re-installing them now.
+
+]
+
+<div class="countdown" id="timer_60ab496f" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: action
+
+## R Packages &amp;mdash; Install from within RStudio
+
+Install the packages that we need
+
+
+```r
+install.packages(c("rvest", "RSelenium", "robotstxt", "polite", "dplyr"))
+```
+
+&lt;br&gt;
+
+We will use
+
+- `rvest` ([Wickham, 2021](https://cran.r-project.org/web/packages/rvest/index.html)), for scraping websites
+
+--
+- `RSelenium` ([Harrison, 2020](https://cran.r-project.org/web/packages/RSelenium/index.html)), for browsing the web programmatically
+
+--
+- `robotstxt` ([Meissner &amp; Ren, 2020](https://cran.r-project.org/web/packages/robotstxt/index.html)), for checking permissions to scrape websites
+
+--
+- `polite` ([Perepolkin, 2019](https://cran.r-project.org/web/packages/polite/index.html)), for compliance with permissions to scrape websites
+
+--
+- `dplyr` ([Wickham et al, 2021](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+
+---
+class: action
+
+## R Script &amp;mdash; Start Your Script
+
+.pull-left[
+
+- Check that you are in the newly created project
+    - indicated at the upper-right corner of RStudio window
+
+- Create a new R Script, following from the RStudio menu
+
+&gt; `File -&gt; New File -&gt; R Script`
+
+- Name and save your file
+    - to avoid the `Untitled123` problem
+    - e.g., `scrape_web.R`
+
+
+- Load `rvest` and other packages
+
+]
+
+.pull-right[
+
+
+```r
+library(rvest)
+library(RSelenium)
+library(robotstxt)
+library(polite)
+library(dplyr)
+```
+
+]
+
+---
+class: action
+
+## Java &amp;mdash; Download from the Internet and Install
+
+
+- A language and software that `RSelenium` needs
+   - for automation scripts
+
+&lt;br&gt;
+
+- Download Java from &lt;https://www.java.com/en/download/&gt;
+   - requires restarting any browser that you might have open
+   
+---
+class: action
+
+## Chrome &amp;mdash; Download from the Internet and Install
+
+
+- A browser that facilitates web scraping
+   - favoured by `RSelenium` and most programmers
+
+&lt;br&gt;
+
+- Download Chrome from &lt;https://www.google.com/chrome/&gt;
+
+---
+class: action
+
+## SelectorGadget &amp;mdash; Add Extension to Browser 
+
+- An extension for Chrome
+
+   - facilitates selecting what to scrape from a webpage
+   - optional, but highly recommended
+   - [open source software](https://github.com/cantino/selectorgadget)
+
+
+&lt;br&gt;
+
+- Add the extension to your browser
+   
+  - search for it at &lt;https://chrome.google.com/webstore/category/extensions&gt;
+  - if you cannot use Chrome, &lt;a href="javascript:(function(){var%20s=document.createElement('div');s.innerHTML='Loading...';s.style.color='black';s.style.padding='20px';s.style.position='fixed';s.style.zIndex='9999';s.style.fontSize='3.0em';s.style.border='2px%20solid%20black';s.style.right='40px';s.style.top='40px';s.setAttribute('class','selector_gadget_loading');s.style.background='white';document.body.appendChild(s);s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('src','https://dv0akt2986vzh.cloudfront.net/unstable/lib/selectorgadget.js');document.body.appendChild(s);})();"&gt;drag and drop this link&lt;/a&gt; to your bookmarks bar
+
+&lt;br&gt;
+
+- [ScrapeMate](https://github.com/hermit-crab/ScrapeMate) is an alternative extension
+
+   - for both Chrome and Firefox
+   - on Firefox, search at &lt;https://addons.mozilla.org/&gt;
+
+---
+## Other Resources&lt;sup&gt;*&lt;/sup&gt;
+
+- `RSelenium` vignettes
+
+   - available at &lt;https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html&gt;
+
+
+- R for Data Science ([Wickham &amp; Grolemund, 2019](https://r4ds.had.co.nz/))
+  
+   - open access at &lt;https://r4ds.had.co.nz&gt;
+   
+
+- Text Mining with R: A Tidy Approach ([Silge &amp; Robinson, 2017](https://www.tidytextmining.com/))
+ 
+   - open access at [tidytextmining.com](https://www.tidytextmining.com/)
+   - comes with [a course website](https://juliasilge.shinyapps.io/learntidytext/) where you can practice
+   
+
+   
+.footnote[
+
+&lt;sup&gt;*&lt;/sup&gt; I recommend these to be consulted not during but after the workshop.
+
+]
+
+---
+name: part2
+class: inverse, center, middle
+
+# Part 2. Preliminary Considerations
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Considerations &amp;mdash; the Law
+
+- Web scraping might be illegal     
+&lt;br&gt;
+   - depending on who is scraping what, why, how &amp;mdash; and under which jurisdiction
+   - reflect, and check, before you scrape
+
+--
+
+&lt;br&gt;
+
+- Web scraping might be more likely to be illegal if, for example,      
+&lt;br&gt;
+   - it is harmful to the source
+      - commercially
+          - e.g., scraping a commercial website to create a rival website     
+      - physically
+          - e.g., scraping a website so hard and fast that it collapses    
+&lt;br&gt;
+   - it gathers data that is
+      - under copyright
+      - not meant for the public to see
+      - then used for financial gain
+
+---
+## Considerations &amp;mdash; the Ethics
+
+- Web scraping might be unethical
+   - depending on who is scraping what, why, and how
+   - reflect before you scrape
+
+--
+
+&lt;br&gt;
+
+- Web scraping might be more likely to be unethical if, for example,    
+&lt;br&gt;
+   - it is &amp;mdash; edging towards &amp;mdash; being illegal
+   - it does not respect the restrictions
+      - as defined in `robots.txt` files    
+&lt;br&gt;
+   - it harvests data 
+       - that is otherwise available to download, e.g., through APIs
+       - without purpose, at dangerous speed, repeatedly
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt`
+
+- Most websites declare a robots exclusion protocol
+
+   - making their rules known with respect to programmatic access
+       - who is (not) allowed to scrape what, and sometimes, at what speed     
+&lt;br&gt;       
+   - within `robots.txt` files
+       - available at, e.g., www.websiteurl.com&lt;span style="background-color: #ffff88;"&gt;/robots.txt&lt;/span&gt;
+
+&lt;br&gt;
+
+- The rules in `robots.txt` cannot not enforced upon scrapers
+  - but should be respected for ethical reasons
+  
+&lt;br&gt;
+
+- The language in `robots.txt` files is specific but intuitive
+  - easy to read and understand
+  - the `robotstxt` package makes these even easier
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+.pull-left[
+
+- It has pre-defined keys, most importantly
+
+   - `User-agent` indicates who the protocol is for
+   
+   - `Allow` indicates which part(s) of the website can be scraped
+   
+   - `Disallow` indicates which part(s) must not be scraped
+   
+   - `Crawl-delay` indicates how fast the website could be scraped
+
+&lt;br&gt;
+
+- In case you write your own protocol one day, note that
+
+   - the keys start with capital letters
+   - they are followed by a colon .yellow-h[:]
+
+]
+
+.pull-right[
+
+```md
+`User-agent:`
+`Allow:`
+`Disallow:`
+`Crawl-delay:`
+
+```
+
+]
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+.pull-left[
+
+- Websites define their own values
+
+   - after a colon and a white space
+
+&lt;br&gt;
+
+- Note that
+
+   - &amp;#42; indicates the protocol is for everyone
+   - `/` indicates all sections and pages
+   - `/about/` indicates a specific path
+   - values for `Crawl-delay` are in seconds    
+&lt;br&gt;   
+   - this website allows anyone to scrape, provided that
+       - `/about/` is left out, and 
+       - the website is accessed at 5-seconds intervals
+
+]
+
+.pull-right[
+
+```md
+User-agent: `*`
+Allow: `/`
+Disallow: `/about/`
+Crawl-delay: `5`
+
+```
+
+]
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+Files might include optional comments, written after the number sign .yellow-h[&amp;#x23;]
+
+
+```md
+`# thank you for respecting our protocol`
+
+User-agent: *
+Allow: /
+Disallow: /about/
+Crawl-delay: 5    `# five second delay, to ensure our servers are not overloaded`
+
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+The protocol of this website only applies to Google
+
+- Google is allowed to scrape everything
+- there is no defined rule for anyone else
+
+&lt;br&gt;
+
+```md
+User-agent: `googlebot`
+Allow: /
+
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+
+The protocol of this website only applies to Google
+
+- Google is .yellow-h[disallowed] to scrape .yellow-h[two] specific paths
+    - with no limit on speed
+- there is no defined rule for anyone else
+
+&lt;br&gt;
+
+```md
+User-agent: googlebot
+`Disallow: /about/`
+`Disallow: /history/`
+
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robots.txt` &amp;mdash; Syntax
+
+
+This website has different protocols for different agents
+
+- Google is allowed to scrape everything, with a 5-second delay
+- Bing is not allowed to scrape anything
+- everyone else can scrape the section or page located at www.websiteurl/about/
+
+&lt;br&gt;
+
+```md
+User-agent: googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: bing
+Disallow: /
+
+User-agent: *
+Allow: /about/
+
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
+- The `robotstxt` packages facilitates checking website protocols
+
+   - from within R &amp;mdash; no need to visit websites via browser
+   - provides functions to check, among others, the rules for specific paths and/or agents
+
+&lt;br&gt;
+
+- There are two main functions
+
+   - `robotstxt`, which gets complete protocols
+   - `paths_allowed`, which checks protocols for one or more specific paths
+
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
+.pull-left[
+
+Use the `robotstxt` function to get a protocol
+- supply a base URL with the `domain` argument
+   - as a string
+   - probably the only argument that you will need
+
+]
+
+
+.pull-right[
+
+```md
+
+robotstxt(
+  domain = NULL,
+  ...
+)
+
+```
+
+]
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
+
+```r
+robotstxt(domain = "https://luzpar.netlify.app")
+```
+
+```
+## $domain
+## [1] "https://luzpar.netlify.app"
+## 
+## $text
+## [robots.txt]
+## --------------------------------------
+## 
+## User-agent: googlebot
+## Disallow: /states/
+## 
+## User-agent: *
+## Allow: /
+## Crawl-delay: 2
+## 
+## 
+## 
+## 
+## 
+## $robexclobj
+## &lt;Robots Exclusion Protocol Object&gt;
+## $bots
+## [1] "googlebot" "*"        
+## 
+## $comments
+## [1] line    comment
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $permissions
+##      field useragent    value
+## 1 Disallow googlebot /states/
+## 2    Allow         *        /
+## 
+## $crawl_delay
+##         field useragent value
+## 1 Crawl-delay         *     2
+## 
+## $host
+## [1] field     useragent value    
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $sitemap
+## [1] field     useragent value    
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $other
+## [1] field     useragent value    
+## &lt;0 rows&gt; (or 0-length row.names)
+## 
+## $check
+## function (paths = "/", bot = "*") 
+## {
+##     spiderbar::can_fetch(obj = self$robexclobj, path = paths, 
+##         user_agent = bot)
+## }
+## &lt;bytecode: 0x0000015524bddfd0&gt;
+## &lt;environment: 0x00000155238a3a68&gt;
+## 
+## attr(,"class")
+## [1] "robotstxt"
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
+.pull-left[
+
+Use the `paths_allowed` function to checks protocols for one or more specific paths
+- supply a base URL with the `domain` argument
+- `path` and `bot` are the other important arguments
+   - notice the default values    
+&lt;br&gt;
+- leads to either `TRUE` (allowed to scrape) or `FALSE` (not allowed)
+
+]
+
+
+.pull-right[
+
+```md
+
+paths_allowed(
+  domain = "auto",
+  paths = "/",
+  bot = "*",
+  ...
+)
+```
+
+]
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
+
+```r
+paths_allowed(domain = "https://luzpar.netlify.app")
+```
+
+```
+## [1] TRUE
+```
+
+
+```md
+paths_allowed(domain = "https://luzpar.netlify.app", 
+              `paths = c("/states/", "/constituencies/")`)
+```
+
+
+```
+## [1] TRUE TRUE
+```
+
+```md
+paths_allowed(domain = "https://luzpar.netlify.app", 
+              paths = c("/states/", "/constituencies/"), `bot = "googlebot"`)
+```
+
+
+```
+## [1] FALSE  TRUE
+```
+
+---
+class: action
+
+## Exercises
+
+1) Check the protocols for &lt;https://www.theguardian.com&gt;
+
+   - via a browser and with the `robotstxt` function
+   - compare what you see
+   
+&lt;br&gt;
+
+2) Check a path with the `paths_allowed` function
+
+   - such that it will return `FALSE`
+   - taking the information from Exercise 1 into account
+   
+&lt;br&gt;
+
+3) Check the protocols for any website that you might wish to scrape
+
+  - with the `robotstxt` function
+
+<div class="countdown" id="timer_60ab4727" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
+</div>
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; Speed
+
+- Websites are designed for visitors with human-speed in mind
+
+   - computer-speed visits can overload servers, depending on bandwidth
+      - popular websites might have more bandwidth
+      - but, they might attract multiple scrapers at the same time
+
+&lt;br&gt;
+
+- Waiting a little between two visits makes scraping more ethical
+    
+  - waiting time may or may not be defined in the protocol
+      - lookout for, and respect, the `Crawl-delay` key in `robots.txt`     
+&lt;br&gt;
+  - [Part 4](#part4) and [Part 5](#part5) covers how to wait
+  
+&lt;br&gt;
+
+- Not waiting enough might lead to a ban
+    - by site owners, administrators
+    - for IP addresses with undesirably high number of visits in a short period of time
+      
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; Purpose
+
+Ideally, we scrape for a purpose
+  
+- e.g., for academics, to answer one or more research questions, test hypotheses    
+&lt;br&gt;
+      - developed prior to data collection, analysis
+          - based on, e.g., theory, claims, observations   
+&lt;br&gt;
+      - perhaps, even pre-registered
+          - e.g., at [OSF Registries](https://osf.io/registries)
+
+---
+## Considerations &amp;mdash; Data Storage
+
+Scraped data frequently requires 
+
+- large amounts of digital storage space
+  - internet data is typically big data    
+&lt;br&gt;
+- private, safe storage spaces
+  - due to local rules, institutional requirements
+
+---
+name: part3
+class: inverse, center, middle
+
+# Part 3. Webpage Source Code
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Webpage Source Code &amp;mdash; Overview
+
+- Webpages include more than what is immediately visible to visitors
+
+  - not only text, images, links
+  - but also code for structure, style, and functionality &amp;mdash; interpreted by browsers first
+      - HTML provides the structure
+      - CSS provides the style
+      - JavaScript provides functionality, if any
+      
+&lt;br&gt;
+
+- Web scraping requires working with the source code
+
+   - even when scraping only what is already visible
+   - to choose one or more desired parts of the visible
+      - e.g., text in table and/or bold only    
+&lt;br&gt;
+
+- Source code also offers more, invisible, data to be scraped
+      - e.g., URLs hidden under text
+           
+---
+## Webpage Source Code &amp;mdash; View in Browser
+
+The `Ctrl` `+` `U` shortcut is to display source code &amp;mdash; alternatively, right click and `View` `Page` `Source`
+
+
+&lt;img src="scrp_workshop_files/images_data/homepage.png" width="45%" /&gt;&lt;img src="scrp_workshop_files/images_data/homepage_source.png" width="45%" /&gt;
+
+
+---
+## Webpage Source Code &amp;mdash; View in Browser &amp;mdash; DOM
+
+Browsers also offer putting source codes in a structure
+- known as DOM (document object model), initiated by the `F12` key on Chrome
+
+&lt;img src="scrp_workshop_files/images_data/homepage.png" width="45%" /&gt;&lt;img src="scrp_workshop_files/images_data/homepage_dom.png" width="45%" /&gt;
+
+---
+class: action
+
+## Exercises
+
+4) View the source code of a page
+- as plain code and as in DOM
+- compare the look of the two
+
+&lt;br&gt;
+
+5) Search for a word or a phrase in source code
+- copy from the front-end page
+- search in plain text code or in DOM
+   - using the `Ctrl` `+` `F` shortcut    
+&lt;br&gt;   
+- compare the look of the front- and back-end
+
+<div class="countdown" id="timer_60ab4abe" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Overview
+
+.pull-left[
+
+- HTML stands for .yellow-h[hypertext markup language]
+
+   - it gives the structure to what is visible to visitors
+       - text, images, links      
+&lt;br&gt;
+   - would a piece of text appear in a paragraph or a list?
+       - depends on the HTML code around that text
+   
+]
+
+.pull-right[
+
+```md
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 {color: blue;}
+    &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Overview
+
+.pull-left[
+
+HTML documents 
+
+- start with a declaration
+    - so that browsers know what they are
+   
+]
+
+.pull-right[
+
+```md
+`&lt;!DOCTYPE html&gt;`
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 {color: blue;}
+    &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Overview
+
+.pull-left[
+
+HTML documents 
+
+- start with a declaration
+  - so that browsers know what they are     
+&lt;br&gt;
+- consist of elements
+  - written in between opening and closing tags
+   
+]
+
+.pull-right[
+
+```md
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    `&lt;style&gt;`
+      `h1 {color: blue;}`
+    `&lt;/style&gt;`
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    `&lt;h1&gt;A header&lt;/h1&gt;`      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       `&lt;li&gt;This&lt;/li&gt;`         
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+```
+]
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; the Root
+
+.pull-left[
+
+&lt;span style="background-color: #ffff88;"&gt;`html`&lt;/span&gt; is the root element
+
+- it is also the parent to all other elements
+- its important children are the `head` and `body` elements
+
+   
+]
+
+.pull-right[
+
+```md
+&lt;!DOCTYPE html&gt;
+`&lt;html&gt;`
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 {color: blue;}
+    &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+`&lt;/html&gt;`
+
+```
+]
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; the Head
+
+.pull-left[
+
+.yellow-h[head] contains metadata, such as
+
+- titles, which appear in browser bars and tabs
+- style elements
+   
+]
+
+.pull-right[
+
+```md
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  `&lt;head&gt;`
+    &lt;style&gt;
+      h1 {color: blue;}
+    &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  `&lt;/head&gt;`
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+```
+]
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Overview
+
+.pull-left[
+
+.yellow-h[body] contains the elements in the main body of pages, such as 
+
+- headers, paragraphs, lists, tables, images
+   
+]
+
+.pull-right[
+
+```md
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 {color: blue;}
+    &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  `&lt;body&gt;`
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  `&lt;/body&gt;`
+&lt;/html&gt;
+
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Syntax
+
+Most elements have opening and closing .yellow-h[tags]
+
+```md
+`&lt;p&gt;`This is a one sentence paragraph.`&lt;/p&gt;`
+
+```
+
+.out-t[
+
+This is a one sentence paragraph.
+
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- tag name, in this case .yellow-h[p], defines the structure of the element
+- the closing tag has a forward slash .yellow-h[/] before the element name
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Syntax
+
+Most elements have some content
+
+```md
+&lt;p&gt;`This is a one sentence paragraph.`&lt;/p&gt;
+
+```
+
+.out-t[
+
+This is a one sentence paragraph.
+
+]
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Syntax
+
+Elements can be nested
+
+```md
+&lt;p&gt;This is a &lt;strong&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+```
+
+.out-t[
+
+&lt;p&gt;This is a &lt;strong&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- there are two elements above, a paragraph and a strong emphasis
+- strong is said to be the child of the paragraph element
+   - there could be more than one child
+   - in that case, children are numbered from the left      
+&lt;br&gt;   
+- paragraph is said to be the parent of the strong element
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Syntax
+
+Elements can have .yellow-h[attributes]
+
+```md
+&lt;p&gt;This is a &lt;strong `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;This is a &lt;strong id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- the id attribute is not visible to the visitors
+- attribute string .yellow-h[sentence-count] could have been anything I could come up with
+    - unlike the tag and attribute names &amp;mdash; e.g., strong, id as they are pre-defined      
+&lt;br&gt;    
+- there are some other attributes that are visible
+
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Syntax
+
+There could be more than one attribute in an element
+
+```md
+&lt;p&gt;This is a &lt;strong `class="count"` `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+&lt;p&gt;There are now &lt;strong `class="count"` `id="paragraph-count"`&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;This is a &lt;strong class="count" id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+&lt;p&gt;There are now &lt;strong class="count" id="paragraph-count"&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
+
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- there could be more than one attribute in an element
+    - with a white space in between them    
+&lt;br&gt;
+- the `class` attribute can apply to multiple elements
+   - while the `id` attribute must be unique on a page
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Important Elements &amp; Attibutes 
+
+Links are provided with the a (anchor) element
+
+```md
+&lt;p&gt;Click &lt;a href="https://www.google.com/"&gt;here&lt;/a&gt; to google things.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;Click &lt;a href="https://www.google.com/"&gt;here&lt;/a&gt; to google things.&lt;/p&gt;
+]
+
+&lt;br&gt;
+
+Note that
+
+- `href` (hypertext reference) is a required attribute for this element
+- most attributes are optional, some are required
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Links 
+
+Links
+
+```md
+&lt;p&gt;Click &lt;a `title="This text appears when visitors hover over the link"` 
+            href="https://www.google.com/"&gt;here&lt;/a&gt; to google things.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;Click &lt;a title="This text appears when visitors hover over the link" 
+            href="https://www.google.com/"&gt;here&lt;/a&gt; to google things.&lt;/p&gt;
+]
+
+&lt;br&gt;
+
+Note that
+
+- the `title` attribute is one of the optional attributes
+- it becomes visible when hovered over with mouse
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Lists
+
+The `&lt;lu&gt;` tag introduces un-ordered lists, while the `&lt;li&gt;` tag defines lists items
+
+
+```r
+&lt;ul&gt;
+  &lt;li&gt;books&lt;/li&gt;
+  &lt;li&gt;journal articles&lt;/li&gt;
+  &lt;li&gt;reports&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+.out-t[
+
+&lt;ul&gt;
+  &lt;li&gt;books&lt;/li&gt;
+  &lt;li&gt;journal articles&lt;/li&gt;
+  &lt;li&gt;reports&lt;/li&gt;
+&lt;/ul&gt;
+
+
+]
+
+&lt;br&gt;
+
+Note that
+
+- Ordered lists are introduced with the the `&lt;lo&gt;` tag instead
+
+---
+## Webpage Source Code &amp;mdash; HTML &amp;mdash; Notes
+
+By default, multiple spaces and/or lines breaks are ignored by browsers
+
+
+```r
+&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
+&lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+```
+
+.out-t[
+
+&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
+&lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
+]
+
+&lt;br&gt;
+
+Note that
+
+- plain source code may or may not be written in a readable manner
+- this is one reason why DOM is helpful
+
+---
+class: action
+
+## Exercises
+
+6) Re-create the .yellow-h[body] of the page at &lt;https://luzpar.netlify.app/states/&gt; in R
+
+- start an HTML file, following from the RStudio menu:
+
+&gt; `File -&gt; New File -&gt; HTML File`
+
+- copy the text from the website, paste in the HTML file
+- add the structure with HTML code
+- click `Preview` to view the result
+
+&lt;br&gt;
+
+7) Add an attribute to an element
+- which is not already on the original page
+- hints:
+   - there are at least two attributes for the list elements on the original page
+   - google to see what attributes list items accept
+   - &lt;https://www.w3schools.com/&gt; is a great place to look at
+   - save this document as we will continue working on it
+
+<div class="countdown" id="timer_60ab472b" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Overview
+
+- CSS stands for .yellow-h[cascading stylesheets]
+
+   - it gives the style to what is visible to visitors
+       - text, images, links      
+&lt;br&gt;
+   - would a piece of text appear in black or blue?
+       - depends on the CSS for that text
+       
+&lt;br&gt;
+
+- CSS can be defined
+   
+   - inline, as an attribute of an element
+   - internally, as a child element of the `head` element
+   - externally, but then linked in the `head` element
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Syntax
+
+.pull-left[
+CSS is written in .yellow-h[rules]
+
+]
+
+.pull-right[
+```md
+`p {font-size:12px;}`
+
+`.count {background-color:yellow;}`
+
+`#sentence-count {color:red;}`
+
+```
+
+]
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+   - one or more &lt;span style="background-color: #ffff88;"&gt;selectors&lt;/span&gt;, matching one or more HTML elements and/or attributes
+
+&lt;br&gt;
+
+- Note that
+
+   - the syntax changes with the selector type
+      - elements and attributes
+      - among attributes, classes and ids
+
+]
+
+.pull-right[
+```md
+`p` {font-size:14px;}
+
+`h1 h2` {color:blue;}
+
+`.count` {background-color:yellow;}
+
+`#sentence-count` {color:red; font-size:14px;}
+
+```
+]
+
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+  - one or more selectors, matching one or more HTML elements and/or attributes
+  - a .yellow-h[declaration]
+
+&lt;br&gt;
+
+- Note that
+
+   - declarations are written in between two curly brackets
+
+]
+
+.pull-right[
+```md
+p `{font-size:14px;}`
+
+h1 h2 `{color:blue;}`
+
+.count `{background-color:yellow;}`
+
+#sentence-count `{color:red; font-size:14px;}`
+
+```
+]
+
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+  - one or more selectors, matching one or more HTML elements and/or attributes
+  - a declaration, with one or more .yellow-h[properties]
+
+]
+
+.pull-right[
+```md
+p {`font-size:`14px;}
+
+h1 h2 {`color:`blue;}
+
+.count {`background-color:`yellow;}
+
+#sentence-count {`color:`red;` font-size:`14px;}
+
+```
+]
+
+&lt;br&gt;
+
+- Note that
+
+  - properties are followed by a colon
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+   - one or more selectors
+   - a declaration, with one or more properties and .yellow-h[values]
+   
+&lt;br&gt;
+
+- Note that
+
+  - values are followed by a semicolon
+  - `property:value;` pairs are separated by a white space
+
+
+]
+
+.pull-right[
+```md
+p {font-size:`14px;`}
+
+h1 h2 {color:`blue;`}
+
+.count {background-color:`yellow;`}
+
+#sentence-count {color:`red;` font-size:`14px;`}
+
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Internal
+
+.pull-left[
+
+- CSS rules can be defined internally
+   - within the `style` element
+   - as a child of the `head` element
+
+- Internally defined rules apply to all matching selectors
+   - on the same page
+]
+
+.pull-right[
+
+
+```r
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+*   &lt;style&gt;
+*     h1 {color: blue;}
+*   &lt;/style&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; External
+
+.pull-left[
+
+- CSS rules can be defined externally
+   - saved somewhere linkable
+   - defined with the the `linked` element
+   - as a child of the `head` element
+
+- Externally defined rules 
+   - are saved in a file with .css extension
+   - apply to all matching selectors
+       - on any page linked
+]
+
+
+.pull-right[
+
+
+```r
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+*   &lt;link rel="styles" href="simple.css"&gt;
+    &lt;title&gt;A title for browsers&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;A header&lt;/h1&gt;      
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;ul&gt;
+       &lt;li&gt;This&lt;/li&gt;
+       &lt;li&gt;is a&lt;/li&gt;
+       &lt;li&gt;list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+```
+]
+
+---
+## Webpage Source Code &amp;mdash; CSS &amp;mdash; Inline
+
+CSS rules can also be defined inline
+- with the `style` attribute
+- does not require selector
+- applies only to that element
+
+```md   
+&lt;p&gt;This is a &lt;strong `style="color:blue;"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+```
+   
+.out-t[
+&lt;p&gt;This is a &lt;strong style="color:blue;"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+]
+
+---
+class: action
+
+## Exercise
+
+8) Provide some simple style to your HTML document
+- one that you created during the previous exercise
+- using internal or external style, but not inline
+   - so that you can practice selecting element and/or attributes     
+&lt;br&gt;
+- no idea what to do? try
+   - increasing the font size of the text in paragraph  
+   - change the colour of the second item in the list to red
+   
+<div class="countdown" id="timer_60ab4860" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+name: part4
+class: inverse, center, middle
+
+# Part 3. Scraping Static Pages
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Static Pages &amp;mdash; Overview
+
+- We will collect data from static pages with the `rvest` package
+
+   - static pages are those that display the same source code to all visitors
+       - including the content &amp;mdash; it does not change    
+&lt;br&gt;       
+   - every visitor sees the same page at a given URL
+   - each page has a different URL
+   - &lt;https://luzpar.netlify.app/&gt; is a static page
+
+&lt;br&gt;
+
+- Scraping static pages involves two main tasks
+
+   - download the source code from one or more pages to R
+      - typically, the only interaction with the page itself     
+&lt;br&gt;
+   - select the exact information needed from the source code
+      - takes place locally, on your machine
+      - the main functionality that `rvest` offers
+          - with the help from selectors
+    
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Overview
+
+- A relative small R package for web scraping
+
+  - created by [Hadley Wickham](http://http://hadley.nz/)
+  - popular &amp;mdash; used by many for web scraping
+      - downloaded 622,724 times last month
+      - some of it must be thanks to being a part of the `tidyverse` family     
+&lt;br&gt;      
+  - last major revision was in March 2021
+      - better alignment with `tidyverse`
+
+--
+
+&lt;br&gt;
+
+- A lot has already been written on this package
+
+  - you will find solutions to, or help for, any issues online
+  - see first the [package documentation](https://cran.r-project.org/web/packages/rvest/rvest.pdf), numerous tutorials &amp;mdash; such as [this](https://rvest.tidyverse.org/) and [this](https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/), and [this](https://steviep42.github.io/webscraping/book/index.html#quick-rvest-tutorial)
+     
+--
+
+&lt;br&gt;
+
+- Comes with the recommendation to combine it with the `polite` package
+
+   - for ethical web scraping
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
+
+Use the `read_html` function to get the source code of a webpage into R
+
+
+```r
+read_html("https://luzpar.netlify.app/")
+```
+
+```
+## {html_document}
+## &lt;html lang="en-us"&gt;
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta charset="utf-8"&gt;\n ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper"&gt;\n&lt; ...
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
+
+You may wish to check the protocol first
+
+
+```r
+paths_allowed(domain = "https://luzpar.netlify.app/")
+```
+
+```
+## [1] TRUE
+```
+
+```r
+read_html("https://luzpar.netlify.app/")
+```
+
+```
+## {html_document}
+## &lt;html lang="en-us"&gt;
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta charset="utf-8"&gt;\n ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper"&gt;\n&lt; ...
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+- The `polite` package facilitates ethical scraping
+
+   - recommended by `rvest`
+
+&lt;br&gt;
+
+- It divides the process of getting source code into two
+   
+   - check the protocol
+   - get the source only if allowed
+
+&lt;br&gt;
+
+- It also 
+
+   - waits for a period of time
+       - minimum by what is specified in the protocol     
+&lt;br&gt;
+   - allows you to introduce yourself to website administrators while scraping
+   
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+.pull-left[
+
+- First, use the `bow` function to check the protocol
+
+   - for a specific .yellow-h[URL]
+
+]
+
+
+.pull-right[
+```md
+
+bow(`url`,
+  user_agent = "polite R package - https://github.com/dmi3kno/polite",
+  delay = 5, 
+  ...
+  )
+  
+```
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+.pull-left[
+
+- First, use the `bow` function to check the protocol
+
+   - for a specific URL
+   - for a specific .yellow-h[agent]
+
+&lt;br&gt;
+
+- Note that
+
+   - the `user_agent` argument can communicate information to website administrators
+      - e.g., your name and contact details
+
+]
+
+
+.pull-right[
+```md
+
+bow(url,
+  `user_agent = "polite R package - https://github.com/dmi3kno/polite"`,
+  delay = 5,
+  force = FALSE,
+  ...
+  )
+  
+```
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+.pull-left[
+
+- First, use the `bow` function to check the protocol
+
+   - for a specific URL
+   - for a specific agent
+   - for any .yellow-h[crawl-delay directives]
+
+&lt;br&gt;
+
+- Note that
+
+   - the `delay` argument cannot be set to a number smaller than in the directive
+       - if there is one
+
+]
+
+
+.pull-right[
+```md
+
+bow(url,
+  user_agent = "polite R package - https://github.com/dmi3kno/polite",
+  `delay = 5`,
+  force = FALSE,
+  ...
+  )
+  
+```
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+.pull-left[
+
+- First, use the `bow` function to check the protocol
+
+   - for a specific URL
+   - for a specific agent
+   - for crawl-delay directives
+
+&lt;br&gt;
+
+- Note that
+
+   - the `delay` argument cannot be set to a number smaller than in the directive
+       - if there is one     
+&lt;br&gt;       
+   - the `force` argument is set to `FALSE` by default
+        - avoids repeated, unnecessary interactions with web page
+       - by caching, and re-using, previously downloaded sources
+]
+
+
+.pull-right[
+```md
+
+bow(url,
+  user_agent = "polite R package - https://github.com/dmi3kno/polite",
+  delay = 5,
+  `force = FALSE`,
+  ...
+  )
+  
+```
+]
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
+
+.pull-left[
+
+- Second, use the `scrape` function get source code
+
+   - for an object created with the .yellow-h[`bow`] function
+
+&lt;br&gt;
+
+- Note that
+
+   - `scrape` will only work if the results from `bow` are positive
+       - creating a safety valve for ethical scraping     
+&lt;br&gt;    
+   - by piping, `bow` into `scrape`, you can avoid creating objects
+
+]
+
+
+.pull-right[
+```md
+
+scrape(`bow`,
+       ...
+       )
+  
+```
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
+
+These two are equal, when there is no protocol against the access
+
+
+```r
+read_html("https://luzpar.netlify.app/")
+```
+
+```
+## {html_document}
+## &lt;html lang="en-us"&gt;
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta charset="utf-8"&gt;\n ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper"&gt;\n&lt; ...
+```
+
+
+
+```r
+bow(url = "https://luzpar.netlify.app/") %&gt;%  
+    scrape()
+```
+
+```
+## {html_document}
+## &lt;html lang="en-us"&gt;
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta charset="utf-8"&gt;\n ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper"&gt;\n&lt; ...
+```
+
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
+
+The difference occurs when there is a protocol against the access
+
+```md
+bow(url = "https://luzpar.netlify.app`/states/`", user_agent = `"googlebot"`)
+```
+
+
+```
+## &lt;polite session&gt; https://luzpar.netlify.app/states/
+##     User-agent: googlebot
+##     robots.txt: 2 rules are defined for 2 bots
+##    Crawl delay: 5 sec
+##   The path is not scrapable for this user-agent
+```
+
+&lt;br&gt;
+
+
+```md
+bow(url = "https://luzpar.netlify.app/states/", user_agent = "googlebot") `%&gt;%` 
+    `scrape()`
+```
+.out-t[
+
+```
+## Warning: No scraping allowed here!
+
+## NULL
+```
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
+
+.pull-left[
+
+- Get one or more HTML elements
+
+   - specified with a selector
+       - CSS or XPATH    
+&lt;br&gt;
+  - we will work with css in this workshop
+       - facilitated by Chrome and SelectorGagdet
+       
+&lt;br&gt;
+
+- Note that
+ 
+  - there are two versions of the same function
+      - singular one gets the first instance of an element
+      - plural one gets all instances
+      
+]
+
+
+.pull-right[
+
+```md
+
+html_element(x, 
+             css, 
+             xpath)
+
+html_elements(x, 
+              css, 
+              xpath)
+
+```
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
+
+Get the anchor (a) elements on the homepage
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  `html_elements(css = "a")`
+```
+
+
+```
+## {xml_nodeset (24)}
+##  [1] &lt;a class="js-search" href="#" aria-label="Close"&gt;&lt;i class="fas fa-times-circle text-muted" aria-hidd ...
+##  [2] &lt;a class="navbar-brand" href="/"&gt;Parliament of Luzland&lt;/a&gt;
+##  [3] &lt;a class="navbar-brand" href="/"&gt;Parliament of Luzland&lt;/a&gt;
+##  [4] &lt;a class="nav-link active" href="/"&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
+##  [5] &lt;a class="nav-link" href="/states/"&gt;&lt;span&gt;States&lt;/span&gt;&lt;/a&gt;
+##  [6] &lt;a class="nav-link" href="/constituencies/"&gt;&lt;span&gt;Constituencies&lt;/span&gt;&lt;/a&gt;
+##  [7] &lt;a class="nav-link" href="/members/"&gt;&lt;span&gt;Members&lt;/span&gt;&lt;/a&gt;
+##  [8] &lt;a class="nav-link" href="/documents/"&gt;&lt;span&gt;Documents&lt;/span&gt;&lt;/a&gt;
+##  [9] &lt;a class="nav-link js-search" href="#" aria-label="Search"&gt;&lt;i class="fas fa-search" aria-hidden="tru ...
+## [10] &lt;a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display prefere ...
+## [11] &lt;a href="#" class="dropdown-item js-set-theme-light"&gt;&lt;span&gt;Light&lt;/span&gt;&lt;/a&gt;
+## [12] &lt;a href="#" class="dropdown-item js-set-theme-dark"&gt;&lt;span&gt;Dark&lt;/span&gt;&lt;/a&gt;
+## [13] &lt;a href="#" class="dropdown-item js-set-theme-auto"&gt;&lt;span&gt;Automatic&lt;/span&gt;&lt;/a&gt;
+## [14] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel="noopener"&gt;a workshop on au ...
+## [15] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Umit&lt;/a&gt;
+## [16] &lt;a href="/documents/"&gt;documents&lt;/a&gt;
+## [17] &lt;a href="/constituencies/"&gt;constituencies&lt;/a&gt;
+## [18] &lt;a href="/members/"&gt;members&lt;/a&gt;
+## [19] &lt;a href="/states/"&gt;states&lt;/a&gt;
+## [20] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener"&gt;Blogdown&lt;/a&gt;
+## ...
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
+
+I would like to get only the URLs on the main body of the page
+- SelectorGadget tells me the correct selector is `#title` `a`
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = `"#title a"`)
+```
+
+
+```
+## {xml_nodeset (9)}
+## [1] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel="noopener"&gt;a workshop on aut ...
+## [2] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Umit&lt;/a&gt;
+## [3] &lt;a href="/documents/"&gt;documents&lt;/a&gt;
+## [4] &lt;a href="/constituencies/"&gt;constituencies&lt;/a&gt;
+## [5] &lt;a href="/members/"&gt;members&lt;/a&gt;
+## [6] &lt;a href="/states/"&gt;states&lt;/a&gt;
+## [7] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener"&gt;Blogdown&lt;/a&gt;
+## [8] &lt;a href="https://gohugo.io/" target="_blank" rel="noopener"&gt;Hugo&lt;/a&gt;
+## [9] &lt;a href="https://github.com/wowchemy" target="_blank" rel="noopener"&gt;Wowchemy&lt;/a&gt;
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_text`
+
+.pull-left[
+
+- Get the text content of one or more HTML elements
+
+   - for the elements already chosen
+      - with the `html_elements` function     
+&lt;br&gt;    
+   - this returns what is already visible to visitors
+       
+&lt;br&gt;
+
+- Note that
+ 
+  - there are two versions of the same function
+     - `html_text` returns text with any space or line breaks around it 
+     - `html_text2` returns plain text
+      
+]
+
+
+.pull-right[
+
+
+```r
+html_text(x, trim = FALSE)
+
+html_text2(x, preserve_nbsp = FALSE)
+```
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_text`
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "#title a") %&gt;% 
+  `html_text()`
+```
+
+
+```
+## [1] "a workshop on automated web scraping" "Resul Umit"                          
+## [3] "documents"                            "constituencies"                      
+## [5] "members"                              "states"                              
+## [7] "Blogdown"                             "Hugo"                                
+## [9] "Wowchemy"
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_attr`
+
+.pull-left[
+
+- Get one or more attributes of one or more HTML elements
+
+   - for the elements already chosen
+      - with the `html_elements` function     
+&lt;br&gt;    
+   - attributes are specified with their name 
+       - not CSS or XPATH
+       
+&lt;br&gt;
+
+- Note that
+ 
+  - there are two versions of the same function
+      - singular one gets a specified attribute
+      - plural one gets all available attributes
+      
+]
+
+
+.pull-right[
+
+```md
+
+html_attr(x, name, default = NA_character_)
+
+html_attrs(x)
+
+```
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_attrs`
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "#title a") %&gt;% 
+  `html_attrs()`
+```
+
+
+```
+## [[1]]
+##                                         href                                       target 
+## "https://github.com/resulumit/scrp_workshop"                                     "_blank" 
+##                                          rel 
+##                                   "noopener" 
+## 
+## [[2]]
+##                     href                   target                      rel 
+## "https://resulumit.com/"                 "_blank"               "noopener" 
+## 
+## [[3]]
+##          href 
+## "/documents/" 
+## 
+## [[4]]
+##               href 
+## "/constituencies/" 
+## 
+## [[5]]
+##        href 
+## "/members/" 
+## 
+## [[6]]
+##       href 
+## "/states/" 
+## 
+## [[7]]
+##                                  href                                target 
+## "https://github.com/rstudio/blogdown"                              "_blank" 
+##                                   rel 
+##                            "noopener" 
+## 
+## [[8]]
+##                 href               target                  rel 
+## "https://gohugo.io/"             "_blank"           "noopener" 
+## 
+## [[9]]
+##                          href                        target                           rel 
+## "https://github.com/wowchemy"                      "_blank"                    "noopener"
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_attr`
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "#title a") %&gt;% 
+  `html_attr(name = "href")`
+```
+
+
+```
+## [1] "https://github.com/resulumit/scrp_workshop" "https://resulumit.com/"                    
+## [3] "/documents/"                                "/constituencies/"                          
+## [5] "/members/"                                  "/states/"                                  
+## [7] "https://github.com/rstudio/blogdown"        "https://gohugo.io/"                        
+## [9] "https://github.com/wowchemy"
+```
+
+--
+
+Note that
+
+- some URLs are given relative to the base URL
+   - e.g., `/states/`, which is actually `/states/`
+   - you can complete them with the `url_absolute` function
+   
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `url_absolute`
+
+Complete the relative URLs with the `url_absolute` function
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "#title a") %&gt;% 
+  html_attr(name = "href") %&gt;% 
+  `url_absolute(base = "https://luzpar.netlify.app")`
+```
+
+
+```
+## [1] "https://github.com/resulumit/scrp_workshop" "https://resulumit.com/"                    
+## [3] "https://luzpar.netlify.app/documents/"      "https://luzpar.netlify.app/constituencies/"
+## [5] "https://luzpar.netlify.app/members/"        "https://luzpar.netlify.app/states/"        
+## [7] "https://github.com/rstudio/blogdown"        "https://gohugo.io/"                        
+## [9] "https://github.com/wowchemy"
+```
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_table`
+
+Use the `html_table()` function to get the text content of table elements
+
+
+```r
+bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+  scrape() %&gt;%
+  html_elements(css = "table") %&gt;% 
+  `html_table()`
+```
+
+.out-t[
+
+```
+## [[1]]
+## # A tibble: 100 x 3
+##   Member           Constituency  Party      
+##   &lt;chr&gt;            &lt;chr&gt;         &lt;chr&gt;      
+##  1 Arthur Ali       Mühlshafen    Liberal    
+##  2 Chris Antony     Benwerder     Labour     
+##  3 Chloë Bakker     Steffisfelden Labour     
+##  4 Rose Barnes      Dillon        Liberal    
+##  5 Emilia Bauer     Kilnard       Green      
+##  6 Wilma Baumann    Granderry     Green      
+##  7 Matteo Becker    Enkmelo       Labour     
+##  8 Patricia Bernard Gänsernten    Labour     
+##  9 Lina Booth       Leonrau       Liberal    
+## 10 Sophie Bos       Zotburg       Independent
+## # ... with 90 more rows
+
+```
+]
+
+---
+## Static Pages &amp;mdash; `rvest`
+
+We can create the same tibble with `html_text`, which requires getting each variable separately to be merged
+
+
+```r
+tibble(
+        
+"Member" = bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+        scrape() %&gt;%
+        html_elements(css = "td:nth-child(1)") %&gt;% 
+        html_text(),
+
+"Constituency" = bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+        scrape() %&gt;%
+        html_elements(css = "td:nth-child(2)") %&gt;% 
+        html_text(),
+
+"Party" = bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+        scrape() %&gt;%
+        html_elements(css = "td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+```
+
+---
+## Static Pages &amp;mdash; `rvest`
+
+Keep the number of interactions with websites to minimum
+- by saving the source code as an object, which could be used repeatedly
+
+```md
+`the_page &lt;- bow(url = "https://luzpar.netlify.app/members/")` %&gt;%
+            `scrape()`
+
+tibble(
+        
+"Member" = `the_page` %&gt;%
+        html_elements(css = "td:nth-child(1)") %&gt;% 
+        html_text(),
+
+"Constituency" = `the_page` %&gt;% 
+        html_elements(css = "td:nth-child(2)") %&gt;% 
+        html_text(),
+
+"Party" = `the_page` %&gt;% 
+        html_elements(css = "td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+```
+
+---
+class: action
+
+## Exercise
+
+9) Create a dataframe out of the table at &lt;https://luzpar.netlify.app/members/&gt;
+- with as many variables as possible
+- hints:
+   - start with the code in the previous slide, and add new variables from attributes
+   - the first two columns have important attributes
+      - e.g., URLs for the pages for members and their constituencies
+      - make these URLs absolute   
+      - see what other attributes are there to collect     
+
+<div class="countdown" id="timer_60ab484e" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Overview
+
+- Rarely a single page includes all variables that we need
+
+  - instead, they are often scattered across different pages of a website
+  - e.g., we might need data on election results &amp;mdash; in addition to constituency names
+
+&lt;br&gt;
+
+- Web scraping then requires crawling across pages
+  
+   - using information found on one page, to go to the next
+   - website design may or may not facilitate crawling
+
+&lt;br&gt;
+
+- We can write for loops to crawl
+
+  - the speed of our code matters the most when we crawl
+  - ethical concerns are higher
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+**Task:**    
+
+- I need data on the name and vote share of parties that came second in each constituency
+- This data is available on constituency pages, but
+   - there are too many such pages
+      - e.g., &lt;https://luzpar.netlify.app/constituencies/arford/&gt;
+   - I do not have the URL to these pages
+
+--
+
+&lt;br&gt;
+
+**Plan:**
+
+- Scrape &lt;https://luzpar.netlify.app/members/&gt; for URLs
+- Write a for loop to
+    - visit these pages one by one
+    - collect and save the variables needed
+    - write these variables into a list
+    - turn the list into a dataframe
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Scrape the page that has all URLs, for absolute URLs
+
+
+```r
+the_links &lt;- bow(url = "https://luzpar.netlify.app/members/") %&gt;%
+        scrape() %&gt;%
+        html_elements(css = "td+ td a") %&gt;% 
+        html_attr("href") %&gt;% 
+        url_absolute(base = "https://luzpar.netlify.app/")
+
+# check if it worked
+head(the_links)
+```
+
+```
+## [1] "https://luzpar.netlify.app/constituencies/muhlshafen/"   
+## [2] "https://luzpar.netlify.app/constituencies/benwerder/"    
+## [3] "https://luzpar.netlify.app/constituencies/steffisfelden/"
+## [4] "https://luzpar.netlify.app/constituencies/dillon/"       
+## [5] "https://luzpar.netlify.app/constituencies/kilnard/"      
+## [6] "https://luzpar.netlify.app/constituencies/granderry/"
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Create an empty list
+
+
+```r
+*temp_list &lt;- list()
+
+for (i in 1:length(the_links)) {
+        
+the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+temp_tibble &lt;- tibble(
+      
+"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+      
+"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;% 
+        html_text(),
+      
+"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+
+temp_list[[i]] &lt;- temp_tibble
+        
+}
+
+df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Start a for loop to iterate over the links one by one
+
+
+```r
+temp_list &lt;- list()
+
+*for (i in 1:length(the_links)) {
+        
+the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+temp_tibble &lt;- tibble(
+      
+"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+      
+"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;% 
+        html_text(),
+      
+"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+
+temp_list[[i]] &lt;- temp_tibble
+        
+*} 
+
+df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Get the source code for the next link
+
+
+```r
+temp_list &lt;- list()
+
+for (i in 1:length(the_links)) {
+        
+*the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+temp_tibble &lt;- tibble(
+      
+"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+      
+"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;% 
+        html_text(),
+      
+"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+
+temp_list[[i]] &lt;- temp_tibble
+        
+}   
+
+df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Get the variables needed, put them in a tibble
+
+
+```r
+temp_list &lt;- list()
+
+for (i in 1:length(the_links)) {
+        
+the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+*temp_tibble &lt;- tibble(
+*  
+*"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+*  
+*"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;%
+*       html_text(),
+*  
+*"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;%
+*       html_text()
+*  
+*) 
+
+temp_list[[i]] &lt;- temp_tibble
+        
+}   
+
+df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Add each tibble into the previously-created list
+
+
+```r
+temp_list &lt;- list()
+
+for (i in 1:length(the_links)) {
+        
+the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+temp_tibble &lt;- tibble(
+      
+"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+      
+"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;% 
+        html_text(),
+      
+"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+
+*temp_list[[i]] &lt;- temp_tibble
+        
+}   
+
+df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Turn the list into a tibble
+
+
+```r
+temp_list &lt;- list()
+
+for (i in 1:length(the_links)) {
+        
+the_page &lt;- bow(the_links[i]) %&gt;% scrape()
+
+temp_tibble &lt;- tibble(
+      
+"constituency" = the_page %&gt;% html_elements("#constituency") %&gt;% html_text(),
+      
+"second_party" = the_page %&gt;% html_element("tr:nth-child(3) td:nth-child(1)") %&gt;% 
+        html_text(),
+      
+"vote_share" = the_page %&gt;% html_elements("tr:nth-child(3) td:nth-child(3)") %&gt;% 
+        html_text()
+
+)
+
+temp_list[[i]] &lt;- temp_tibble
+        
+}   
+
+*df &lt;- as_tibble(do.call(rbind, temp_list))
+```
+
+---
+## Static Pages &amp;mdash; Crawling &amp;mdash; Example
+
+Check the resulting dataset
+
+
+```r
+head(df, 10)
+```
+
+.out-t[
+
+```
+## # A tibble: 100 x 3
+##    constituency  second_party vote_share
+##    &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;     
+##  1 Mühlshafen    Green        26.1%     
+##  2 Benwerder     Conservative 24.8%     
+##  3 Steffisfelden Green        25.7%     
+##  4 Dillon        Conservative 27%       
+##  5 Kilnard       Conservative 28.8%     
+##  6 Granderry     Labour       26.1%     
+##  7 Enkmelo       Liberal      26.8%     
+##  8 Gänsernten    Green        26.6%     
+##  9 Leonrau       Conservative 25%       
+## 10 Zotburg       Conservative 28.4%     
+## # ... with 90 more rows
+
+```
+]
+
+---
+class: action
+
+## Exercise
+
+10) Crawl into members' personal pages to create a rich dataset
+- with members being the unit of observation
+
+
+&lt;br&gt;
+
+Hints:
+- see an example dataset at &lt;https://luzpar.netlify.app/files/exercises/static_data.csv&gt;
+- start with the related code in the previous slides, and adopt it to your needs
+-  practice with 3 members until you are ready to run the loop for all 
+    - e.g., by replacing `1:length(the_links)` with `1:3` for the loop
+
+<div class="countdown" id="timer_60ab4a7e" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">45</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+name: part5
+class: inverse, center, middle
+
+# Part 5. Scraping Dynamic Pages
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Overview
+
+- Dynamic pages are ones that display custom content 
+
+   - different visitors might see different content on the same page
+        - while the URL remains the same    
+&lt;br&gt;
+   - depending on, for example, their own input
+       - e.g., clicks, scrolls     
+&lt;br&gt;
+   - &lt;https://luzpar.netlify.app/documents/&gt; is a page with a dynamic part
+
+--
+
+&lt;br&gt;
+
+- Dynamic pages are more difficult than static pages to scrape
+   
+   - it involves three, instead of two, steps
+   - we will have a new package, `RSelenium`, for the additional step
+
+
+---
+## Dynamic Pages &amp;mdash; Three Steps to Scrape
+
+Scraping dynamic pages involves three main tasks      
+&lt;br&gt;
+- Create the desired instance of the dynamic page
+  - with the `RSelenium` package
+  - e.g., by clicking, scrolling, filling in forms
+      - from within R    
+&lt;br&gt;
+- Get the source code into R
+      - `RSelenium` downloads XML
+      - `rvest` turns it into HTML    
+&lt;br&gt;
+- Select the exact information needed from the source code
+      - as for static pages
+      - with the the`rvest` page
+    
+---
+## Dynamic Pages &amp;mdash; `Rselenium` &amp;mdash; Overview
+
+- A package that integrates [Selenium 2.0 WebDriver](https://www.selenium.dev/documentation/en/) into R
+
+  - created by [John Harrison](http://johndharrison.github.io/#/cover)
+  - downloaded 4,874 times last month
+  - last updated in February 2020
+
+--
+
+&lt;br&gt;
+
+- A lot has already been written on this package
+
+  - you will find solutions to, or help for, any issues online
+  - see the [package documentation](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) and the [vignettes](https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html) for basic functionality
+  - Google searches return code and tutorials in various languages
+      - not only R but also Python, Java
+
+---
+## Dynamic Pages &amp;mdash; `Rselenium` &amp;mdash; Overview
+
+- The package involves more methods than functions
+  
+  - code look slightly unusual
+  - as it follows the logic behind Selenium
+
+--
+
+&lt;br&gt;
+
+- It allows interacting with two things &amp;mdash; and it is crucial that we are aware of the difference
+
+  - browsers
+      - e.g., opening a browser and navigating to a page     
+&lt;br&gt;
+  - elements
+      - e.g., opening and clicking on a drop-down menu
+
+---
+class: center, middle
+
+## Interacting with Browsers
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+.pull-left[
+
+- Use the `rsDriver` function to start a server
+
+  - so that you can control a web browser from within R
+
+&lt;br&gt;
+
+]
+
+
+.pull-right[
+
+```md
+rsDriver(port = 4567L, 
+         browser = "chrome", 
+         version = "latest", 
+         chromever = "latest",
+         ...
+         )
+
+```
+
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+.pull-left[
+
+- Use the `rsDriver` function to start a server
+    - so that you can control a web browser from within R
+
+&lt;br&gt;
+
+- Note that the defaults can cause errors, such as
+   - tying to start two servers from the same .yellow-[port]
+
+
+
+]
+
+
+.pull-right[
+
+```md
+rsDriver(`port` = 4567L, 
+         browser = "chrome", 
+         version = "latest", 
+         chromever = "latest",
+         ...
+         )
+
+```
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+.pull-left[
+
+- Use the `rsDriver` function to start a server
+    - so that you can control a web browser from within R
+
+&lt;br&gt;
+
+- Note that the defaults can cause errors, such as
+   - tying to start two servers from the same port
+   - any mismatch between the .yellow[version and driver numbers]
+
+]
+
+
+.pull-right[
+
+```md
+rsDriver(port = 4567L, 
+         browser = "chrome", 
+         `version = "latest"`, 
+         `chromever = "latest"`,
+         ...
+         )
+
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+- The latest version of the driver is too new for my browser
+  - I have to use an older version to make it work
+  - after checking the available versions with the following code
+
+
+```r
+binman::list_versions("chromedriver")
+```
+
+```
+## $win32
+## [1] "89.0.4389.23" "90.0.4430.24" "91.0.4472.19"
+```
+
+--
+
+&lt;br&gt;
+
+- Note that
+
+  - you can only use the version that *you* get
+  - not one of the version that you see on this slide
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+.pull-left[
+
+- Then the function works
+
+  - a web browser opens as a result
+  - an R object named .yellow-h[driver] is created
+
+&lt;br&gt;
+
+- Note that
+
+   - the browser says .yellow-h["Chrome is being controlled by automated test software."]
+    
+    - you should avoid controlling this browser manually
+    
+    - you should also avoid creating multiple servers
+   
+
+]
+
+.pull-right[
+
+```md
+driver &lt;- rsDriver(`chromever = "90.0.4430.24"`)
+```
+
+&lt;img src="scrp_workshop_files/images_data/chrome_works.png" width="2073" /&gt;
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
+
+Separate the .yellow-h[client] and .yellow-h[server] as different objects
+
+
+```r
+browser &lt;- driver$client
+server &lt;- driver$server
+```
+
+&lt;br&gt;
+
+Note that
+
+- `rsDriver()` creates a client and a server
+   - the code above singles out the client, with which our code will interact
+   - client is best thought as the browser itself
+       - it has the class of `remoteDriver`
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Navigate
+
+Navigate to a page with the following notation
+
+```md
+browser`$navigate`(url = "https://luzpar.netlify.app")
+```
+
+&lt;img src="scrp_workshop_files/images_data/navigate.png" width="1973" /&gt;
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Navigate
+
+Navigate to a page with the following notation
+
+```md
+browser`$`navigate("https://luzpar.netlify.app")
+```
+
+&lt;br&gt;
+
+Note that
+
+- `navigate` is called .yellow-h[a method, not a function]
+    - it cannot be piped into `browser`
+    - use the dollar sign &lt;span style="background-color: #ffff88;"&gt;$&lt;/span&gt; notation instead
+    - it is not necessary to type the name of the `url` argument 
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Navigate
+
+Check the description of any method as follows
+- with no parentheses after the method name
+
+```md
+browser$navigate
+```
+
+.out-t[
+
+```
+Class method definition for method navigate()
+function (url) 
+{
+    "Navigate to a given url."
+    qpath &lt;- sprintf("%s/session/%s/url", serverURL, sessionInfo[["id"]])
+    queryRD(qpath, "POST", qdata = list(url = url))
+}
+&lt;environment: 0x00000173db9035a8&gt;
+
+Methods used: 
+     "queryRD"
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Navigate
+
+Go back to the previous URL
+
+```md
+browser$goBack()
+```
+&lt;br&gt;
+
+Go forward
+
+```md
+browser$goForward()
+```
+&lt;br&gt;
+
+Refresh the page
+
+```md
+browser$refresh()
+```
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Navigate
+
+Get the URL of the current page
+
+```md
+browser$CurrentUrl()
+```
+&lt;br&gt;
+
+Get the title of the current page
+
+```md
+browser$getTitle()
+```
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Close and Open
+
+Close the browser
+- which will not close the session on the server
+    - recall that we singled the client out
+
+```md
+browser$close()
+```
+
+&lt;br&gt;
+
+Open a new browser
+- which does not require the `rsDriver` function
+   - because the server is still running
+
+```md
+browser$open()
+```
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Get Page Source
+
+Get the page source
+
+```md
+browser$getPageSource()[[1]]
+```
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Get Page Source
+
+Get the page source
+
+```md
+browser$getPageSource()`[[1]]`
+```
+
+&lt;br&gt;
+
+Note that
+
+- this method returns a list
+   - XML source is in the first item
+   - this is why we need the .inline-c[[[1]]] bit         
+&lt;br&gt;
+- this is akin to `read_html()` for static pages
+    - or `bow()` `%&gt;%` `scrape()`    
+&lt;br&gt;    
+- `rvest` usually takes over after this step
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Get Page Source
+
+Get the page source
+- by combining the two package
+
+```md
+browser$getPageSource()[[1]] %&gt;% 
+        read_html() %&gt;% 
+        html_elements("#title a") %&gt;% 
+        html_attr("href")
+```
+
+.out-t[
+
+```
+[1] "https://github.com/resulumit/scrp_workshop"            
+[2] "https://resulumit.com/"                                
+[3] "https://parliament-luzland.netlify.app/documents/"     
+[4] "https://parliament-luzland.netlify.app/constituencies/"
+[5] "https://parliament-luzland.netlify.app/members/"       
+[6] "https://parliament-luzland.netlify.app/states/"        
+[7] "https://github.com/rstudio/blogdown"                   
+[8] "https://gohugo.io/"                                    
+[9] "https://github.com/wowchemy"   
+
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Get Page Source
+
+Get the page source
+- by using both packages
+
+```md
+browser$getPageSource()[[1]] %&gt;% 
+        read_html() %&gt;% 
+        html_elements("#title a") %&gt;% 
+        html_attr("href")
+```
+
+&lt;br&gt;
+
+Note that
+
+- this method gets the source for only what is physically visible on the browser
+- window size and position might become important
+    - you may wish to maximise the window
+
+```md
+browser$browser$maxWindowSize()
+```
+
+---
+## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Get Page Source
+
+Get the page source
+- by using both packages
+
+```md
+browser$getPageSource()[[1]] %&gt;% 
+        `read_html() %&gt;%` 
+        html_elements("#title a") %&gt;% 
+        html_attr("href")
+```
+
+&lt;br&gt;
+
+Note that
+
+- we still need the `read_html()` function
+   - to turn XML into HTML
+
+
+---
+class: action
+
+## Exercises
+
+11) Navigate to and get the source code of a page
+- e.g., &lt;https://luzpar.netlify.app/constituencies/&gt;
+- by using both packages
+
+
+&lt;br&gt;
+
+13) See what other methods are available to interact with browsers
+- by typing the object name for your client into R console
+   - followed by the dollar sign
+   - and hitting the tab key on your keyboard if necessary
+- read the description for one or more of them
+
+&lt;br&gt;
+
+14) Try one or more new methods
+- e.g., take a screenshot of your browser
+   - and view it in R
+
+<div class="countdown" id="timer_60ab4754" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: center, middle
+
+## Interacting with Elements
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Find
+
+.pull-left[
+
+- Locate an element on the open browser
+    - to be interacted later on
+        - e.g., clicking on the element
+        
+&lt;br&gt;
+
+- Note that
+   - the default selector is `xpath`
+   - requires entering the `xpath` value
+
+]
+
+
+.pull-right[
+
+```md
+
+findElement(using = "xpath", 
+            value
+            )
+
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Find
+
+.pull-left[
+
+- Locate an element on the open browser
+    - using CSS selectors
+        
+&lt;br&gt;
+
+- Note that
+
+   - typing .yellow-h["css"], instead of .yellow-h["css selector"], also works
+
+   - there are other selector schemes as well, including
+      - id
+      - name
+      - link text
+      
+]
+
+
+.pull-right[
+
+```md
+
+findElement(using = `"css selector"`, 
+            value
+            )
+
+```
+
+]
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Find &amp;mdash; Selectors
+
+If there were a button on a page with the following DOM...
+
+```md
+&lt;button class="big-button" id="only-button" name="clickable"&gt;Click Me&lt;/button&gt;
+
+```
+
+&lt;br&gt;
+
+Any of the following would find it
+
+```md
+browser$findElement(using = "xpath", value = '//*[(@id = "only-button")]')
+
+browser$findElement(using = "css selector", value = ".big-button")
+
+browser$findElement(using = "css", value = "#only-button")
+
+browser$findElement(using = "id", value = "only-button")
+
+browser$findElement(using = "name", value = "clickable")
+```
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Objects
+
+Save elements as R objects to be interacted later on
+
+```
+button &lt;- browser$findElement(using = ..., value = ...)
+```
+
+&lt;br&gt;
+
+Note the difference between the classes of clients and elements
+
+.pull-left[
+
+```md
+class(browser)
+```
+
+.out-t[
+
+```
+[1] "remoteDriver"
+attr(,"package")
+[1] "RSelenium"
+```
+]
+
+]
+
+
+.pull-right[
+
+```md
+class(button)
+```
+
+.out-t[
+
+```
+[1] "webElement"
+attr(,"package")
+[1] "RSelenium"
+```
+]
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Highlight
+
+Highlight the element found in the previous step, with the `highlightElement` method
+
+
+```r
+# navitage to a page
+browser$navigate("http://luzpar.netlify.app/")
+
+# find the element
+menu_states &lt;- browser$findElement(using = "link text", value = "States")
+
+# highlight it to see if we found the correct element
+menu_states$`highlightElement()`
+```
+
+&lt;br&gt;
+
+Note that
+
+- the highlighted element fill flash for a second or two on the browser
+    - helpful to check if selection worked as intended  
+    
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Highlight
+
+Highlight the element found in the previous step, with the `highlightElement` method
+
+
+```r
+# navitage to a page
+browser$navigate("http://luzpar.netlify.app/")
+
+# find the element
+menu_states &lt;- `browser$`findElement(using = "link text", value = "States")
+
+# hihglight it to see if we found the correct element
+`menu_states$`highlightElement()
+```
+
+&lt;br&gt;
+
+Note that
+
+- the highlighted element fill flash for a second or two on the browser
+    - helpful to check if selection worked as intended     
+&lt;br&gt;    
+- the highlight method is applied to the element (`menu_states`), not to the client (`browser`)
+   - compare it to the find method
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Click
+
+Click on the element found in the previous step, with the `clickElement` method
+
+
+```r
+# navigate to a page
+browser$navigate("http://luzpar.netlify.app/")
+
+# find an element
+search_icon &lt;- browser$findElement(using = "css", value = ".fa-search")
+
+# click on it
+search_icon$`clickElement()`
+```
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input
+
+.pull-left[
+
+- Provide input to elements, such as
+    - text, with the &lt;span style="background-color: #ffff88;"&gt;value&lt;/span&gt; argument
+    
+]
+
+.pull-right[
+
+```md
+
+sendKeysToElement(list(`value`, 
+                       key
+                       )
+                  )
+
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input
+
+.pull-left[
+
+- Provide input to elements, such as
+    - text, with the value argument
+    - keyboard presses or mouse gestures, with the &lt;span style="background-color: #ffff88;"&gt;key&lt;/span&gt; argument
+    
+&lt;br&gt;
+
+- Note that
+ 
+  - user provides values while the selenium keys are pre-defined
+    
+]
+
+.pull-right[
+
+```md
+
+sendKeysToElement(list(value, 
+                       `key`
+                       )
+                  )
+
+```
+
+]
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input &amp;mdash; Selenium Keys
+
+View the list of Selenium keys
+
+
+```r
+as_tibble(selKeys) %&gt;% names()
+```
+
+```
+##  [1] "null"         "cancel"       "help"         "backspace"    "tab"          "clear"       
+##  [7] "return"       "enter"        "shift"        "control"      "alt"          "pause"       
+## [13] "escape"       "space"        "page_up"      "page_down"    "end"          "home"        
+## [19] "left_arrow"   "up_arrow"     "right_arrow"  "down_arrow"   "insert"       "delete"      
+## [25] "semicolon"    "equals"       "numpad_0"     "numpad_1"     "numpad_2"     "numpad_3"    
+## [31] "numpad_4"     "numpad_5"     "numpad_6"     "numpad_7"     "numpad_8"     "numpad_9"    
+## [37] "multiply"     "add"          "separator"    "subtract"     "decimal"      "divide"      
+## [43] "f1"           "f2"           "f3"           "f4"           "f5"           "f6"          
+## [49] "f7"           "f8"           "f9"           "f10"          "f11"          "f12"         
+## [55] "command_meta"
+```
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input &amp;mdash; Selenium Keys &amp;mdash; Note
+
+Choosing the body element, you can scroll up and down a page
+
+
+```r
+body &lt;- broswer$findElement(using = "css", `value = "body"`)
+body$sendKeysToElement(list(`key = "page_down"`))
+```
+
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input &amp;mdash; Example
+
+Search the demonstration site
+
+
+```r
+# navigate to the home page
+browser$navigate("http://luzpar.netlify.app/")
+
+# find the search icon and click on it
+search_icon &lt;- browser$findElement(using = "css", value = ".fa-search")
+search_icon$clickElement()
+
+# find the search bar on the new page and click on it
+search_bar &lt;- browser$findElement(using = "css", value = "#search-query")
+search_bar$clickElement()
+
+# search for the keyword "Law" and click enter
+search_bar$`sendKeysToElement(list(value = "Law", key = "enter"))`
+```
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input &amp;mdash; Example
+
+Slow down the code where necessary, with the `Sys.sleep`
+- for ethical reasons
+- because R might be faster than the browser
+
+
+```r
+# navigate to the home page
+browser$navigate("http://luzpar.netlify.app/")
+
+# find the search icon and click on it
+search_icon &lt;- browser$findElement(using = "css", value = ".fa-search")
+search_icon$clickElement()
+
+# sleep for 2 seconds
+*Sys.sleep(2)
+
+# find the search bar on the new page and click on it
+search_bar &lt;- browser$findElement(using = "css", value = "#search-query")
+search_bar$clickElement()
+
+# search for the keyword "Law" and click enter
+search_bar$sendKeysToElement(list(value = "Law", key = "enter"))
+```
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Input &amp;mdash; Clear
+
+Clear text, or a value, from an element
+
+```
+search_bar$clearElement()
+```
+
+---
+class: action
+
+## Exercise
+
+15) Conduct an internet search programatically
+- navigate to &lt;https://duckduckgo.com/&gt;
+   - just to keep it simple as Google would require you to scroll down and accept a policy     
+&lt;br&gt;   
+- find, highlight, and fill in the search bar
+    - hit enter
+    
+&lt;br&gt;
+
+16) Scroll down programatically, and up
+- to see all results
+
+
+<div class="countdown" id="timer_60ab4a91" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Switch Frames
+
+.pull-left[
+
+- Switch to a different frame on a page
+
+  - some pages have multiple frames
+  - you can think of them as browsers within browsers
+  - while in one frame, we cannot work with the page source of another frame
+
+]
+
+
+.pull-right[
+
+```md
+switchToFrame(Id
+             )
+
+```
+
+]
+
+&lt;br&gt;
+
+- Note that
+
+  - there is one such page on the demonstration website
+     - &lt;https://luzpar.netlify.app/documents/&gt;
+     - featuring a shiny app that lives originally lives at &lt;https://resulumit.shinyapps.io/luzpar/&gt;     
+&lt;br&gt;
+  - the `Id` argument takes an element object, unquoted
+     - setting it to `NULL` returns to the default frame
+
+
+---
+## Dynamic Pages &amp;mdash; Elements &amp;mdash; Switch Frames
+
+Switch to a non-default frame
+
+
+```r
+# navigate to a page and wait for the frame to load
+browser$navigate("https://luzpar.netlify.app/documents/")
+Sys.sleep(4)
+
+# find the frame, which is an element
+app_frame &lt;- browser$findElement("css", "iframe")
+
+# switch to it
+browser$`switchToFrame(Id = app_frame)`
+
+#switch back to the default frame
+browser$`switchToFrame(Id = NULL)`
+```
+
+---
+## Dynamic Pages &amp;mdash; Scraping &amp;mdash; Example
+
+**Task:**    
+
+- I need to download specific documents published by the parliament
+   - e.g., proposals and reports
+- The related section of the website is a dynamic page
+    - initially it is empty, and clicking on things do not change the URL
+
+--
+
+&lt;br&gt;
+
+**Plan:**
+
+- Interact with the page until it displays the desired list of documents
+- Get the page source and separate the links
+- Write a for loop to
+    - visit the related pages one by one
+    - download the documents
+    
+---
+## Dynamic Pages &amp;mdash; Scraping &amp;mdash; Example
+
+Interact with the page until it displays the desired list of documents
+
+
+```r
+# navigate to the desired page and wait a little
+browser$navigate("https://luzpar.netlify.app/documents/")
+Sys.sleep(4)
+
+# switch to the frame with the app
+app_frame &lt;- browser$findElement("css", "iframe")
+browser$switchToFrame(Id = app_frame)
+
+# find and open the drop down menu
+drop_down &lt;- browser$findElement(using = "css", value = ".bs-placeholder")
+drop_down$clickElement()
+
+# choose proposals
+proposal &lt;- browser$findElement(using = 'css', "[id='bs-select-1-1']")
+proposal$clickElement()
+
+# choose reports
+report &lt;- browser$findElement(using = 'css', "[id='bs-select-1-2']")
+report$clickElement()
+
+# close the drop down menu
+drop_down$clickElement()
+```
+
+---
+## Dynamic Pages &amp;mdash; Scraping &amp;mdash; Example
+
+Get the page source and separate the links
+
+
+```r
+the_links &lt;- browser$getPageSource()[[1]] %&gt;% 
+        read_html() %&gt;% 
+        html_elements("td a") %&gt;% 
+        html_attr("href")
+
+print(the_links)
+```
+
+.out-t[
+```
+## [1] "https://luzpar.netlify.app/documents/human-rights-2021/"            
+## [2] "https://luzpar.netlify.app/documents/greenhouse-gas-emissions-2021/"
+## [3] "https://luzpar.netlify.app/documents/tax-reform-2020/"              
+## [4] "https://luzpar.netlify.app/documents/parliamentary-staff-2020/"     
+## [5] "https://luzpar.netlify.app/documents/cyber-security-2019/"          
+## [6] "https://luzpar.netlify.app/documents/electronic-cigarettes-2019/" 
+
+```
+]
+
+---
+## Dynamic Pages &amp;mdash; Scraping &amp;mdash; Example
+
+Write a for loop to download PDFs
+
+```
+for (i in 1:length(the_links)) {
+        
+pdf_link &lt;- bow(url = the_links[i]) %&gt;%
+        scrape() %&gt;%
+        html_elements(css = ".btn-page-header") %&gt;% 
+        html_attr("href") %&gt;% 
+        url_absolute(base = "https://luzpar.netlify.app/")
+
+download.file(url = pdf_link, destfile = basename(pdf_link))
+        
+}
+
+```
+
+---
+class: action
+
+## Exercise
+
+17) Collect data on a subset of documents
+- article tags and image credits
+- for documents within the Law and Proposal categories
+- published after 2019
+
+
+&lt;br&gt;
+
+Hint
+- start with the related code in the previous slides, and adopt it to your needs  
+
+
+<div class="countdown" id="timer_60ab49c3" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">30</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+name: reference-slide
+class: inverse, center, middle
+
+# References
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+---
+## References
+
+Harrison, J. (2020). [RSelenium: R Bindings for 'Selenium WebDriver'](https://cran.r-project.org/web/packages/RSelenium/index.html). R package, version 1.7.7.
+
+Meissner, P., &amp; Ren, K. (2020). [robotstxt: A 'robots.txt' Parser and 'Webbot'/'Spider'/'Crawler' Permissions Checker](https://cran.r-project.org/web/packages/robotstxt/index.html). R package, version 0.7.13.
+
+Perepolkin, D. (2019). [polite: Be Nice on the Web](https://cran.r-project.org/web/packages/polite/index.html). R package, version 0.1.1.
+
+Wickham, H. (2021). [rvest: Easily Harvest (Scrape) Web Pages](https://cran.r-project.org/web/packages/rvest/index.html). R package, version 1.0.0.
+
+Wickham, H., François, R., Henry, L., &amp; Müller, K. (2021). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.6.
+
+Xie, Y. (2020). [xaringan: Presentation Ninja](https://cran.r-project.org/web/packages/xaringan/index.html). R package, version 0.19.
+
+---
+class: middle, center
+
+## The workshop ends here.
+## Congradulations for making it this far, and
+## thank you for joining me!
+
+.footnote[
+
+[Back to the contents slide](#contents-slide).
+
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
