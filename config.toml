@@ -26,7 +26,7 @@ posts_count = 2
 pubs_count = 2
 
 # Number of posts to show on main page.
-unpublished_count = 2
+unpublished_count = 3
 
 # options for highlight.js (version, additional languages, and theme)
 highlightjsVersion = "9.11.0"
