@@ -3,7 +3,7 @@ Source files for resulumit.com
 
 All files for https://resulumit.com, generated with [Blogdown](https://github.com/rstudio/blogdown) and [Hugo](http://gohugo.io/).
 
-The design follows http://kieranhealy.org and https://robjhyndman.com, modifications of [hugo-finite](https://github.com/lambdafu/hugo-finite). 
+The design follows https://robjhyndman.com, a modification of [hugo-finite](https://github.com/lambdafu/hugo-finite). 
 
 
 ### Licenses of third-party components
