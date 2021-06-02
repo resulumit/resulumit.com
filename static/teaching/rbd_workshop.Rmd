@@ -122,7 +122,7 @@ Resul Umit
   - [writing reproducible research papers](https://resulumit.com/blog/rmd-workshop/)
   - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
   - [working with Twitter data](https://resulumit.com/syllabi/21spring_twtr.pdf)
-  - [web scraping](https://www.campus-luzern.ch/files/2020/12/FS21_Web-Scraping-with-R.pdf)
+  - [automated web scraping](https://resulumit.com/teaching/scrp_workshop.html)
     
 --
 
@@ -4301,3 +4301,7 @@ class: middle, center
 [Back to the contents slide](#contents-slide).
 
 ]
+
+```{r, print, eval=FALSE, echo=FALSE, message=FALSE}
+pagedown::chrome_print("rbd_workshop.html", output = "rbd_workshop.pdf")
+```
