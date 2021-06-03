@@ -4,7 +4,7 @@ comments: false
 date: '2021-06-02'
 slug: flag-draped-coffins
 title: 'Rallies around the flag-draped coffins: The electoral effects of security force casualties in terror attacks'
-kind: published
+kind: article
 tags:
 - elections
 - terrorism
