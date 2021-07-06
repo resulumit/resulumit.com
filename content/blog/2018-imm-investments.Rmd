@@ -5,8 +5,6 @@ title: "Istanbul puts the money where AKP voters are"
 output: html_document
 categories:
         - Turkey
-        - public investments
-        - data visualisation
 ---
 
 ```{r setup, include=FALSE}

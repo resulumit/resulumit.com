@@ -5,6 +5,7 @@ title: "Turnaround times and acceptance rates at political science journals"
 output: html_document
 categories:
         - journals
+        - web scraping
 ---
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}

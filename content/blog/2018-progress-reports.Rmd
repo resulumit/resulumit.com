@@ -5,8 +5,6 @@ title: "EU press releases differ from their reports on Turkey"
 output: html_document
 categories:
         - EU
-        - progress reports
-        - text analyis
         - Turkey
 ---
 

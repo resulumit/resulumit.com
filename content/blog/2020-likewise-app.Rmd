@@ -5,8 +5,8 @@ title: "Search your Twitter likes"
 output: html_document
 runtime: shiny
 categories:
-        - software
         - Twitter
+        - software
 ---
 
 This post introduces `LikeWise` --- a Shiny app that retrieves and filters users' likes on Twitter. If you are looking for a quick direction, click <a href="https://resulumit.shinyapps.io/likewise/" target="_blank"><b>here</b></a> for the app.

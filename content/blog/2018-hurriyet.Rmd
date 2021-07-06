@@ -5,8 +5,6 @@ title: "Media coverage of presidential candidates in Turkey"
 output: html_document
 categories:
         - Turkey
-        - media
-        - elections
         - Twitter
 ---
 
@@ -21,9 +19,9 @@ df_coded <- data.frame(variables=c("total", "electoral", "erdogan", "others", "e
                  e2018p=c(135.52, 5.5, 58.7, 49.6, 53.6, 31.4, 5.1, 18.2, 0.3, 11.8))
 ```
 
-When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet — Dogan’s top-selling daily — in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
+When Dogan Media was bought by a pro-Erdogan businessman, many suspected a change in the position of its news outlets in the long-run. I compare the tweets by Hurriyet---Dogan’s top-selling daily---in two presidential elections, before and after the sale. I find unmistakable changes in the way the newspaper approached the candidates, increasing its bias towards Erdogan in the election months after the sale.
 
-Most news media are divided into pro- and anti-Erdogan camps in Turkey. The former, larger camp is in the hands of a few conglomerates, who owe some of their wealth to their ability to win government tenders.When one of these conglomerates, Demiroren Holding, bought Dogan Media — ‘[Turkey’s last big independent media firm](https://www.economist.com/europe/2018/03/27/turkeys-last-big-independent-media-firm-is-snapped-up-by-a-regime-ally)’ — on 9 April, the question marks over the media freedom in Turkey just got bigger.
+Most news media are divided into pro- and anti-Erdogan camps in Turkey. The former, larger camp is in the hands of a few conglomerates, who owe some of their wealth to their ability to win government tenders.When one of these conglomerates, Demiroren Holding, bought Dogan Media---‘[Turkey’s last big independent media firm](https://www.economist.com/europe/2018/03/27/turkeys-last-big-independent-media-firm-is-snapped-up-by-a-regime-ally)’---on 9 April, the question marks over the media freedom in Turkey just got bigger.
 
 At the time, many commentators raised concerns about the potential effect of this sale on the media coverage of the campaign for the upcoming 2019 presidential election.
 
@@ -90,12 +88,12 @@ grid.arrange(f1, f2, ncol = 2, widths = c(1.8, 2))
 
 On the left, we see that Hurriyet’s Twitter account was more active in 2018 than in 2014: while it posted on average about 80 tweets a day before the 2014 election, it now tweets about 135 times a day.
 
-Despite this 65% increase in its overall activity on Twitter, Hurriyet's attention to the candidates decreased — both in absolute and therefore in relative numbers. In 2014, 11% of Hurriyet’s messages on Twitter were related to the candidates in the upcoming election.^3^ However, the share of candidate-related tweets decreased to below 6% in 2018.
+Despite this 65% increase in its overall activity on Twitter, Hurriyet's attention to the candidates decreased---both in absolute and therefore in relative numbers. In 2014, 11% of Hurriyet’s messages on Twitter were related to the candidates in the upcoming election.^3^ However, the share of candidate-related tweets decreased to below 6% in 2018.
 
 The decrease in Hurriyet’s attention to the candidates becomes all the more surprising if we consider that the 2018 election:
 
 1. was more salient due to the change from a parliamentary to a presidential system,
-2. was more competitive — unlike the 2014 election, there was less certainty that Erdogan would win, and
+2. was more competitive---unlike the 2014 election, there was less certainty that Erdogan would win, and
 3. had more candidates, and the campaign was more lively.
 
 Overall, this suggests that Hurriyet paid relatively less attention to the election in 2018, compared with the previous election in 2014.
@@ -243,7 +241,7 @@ ggplot(df_nt, aes(x=year, y=mean, colour=variables, group=variables)) +
         legend.position = "none", legend.title = element_blank())
 ```
 
-During the 50 days preceding the 2014 election, about 11% of the tweets that Hurriyet posted included something negative about Erdogan. However, there was only one single negative tweet during the 2018 campaign, and that tweet was a self-ciricitism by Erdogan, where he says he does not deny that FETO — who were allegedly behind the coup attempt in 2016 — gained power during this rule.
+During the 50 days preceding the 2014 election, about 11% of the tweets that Hurriyet posted included something negative about Erdogan. However, there was only one single negative tweet during the 2018 campaign, and that tweet was a self-ciricitism by Erdogan, where he says he does not deny that FETO---who were allegedly behind the coup attempt in 2016---gained power during this rule.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, tweet.align="center"}
 blogdown::shortcode("tweet", "1004837304773603328")
@@ -258,7 +256,7 @@ Notes:
 
 1. Analysing tweets are not only resource effective. Social media is also [where more and more people follow the news, including the ones on political campaigns](http://www.journalism.org/2016/02/04/the-2016-presidential-campaign-a-news-event-thats-hard-to-miss/). At the time of writing, [Hurriyet](https://twitter.com/Hurriyet) has 4.17 million followers on Twitter.
 
-2. I look at only 50 days before each election because, the runner-up in the 2018 elections — Muharrem Ince — announced his candidacy 51 days before the election.
+2. I look at only 50 days before each election because, the runner-up in the 2018 elections---Muharrem Ince---announced his candidacy 51 days before the election.
 
 3. I located the candidate-related tweets by searching for the names and surnames of the candidates, and then reading these tweets to see if they were really about the elections.
 
