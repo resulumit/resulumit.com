@@ -25,10 +25,6 @@ report_words <- data %>%
         filter(!word %in% stop_words$word,
                str_detect(word, "[a-z]"))
 
-nrc <- sentiments %>%
-        filter(lexicon == "nrc") %>%
-        dplyr::select(word, sentiment)
-
 report_comparison <- report_words %>%
         group_by(year) %>%
         mutate(total_words = n()) %>%
@@ -36,7 +32,7 @@ report_comparison <- report_words %>%
         distinct(year, total_words)
 
 by_report_sentiment <- report_words %>%
-        inner_join(nrc, by = "word") %>%
+        inner_join(sentiments, by = "word") %>%
         count(sentiment, year) %>%
         ungroup() %>%
         complete(sentiment, year, fill = list(n = 0)) %>%
@@ -66,7 +62,7 @@ key_comparison <- key_words %>%
         distinct(year, total_words)
 
 by_key_sentiment <- key_words %>%
-        inner_join(nrc, by = "word") %>%
+        inner_join(sentiments, by = "word") %>%
         count(sentiment, year) %>%
         ungroup() %>%
         complete(sentiment, year, fill = list(n = 0)) %>%
@@ -134,7 +130,7 @@ ggplot(negative.df, aes(year, share, group = type)) +
 
 I think it is safe to say that these reports have very limited readership. They are not only technical, but also lengthy documents. For example. the 2018 report on Turkey is 111-page long, and the average length is about 102 pages. 
 
-This is perhaps one of the reasons why the Commission publishes press releases together with reports. These releases are much shorter; for example the [latest press release]http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf on Turkey has only five pages. On average, they are about 3.5 pages long.^1^
+This is perhaps one of the reasons why the Commission publishes press releases together with reports. These releases are much shorter; for example the [latest press release](http://europa.eu/rapid/press-release_MEMO-18-3407_en.pdf) on Turkey has only five pages. On average, they are about 3.5 pages long.^1^
 
 Considering that press releases are more widely-read than the reports (especially by the journalists, from whom most people would learn about the reports), I wanted to compare the two types with regards to the sentiments and emotions that they reveal.  
 

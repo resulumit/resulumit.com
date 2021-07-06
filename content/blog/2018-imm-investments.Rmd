@@ -123,13 +123,22 @@ To increase our confidence in these results, we can repeat our analysis in the r
 
 If we plot the regression discontinuity estimates, we see this difference in a clear picture.
 
-```{r rdd, echo= FALSE}
+```{r rdd, include=FALSE, echo=FALSE}
 est <- rdrobust(y=df1$investment, x=df1$running)
-rdplot(y=df1$investment, x=df1$running, subset=-est$h_l<= df1$running & df1$running <= est$h_r, scale=6,
-       binselect="esmv", kernel="triangular", h=c(est$h_l, est$h_r), p=1,
+
+plot <- rdplot(y = df1$investment, x = df1$running,
+       binselect = "esmv", kernel = "triangular", h = c(est$h_l, est$h_r), p=1,
        title=element_blank(), 
        y.label="Investment in 2018 (Million TL)",
        x.label="AKP Margin in 2014")
+```
+
+
+```{r rdd_plot, echo=FALSE}
+plot$rdplot +
+        theme(panel.background = element_rect(fill = "#faf9f9"),
+        plot.background = element_rect(fill = "#faf9f9"),
+        legend.background = element_rect(fill = "#faf9f9"))
 ```
 
 To sum it all up, there are significant differences between the mount of public money invested in the districts of Istanbul. It is clear that AKP districts are better off as they receive on average around 250 million TL more from the city.
