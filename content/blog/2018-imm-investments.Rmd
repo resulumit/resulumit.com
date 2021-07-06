@@ -43,7 +43,6 @@ The plan lists 555 projects, with information on how much money will be invested
 
 Let’s have a look at how the investment is distributed among the 39 district municipalities in Istanbul, 25 of which governed by AKP and the remaining 14 by the main opposition, Republican People’s Party (CHP).
 
-
 ```{r barplot, echo=FALSE}
 ggplot(df1, aes(x = reorder(municipality, -investment), y = investment, fill = factor(treatment))) + 
   geom_bar(stat = "identity") +
@@ -113,9 +112,10 @@ stargazer(lm1, lm2, single.row = T, type = "html",
           no.space = T,
           star.cutoffs = c(0.05, 0.01, 0.001))
 ```
+
 With or without the additional controls, the results are substantively the same: on average, AKP municipalities are predicted to receive about 250 million TL more than the CHP municipalities.
 
-Besides, there is a negative relationship between AKP winning margin and the amount of investment: it seems that larger the AKP’s winning margin in a district, the less Mevlut Uygur is planning to invest there. This would indeed be strategically more meaningful if a party invest more in the districts that are marginal than very safe — something that we can see in Figure 2 above.
+Besides, there is a negative relationship between AKP winning margin and the amount of investment: it seems that larger the AKP’s winning margin in a district, the less Mevlut Uygur is planning to invest there. This would indeed be strategically more meaningful if a party invest more in the districts that are marginal than very safe---something that we can see in Figure 2 above.
 
 Both these results are statistically significant—that is, the possibility that these differences happen by chance is small enough by the standards of social sciences.
 
