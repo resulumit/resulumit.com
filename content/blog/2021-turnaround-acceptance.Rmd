@@ -157,8 +157,8 @@ df %>% ggplot(aes(x = acceptance_rate)) +
               strip.text = element_text(colour = "black", size=11),
               strip.background = element_rect(fill= "faf9f9", color= "faf9f9"),
               legend.position = "bottom",
-              legend.title = element_blank())
-
+              legend.title = element_blank()) +
+    scale_x_continuous(labels = function(x) paste0(x, "%"))
 
 ```
 
