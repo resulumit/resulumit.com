@@ -1,7 +1,7 @@
 ---
 date: 2021-07-06
 slug: polisci-turnaround-acceptance
-title: "Turnaround times and acceptance rates at political science journals"
+title: "Turnaround times and acceptance rates in political science journals"
 output: html_document
 categories:
         - journals
@@ -9,494 +9,1171 @@ categories:
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+<link href="/rmarkdown-libs/lightable/lightable.css" rel="stylesheet" />
 
 
-<p>It would be great if <a href="https://resulumit.shinyapps.io/psjournals/" target="_blank">the psjournals app</a> included information on turnaround times and acceptance rates at political science journals. This is one of the most common feedback that I receive from its users, and I could not agree more.</p>
+<p>It would be great if <a href="https://resulumit.shinyapps.io/psjournals/" target="_blank">the psjournals app</a> included information on turnaround times and acceptance rates in political science journals. This is one of the most common requests that I receive from its users, and I could not agree more.</p>
 <p>These statistics are unfortunately unavailable for many journals.</p>
-<p>The journals published by Taylor &amp; Francis are now a welcome exception. The publisher has recently started to provide statistics on journal turnaround times and acceptance rates on its website — in separate sections for individual journals.</p>
+<p>The ones published by Taylor &amp; Francis are now a welcome exception. The publisher has recently started to provide statistics on journal turnaround times and acceptance rates on its website — in separate sections for individual journals.</p>
 <p>This blogpost brings these statistics together, collecting the data with the code <a href="https://gist.github.com/resulumit/05f5186f2c7abd7efed0e05bc64a358e" target="_blank">available on GitHub</a>.</p>
-<p>All turnaround times indicate the median, measured in days. Hover over the column headers for their definitions. Furhter details are available on <a href="https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-metrics/#" target="_blank">the publisher’s website</a>.</p>
+<p>All turnaround times indicate the median, measured in days. Further details on measurement are available on <a href="https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-metrics/#" target="_blank">the publisher’s website</a>.</p>
 <p>See also the graphs that summarise the statistics <a href="#descriptive-graphs">at the end of the post</a>.</p>
-<p><br></p>
-<table>
-<colgroup>
-<col width="40%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-</colgroup>
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th align="right">Journal</th>
-<th align="right"><span class="cname" title="Median number of days, from submission to first decision, including desk rejections">First Decision</span></th>
-<th align="right"><span class="cname" title="Median number of days, from submission to first decision, excluding desk rejections">Post-PR Decision</span></th>
-<th align="right"><span class="cname" title="Median number of days, from acceptance to online publication">Online Publication</span></th>
-<th align="right">Acceptance Rate</th>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Submission to first decision
+</div>
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Journal
+</th>
+<th style="text-align:left;">
+Including desk rejects
+</th>
+<th style="text-align:left;">
+Excluding desk rejects
+</th>
+<th style="text-align:left;">
+Acceptance to online
+</th>
+<th style="text-align:left;">
+Acceptance rate
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rjpp20/current'>Journal of European Public Policy</a></td>
-<td align="right">3</td>
-<td align="right">47</td>
-<td align="right">21</td>
-<td align="right">24%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/cjms20/current'>Journal of Ethnic and Migration Studies</a></td>
-<td align="right">23</td>
-<td align="right">79</td>
-<td align="right">21</td>
-<td align="right">14%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fwep20/current'>West European Politics</a></td>
-<td align="right">39</td>
-<td align="right">68</td>
-<td align="right">27</td>
-<td align="right">18%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rrip20/current'>Review of International Political Economy</a></td>
-<td align="right">10</td>
-<td align="right">86</td>
-<td align="right">19</td>
-<td align="right">24%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fenp20/current'>Environmental Politics</a></td>
-<td align="right">76</td>
-<td align="right">99</td>
-<td align="right">18</td>
-<td align="right">18%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fdem20/current'>Democratization</a></td>
-<td align="right">15</td>
-<td align="right">41</td>
-<td align="right">20</td>
-<td align="right">34%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/cnpe20/current'>New Political Economy</a></td>
-<td align="right">18</td>
-<td align="right">89</td>
-<td align="right">15</td>
-<td align="right">22%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/upcp20/current'>Political Communication</a></td>
-<td align="right">17</td>
-<td align="right">75</td>
-<td align="right">38</td>
-<td align="right">12%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/uter20/current'>Studies in Conflict and Terrorism</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">18</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/ftpv20/current'>Terrorism and Political Violence</a></td>
-<td align="right">41</td>
-<td align="right">62</td>
-<td align="right">27</td>
-<td align="right">20%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fses20/current'>South European Society and Politics</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">35</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/geui20/current'>Journal of European Integration</a></td>
-<td align="right">54</td>
-<td align="right">121</td>
-<td align="right">28</td>
-<td align="right">28%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rglo20/current'>Globalizations</a></td>
-<td align="right">17</td>
-<td align="right">105</td>
-<td align="right">23</td>
-<td align="right">53%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fgeo20/current'>Geopolitics</a></td>
-<td align="right">33</td>
-<td align="right">87</td>
-<td align="right">22</td>
-<td align="right">30%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rpsa20/current'>Post-Soviet Affairs</a></td>
-<td align="right">32</td>
-<td align="right">78</td>
-<td align="right">12</td>
-<td align="right">14%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/ccst20/current'>Citizenship Studies</a></td>
-<td align="right">23</td>
-<td align="right">102</td>
-<td align="right">12</td>
-<td align="right">15%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/flgs20/current'>Local Government Studies</a></td>
-<td align="right">27</td>
-<td align="right">76</td>
-<td align="right">15</td>
-<td align="right">20%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/csms20/current'>Social Movement Studies</a></td>
-<td align="right">56</td>
-<td align="right">126</td>
-<td align="right">11</td>
-<td align="right">23%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rwaq20/current'>Washington Quarterly</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">30</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/feus20/current'>European Security</a></td>
-<td align="right">29</td>
-<td align="right">54</td>
-<td align="right">19</td>
-<td align="right">37%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/crea20/current'>Review of African Political Economy</a></td>
-<td align="right">40</td>
-<td align="right">104</td>
-<td align="right">45</td>
-<td align="right">22%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fsst20/current'>Security Studies</a></td>
-<td align="right">34</td>
-<td align="right">103</td>
-<td align="right">22</td>
-<td align="right">6%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rtep20/current'>Territory, Politics, Governance</a></td>
-<td align="right">52</td>
-<td align="right">94</td>
-<td align="right">32</td>
-<td align="right">30%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fmed20/current'>Mediterranean Politics</a></td>
-<td align="right">9</td>
-<td align="right">86</td>
-<td align="right">15</td>
-<td align="right">25%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/mppc20/current'>Problems of Post-Communism</a></td>
-<td align="right">88</td>
-<td align="right">108</td>
-<td align="right">41</td>
-<td align="right">39%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rfjp20/current'>International Feminist Journal of Politics</a></td>
-<td align="right">59</td>
-<td align="right">118</td>
-<td align="right">38</td>
-<td align="right">36%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fcsp20/current'>Contemporary Security Policy</a></td>
-<td align="right">4</td>
-<td align="right">47</td>
-<td align="right">15</td>
-<td align="right">12%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fjss20/current'>Journal of Strategic Studies</a></td>
-<td align="right">0</td>
-<td align="right">88</td>
-<td align="right">19</td>
-<td align="right">17%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rbul20/current'>Bulletin of the Atomic Scientists</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">37</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/gini20/current'>International Interactions</a></td>
-<td align="right">49</td>
-<td align="right">64</td>
-<td align="right">31</td>
-<td align="right">24%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/ccpo20/current'>Contemporary Politics</a></td>
-<td align="right">11</td>
-<td align="right">77</td>
-<td align="right">14</td>
-<td align="right">22%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/cjhr20/current'>Journal of Human Rights</a></td>
-<td align="right">19</td>
-<td align="right">80</td>
-<td align="right">65</td>
-<td align="right">28%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/ccam20/current'>Cambridge Review of International Affairs</a></td>
-<td align="right">54</td>
-<td align="right">85</td>
-<td align="right">21</td>
-<td align="right">27%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fjcs21/current'>East European Politics</a></td>
-<td align="right">52</td>
-<td align="right">86</td>
-<td align="right">14</td>
-<td align="right">41%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fcri20/current'>Critical Review of International Social and Political Philosophy</a></td>
-<td align="right">42</td>
-<td align="right">101</td>
-<td align="right">9</td>
-<td align="right">50%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fbep20/current'>Journal of Elections, Public Opinion and Parties</a></td>
-<td align="right">56</td>
-<td align="right">72</td>
-<td align="right">15</td>
-<td align="right">23%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fjls20/current'>Journal of Legislative Studies</a></td>
-<td align="right">73</td>
-<td align="right">86</td>
-<td align="right">21</td>
-<td align="right">53%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/cjss20/current'>Journal of Southern African Studies</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">30</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/fgrp20/current'>German Politics</a></td>
-<td align="right">80</td>
-<td align="right">91</td>
-<td align="right">20</td>
-<td align="right">44%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fint20/current'>Intelligence and National Security</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">11</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/reno20/current'>Ethnopolitics</a></td>
-<td align="right">28</td>
-<td align="right">57</td>
-<td align="right">22</td>
-<td align="right">62%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/mijp20/current'>International Journal of Political Economy</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">58</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/wwap20/current'>Journal of Women, Politics and Policy</a></td>
-<td align="right">0</td>
-<td align="right">90</td>
-<td align="right">59</td>
-<td align="right">10%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/cajp20/current'>Australian Journal of Political Science</a></td>
-<td align="right">32</td>
-<td align="right">76</td>
-<td align="right">15</td>
-<td align="right">36%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rrep20/current'>Representation</a></td>
-<td align="right">70</td>
-<td align="right">92</td>
-<td align="right">21</td>
-<td align="right">46%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rcri20/current'>Critical Review</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">45</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/cjgr20/current'>Journal of Genocide Research</a></td>
-<td align="right">16</td>
-<td align="right">80</td>
-<td align="right">20</td>
-<td align="right">33%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/upse20/current'>Journal of Political Science Education</a></td>
-<td align="right">88</td>
-<td align="right">102</td>
-<td align="right">18</td>
-<td align="right">58%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/cnid20/current'>National Identities</a></td>
-<td align="right">63</td>
-<td align="right">117</td>
-<td align="right">24</td>
-<td align="right">41%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fmes20/current'>Middle Eastern Studies</a></td>
-<td align="right">13</td>
-<td align="right"></td>
-<td align="right">27</td>
-<td align="right">29%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rcfp20/current'>Canadian Foreign Policy Journal</a></td>
-<td align="right">12</td>
-<td align="right">47</td>
-<td align="right">40</td>
-<td align="right">51%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/ujic20/current'>International Journal of Intelligence and CounterIntelligence</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">53</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/cper20/current'>Peace Review</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">98</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fdas20/current'>Democracy and Security</a></td>
-<td align="right">57</td>
-<td align="right">72</td>
-<td align="right">22</td>
-<td align="right">37%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/ucst20/current'>Comparative Strategy</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">50</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/fisa20/current'>Israel Affairs</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">10</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rpic20/current'>Journal of Policing, Intelligence and Counter Terrorism</a></td>
-<td align="right">2</td>
-<td align="right">133</td>
-<td align="right">14</td>
-<td align="right">23%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rnpr20/current'>Nonproliferation Review</a></td>
-<td align="right">41</td>
-<td align="right">57</td>
-<td align="right">48</td>
-<td align="right">42%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/vpps20/current'>Perspectives on Political Science</a></td>
-<td align="right">147</td>
-<td align="right">102</td>
-<td align="right">23</td>
-<td align="right">33%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rpnz20/current'>Political Science</a></td>
-<td align="right">56</td>
-<td align="right">84</td>
-<td align="right">28</td>
-<td align="right">27%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rasi20/current'>Asian Journal of Political Science</a></td>
-<td align="right">52</td>
-<td align="right">64</td>
-<td align="right">14</td>
-<td align="right">19%</td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/caji20/current'>Australian Journal of International Affairs</a></td>
-<td align="right">5</td>
-<td align="right">45</td>
-<td align="right">15</td>
-<td align="right">24%</td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rifa20/current'>Israel Journal of Foreign Affairs</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">26</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rper20/current'>Parliaments, Estates and Representation</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">21</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right"><a href='https://www.tandfonline.com/toc/rfia20/current'>Review of Faith and International Affairs</a></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">56</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"><a href='https://www.tandfonline.com/toc/rsaj20/current'>South African Journal of International Affairs</a></td>
-<td align="right">2</td>
-<td align="right">90</td>
-<td align="right">22</td>
-<td align="right">49%</td>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rjpp20/current">Journal of European Public Policy</a>
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+47
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+24%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cjms20/current">Journal of Ethnic and Migration Studies</a>
+</td>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+79
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+14%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fwep20/current">West European Politics</a>
+</td>
+<td style="text-align:left;">
+39
+</td>
+<td style="text-align:left;">
+68
+</td>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+18%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rrip20/current">Review of International Political Economy</a>
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+24%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fenp20/current">Environmental Politics</a>
+</td>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+99
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+18%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fdem20/current">Democratization</a>
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+34%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cnpe20/current">New Political Economy</a>
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+89
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+22%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/upcp20/current">Political Communication</a>
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+75
+</td>
+<td style="text-align:left;">
+38
+</td>
+<td style="text-align:left;">
+12%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/uter20/current">Studies in Conflict and Terrorism</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ftpv20/current">Terrorism and Political Violence</a>
+</td>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+20%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fses20/current">South European Society and Politics</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+35
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/geui20/current">Journal of European Integration</a>
+</td>
+<td style="text-align:left;">
+54
+</td>
+<td style="text-align:left;">
+121
+</td>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+28%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rglo20/current">Globalizations</a>
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+105
+</td>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+53%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fgeo20/current">Geopolitics</a>
+</td>
+<td style="text-align:left;">
+33
+</td>
+<td style="text-align:left;">
+87
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+30%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rpsa20/current">Post-Soviet Affairs</a>
+</td>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+78
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+14%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ccst20/current">Citizenship Studies</a>
+</td>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+102
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+15%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/flgs20/current">Local Government Studies</a>
+</td>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+20%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/csms20/current">Social Movement Studies</a>
+</td>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+126
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+23%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rwaq20/current">Washington Quarterly</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+30
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/feus20/current">European Security</a>
+</td>
+<td style="text-align:left;">
+29
+</td>
+<td style="text-align:left;">
+54
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+37%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/crea20/current">Review of African Political Economy</a>
+</td>
+<td style="text-align:left;">
+40
+</td>
+<td style="text-align:left;">
+104
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+22%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fsst20/current">Security Studies</a>
+</td>
+<td style="text-align:left;">
+34
+</td>
+<td style="text-align:left;">
+103
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+6%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rtep20/current">Territory, Politics, Governance</a>
+</td>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+94
+</td>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+30%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fmed20/current">Mediterranean Politics</a>
+</td>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+25%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/mppc20/current">Problems of Post-Communism</a>
+</td>
+<td style="text-align:left;">
+88
+</td>
+<td style="text-align:left;">
+108
+</td>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+39%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rfjp20/current">International Feminist Journal of Politics</a>
+</td>
+<td style="text-align:left;">
+59
+</td>
+<td style="text-align:left;">
+118
+</td>
+<td style="text-align:left;">
+38
+</td>
+<td style="text-align:left;">
+36%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fcsp20/current">Contemporary Security Policy</a>
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+47
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+12%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fjss20/current">Journal of Strategic Studies</a>
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+88
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+17%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rbul20/current">Bulletin of the Atomic Scientists</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+37
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/gini20/current">International Interactions</a>
+</td>
+<td style="text-align:left;">
+49
+</td>
+<td style="text-align:left;">
+64
+</td>
+<td style="text-align:left;">
+31
+</td>
+<td style="text-align:left;">
+24%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ccpo20/current">Contemporary Politics</a>
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+77
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+22%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cjhr20/current">Journal of Human Rights</a>
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+65
+</td>
+<td style="text-align:left;">
+28%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ccam20/current">Cambridge Review of International Affairs</a>
+</td>
+<td style="text-align:left;">
+54
+</td>
+<td style="text-align:left;">
+85
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+27%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fjcs21/current">East European Politics</a>
+</td>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+41%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fcri20/current">Critical Review of International Social and Political Philosophy</a>
+</td>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+50%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fbep20/current">Journal of Elections, Public Opinion and Parties</a>
+</td>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+72
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+23%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fjls20/current">Journal of Legislative Studies</a>
+</td>
+<td style="text-align:left;">
+73
+</td>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+53%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cjss20/current">Journal of Southern African Studies</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+30
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fgrp20/current">German Politics</a>
+</td>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+91
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+44%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fint20/current">Intelligence and National Security</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/reno20/current">Ethnopolitics</a>
+</td>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+62%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/mijp20/current">International Journal of Political Economy</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+58
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/wwap20/current">Journal of Women, Politics and Policy</a>
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+59
+</td>
+<td style="text-align:left;">
+10%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cajp20/current">Australian Journal of Political Science</a>
+</td>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+36%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rrep20/current">Representation</a>
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+92
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+46%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rcri20/current">Critical Review</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cjgr20/current">Journal of Genocide Research</a>
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+33%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/upse20/current">Journal of Political Science Education</a>
+</td>
+<td style="text-align:left;">
+88
+</td>
+<td style="text-align:left;">
+102
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+58%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cnid20/current">National Identities</a>
+</td>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:left;">
+117
+</td>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:left;">
+41%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fmes20/current">Middle Eastern Studies</a>
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+29%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rcfp20/current">Canadian Foreign Policy Journal</a>
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+47
+</td>
+<td style="text-align:left;">
+40
+</td>
+<td style="text-align:left;">
+51%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ujic20/current">International Journal of Intelligence and CounterIntelligence</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/cper20/current">Peace Review</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+98
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fdas20/current">Democracy and Security</a>
+</td>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+72
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+37%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/ucst20/current">Comparative Strategy</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/fisa20/current">Israel Affairs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rpic20/current">Journal of Policing, Intelligence and Counter Terrorism</a>
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+133
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+23%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rnpr20/current">Nonproliferation Review</a>
+</td>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+48
+</td>
+<td style="text-align:left;">
+42%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/vpps20/current">Perspectives on Political Science</a>
+</td>
+<td style="text-align:left;">
+147
+</td>
+<td style="text-align:left;">
+102
+</td>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+33%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rpnz20/current">Political Science</a>
+</td>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+84
+</td>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+27%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rasi20/current">Asian Journal of Political Science</a>
+</td>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+64
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+19%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/caji20/current">Australian Journal of International Affairs</a>
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+24%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rifa20/current">Israel Journal of Foreign Affairs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+26
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rper20/current">Parliaments, Estates and Representation</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rfia20/current">Review of Faith and International Affairs</a>
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://www.tandfonline.com/toc/rsaj20/current">South African Journal of International Affairs</a>
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+49%
+</td>
 </tr>
 </tbody>
 </table>
