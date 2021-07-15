@@ -1,7 +1,7 @@
 ---
 author: Resul Umit
 comments: false
-date: '2021-06-02'
+date: '2021-07-15'
 slug: flag-draped-coffins
 title: 'Rallies around the flag-draped coffins: The electoral effects of security force casualties in terror attacks'
 kind: article
@@ -9,9 +9,9 @@ tags:
 - elections
 - terrorism
 - Turkey
-citation: Forthcoming in <em>Political Science Research and Methods</em>
+citation: <em>Political Science Research and Methods</em>
 file: fd_coffins.pdf
-doi: 10.31219/osf.io/7zswb
+doi: doi.org/10.1017/psrm.2021.30
 code: https://doi.org/10.7910/DVN/52X882
 ---
 
