@@ -10,7 +10,7 @@ tags:
 - terrorism
 - Turkey
 citation: <em>Political Science Research and Methods</em>
-file: fd_coffins.pdf
+file: umit2021.pdf
 doi: 10.1017/psrm.2021.30
 code: https://doi.org/10.7910/DVN/52X882
 ---
