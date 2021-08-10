@@ -9,7 +9,7 @@ tags:
 - parliaments
 - communication
 - allowances
-citation: <em>Political Studies Review</em>
+citation: <em>Political Studies Review, 19</em>(3), 492--500
 doi: 10.1177/1478929920967588
 file: umit2020c.pdf
 ---
