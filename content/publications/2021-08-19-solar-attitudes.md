@@ -1,14 +1,15 @@
 ---
 author: Resul Umit
 comments: false
-date: '2020-10-19'
+date: '2021-08-19'
 slug: solar-attitudes
 title: 'Solar panels and political attitudes'
-kind: unpublished
+kind: article
 tags:
 - energy
 - political behaviour
 - panel data
+citation: Forthcoming in <em>Political Studies Review</em>
 file: solar_attitudes.pdf
 doi: 10.31219/osf.io/qjr5y
 ---
