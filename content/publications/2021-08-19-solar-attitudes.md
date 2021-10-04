@@ -9,9 +9,10 @@ tags:
 - energy
 - political behaviour
 - panel data
-citation: Forthcoming in <em>Political Studies Review</em>
+citation: <em>Political Studies Review</em>
 file: solar_attitudes.pdf
-doi: 10.31219/osf.io/qjr5y
+doi: 10.1177%2F14789299211044868
+code: https://doi.org/10.7910/DVN/8GYO8F
 ---
 
 
