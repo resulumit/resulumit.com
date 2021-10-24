@@ -2,7 +2,7 @@
 title: "Writing Reproducible Research Papers with R Markdown"
 subtitle: "Resul Umit"
 institute: ""
-date: "November 2020"
+date: "October 2021"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -104,7 +104,7 @@ lm4 <- lm(h5_index ~ issues + english + subfield + age, data = df)
 
 ### Resul Umit
 
-### November 2020
+### October 2021
 
 .footnote[
 
@@ -120,9 +120,9 @@ Resul Umit
 - post-doctoral researcher in political science at the University of Oslo
 
 - teaching and studying representation, elections, and parliaments
-    - [a recent publication](https://doi.org/10.1177%2F1478929920967588):
-    Parliamentary communication allowances do not increase electoral turnout or incumbents’ vote share
-
+    - [a recent publication](https://doi.org/10.1017/psrm.2021.30):
+    the effects of casualties in terror attacks on elections
+    
 --
 
 <br>
@@ -130,11 +130,10 @@ Resul Umit
 - teaching workshops, also on
 
   - [version control and collaboration](https://resulumit.com/teaching/git_workshop.html)
+  - [automated web scraping ](https://resulumit.com/teaching/scrp_workshop.html)
   - [working with Twitter data](https://resulumit.com/teaching/twtr_workshop.html)
   - [creating academic websites](https://resulumit.com/teaching/rbd_workshop.html)
-  - [automated web scraping ](https://resulumit.com/teaching/scrp_workshop.html)
 
-    
 --
 
 <br>
@@ -361,8 +360,9 @@ Slides with this background colour indicate that your action is required, for
 ---
 ## The Workshop &mdash; Organisation &mdash; Slides
 
-- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]
-    - long codes and texts will have their own line(s)
+- Codes and texts that go in R Markdown documents .inline-c[appear as such &mdash; in a different font, on gray background]     
+
+  - long codes and texts will have their own line(s)
 
 ````md
 `r ''````{r, scatterplot, fig.cap = "A scatterplot of journal metrics."}
@@ -471,7 +471,7 @@ class: action
   
   - rename the folder as `YOURNAME-rmd`
      - e.g., `resul-rmd`
-     - this will come handy in Part 9
+     - this will come handy when we collaborate [Part 9](#part9)
   
 ---
 ## Course Materials &mdash; Contents
@@ -484,7 +484,7 @@ class: action
     
 .footnote[
 
-<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package (Gagolewski, 2020) while the dataset is created with the `fabricatr` package (Blair et al., 2019). 
+<sup>*</sup> The text, _Lorem ipsum_, is generated with the `stringi` package ([Gagolewski, 2021](https://cran.r-project.org/web/packages/stringi/index.html)) while the dataset is created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)). 
 
 ]
 
@@ -511,13 +511,13 @@ class: action
 
 - `manuscript\apa_7th.csl`
 
-    - a Citation Style Language document, with APA (7th Edition) referencing style (Wiernik, 2020)
+    - a Citation Style Language document, with APA (7th Edition) referencing style ([Wiernik, 2020](https://www.zotero.org/styles/apa-no-ampersand))
 
 ---
 ## Course Materials &mdash; Contents  
 
 `data\journals.csv`
-- a dataset created with the `fabricatr` package (Blair et al., 2019), imagined to explore the `Google Scholar` rankings of fictitious journals
+- a dataset created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)), imagined to explore the `Google Scholar` rankings of fictitious journals
     
 - includes the following variables 
     - **name**: journals (1090 random titles)
@@ -575,20 +575,52 @@ class: action
     - choose the free version
 
 ---
-class: action
+## RStudio &mdash; R Markdown Options
 
-## R Packages &mdash; Install from within RStudio
+.pull-left-c[
 
-```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+RStudio offers various functions that facilitate working with .Rmd documents, which can be controlled at two locations:
 
-tinytex::install_tinytex()
+- global settings that apply to all markdown projects, located at:
 
-```
+> `Tools -> Global Options -> R Markdown`
 
---
+]
 
-- `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
+.pull-right-c[
+
+![](rmd_workshop_files/images_data/window_global_options.png)
+
+]
+
+---
+## RStudio &mdash; R Markdown Options
+
+.pull-left-c[
+
+RStudio offers various functions that facilitate working with .Rmd documents, which can be controlled at two<sup>*</sup> locations:
+
+- global settings that apply to all markdown projects, located at:
+
+> `Tools -> Global Options -> R Markdown`
+
+- project settings that apply to a given markdown project, located at:
+
+> `Tools -> Project Options -> R Markdown`
+
+]
+
+.pull-right-c[
+
+![](rmd_workshop_files/images_data/window_project_options.png)
+
+]
+
+.footnote[
+
+<sup>*</sup> Some settings become available on the document toolbar as well, only when an .Rmd document is open. We will cover the [document toolbar](#toolbar) later on in the workshop. All settings can stay as they are &mdash; for now.
+
+]
 
 ---
 class: action
@@ -596,15 +628,31 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+install.packages(c(`"rmarkdown"`, "tinytex", "dplyr", "stargazer", "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+--
+
+- `rmarkdown` ([Allaire et al., 2021](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
+
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", `"tinytex"`, "dplyr", "stargazer", "ggplot2"))
 
 tinytex::install_tinytex() #<<
 
 ```
 
-- `rmarkdown` (Allaire et al., 2020), for automating the process of converting R Markdown documents into other formats
+- `rmarkdown` ([Allaire et al., 2021](rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html)), for automating the process of converting R Markdown documents into other formats
 
-- `tinytex` (Xie, 2020), for PDF outputs
+- `tinytex` ([Xie, 2021a](https://cran.r-project.org/web/packages/tinytex/index.html)), for PDF outputs
     - requires an additional step to install
     - alternative: a TeX/LaTeX system installed on your computer
 
@@ -614,26 +662,55 @@ class: action
 ## R Packages &mdash; Install from within RStudio
 
 ```{r eval=FALSE, tidy=FALSE}
-install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", "ggplot2"))
+install.packages(c("rmarkdown", "tinytex", `"dplyr"`, "stargazer", "ggplot2"))
 
 tinytex::install_tinytex()
 
 ```
 
 
-- `dplyr` (Wickham, 2020a), for data manipulation
-    - alternatives: e.g., `base`, `data.table` (Dowle & Srinivasan, 2019)
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
 
---
+---
+class: action
 
-- `stargazer` (Hlavac, 2018), for tables
-    - alternatives: e.g., `knitr` (Xie, 2020b), `kableExtra` (Zhu, 2019)
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", `"stargazer"`, "ggplot2"))
+
+tinytex::install_tinytex()
+
+```
+
+
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
     
---
-
+- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
+    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html)), `huxtable` ([Hugh-Jones, 2021](https://cran.r-project.org/web/packages/huxtable/index.html))
     
-- `ggplot2` (Wickham, 2020b), for figures
-    - alternatives: e.g., `base`, `plotly` (Sievert et al., 2020)
+---
+class: action
+
+## R Packages &mdash; Install from within RStudio
+
+```{r eval=FALSE, tidy=FALSE}
+install.packages(c("rmarkdown", "tinytex", "dplyr", "stargazer", `"ggplot2"`))
+
+tinytex::install_tinytex()
+
+```
+
+- `dplyr` ([Wickham et al., 2021a](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+    - popular alternative: e.g., `base`, `data.table` ([Dowle & Srinivasan, 2021](https://cran.r-project.org/web/packages/data.table/index.html))
+    
+- `stargazer` ([Hlavac, 2018](https://cran.r-project.org/web/packages/stargazer/index.html)), for tables
+    - popular alternatives: `knitr` ([Xie, 2021b](https://cran.r-project.org/web/packages/knitr/index.html)), `kableExtra` ([Zhu, 2021](https://cran.r-project.org/web/packages/kableExtra/index.html))
+    
+- `ggplot2` ([Wickham et al., 2021b](https://cran.r-project.org/web/packages/ggplot2/index.html)), for figures
+    - popular alternatives: `base`, `plotly` ([Sievert et al., 2021](https://cran.r-project.org/web/packages/plotly/index.html))
 
 ---
 class: action
@@ -661,7 +738,7 @@ name: rstudio-project
 ---
 class: action
 
-## R Markdown Cheat Sheet &mdash; Download from the Internet
+## [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) &mdash; Download from the Internet
 
 Downloading process can be initiated from within RStudio
 
@@ -677,18 +754,21 @@ Downloading process can be initiated from within RStudio
 
    - available at [https://pandoc.org/MANUAL.html](https://pandoc.org/MANUAL.html)
 
-- R Markdown: The Definitive Guide (Xie et al., 2019)
+<br>
+
+- R Markdown: The Definitive Guide ([Xie et al., 2021a](https://bookdown.org/yihui/rmarkdown))
 
    - open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/)
     
+<br>
 
-- R for Data Science (Wickham and Grolemund, 2019)
+- R for Data Science ([Wickham and Grolemund, 2021](https://r4ds.had.co.nz/))
   
    - open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/)
    
 .footnote[
 
-<sup>*</sup> During the workshop, R Markdown Cheat Sheet is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
+<sup>*</sup> During the workshop, [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) is likely to be more helpful than these resources, which I recommend to be consulted after the workshop.
 
 ]
 
@@ -780,12 +860,27 @@ Observe also that the document has three components
 ]
 
 ---
+name: toolbar
+
+## R Markdown Document &mdash; Document Toolbar
+
+Observe also that the document toolbar offers extended tools for .Rmd documents
+
+![](rmd_workshop_files/images_data/toolbar.png)
+
+<br>
+
+These include, most impotantly,
+
+- the ![](rmd_workshop_files/images_data/button_knit.png) button to compile .Rmd documents
+
+---
 class: action
 
 ## R Markdown Document &mdash; Compile
 
 .pull-left-c[
-- Click the `Knit` button to compile it, and observe that 
+- Click the `Knit` button to compile your .Rmd document, and observe that 
 
   - the output document has the same name as your .Rmd document
 
@@ -829,16 +924,16 @@ knitr::include_graphics("rmd_workshop_files/images_data/first_rmd.png")
 - Behind the scenes, each .Rmd file is compiled in its own session, and therefore
 
   - the code needs to stand alone, for reproducibility reasons
-  - you might have already loaded a package and/or imported data elsewhere (e.g., in a separate .R and/or .Rmd file), but even in the same session, these won't be available to a given .Rmd file
+  - e.g., if you load a package in the Console, it will not be available to a given .Rmd file &mdash; even in the same R session
 
 --
 
 - R Markdown can produce more than documents,<sup>*</sup> including
 
   - presentations, again with `rmarkdown`
-  - books, with `bookdown` (Xie, 2020c)
-  - websites, with `blogdown` (Xie, 2020d)
-
+  - books, with `bookdown` ([Xie, 2021c](https://cran.rstudio.com/web/packages/bookdown/index.html))
+  - websites, with `blogdown` ([Xie et al., 2021b](https://cran.r-project.org/web/packages/blogdown/index.html))
+  
 .footnote[
 
 <sup>*</sup> Here we will focus on research papers only. In a separate workshop, I teach how to create professional websites with R Blogdown.
@@ -861,12 +956,12 @@ class: inverse, center, middle
 ## YAML &mdash; Overview
 
 .Rmd documents start<sup>*</sup> with YAML
-- it includes the metadata variables
+- includes the metadata variables
     - e.g., title, output format    
 <br>    
-- it is written between a pair of three hyphens .yellow-h[-]
+- written between a pair of three hyphens .yellow-h[-]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: 
 output:
@@ -888,11 +983,11 @@ output:
 <br>
     - the list of available variables, as well as options and sub-options for these variables, depends on the output format
        - [Pandoc User's Guide](https://pandoc.org/MANUAL.html) provides a comprehensive documentation
-       - R Markdown Cheat Sheet provides a helpful list
+       - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list
 
-- Typical YAML variables for an research paper:
+- Typical YAML variables for an research paper are as follows:
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: 
 author: 
@@ -908,7 +1003,7 @@ output:
 
 Variables can take .yellow-h[strings]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" #<<
 output:
@@ -920,7 +1015,7 @@ output:
 
 Variables can take strings, .yellow-h[options]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: pdf_document                                  #<<
@@ -932,7 +1027,7 @@ output: pdf_document                                  #<<
 
 Variables can take strings, options, .yellow-h[sub-options]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: 
@@ -946,13 +1041,14 @@ output:
 
 Variables can take strings, options, sub-options, and .yellow-h[code]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
-date: "\`r format(Sys.Date(), '%d %B %Y')`"      #<<
 output: 
     pdf_document:
-        keep_tex: true                    
+        keep_tex: true
+date: "\`r format(Sys.Date(), '%d %B %Y')`"      #<<
+
 ---
 ```
 
@@ -965,7 +1061,7 @@ Documents as output formats include
 
 - .yellow-h[HTML]
     
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: html_document #<<
@@ -991,7 +1087,7 @@ Documents as output formats include
 - HTML
 - .yellow-h[LaTeX]
     
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: latex_document #<<
@@ -1018,7 +1114,7 @@ Documents as output formats include
 - LaTeX
 - .yellow-h[PDF]
     
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: pdf_document #<<
@@ -1046,7 +1142,7 @@ Documents as output formats include
 - PDF
 - .yellow-h[Word]
     
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 output: word_document #<<
@@ -1080,7 +1176,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 ]
     
-.pull-right-c[ 
+.pull-right[ 
 
 - Presentations as output formats
 
@@ -1093,7 +1189,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .footnote[
 
-<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or R Markdown Cheat Sheet.
+<sup>*</sup> For reasons of simplicity, this workshop focuses on LaTex and/or PDF outputs. Different output formats have slightly different customisations. See [Pandoc User's Guide](https://pandoc.org/MANUAL.html) and/or [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf).
 
 ]
 
@@ -1102,9 +1198,9 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_word.png")
 
 .pull-left-c[
 
-Strings with special characters, such as colon, require quotation marks .yellow-h["] or .yellow-h[']
+Strings with special characters, such as colon, require quotation marks &mdash; single .yellow-h['] or double .yellow-h["]
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" #<<
 output: pdf_document                                  
@@ -1128,7 +1224,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml_pdf.png")
 
 Quotation marks are optional for strings without special characters
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data" 
 subtitle: A Mock Paper for an R Markdown Workshop #<<
@@ -1148,13 +1244,13 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml2.png")
 ]
 
 ---
-## YAML &mdash; Strings
+## YAML &mdash; Strings &mdash; Footnotes
 
 .pull-left-c[
 
 The syntax .inline-c[^[footnotes_go_here]] adds footnotes to strings
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]" #<<
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1175,16 +1271,16 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml3.png")
 ]
 
 ---
-## YAML &mdash; Strings
+## YAML &mdash; Strings &mdash; External Files
 
 The `bibliography` and `csl` variables take strings as well
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
 author: "Jane Doe^[Department of Science, University of Random. Email: jane.doe@random.edu. Website: http://www.janedoe.com.]"                                    
-date: 4 May 2020 
+date: 4 March 2020 
 bibliography: references.bib   #<<
 csl: apa_7th.csl               #<<  
 output: pdf_document                                    
@@ -1192,15 +1288,53 @@ output: pdf_document
 ```
 
 ---
-## YAML &mdash; Strings
+## YAML &mdash; Strings &mdash; External Files
 
-These strings depend on (a) where the files are located and (b) how they are named
+The strings  for external files indicate (a) .yellow-h[where the files are located] and (b) how they are named
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 ...
-bibliography: references/ref_library.bib                                               #<<
-csl: "C:/Users/resul/Dropbox/teaching/r_markdown/references/chicago_manual_17.csl"     #<<
+bibliography: `references/`ref_library.bib                                    
+csl: "`../../styles/`chicago_manual_17.csl"
+...
+---
+```
+
+---
+## YAML &mdash; Strings &mdash; External Files
+
+The strings  for external files indicate (a) .yellow-h[where the files are located] and (b) how they are named
+
+```{r, eval=FALSE}
+---
+...
+bibliography: `references/`ref_library.bib                                    
+csl: "`../../styles/`chicago_manual_17.csl"
+...
+---
+```
+
+<br>
+
+Notice that
+- the locations above are specified as .yellow-h[relative to the working directory]
+  - the former (references) is a sub-directory, or folder, one level down while the latter (styles) is two levels up
+    
+- for reproducibility reasons, hard-coded stings
+should be avoided
+  - e.g., `"C:/Users/resulumit/Dropbox/styles/chicago_manual_17.csl"`
+
+---
+## YAML &mdash; Strings &mdash; External Files
+
+The strings indicate (a) where the files are located and (b) .yellow-h[how they are named]
+
+```{r, eval=FALSE}
+---
+...
+bibliography: references/`ref_library.bib`                                    
+csl: "../../styles/`chicago_manual_17.csl`"
 ...
 ---
 ```
@@ -1212,7 +1346,7 @@ csl: "C:/Users/resul/Dropbox/teaching/r_markdown/references/chicago_manual_17.cs
 
 Options can have sub-options
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1243,7 +1377,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml4.png")
 
 Options can have sub-options
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1281,7 +1415,7 @@ Notice that
 
 Variables can take code as well
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1310,7 +1444,7 @@ knitr::include_graphics("rmd_workshop_files/images_data/yaml5.png")
 
 Variables can take code as well
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1335,7 +1469,7 @@ Notice that
 
 - there are quotation marks around the code
 
-- we'll cover codes in .Rmd documents later on in the workshop
+- we will cover codes in .Rmd documents later on in the workshop
 
 ]
 
@@ -1346,7 +1480,7 @@ Notice that
 
 Code and text can be combined in a string
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 title: "Journals: Random Words With Random Data^[Preliminary draft. Please do not cite or circulate without permission from the author.]"
 subtitle: A Mock Paper for an R Markdown Workshop
@@ -1388,7 +1522,7 @@ name: yaml-further-settings
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 1&ndash;4
 
 1) Open `journals.Rmd` and fill in the YAML variables for the mock paper
 - take cues from `reproduce_this.pdf` and/or the slides
@@ -1401,7 +1535,7 @@ class: action
 <br>
 
 3) Add and set a completely new variable not covered so far
--  see, for example, the R Markdown Cheat Sheet
+-  see, for example, the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
 
 <br>
 
@@ -1425,17 +1559,24 @@ class: inverse, center, middle
 ---
 ## Syntax &mdash; Overview
 
+- There are not one, but several different versions of Markdown
+
+  - e.g., [Pandoc](https://pandoc.org/), [MultiMarkdown](https://fletcherpenney.net/multimarkdown/), [CommonMark](https://commonmark.org/)
+  - each might implement the same things (e.g., citations) slightly differently, and each might offer unique functionalities
+
+<br>
+
 - R Markdown follows the syntax in Pandoc's Markdown 
 
    - for the complete rules of the syntax, see [Pandoc User's Guide](https://pandoc.org/MANUAL.html)
-   - for a useful summary of the syntax, see the R Markdown Cheat Sheet
-
+   - for a useful summary of the syntax, see the [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+   
 ---
 ## Syntax &mdash; Lines
 
 Multiple spaces on a given line are reduced to one
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 This is a sentence followed by four spaces.    This is another sentence on the same line.
 
 ```
@@ -1446,7 +1587,7 @@ This is a sentence followed by four spaces.    This is another sentence on the s
 
 Line endings with fewer than two spaces are ignored
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 This is a sentence followed by one space.
 This is another sentence on a new line.
 ```
@@ -1458,7 +1599,7 @@ This is another sentence on a new line.
 
 Two or more spaces at the end of lines introduce hard breaks, forcing a new line
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 This is a sentence followed by two spaces.  
 This is another sentence on a new line.
 ```
@@ -1469,9 +1610,9 @@ This is another sentence on a new line.]
 ---
 ## Syntax &mdash; Line Blocks
 
-Spaces in lines starting with a vertical line .yellow-h[|] are kept
+Spaces on lines that start with a vertical line .yellow-h[|] are kept
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 | a one-space indent
 |     a five-space indent
 |          a ten-space indent  
@@ -1488,7 +1629,7 @@ Spaces in lines starting with a vertical line .yellow-h[|] are kept
 ---
 ## Syntax &mdash; Block Quotes
 
-Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes
+Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quotes<sup>*</sup>
 
 ```{r, eval=FALSE}
 > In God, we trust. All others must bring data. 
@@ -1503,12 +1644,19 @@ Lines starting with the greater-than sign .yellow-h[&#62;] introduce block quote
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &mdash; Anonymous
 ]
+
+.footnote[
+
+<sup>*</sup> Notice that three hyphens grouped together introduce an em-dash. Dashes are covered later on in the workshop.
+
+]
+
 ---
 ## Syntax &mdash; Paragraphs
 
 One or more<sup>*</sup> blank lines introduce a new paragraph
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 
 This is the first sentence of a paragraph as it is preceded by a blank line. This is the second 
 sentence of that paragraph, which is followed by a blank line. 
@@ -1563,12 +1711,12 @@ second sentence of that paragraph, which is followed by a blank line.
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 5&ndash;6
 
 5) Hard Breaks
 
-- see `reproduce_this.pdf`: page 1 
-- apply in `journals.Rmd`: paragraph 1
+- see `reproduce_this.pdf`, page 1 
+- apply in `journals.Rmd`, paragraph 1
 
 <br>
 
@@ -1684,7 +1832,7 @@ Strikethrough can be combined with italics or bold
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 7&ndash;8
 
 7) Headers
 
@@ -1721,7 +1869,7 @@ Multi-word headers need hyphenation
 
 .footnote[
 
-<sup>*</sup> The [links to references](#reference-links), [figures](#autoref-figures), and [tables](#autoref-tables) are covered later on.
+<sup>*</sup> The [links to references](#reference-links), [figures](#autoref-figures), and [tables](#autoref-tables) are covered later on in the workshop.
 
 ]
 
@@ -1748,14 +1896,14 @@ You can also link text to an email address
 
 .footnote[
 
-<sup>*</sup> Notice the prefix .yellow-h[mailto:] in the syntax
+<sup>*</sup> Notice the prefix .yellow-h[mailto:] in the syntax.
 
 ]
 
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 9&ndash;10
 
 9) Links &mdash; Internal
 
@@ -1835,7 +1983,7 @@ Notice that
 
 An alternative is to use the .inline-c[[^identifier]] syntax, with identifiers defined elsewhere in the same document
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 Dr Doe holds a PhD in rock science.[^defence_date]
 
 [^defence_date]: She defended her thesis in 2017.
@@ -1861,7 +2009,7 @@ Notice that
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 11&ndash;12
 
 11) Equations
 
@@ -2007,7 +2155,7 @@ Notice that
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 13&ndash;15
 
 13) Lists
 
@@ -2047,18 +2195,21 @@ class: inverse, center, middle
 
 .pull-left-c[
 - References are defined in .bib files
-    - they follow the BibTeX format
+
+  - they follow the BibTeX format
 
 <br>
 
 - `pandoc` looks for a .bib file, and for the definitions therein, to process citations
-    - .bib files are specified with the `bibliography` variable in YAML
+
+  - .bib files are specified with the `bibliography` variable in YAML
 
 <br>
 
 
 - `pandoc` can process a citation only if there is a linked entry in the .bib file
-    - but not all entries have to be cited
+
+  - but not all entries have to be cited
 
 ]
 
@@ -2078,17 +2229,20 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib.png")
 
 - A BibTeX entry consists of three elements
 
-   - a type
-       - e.g., `@article`    
+  - a type
+      - e.g., `@article`    
 <br>
-   - a citation-key
-       - e.g., `bennett2015`    
+  - a citation-key
+      - e.g., `bennett2015`    
 <br>
-   - a number of tags
-       - e.g., `title`, `author`
+  - a number of tags
+      - e.g., `title`, `author`
+
+<br>
 
 - Different tags are available for different reference types
-    - some tags are required, others are optional
+
+  - some tags are required, others are optional
     
 ]
 
@@ -2104,13 +2258,19 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 ## References &mdash; Bibliography Database &mdash; Entries
 
 - One could create entries by hand
-    - this requires knowing the BibTeX format, entry types, tags, and related information about references to be cited
-        - this is not efficient
-    
+
+  - requires knowing the BibTeX format, entry types, tags, and related information about references to be cited
+  - neither efficient nor necessary
+
+<br>
+
 - A good alternative is to use `Google Scholar`, which provides BibTeX entries
-    - follow `cite -> BibTex` and copy
-    - paste into .bib, edit if necessary, and save
-    
+
+  - follow `cite -> BibTex` and copy
+  - paste into .bib, edit if necessary, and save
+
+<br>
+
 - Some publishers and journals provide BibTeX entries on their website as well
 
 ---
@@ -2119,19 +2279,22 @@ knitr::include_graphics("rmd_workshop_files/images_data/bib1.png")
 .pull-left-c[
 
 - Reference styles are defined in .csl files
-    - files for different styles (e.g., APA) are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
+
+  - files for different styles (e.g., APA) are available at [https://www.zotero.org/styles](https://www.zotero.org/styles)
 
 <br>
 
 - `pandoc` looks for a .csl file, and for the styles therein, to style citations and references
-    - .csl files are specified with the `csl` variable in YAML
-    - if unspecified, it uses a Chicago author-date format
+
+  - .csl files are specified with the `csl` variable in YAML
+  - if unspecified, it uses a Chicago author-date format
     
 
 <br>
 
 - .csl files affect the style only in outputs
-    - no matter which the style is used, the citation syntax in .Rmd documents remains the same
+
+  - no matter which the style is used, the citation syntax in .Rmd documents remains the same
     
 ]
 
@@ -2144,13 +2307,14 @@ knitr::include_graphics("rmd_workshop_files/images_data/csl.png")
 ]
 
 ---
-## References &mdash; In-text Citation Syntax &mdash; Author-Date
+## References &mdash; In-text Citation Syntax &mdash; Author-Date Styles<sup>*</sup>
 
 All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or minus signs introduce variation
 
-<br>
 
-.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)] in APA 7<sup>th</sup> edition
+.pull-left[
+
+.inline-c[[@bennett2015]] becomes .out-t[(Bennett, 2015)]
 
 .inline-c[@bennett2015] becomes .out-t[Bennett (2015)]
 
@@ -2162,6 +2326,11 @@ All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or 
 
 .inline-c[[@bennett2015 33-35]] becomes .out-t[(Bennett, 2015, pp. 33&ndash;35)]
 
+
+]
+
+.pull-right[
+
 .inline-c[[@bennett2015, ch. 1]] becomes .out-t[(Bennett, 2015, ch. 1)]
 
 .inline-c[[@bennett2015; @gilbert2019]] becomes .out-t[(Bennett, 2015; Gilbert, 2019)]
@@ -2170,8 +2339,16 @@ All citations keys take the 'at' sign .yellow-h[@] while square brackets and/or 
 
 .inline-c[@bennett2015 [33-35]] becomes .out-t[Bennett (2015, pp. 33&ndash;35)]
 
+]
+
+.footnote[
+
+<sup>*</sup> Specifically, the outputs on this slide are formatted according to the APA 7<sup>th</sup> edition.
+
+]
+
 ---
-## References &mdash; In-text Citation Syntax &mdash; Numerical
+## References &mdash; In-text Citation Syntax &mdash; Numerical Styles
 
 All citations keys take the 'at' sign .yellow-h[@] 
 
@@ -2195,18 +2372,18 @@ Individual styles may or may not be sensitive to variation, such as square brack
 ---
 ## Citations &mdash; Reference List
 
-The list of references appears after the last line of the document, with no section header 
+The list of references appears after the last line of the output document, with no section header 
 - so that you can choose the header yourself, by ending .Rmd documents with a header of your choice
 
 ```{r eval=FALSE}
-This is the last sentence of a manuscript with an APA style.
+This is the last sentence of an APA style manuscript.
 
 ## References
 ```
 
 .out-t[
 
-This is the last sentence of a manuscript with an APA style.
+This is the last sentence of an APA style manuscript.
 
 ### References
 
@@ -2227,7 +2404,7 @@ For internal links from in-text citations to the reference list, set .inline-c[l
 - the `linkcolor` variable make these links explicit
     - setting this is not necessary for the links to work &mdash; the default is black
        
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 ---
 ...
 bibliography: references.bib
@@ -2241,7 +2418,7 @@ linkcolor: blue        #<<
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 16&ndash;19
 
 16) Add an entry to `references.bib` for the following book
 - *R Markdown: The Definitive Guide* by Xie and co-authors
@@ -2299,6 +2476,8 @@ df <- read.csv("rmd_workshop_files/images_data/journals.csv") %>%
 ```
 ````
 
+<br>
+
 Codes can also go in line with text
 - e.g., code that results in a single statistic
 
@@ -2309,31 +2488,151 @@ The average H5 Index for the journals in the dataset is \`r mean(df$h5_index)`.
 ---
 ## Code Chunks &mdash; Overview
 
-- Code chunks are delimited spaces between a pair of three backticks
-    - below is an empty chunk for R code
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks .yellow-h[`]
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+
+]
+
+.pull-right-c[
 
 ````md
-`r ''````{r}
+`r ''````
 
 ```
 ````
 
-- `r` is an option of the chunk, indicating that the code in the chunk above should be run by R
-    - it could have been `python`, which we will not cover in this workshop
-    - options go in a pair of curly brackets, on the same line with the first delimiter
+]
 
-- Chunks can be placed anywhere in .Rmd documents
-    - their output, if there is any, might float around text to avoid breaking across pages
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets .yellow-h[{], code chunks take
+
+  - .yellow-h[a languge engine]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{`r`}
+
+```
+````
+]
+
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets {, code chunks take
+
+  - a language engine
+  - .yellow-h[a label]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{r, `setup`}
+
+```
+````
+]
+
+---
+## Code Chunks &mdash; Overview
+
+.pull-left-c[
+
+- Code chunks are delimited spaces between a pair of three backticks `
+
+  - placed on their own lines in .Rmd documents, separate from text
+  - their output, if there is any, appear in the output document
+      - at about the same place as the chunk
+      - might float around text to avoid breaking across pages
+      
+<br>
+
+- On the same line with the first delimiter, and in curly brackets {, code chunks take
+
+  - a language engine
+  - a label
+  - .yellow-h[one or more options]
+
+]
+
+.pull-right-c[
+
+````md
+`r ''````{r, setup, `echo=FALSE`}
+
+```
+````
+
+]
+
+---
+## Code Chunks &mdash; Lenguage Engines
+
+The first item in code chunks indicates the engine to run the code
+
+````md
+`r ''````{`r`}
+
+```
+````
+
+<br>
+
+Note that
+
+- indicating an engine for each chunk is a must
+
+  - otherwise, any code<sup>*</sup> in these chunks cannot be executed
+
+- `r` is the specified engine, indicating that the code in the chunk above should be run by R
+      
+  - it could have been `python`, which we will not cover in this workshop
+
+.footnote[
+
+<sup>*</sup> The above chunk has no code &mdash; it is for demonstration only.
+
+]
 
 ---
 ## Code Chunks &mdash; Labels
 
-It is recommended to label the code chunks, which are otherwise automatically numbered
-- informative labels can be helpful for navigating through error messages as well as filenames of plots and cache
-    - in the example below, the chunk is labelled as `data_import`
-<br>
-- but note that duplicate labels lead to an error during compilation
-
+It is recommended, but optional, to label the code chunks
 
 ````md
 `r ''````{r, `data_import`}
@@ -2342,29 +2641,70 @@ df <- read_csv("data/journals.csv")
 
 ```
 ````
+<br>
+
+Note that
+
+- labels are written after the language engine, separated by a comma
+
+  - in the example above, the chunk is labelled as `data_import`  
+  
+- chunks without labels are otherwise automatically numbered
+
+  - specifying informative labels can be helpful for, e.g., navigating through error messages
+      
+- duplicate labels lead to errors during compilation
 
 ---
 ## Code Chunks &mdash; Options
 
-- Code chunks take options, listed on the same line with the first delimiter, in curly brackets
-
-    - avoid spaces around the equal sign <span style="background-color: #ffff88;">=</span> between option tags and values
-        - such spaces might lead to errors    
-<br>
-    - in the example below, the chunk is labelled as `setup`, and and the `include` option is set to `FALSE`
-        - with this option and value, nothing from this chunk will be included in the output document
+Code chunks can take further options
 
 ````md
 `r ''````{r, setup, `include=FALSE`}
 
 ```
 ````
+
 <br>
 
-- The list of options is available at <https://yihui.org/knitr/options>
+Note that
 
-    - R Markdown Cheat Sheet provides a helpful list as well
+- in the example above, the `include` option is set to `FALSE`
+  - with this option and value, nothing from this chunk will be included in the output document
 
+- The complete list of options is available at <https://yihui.org/knitr/options>
+  - [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) provides a helpful list as well
+  
+- leaving spaces around the equal sign <span style="background-color: #ffff88;">=</span>, between option tags and values, should be avoided
+  - such spaces might lead to errors    
+
+---
+## Code Chunks &mdash; Options &mdash; Alternative Syntax
+
+Options can be specified inside code chunks as well, after a number sign and a vertical line .yellow-h[&#x23;|]
+- therefore the following chunks have the same function
+
+````md
+`r ''````{r, echo=FALSE, eval=TRUE}
+
+```
+````
+
+````md
+`r ''````{r}
+
+#| echo = FALSE, eval = TRUE
+```
+````
+
+````md
+`r ''````{r}
+
+#| echo = FALSE
+#| eval = TRUE
+```
+````
 
 ---
 ## Code Chunks &mdash; Options &mdash; Defaults
@@ -2388,6 +2728,7 @@ Options have default values
 
 ```
 ````
+
 ---
 ## Code Chunks &mdash; Options &mdash; Defaults
 
@@ -2418,7 +2759,7 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Setting .inline-c[echo=FALSE] prevents the code from being displayed in the output document
 
@@ -2442,7 +2783,7 @@ head(df)
 ]
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Prevent the result(s) of the source code from being displayed in the output document
 
@@ -2465,7 +2806,7 @@ This chunk therefore prints one thing in the output document &mdash; the source 
 Setting .inline-c[results="asis"] passes the results as they are produced by the code &mdash; `pandoc` does not transform these. In creating tables for PDF output with the `stargazer` package, this option is a must.
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Cache results for future compilations 
 
@@ -2477,6 +2818,24 @@ Cache results for future compilations
 
 --
 
+<br>
+
+Note that caching
+
+- is useful especially for chunks that take a long time to execute
+  - it can speed up the compilation process
+
+- avoids executing the chunks at every compilation
+  - unless the chunk is newly created or edited since the last cached compilation
+
+- creates a new folder in your working directory
+  
+  - an alternative location can be specified with the `cache.path` option
+
+
+---
+## Code Chunks &mdash; Options &mdash; Examples
+
 Prevent R from running the code in the chunk altogether 
 
 ````md
@@ -2487,6 +2846,8 @@ Prevent R from running the code in the chunk altogether
 
 --
 
+<br>
+
 Prevent messages and/or warnings from being displayed in the output
 
 ````md
@@ -2496,7 +2857,7 @@ Prevent messages and/or warnings from being displayed in the output
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Define the .yellow-h[actual dimensions] of figures, in inches
 
@@ -2508,6 +2869,8 @@ Define the .yellow-h[actual dimensions] of figures, in inches
 
 --
 
+<br>
+
 Define the size of figures .yellow-h[as they appear in the output document], with `out.width` and/or `out.height`
 
 ````md
@@ -2518,6 +2881,9 @@ Define the size of figures .yellow-h[as they appear in the output document], wit
 
 --
 
+<br>
+
+
 Define the alignment of figures &mdash; `left`, `right`, or `center`
 
 ````md
@@ -2527,7 +2893,7 @@ Define the alignment of figures &mdash; `left`, `right`, or `center`
 ````
 
 ---
-## Code Chunks &mdash; Other Useful Options
+## Code Chunks &mdash; Options &mdash; Examples
 
 Define captions for figures
 
@@ -2539,6 +2905,8 @@ Define captions for figures
 
 --
 
+<br>
+
 Set the resolution for figures
 
 ````md
@@ -2548,6 +2916,8 @@ Set the resolution for figures
 ````
 
 --
+
+<br>
 
 Set extra options, such as angle, that output format would accept for figures
 
@@ -2595,10 +2965,13 @@ I recommend using the second chunk for the main operations<sup>*</sup> on raw da
     - e.g., capitalizing variable names for figures
         
 ````md
-`r ''````{r, data, echo=FALSE ...}
+`r ''````{r, data, ...}
 
 df <- df_raw `%>%`
-      `...`
+      mutate(subfield = as.factor(subfield), 
+             english = as.factor(english),
+             age = 2020 - since) `%>%`
+      select(-since)
 
 ```
 ````
@@ -2608,53 +2981,6 @@ df <- df_raw `%>%`
 <sup>*</sup> I will be using the pipe operator <span style="background-color: #ffff88; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;"><code>%>%</code></span> and other functions from the `dplyr` package for such operations in the following slides.
 
 ]
-
-
----
-## Code Chunks &mdash; The Data Chunk
-
-Transform `subfield` and `english` into factor variables
-- despite being numeric &mdash; i.e., 0s and 1s &mdash; they are meant to be categorical variables
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw `%>%`
-      `mutate(subfield = as.factor(subfield),` 
-             `english = as.factor(english))`
-
-```
-````
-
----
-## Code Chunks &mdash; The Data Chunk
-
-Create a new variable `age`, based on the existing variable `since`, to be used in regression models later on
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw %>%
-      mutate(subfield = as.factor(subfield), 
-             english = as.factor(english),
-             `age = 2020 - since`)
-
-```
-````
---
-
-Drop the `since` variable, so that it won't appear in our summary statistics table later on
-
-````md
-`r ''````{r, data, echo=FALSE ...}
-
-df <- df_raw %>%
-      mutate(subfield = as.factor(subfield), 
-             english = as.factor(english),
-             age = 2020 - since) `%>%`
-      `select(-since)`
-```
-````
 
 ---
 ## Inline Code &mdash; Overview
@@ -2697,7 +3023,7 @@ other than English.
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 20&ndash;22
 
 20) Setup Chunk
 - introduce a setup chunk with one or more defaults chunk options, with `knitr::opts_chunk$set()`
@@ -2790,12 +3116,14 @@ knitr::include_graphics("rmd_workshop_files/images_data/google_scholar.png")
 The `knitr` package offers a capable alternative with the `include_graphics()` function
 
 - this goes inside code chunks
-    - use the function with the double-colon operator <span style="background-color: #ffff88">::</span>     
-        - e.g., `knitr::include_graphics("figure.extension")`    
+
+  - use the function with the double-colon operator <span style="background-color: #ffff88">::</span>     
+      - e.g., `knitr::include_graphics("figure.extension")`    
 <br>
 - this is more customisable, through the use of code chunks
-    - size is defined with the `out.width` or `out.hight` options
-        - rather than `fig.height` and/or `fig.width`
+
+  - size is defined with the `out.width` or `out.hight` options
+      - rather than `fig.height` and/or `fig.width`
     
 ---
 ## Figures &mdash; Images &mdash; `knitr`
@@ -3108,7 +3436,7 @@ Figure 1. A scatterplot of journal metrics.
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 24&ndash;25
 
 24) Barplot
 - see `reproduce_this.pdf`: figure 2 on page 7
@@ -3400,7 +3728,7 @@ Grid tables can be aligned as well, with colons at the boundaries of the header 
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 26
 
 26) Markdown Tables
 - see `reproduce_this.pdf`: table 1 on page 4
@@ -3411,13 +3739,13 @@ class: action
 ---
 ## Tables &mdash; `stargazer` &mdash; Overview
 
-- A capable package for creating tables to present
+- A capable package for creating at least three kinds of tables
 
-    - data in columns and rows
+    - raw data, in columns and rows
     - descriptive/summary statistics
     - regression models
 
-- Used widely by academics
+- Used widely by academics, even tough it has not been updated since 2018
 
 - Creates LaTeX code, HTML/CSS code, and ASCII text to be knitted
 
@@ -3427,34 +3755,53 @@ class: action
     - this [vignette](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf) by its author Marek Hlavac
     - this [tutorial](https://www.jakeruss.com/cheatsheets/stargazer/) by Jake Russ
 
-
+- Among its alternatives are the `knitr`, `kableExtra`, and `huxtable` packages
 
 ---
 ## Tables &mdash; `stargazer` &mdash; Notes
 
-- We must
+- The `stargazer` package requires specific settings
 
-  - set the chunk option .inline-c[results="asis"] for chunks with stargazer tables  
+  - in the chunk options
+  - and, in the `type` argument of the `stargazer()` function
+
 <br>
-  - change the argument `type` in the `stargazer()` function for different output formats accordingly   
-  <ul> <li style="margin-top: 7px;">e.g., the default <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "latex"</span> is for LaTeX and PDF, <span style="background-color: #e5e5e5; border-radius: 3px; padding: 4px; font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace;">type = "html"</span> for HTML</li> </ul>
 
---
+- These settings depend on the desired output format,<sup>*</sup> as shown below
 
-- It is currently not quite possible to `knit` `stargazer` code into tables in Word documents
+.pull-left[
 
-  - `stargazer` tables will not appear in Word documents automatically    
-<br>
-  - workarounds available
-      - `knit` to HTML as well as Word, copy the tables from HTML to Word
-      - `knit` to PDF, open the PDF in Word
-          - in Word, follow `File -> Open`
+|  Output       | Chunk Option    |  Type Argument |                   
+|:------------- |:----------------|:-------------- |
+| LaTex / PDF   |  results="asis" | latex          |  
+| HTML          |  results="asis" | html           |  
+| Word          |  comment=""     | text           |
 
---
+]
 
-- `stargazer` tables might look slightly different in different output formats
+.footnote[
+
+<sup>*</sup> The following slides use the setting for LaTex and PDF outputs.
+
+]
+
+---
+## Tables &mdash; `stargazer` &mdash; Notes
+
+- `stargazer` tables look slightly different in different output formats
 
   - on the following slides, they will have the HTML look
+  - even if the slides display the setting for LaTex and PDF outputs
+
+<br>
+
+- In fact, it is currently not quite possible to `knit` `stargazer` code into tables in Word documents
+
+  - though it can `knit` ASCII text, looking like a table 
+  - some popular workarounds:
+      - `knit` to HTML as well as Word, copy the tables from HTML to Word
+      - `knit` to PDF, open the PDF in Word
+      - use a different package to create tables, such as `huxtable`
 
 ---
 ## Tables &mdash; `stargazer` &mdash; Basics
@@ -3465,6 +3812,8 @@ class: action
         - but it accepts many, many arguments to customise tables
 
 --
+
+<br>
 
 - The `data` argument of that function, with two main options
 
@@ -3487,6 +3836,8 @@ stargazer(data = head(df, n = 4), `type = "latex"`, `summary = FALSE`)
 ```
 ````
 --
+
+<br>
 
 Notice the options of the chunk and the arguments of the function
 
@@ -3683,7 +4034,7 @@ stargazer(data = df, type = "html", summary = TRUE, flip = TRUE,
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 27
 
 27) Summary Statistics Tables
 - see `reproduce_this.pdf`: table 2 on page 8
@@ -3701,7 +4052,7 @@ Create a table of regression models instead
 ````md
 `r ''````{r, regression_table, echo=FALSE, results="asis"}
 
-stargazer(`data = lm(h5_index ~ subfield, data = df)`, 
+stargazer(`data = lm(h5_index ~ issues, data = df)`, 
           type = "latex", header = FALSE,
           title = "Regression Results")
 
@@ -3711,16 +4062,19 @@ stargazer(`data = lm(h5_index ~ subfield, data = df)`,
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
-stargazer(data = lm(h5_index ~ subfield, data = df), type = "html")
+stargazer(data = lm(h5_index ~ issues, data = df), type = "html")
 
 ```
+
 ]
+
 ]
 
 ---
@@ -3733,7 +4087,7 @@ Models can also be estimated outside the function first
 ````md
 `r ''````{r, regression_table, echo=FALSE, results="asis"}
 
- `lm1 <- lm(h5_index ~ subfield, data = df)`
+ `lm1 <- lm(h5_index ~ issues, data = df)`
 
  stargazer(`data = lm1`, type = "latex", header = FALSE,
            title = "Regression Results")
@@ -3744,16 +4098,19 @@ Models can also be estimated outside the function first
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = lm1, type = "html")
 
 ```
+
 ]
+
 ]
 
 ---
@@ -3776,16 +4133,19 @@ stargazer(data = lm1, type = "latex", header = FALSE,
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = lm1, type = "html", keep.stat = c("n", "rsq"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -3808,16 +4168,19 @@ stargazer(`data = list(lm1, lm2)`, type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -3842,18 +4205,21 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
           covariate.labels = c("Issues", "English"))
 
 ```
+
 ]
+
 ]
 
 ---
@@ -3879,11 +4245,12 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
@@ -3891,13 +4258,15 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           star.cutoffs = c(0.05, 0.01, 0.001))
 
 ```
+
 ]
+
 ]
 
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 28
 
 28) Regression Tables
 - see `reproduce_this.pdf`: table 3 on page 10
@@ -3921,22 +4290,27 @@ class: inverse, center, middle
 ## Functionality Gaps
 
 - Not everything is possible to achieve with R Markdown syntax, code chunks, and/or code
-    - e.g., centering text
+
+  - e.g., centering text, increasing the space between the lines of text
 
 --
 
+<br>
+
 - Workarounds available through inclusion of other languages and/or syntaxes in .Rmd documents
 
-    - e.g., incorporating HTML or LaTeX code into R Markdown
-    - workarounds might be output specific
+  - e.g., incorporating HTML or LaTeX code into R Markdown
+  - workarounds might be output specific
        - e.g., LaTeX-based workarounds may work only for LaTeX and PDF outputs
 
 --
 
+<br>
+
 - There are no exclusive list of gaps or workarounds
 
-    - these are specific to the output you want to achieve, problems you encounter
-    - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
+  - these are specific to the output you want to achieve, problems you encounter
+  - after writing a few manuscripts with R Markdown, you will have addressed most typical gaps in your workflow
 
 ---
 ## Functionality Gaps &mdash; Examples
@@ -4022,7 +4396,7 @@ Note that there is a difference in the label syntax for figures and R Markdown t
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 29&ndash;30
 
 29) Referring to Figures
 - see `reproduce_this.pdf`: pages 6 and 9
@@ -4063,11 +4437,12 @@ stargazer(data = list(lm1, lm2), type = "latex",
 ]
 
 .pull-right-c[
+
 .medium[
 
 <center>Table 1: Regression Results</center> 
 
-```{r echo = FALSE, results = "asis"}
+```{r echo=FALSE, results="asis"}
 
 stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           dep.var.labels = "H5 Index",
@@ -4076,7 +4451,9 @@ stargazer(data = list(lm1, lm2), type = "html", keep.stat = c("n", "rsq"),
           label = "regression_results")
 
 ```
+
 ]
+
 ]
 
 
@@ -4119,7 +4496,7 @@ According to \autoref{special_relativity}, space and time are linked.
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 31&ndash;33
 
 31) Referring to Tables
 - see `reproduce_this.pdf`: pages 7 and 9
@@ -4157,7 +4534,7 @@ R Markdown adds the list of references to the end of documents. This might be un
 
 Define where exactly the list of references should appear with the HMTL code .inline-c[<div id].inline-c[="refs"></div>]
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 # References
 <div id = "refs"></div>
 
@@ -4194,7 +4571,7 @@ header-includes:
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 34
 
 34) Line Spacing
 - introduce 1.5 spacing to the manuscript
@@ -4214,7 +4591,7 @@ Pages, tables, figures etc. are numbered continuously across an output. We might
 #### Solution:
 Use the `setcounter` in combination with the `renewcommand` command, outside code chunks
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 \setcounter{page}{1}
 \renewcommand*{\thepage}{A\arabic{page}}
 
@@ -4259,6 +4636,7 @@ class: inverse, center, middle
     - typically written over a long period of time, in numerous sittings
     - at the end of every sitting, essentially a different version of the same manuscript is created
     
+<br>
 
 - With many versions created over time, there emerge at least two challenges
 
@@ -4267,9 +4645,10 @@ class: inverse, center, middle
 
 --
 
+<br>
 - We all version control, in different ways, such as
 
-   - edit, rename, save
+   - edit, rename, and save the files
    - use applications or websites such as Dropbox, Google Docs, Overleaf
    - use distributed version control systems such as Git and GitHub
 
@@ -4298,9 +4677,11 @@ manuscript
 
 - Git
     - a software that keeps track of versions of a set of files
-    - it is *local* to you, the records are kept on your computer
+    - it is *local* to you; the records are kept on your computer
 
 --
+
+<br>
 
 - GitHub
     - a hosting service, or a website, that can keep the records
@@ -4308,6 +4689,8 @@ manuscript
     - but unlike Dropbox, GitHub is specifically structured to keep records with Git
 
 --
+
+<br>
 
 - Repository, or repo
     - a set of files whose records are kept together, by Git and/or on GitHub
@@ -4317,15 +4700,17 @@ manuscript
 ## Version Control &mdash; Git and GitHub &mdash; Definitions
 
 - To commit
-    - to take a snaphot of, or to version, a repository
+    - to take a snapshot of, or to version, a repository
     - it is like saving a new version of all files and sub-folders in your project folder with a new name
-    - it is local, the records are kept on your computer unless you `push`
+    - it is local, the records are kept on your computer unless you push
 
 --
 
+<br>
+
 - To push
-    - to move the records from Git to GitHub, from your computer to online server
-    - it is like uploading (the new versions of) your files and sub-folders to a website, 
+    - to move a copy of the records from Git to GitHub, from your computer to online server
+    - it is like uploading (the new versions of) your files and sub-folders to a website
     - it also involves merging, if this not the first push
 
 .footnote[
@@ -4343,7 +4728,7 @@ Version control with Git and GitHub requires
     - unless for a new computer or, if ever, a new GitHub account
     - a bit technical, but worth the hassle
     
-2. .yellow-h[project setup], repeated for every paper
+2. .yellow-h[project setup], repeated for every RStudio project
     - shorter, less complicated
 
 .footnote[
@@ -4363,11 +4748,16 @@ class: action
 
 > `Tools -> Global Options -> Git/SNV -> Enable version control interface for RStudio projects`
 
-- RStudio will likely find Git automatically. In case it cannot, Git is likely to be at
+<br>
 
-    - `c:/Program Files/Git/bin/git.exe` on Windows
+- RStudio will likely find Git automatically
 
-    - `/usr/local/git/bin/git` on Mac
+ - In case it cannot do so on its own, help RStudio find it by clicking `Browse...`
+ - Git is likely to be at
+
+      - `c:/Program Files/Git/bin/git.exe` on Windows
+
+      - `/usr/local/git/bin/git` on Mac
 
 ---
 class: action
@@ -4375,7 +4765,7 @@ class: action
 ## Version Control &mdash; Git &mdash; Initial Setup
 
 
-2) Set Git Bash as your shell (Windows-only step)
+2) If you are using Windowns, set Git Bash as your shell
 
 - from the RStudio menu, follow:
 
@@ -4417,10 +4807,12 @@ class: action
 
 > `Tools -> Version Control -> Project Setup... -> Version Control System -> Git`
 
+<br>
 
 - after confirming your new repository, and restarting the session, observe that 
 
-   - now there is now a Git tab in RStudio, documenting the differences between you local repository and the one on GitHub. When you change a file, it will appear here.  
+   - now there is now a Git tab in RStudio
+      - newly-added and/or edited files, since the last commmit, are listed here 
    
    - your project now includes a `.gitignore` file
        - this is where you can list files and/or folders to be excluded from being tracked
@@ -4442,13 +4834,14 @@ class: action
 
 > `Repositories -> New -> Repository name (e.g., "rwd_workshop") -> Public -> Create repository`
 
-- observe that
+<br>
 
-    - repository URLs have the following structure: https://github.com/USER_NAME/REPOSITORY_NAME
-    
-        - this is the address to view the repository online
-        - for use in the `Terminal`, the address gets the `.git` extension
-            - e.g., https://github.com/USER_NAME/REPOSITORY_NAME.git
+- observe the structure of the repository address
+
+  - e.i., https://github.com/USER_NAME/REPOSITORY_NAME
+  - this is the address to view the repository online
+  - for use in the `Terminal`, the address gets the `.git` extension
+     - e.i., https://github.com/USER_NAME/REPOSITORY_NAME.git
 
 ---
 class: action
@@ -4461,10 +4854,10 @@ class: action
 
 > `Tools -> Terminal -> New Terminal`
 
-- enter the following lines in the `Terminal`, with your username and repository name
+- enter the following lines in the `Terminal`, with .yellow-h[your username and repository name]
 
 ```yaml
-git remote add origin https://github.com/USER_NAME/REPOSITORY_NAME.git
+git remote add origin https://github.com/`USER_NAME/REPOSITORY_NAME`.git
 git add .
 git commit -m "first commit"
 git push -u origin master
@@ -4519,13 +4912,15 @@ name: git-github-basic-workflow
     - under the Git tab in RStudio, find the list of files that you edited since the last push
     - these will have `M`, for modified, as `Status`     
 
+<br>
+
 2) Commit and Push
 
 - tick `Staged` for one or more files that you would like to commit
-    - enter a `Commit message` that summarises the edits
-    - click `Commit` to create a record of the new version locally to your computer
-    - click `Close -> Push` to push the version to GitHub
-
+  - enter a `Commit message` that summarises the edits
+  - click `Commit` to create a record of the new version locally to your computer
+  - click `Close -> Push` to push the version to GitHub   
+<br>
 - observe the changes in the Git tab in RStudio and on the GitHub repository
 
 ---
@@ -4538,11 +4933,15 @@ name: git-github-basic-workflow
 
 --
 
+<br>
+
 - `.gitignore` lists one item per line
 
     - each line has a pattern, which determines whether one or more files or folders are to be ignored
 
 --
+
+<br>
 
 - See the documentation at <https://git-scm.com/docs/gitignore> 
 
@@ -4551,16 +4950,16 @@ name: git-github-basic-workflow
 ---
 ## Version Control &mdash; Git and Github &mdash; `.gitignore`
 
-- There might be good reasons to ignore some others, including files
+There are good reasons to ignore some others, including files
 
-    - that contain information that we do not want others to see
-        - e.g., personal API keys    
+- that contain information that we do not want others to see
+    - e.g., personal API keys    
 <br>
-    - that we do not have the right to share with others
-        - e.g., secondary data with user agreements otherwise    
+- that we do not have the right to share with others
+    - e.g., secondary data with user agreements otherwise    
 <br>
-    - that we (re-)create automatically as outputs
-        - e.g., `journals.pdf`, as opposed to journals.Rmd
+- that we (re-)create automatically as outputs
+    - e.g., `journals.pdf`, as opposed to journals.Rmd
         
 ---
 ## Version Control &mdash; Git and Github &mdash; `.gitignore`
@@ -4574,7 +4973,7 @@ name: git-github-basic-workflow
 
 .pull-right[
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 .Rproj.user
 .Rhistory
 .RData
@@ -4598,7 +4997,7 @@ name: git-github-basic-workflow
 
 .pull-right[
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 .Rproj.user
 .Rhistory
 .RData
@@ -4625,7 +5024,7 @@ name: git-github-basic-workflow
 
 .pull-right[
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 .Rproj.user
 .Rhistory
 .RData
@@ -4655,7 +5054,7 @@ name: git-github-basic-workflow
 
 .pull-right[
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 .Rproj.user
 .Rhistory
 .RData
@@ -4688,7 +5087,7 @@ journals.pdf               #<<
 
 .pull-right[
 
-```{r, eval = FALSE}
+```{r, eval=FALSE}
 .Rproj.user
 .Rhistory
 .RData
@@ -4734,7 +5133,7 @@ git rm -r --cached .
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 35&ndash;36
 
 35) Reproducibility and Version Control
 - imagine that, after producing all these tables and figures, and writing up your results, you have decided to exclude journals from Oceania from analysis
@@ -4889,7 +5288,7 @@ class: inverse, center, middle
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 37&ndash;39
 
 37) Owner Setup
 - create a new version-controlled RStudio project, with Git and GitHub
@@ -4928,28 +5327,34 @@ class: action
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 40
 
 40) Non-simultaneous Collaboration
 
 - take in turns with your partner to work on the same document (of the same project)
-    - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
-    - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
+
+  - *owner*: edit the first header in the document (i.e., "R Markdown"), save, commit, and push
+    
+  - *owner and collaborator*: observe the changes, if any, on your own `.Rmd` file, and/or on your GitHub repository
         - click on the relevant commit message on GitHub and observe the commit
-    - *collaborator*: pull, revert the header back to original, save, commit, and push
+        
+  - *collaborator*: pull, revert the header back to original, save, commit, and push
 
 `r countdown(minutes = 5, seconds = 00, top = 0)`
 
---
-
-- notice that you have not encountered any errors and/or merge conflicts
-    - because everyone edited and merged with an up-to-date document
-    - this is the default scenario in single-author, multiple computer scenario
+---
+## Exercise &mdash; 40 &mdash; Notes
+ 
+Notice that you have not encountered any errors and/or merge conflicts
+    
+- because everyone edited and merged with an up-to-date document
+    
+- this is the default scenario in single-author, multiple computer scenario
 
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 41
 
 41) Simultaneous Collaboration &mdash; Different Lines
 
@@ -4960,35 +5365,48 @@ class: action
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
---
+---
+## Exercise &mdash; 41 &mdash; Notes
 
-- notice that you have encountered an error but not a merge conflict
-    - pulling before pushing solves the problem because the edits are not on the same line
-    - the merge takes place automatically, on the *local* repository of the last pusher
+Notice that you have encountered an error
+    
+- pulling before pushing solves the problem because the edits are not on the same line
+  - hence, this is not a merge conflict
+    
+- the merge takes place automatically, on the *local* repository of the last pusher
 
 ---
 class: action
 
-## Exercise
+## Exercise &mdash; 42
 
 42) Simultaneous Collaboration &mdash; Same Line
 
 - work on the same document at the same time
     - *owner*: edit the first header in the document again, save, commit, and push
+    
     - *collaborator*: edit the first header in the document as well, save, commit, and push
-        - observe the error message that the last pusher will receive, follow the instructions on RStudio to solve the problem
+    
+- observe the error message that the last pusher will receive
+  - follow the instructions on RStudio to solve the problem
+  - google if necessary
 
 `r countdown(minutes = 10, seconds = 00, top = 0)`
 
---
+---
+## Exercise &mdash; 42 &mdash; Notes
 
-- notice that you have encountered not only an error but also a merge conflict
-    - pulling before pushing alone does not solve the problem because the edits are on the same line
-        - the conflict cannot be solved automatically &mdash; it needs human intervention
-        - by pulling first, you can view the conflict directly on the file
-            - marked between less than <span style="background-color: #ffff88;">&lt;</span> and greater than <span style="background-color: #ffff88;">&gt;</span> signs, divided by the equal signs
-            - solution is to accept the remote version, by deleting your edit and or moving that edit to a different line
-    - merging takes place on the *local* repository of the last pusher
+Notice that you have encountered not only an error but also a merge conflict
+
+- pulling before pushing alone does not solve the problem because the edits are on the same line
+
+  - the conflict cannot be solved automatically &mdash; it needs human intervention
+
+- nevertheless, by pulling first, you can view the conflict directly on the file
+  - marked between less than <span style="background-color: #ffff88;">&lt;</span> and greater than <span style="background-color: #ffff88;">&gt;</span> signs, divided by the equal signs
+  - solution is to accept the remote version, by deleting your edit and or moving that edit to a different line
+    
+- the merge takes place on the *local* repository of the last pusher
 
 ---
 ## Colloboration &mdash; Git and Github &mdash; Workflow &mdash; Alternative
@@ -5035,7 +5453,7 @@ class: action
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 43&ndash;44
 
 43) Pull request
 
@@ -5068,7 +5486,7 @@ class: action
 ---
 class: action
 
-## Exercises
+## Exercises &mdash; 45
 
 45) GitHub edit
 
@@ -5118,42 +5536,47 @@ class: inverse, center, middle
 ---
 ## References
 
-Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2020). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.1.
+Allaire, J. J., Xie, Y., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W. and Iannone, R. (2021). [rmarkdown: Dynamic documents for R](https://cran.r-project.org/web/packages/rmarkdown/index.html). R package, version 2.11.
 
-Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2019). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.10.0.
+Blair, G., Cooper, J., Coppock, A., Humphreys, M., Rudkin, A. and Fultz, N. (2021). [fabricatr: Imagine your data before you collect it](https://cran.r-project.org/web/packages/fabricatr/index.html). R package, version 0.14.0.
 
 Carlisle, D., Fairbairns, R., Harris, E. and Tobin, G. (2011). [setspace – Set space between lines](https://ctan.org/pkg/setspace). LaTeX package, version 6.7a.
 
-Dowle, M. and Srinivasan, A. (2019). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.12.8.
+Dowle, M. and Srinivasan, A. (2021). [data.table: Extension of 'data.frame'](https://cran.r-project.org/web/packages/data.table/index.html). R package, version 1.14.2.
 
-Gagolewski, M. (2020). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.4.6.
+Gagolewski, M. (2021). [stringi: Character String Processing Facilities](https://cran.r-project.org/web/packages/stringi/index.html). R package, version 1.7.5.
 
 Hlavac, M. (2018). [stargazer: Well-formatted regression and summary statistics tables](https://cran.r-project.org/web/packages/stargazer/index.html). R package, version 5.2.2.
 
-Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2020). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.9.3.
+Hugh-Jones, D. (2021).[huxtable: Easily Create and Style Tables for LaTeX, HTML and Other Formats](https://cran.r-project.org/web/packages/huxtable/index.html). R package, version 5.4.0.
 
-Wickham, H. and Grolemund, G. (2019). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
-
-Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2020a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 0.8.5.
+Sievert, C., Parmer, C.,  Hocking, T., Chamberlain, S., Ram, K., Corvellec, M., & Despouy, P. (2021). [plotly: Create Interactive Web Graphics via 'plotly.js'](https://cran.r-project.org/web/packages/plotly/index.html). R package, version 4.10.0.
 
 ---
 ## References
 
-Wickham, H., François, W., Henry L. and Müller, K. (2020b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 0.8.5.
+Wickham, H. and Grolemund, G. (2021). R for data science. O'Reilly. Open access at [https://r4ds.had.co.nz](https://r4ds.had.co.nz/).
+
+Wickham, H., François, W., Henry L. and Müller, K.(2021a). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.7.
+
+Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., Woo, K., Yutani, H. and Dunnington, D. (2021b). [ggplot2: Create elegant data visualisations using the grammar of graphics](https://cran.r-project.org/web/packages/ggplot2/index.html). R package, version 3.3.5.
 
 Wiernik, B. M. (2020). [American Psychological Association 7th edition (no ampersand)](https://www.zotero.org/styles/apa-no-ampersand). Citation style language file, version 1.0.
 
-Xie, Y. (2020a). [tinytex: Helper functions to install and maintain TeX Live and compile LaTeX documents](https://cran.r-project.org/web/packages/tinytex/index.html). R package, version 0.21.
+Xie, Y. (2021a). [tinytex: Helper functions to install and maintain TeX Live and compile LaTeX documents](https://cran.r-project.org/web/packages/tinytex/index.html). R package, version 0.34.
 
-Xie, Y. (2020b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.28.
+Xie, Y. (2021b). [knitr: A general-purpose package for dynamic report generation in R](https://cran.r-project.org/web/packages/knitr/index.html). R package, version 1.36.
 
-Xie, Y. (2020c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.18.
+Xie, Y. (2021c). [bookdown: Authoring books and technical documents with R Markdown](https://cran.rstudio.com/web/packages/bookdown/index.html). R package, version 0.24.
 
-Xie, Y. (2020d). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 0.18.
+Xie, Y., Allaire, J. J., and Grolemund, G. (2021a). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
 
-Xie, Y., Allaire, J. J., and Grolemund, G. (2019). R markdown: The definitive guide. CRC Press. Open access at [https://bookdown.org/yihui/rmarkdown](https://bookdown.org/yihui/rmarkdown/).
+---
+## References
 
-Zhu, H. (2019). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.1.0.
+Xie, Y, Dervieux, C. Presmanes Hill, A. (2021b). [blogdown: Create blogs and websites with R Markdown](https://cran.r-project.org/web/packages/blogdown/index.html). R package, version 1.5.
+
+Zhu, H. (2021). [kableExtra: Construct Complex Table with 'kable' and Pipe Syntax](https://cran.r-project.org/web/packages/kableExtra/index.html). R package, version 1.3.4.
 
 ---
 class: middle, center
