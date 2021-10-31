@@ -442,6 +442,7 @@ rmd_workshop-materials
    |  |
    |  |- reproduce_this.pdf
    |  |- journals.Rmd
+   |  |- solutions.Rmd
    |  |- references.bib
    |  |- apa_7th.csl
    |
@@ -501,7 +502,13 @@ class: action
 - `manuscript\journals.Rmd`
     - the R Markdown document that we will work on
     - includes unformatted text from `reproduce_this.pdf` to save time
-    - major components, such as paragraphs and tables, are numbered and marked in comments to facilitate navigation
+    - key sections are marked with comments to facilitate navigation
+
+--
+
+- `manuscript\solutions.Rmd`
+    - the R Markdown document that includes solutions to exercises
+    - at the end of the workshop, your `journals.Rmd` should look like it
 
 --
 
@@ -509,28 +516,30 @@ class: action
 
     - a BibTeX document with three fabricated references
 
---
+---
+## Course Materials &mdash; Contents  
 
 - `manuscript\apa_7th.csl`
 
     - a Citation Style Language document, with APA (7th Edition) referencing style ([Wiernik, 2020](https://www.zotero.org/styles/apa-no-ampersand))
 
----
-## Course Materials &mdash; Contents  
+--
 
-`data\journals.csv`
-- a dataset created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)), imagined to explore the `Google Scholar` rankings of fictitious journals
+<br>
+
+- `data\journals.csv`
+  - a dataset created with the `fabricatr` package ([Blair et al., 2021](https://cran.r-project.org/web/packages/fabricatr/index.html)), imagined to explore the `Google Scholar` rankings of fictitious journals
     
-- includes the following variables 
-    - **name**: journals (1090 random titles)
-    - **origin**: geographic origins (five continents)
-    - **branch**: major discipline of journals (four branches)
-    - **since**: time of first publication (years)
-    - **h5_index**: H5 Index (integers)
-    - **h5_median**: H5 Median (integers)
-    - **english**: English (1) *vs.* other-language (0) journals
-    - **subfield**: subfield (1) *vs.* generalist (0) journals
-    - **issues**: number of issues published per year (integers)
+  - includes the following variables 
+        - **name**: journals (1090 random titles)
+        - **origin**: geographic origins (five continents)
+        - **branch**: major discipline of journals (four branches)
+        - **since**: time of first publication (years)
+        - **h5_index**: H5 Index (integers)
+        - **h5_median**: H5 Median (integers)
+        - **english**: English (1) *vs.* other-language (0) journals
+        - **subfield**: subfield (1) *vs.* generalist (0) journals
+        - **issues**: number of issues published per year (integers)
 
 ---
 ## Course Materials &mdash; Contents  
