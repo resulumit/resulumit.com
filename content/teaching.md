@@ -2,6 +2,10 @@
 title: "Teaching experience"
 ---
 
+In Spring 2021, I completed a 200-hour postgraduate programme in <a href="https://www.uio.no/link/english/academic-development/" target="_blank">teaching and learning in higher education</a> at the University of Oslo.
+
+My teaching experience includes the following courses and workshops: 
+
 ## Graduate course
 
 * *Research design in quantitative political science*
@@ -38,8 +42,8 @@ title: "Teaching experience"
 ## Workshops
 
 * *R Markdown*
-    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, November 2020
-        - Previuos iteration: March 2020
+    - <a href="https://www.wzb.eu/en" target="_blank">The WZB Berlin Social Science Center</a>, November 2021
+        - Previous iterations: October 2021, November 2020, March 2020 (<a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>)
     - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
 <div style = "line-height: 50%;">
