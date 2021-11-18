@@ -259,21 +259,3 @@ Notes:
 2. I look at only 50 days before each election because, the runner-up in the 2018 elections---Muharrem Ince---announced his candidacy 51 days before the election.
 
 3. I located the candidate-related tweets by searching for the names and surnames of the candidates, and then reading these tweets to see if they were really about the elections.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
