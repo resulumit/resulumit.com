@@ -11,7 +11,7 @@ tags:
 - panel data
 citation: <em>Political Studies Review</em>
 file: solar_attitudes.pdf
-doi: 10.1177%2F14789299211044868
+doi: 10.1177/F14789299211044868
 code: https://doi.org/10.7910/DVN/8GYO8F
 ---
 
