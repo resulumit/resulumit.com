@@ -10,6 +10,7 @@ tags:
 - elections
 - survey experiments
 file: wind_turbines.pdf
+doi: 10.31219/osf.io/e6tpx
 ---
 
 
