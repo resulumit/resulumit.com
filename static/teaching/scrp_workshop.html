@@ -87,7 +87,7 @@ class: inverse, center, middle
 
 ### Resul Umit
 
-### May 2021
+### March 2022
 
 .footnote[
 
@@ -125,9 +125,9 @@ Resul Umit
 ---
 ## The Workshop &amp;mdash; Overview
 
-- One day, on how to automate the process of extracting data from websites
+- One and a half day, on how to automate the process of extracting data from websites
 
-  - 150+ slides, 15+ exercises
+  - 180+ slides, 25+ exercises
   - a [demonstration website](https://luzpar.netlify.app/) for practice
 
 --
@@ -164,19 +164,19 @@ Resul Umit
 
 - Typically, such skills are not part of academic training
 
-  - for my PhD, I hand-visited close to 3000 webpages to collect data manually
+  - for my PhD, I visited close to 3000 webpages to collect data manually
       - on members of ten parliaments
       - multiple times, to update the dataset as needed
 
 ---
 ## The Workshop &amp;mdash; Motivation &amp;mdash; Aims
 
-- To provide you with an understanding of what is ethically possible
+- To provide you with an understanding of what is .yellow-h[ethically] possible
 
   - we will cover a large breath of issues, not all of it is for long-term memory
       - hence the slides are designed for self study as well    
 &lt;br&gt;
-  - awareness of what is ethical and possible, `Google`, and perseverance are all you need
+  - awareness of what is ethical and possible, Google, and perseverance are all you need
 
 --
 
@@ -185,7 +185,8 @@ Resul Umit
 - To start you with acquiring and practicing the skills needed 
 
   - practice with the demonstration website
-     - plenty of data, stable structure, and an ethical playground
+     - plenty of data, stable structure, and an ethical playground    
+&lt;br&gt;
   - start working on a real project
 
 ---
@@ -230,26 +231,25 @@ name: contents-slide
 ---
 ## The Workshop &amp;mdash; Organisation
 
-- Breakout in groups of two for exercises
+- I will go through a number of slides...
 
-  - participants learn as much from their partner as from instructors
-  - switch partners after every other part
-  - leave your breakout room manually, when everyone in the group is ready
-
-&lt;br&gt; 
-
-- Type, rather than copy and paste, the code that you will find on these slides
-
-  - typing is a part of the learning process
-  - slides are, and will remain, available at [resulumit.com/teaching/scrp_workshop.html](https://resulumit.com/teaching/scrp_workshop.html)
+  - introducing things
+  - demonstrating how-to do things
 
 &lt;br&gt; 
 
-- When you have a question
+- ... and then pause, for you to use/do those things
 
-  - ask your partner
-  - google together
-  - ask me
+  - e.g., prepare your computer for the workshop, and/or
+  - complete a number of exercises
+    
+&lt;br&gt; 
+
+- We are here to help
+
+  - ask me, other participants
+  - consult Google, [slides](https://resulumit.com/teaching/scrp_workshop.html), [answer script](https://luzpar.netlify.app/exercises/solutions.R)
+      - type, rather than copy and paste, the code you will find on the slides or the script
 
 ---
 class: action
@@ -266,7 +266,7 @@ Slides with this background colour indicate that your action is required, for
     - these slides have countdown timers
         - as a guide, not to be followed strictly
     
-<div class="countdown" id="timer_60afd79a" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62212f76" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -297,7 +297,7 @@ bow(url = "https://luzpar.netlify.app/members/") %&gt;%
 
 - Results that come out as output .out-t[appear as such &amp;mdash; in the same font, on green background]    
 
-  - with some results, such as browsers popping up
+  - except for some results, such as a browser popping up
     
 --
 
@@ -336,7 +336,8 @@ class: action
 - Having the workshop slides&lt;sup&gt;*&lt;/sup&gt; on your own machine might be helpful
 
   - flexibility to go back and forward on your own
-      - especially while in a breakout room
+      - especially while in a breakout room     
+&lt;br&gt;      
   - ability to scroll across long codes on some slides
 
 &lt;br&gt;
@@ -349,7 +350,7 @@ class: action
   
 .footnote[
 
-&lt;sup&gt;*&lt;/sup&gt; These slides are produced in R, with the `xaringan` package ([Xie, 2020](https://cran.r-project.org/web/packages/xaringan/xaringan.pdf)).
+&lt;sup&gt;*&lt;/sup&gt; These slides are produced in R, with the `xaringan` package ([Xie, 2021](https://github.com/yihui/xaringan)).
 
 ]
 
@@ -364,23 +365,48 @@ class: action
    - includes fabricated data on the imaginary Parliament of Luzland
    - provides us with plenty of data, stable structure, and an ethical playground
 
-&lt;br&gt;
+- Using this demonstration website for practice is recommended
+
+   - tailored to exercises, no ethical concern
+   - but not compulsory &amp;mdash; use a different one if you prefer so
+ 
+- Explore the website now
+
+   - click on the links to see an individual page for 
+       - states, constituencies, members, and documents     
+&lt;br&gt;       
+   - notice that the documents section is different than the rest
+       - it is a page with dynamic frame
+
+<div class="countdown" id="timer_622131bc" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+   
+---
+class: action
+
+## Demonstration Website &amp;mdash; Explore on Your Browser
+
+- There is a demonstration website for this workshop
+
+   - available at &lt;https://luzpar.netlify.app/&gt;
+   - includes fabricated data on the imaginary Parliament of Luzland
+   - provides us with plenty of data, stable structure, and an ethical playground
 
 - Using this demonstration website for practice is recommended
 
    - tailored to exercises, no ethical concern
    - but not compulsory &amp;mdash; use a different one if you prefer so
-
-&lt;br&gt;
  
 - Explore the website now
 
    - click on the links to see an individual page for 
-       - states, constituencies, members, and documents
+       - states, constituencies, members, and documents     
+&lt;br&gt;       
    - notice that the documents section is different than the rest
        - it is a page with dynamic frame
 
-<div class="countdown" id="timer_60afd421" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_622132ba" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
    
@@ -481,7 +507,7 @@ install.packages(c("rvest", "RSelenium", "robotstxt", "polite", "dplyr"))
 
 ]
 
-<div class="countdown" id="timer_60afd550" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62213182" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -501,19 +527,19 @@ install.packages(c("rvest", "RSelenium", "robotstxt", "polite", "dplyr"))
 
 We will use
 
-- `rvest` ([Wickham, 2021](https://cran.r-project.org/web/packages/rvest/index.html)), for scraping websites
+- `rvest` ([Wickham, 2021](https://CRAN.R-project.org/package=rvest)), for scraping websites
 
 --
-- `RSelenium` ([Harrison, 2020](https://cran.r-project.org/web/packages/RSelenium/index.html)), for browsing the web programmatically
+- `RSelenium` ([Harrison, 2020](http://docs.ropensci.org/RSelenium)), for browsing the web programmatically
 
 --
-- `robotstxt` ([Meissner &amp; Ren, 2020](https://cran.r-project.org/web/packages/robotstxt/index.html)), for checking permissions to scrape websites
+- `robotstxt` ([Meissner and Ren, 2020](https://CRAN.R-project.org/package=robotstxt)), for checking permissions to scrape websites
 
 --
-- `polite` ([Perepolkin, 2019](https://cran.r-project.org/web/packages/polite/index.html)), for compliance with permissions to scrape websites
+- `polite` ([Perepolkin, 2019](https://github.com/dmi3kno/polite)), for compliance with permissions to scrape websites
 
 --
-- `dplyr` ([Wickham et al, 2021](https://cran.r-project.org/web/packages/dplyr/index.html)), for data manipulation
+- `dplyr` ([Wickham, François, Henry, et al., 2021](https://CRAN.R-project.org/package=dplyr)), for data manipulation
 
 ---
 class: action
@@ -605,6 +631,21 @@ class: action
    - on Firefox, search at &lt;https://addons.mozilla.org/&gt;
 
 ---
+class: action
+
+## Solutions &amp;mdash; Note Where They Are
+
+- Solutions to exercises, or links to them, are available online
+
+   - can be downloaded at &lt;https://luzpar.netlify.app/exercises/solutions.R&gt;
+
+&lt;br&gt;
+
+- I recommend the solutions to be consulted as a last resort
+
+  - after a genuine effort to complete the exercises yourself first
+
+---
 ## Other Resources&lt;sup&gt;*&lt;/sup&gt;
 
 - `RSelenium` vignettes
@@ -612,18 +653,17 @@ class: action
    - available at &lt;https://cran.r-project.org/web/packages/RSelenium/vignettes/basics.html&gt;
 
 
-- R for Data Science ([Wickham &amp; Grolemund, 2019](https://r4ds.had.co.nz/))
+- R for Data Science ([Wickham and Grolemund, 2021](#bib-rfordatascience))
   
    - open access at &lt;https://r4ds.had.co.nz&gt;
    
 
-- Text Mining with R: A Tidy Approach ([Silge &amp; Robinson, 2017](https://www.tidytextmining.com/))
+- Text Mining with R: A Tidy Approach ([Silge and Robinson, 2017](#bib-textminingwithr))
  
    - open access at [tidytextmining.com](https://www.tidytextmining.com/)
    - comes with [a course website](https://juliasilge.shinyapps.io/learntidytext/) where you can practice
    
 
-   
 .footnote[
 
 &lt;sup&gt;*&lt;/sup&gt; I recommend these to be consulted not during but after the workshop.
@@ -656,10 +696,8 @@ class: inverse, center, middle
 
 - Web scraping might be more likely to be illegal if, for example,      
 &lt;br&gt;
-   - it is harmful to the source
-      - commercially
+   - it is harmful to the source commercially and/or physically
           - e.g., scraping a commercial website to create a rival website     
-      - physically
           - e.g., scraping a website so hard and fast that it collapses    
 &lt;br&gt;
    - it gathers data that is
@@ -794,7 +832,7 @@ Files might include optional comments, written after the number sign .yellow-h[&
 User-agent: *
 Allow: /
 Disallow: /about/
-Crawl-delay: 5    `# five second delay, to ensure our servers are not overloaded`
+Crawl-delay: 5    `# please delay for five seconds, to ensure our servers are not overloaded`
 
 ```
 
@@ -839,21 +877,21 @@ User-agent: googlebot
 
 This website has different protocols for different agents
 
-- Google is allowed to scrape everything, with a 5-second delay
-- Bing is not allowed to scrape anything
-- everyone else can scrape the section or page located at www.websiteurl/about/
+- .yellow-h[Google] is allowed to scrape everything, with a 5-second delay
+- .yellow-h[Bing] is not allowed to scrape anything
+- .yellow-h[everyone else] can scrape the section or page located at www.websiteurl/about/
 
 &lt;br&gt;
 
 ```md
-User-agent: googlebot
+User-agent: `googlebot`
 Allow: /
 Crawl-delay: 5
 
-User-agent: bing
+User-agent: `bing`
 Disallow: /
 
-User-agent: *
+User-agent: `*`
 Allow: /about/
 
 ```
@@ -920,6 +958,9 @@ robotstxt(domain = "https://luzpar.netlify.app")
 ## Disallow: /states/
 ## 
 ## User-agent: *
+## Disallow: /exercises/
+## 
+## User-agent: *
 ## Allow: /
 ## Crawl-delay: 2
 ## 
@@ -937,9 +978,10 @@ robotstxt(domain = "https://luzpar.netlify.app")
 ## &lt;0 rows&gt; (or 0-length row.names)
 ## 
 ## $permissions
-##      field useragent    value
-## 1 Disallow googlebot /states/
-## 2    Allow         *        /
+##      field useragent       value
+## 1 Disallow googlebot    /states/
+## 2 Disallow         * /exercises/
+## 3    Allow         *           /
 ## 
 ## $crawl_delay
 ##         field useragent value
@@ -963,8 +1005,8 @@ robotstxt(domain = "https://luzpar.netlify.app")
 ##     spiderbar::can_fetch(obj = self$robexclobj, path = paths, 
 ##         user_agent = bot)
 ## }
-## &lt;bytecode: 0x0000000027931670&gt;
-## &lt;environment: 0x0000000027930ad8&gt;
+## &lt;bytecode: 0x000001b458594838&gt;
+## &lt;environment: 0x000001b453beed70&gt;
 ## 
 ## attr(,"class")
 ## [1] "robotstxt"
@@ -973,9 +1015,27 @@ robotstxt(domain = "https://luzpar.netlify.app")
 ---
 ## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
 
+Check the list of permissions for the most relevant part in the output
+
+
+```r
+robotstxt(domain = "https://luzpar.netlify.app")`$permissions`
+```
+
+
+```
+##      field useragent       value
+## 1 Disallow googlebot    /states/
+## 2 Disallow         * /exercises/
+## 3    Allow         *           /
+```
+
+---
+## Considerations &amp;mdash; the Ethics &amp;mdash; `robotstxt`
+
 .pull-left[
 
-Use the `paths_allowed` function to checks protocols for one or more specific paths
+Use the `paths_allowed` function to check protocols for one or more specific paths
 - supply a base URL with the `domain` argument
 - `path` and `bot` are the other important arguments
    - notice the default values    
@@ -1039,7 +1099,7 @@ class: action
 
 1) Check the protocols for &lt;https://www.theguardian.com&gt;
 
-   - via a browser and with the `robotstxt` function
+   - via (a) your browser and (b) with the `robotstxt` function in R
    - compare what you see
    
 &lt;br&gt;
@@ -1048,15 +1108,17 @@ class: action
 
    - such that it will return `FALSE`
    - taking the information from Exercise 1 into account
+   - hint: try looking at the list of permissions first
    
 &lt;br&gt;
 
 3) Check the protocols for any website that you might wish to scrape
 
   - with the `robotstxt` function
+  - reflect on the ethics of scraping that website
 
-<div class="countdown" id="timer_60afd634" style="top:0;right:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
+<div class="countdown" id="timer_62212fdd" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -1145,17 +1207,16 @@ class: inverse, center, middle
 ---
 ## HTML &amp;mdash; Webpage Source
 
-The `Ctrl` `+` `U` shortcut is to display source code &amp;mdash; alternatively, right click and `View` `Page` `Source`
-
+The `Ctrl` `+` `U` shortcut displays source code &amp;mdash; alternatively, right click and `View` `Page` `Source`
 
 &lt;img src="scrp_workshop_files/images_data/homepage.png" width="45%" /&gt;&lt;img src="scrp_workshop_files/images_data/homepage_source.png" width="45%" /&gt;
-
 
 ---
 ## HTML &amp;mdash; DOM
 
-Browsers also offer putting source codes in a structure
-- known as DOM (document object model), initiated by the `F12` key on Chrome
+Browsers also offer putting source codes in a structure, known as DOM (document object model)
+
+- initiated by the `F12` key on Chrome &amp;mdash; alternatively, right click and `Inspect`
 
 &lt;img src="scrp_workshop_files/images_data/homepage.png" width="45%" /&gt;&lt;img src="scrp_workshop_files/images_data/homepage_dom.png" width="45%" /&gt;
 
@@ -1177,7 +1238,7 @@ class: action
 &lt;br&gt;   
 - compare the look of the front- and back-end
 
-<div class="countdown" id="timer_60afd41a" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_622130f5" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1228,7 +1289,7 @@ class: action
 
 HTML documents 
 
-- start with a declaration
+- start with a .yellow-h[declaration]
     - so that browsers know what they are
    
 ]
@@ -1268,7 +1329,7 @@ HTML documents
 - start with a declaration
   - so that browsers know what they are     
 &lt;br&gt;
-- consist of elements
+- consist of .yellow-h[elements]
   - written in between opening and closing tags
    
 ]
@@ -1302,7 +1363,7 @@ HTML documents
 
 .pull-left[
 
-&lt;span style="background-color: #ffff88;"&gt;`html`&lt;/span&gt; is the root element
+&lt;span style="background-color: #ffff88;"&gt;`html`&lt;/span&gt; holds together the root element
 
 - it is also the parent to all other elements
 - its important children are the `head` and `body` elements
@@ -1371,7 +1432,7 @@ HTML documents
 ```
 ]
 ---
-## HTML &amp;mdash; Overview
+## HTML &amp;mdash; the Body
 
 .pull-left[
 
@@ -1407,7 +1468,7 @@ HTML documents
 ]
 
 ---
-## HTML &amp;mdash; Syntax
+## HTML &amp;mdash; Syntax &amp;mdash; Tags
 
 Most elements have opening and closing .yellow-h[tags]
 
@@ -1431,9 +1492,9 @@ Note that
 - the closing tag has a forward slash .yellow-h[/] before the element name
 
 ---
-## HTML &amp;mdash; Syntax
+## HTML &amp;mdash; Syntax &amp;mdash; Content
 
-Most elements have some content
+Most elements have some .yellow-h[content]
 
 ```md
 &lt;p&gt;`This is a one sentence paragraph.`&lt;/p&gt;
@@ -1447,7 +1508,62 @@ This is a one sentence paragraph.
 ]
 
 ---
-## HTML &amp;mdash; Syntax
+## HTML &amp;mdash; Syntax &amp;mdash; Attributes
+
+Elements can have .yellow-h[attributes]
+
+```md
+&lt;p&gt;This is a &lt;strong `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;This is a &lt;strong id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- attributes are added to the opening tags
+ - separated from anything else in the tag with a white space   
+
+- attribute string .yellow-h[sentence-count] could have been anything I could come up with
+ - unlike the tag and attribute names &amp;mdash; e.g., `strong`, `id` as they are pre-defined      
+&lt;br&gt;
+- the `id` attribute has no visible effects
+  - some other attributes, such as `style`, can have visible effects 
+
+---
+## HTML &amp;mdash; Syntax &amp;mdash; Attributes
+
+There could be more than one attribute in a single element
+
+```md
+&lt;p&gt;This is a &lt;strong `class="count"` `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+&lt;p&gt;There are now &lt;strong `class="count"` `id="paragraph-count"`&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
+
+```
+
+.out-t[
+&lt;p&gt;This is a &lt;strong class="count" id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
+
+&lt;p&gt;There are now &lt;strong class="count" id="paragraph-count"&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
+
+]
+
+
+&lt;br&gt;
+
+Note that
+
+- the same `class` attribute (e.i., `count`) can apply to multiple elements
+   - while the `id` attribute must be unique on a given page
+
+---
+## HTML &amp;mdash; Syntax &amp;mdash; Notes
 
 Elements can be nested
 
@@ -1474,65 +1590,40 @@ Note that
 - paragraph is said to be the parent of the strong element
 
 ---
-## HTML &amp;mdash; Syntax
+## HTML &amp;mdash; Syntax &amp;mdash; Notes
 
-Elements can have .yellow-h[attributes]
+By default, multiple spaces and/or lines breaks are ignored by browsers
 
-```md
-&lt;p&gt;This is a &lt;strong `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
 
+```r
+&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
+&lt;/li&gt;
+  
+  
+&lt;/ul&gt;
 ```
 
 .out-t[
-&lt;p&gt;This is a &lt;strong id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
-]
 
+&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
+&lt;/li&gt;
+  
+  
+&lt;/ul&gt;
+
+]
 
 &lt;br&gt;
 
 Note that
 
-- the id attribute is not visible to the visitors
-- attribute string .yellow-h[sentence-count] could have been anything I could come up with
-    - unlike the tag and attribute names &amp;mdash; e.g., strong, id as they are pre-defined      
-&lt;br&gt;    
-- there are some other attributes that are visible
-
+- plain source code may or may not be written in a readable manner
+  - this is one reason why DOM is helpful
 
 ---
-## HTML &amp;mdash; Syntax
+## HTML &amp;mdash; Other Important Elements &amp;mdash; Links 
 
-There could be more than one attribute in an element
-
-```md
-&lt;p&gt;This is a &lt;strong `class="count"` `id="sentence-count"`&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
-
-&lt;p&gt;There are now &lt;strong `class="count"` `id="paragraph-count"`&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
-
-```
-
-.out-t[
-&lt;p&gt;This is a &lt;strong class="count" id="sentence-count"&gt;one&lt;/strong&gt; sentence paragraph.&lt;/p&gt;
-
-&lt;p&gt;There are now &lt;strong class="count" id="paragraph-count"&gt;two&lt;/strong&gt; paragraphs.&lt;/p&gt;
-
-]
-
-
-&lt;br&gt;
-
-Note that
-
-- there could be more than one attribute in an element
-    - with a white space in between them    
-&lt;br&gt;
-- the `class` attribute can apply to multiple elements
-   - while the `id` attribute must be unique on a page
-
----
-## HTML &amp;mdash; Important Elements &amp; Attibutes 
-
-Links are provided with the a (anchor) element
+Links are provided with the `a` (anchor) element
 
 ```md
 &lt;p&gt;Click &lt;a href="https://www.google.com/"&gt;here&lt;/a&gt; to google things.&lt;/p&gt;
@@ -1547,13 +1638,13 @@ Links are provided with the a (anchor) element
 
 Note that
 
-- `href` (hypertext reference) is a required attribute for this element
-- most attributes are optional, some are required
+- `href` (hypertext reference) is a .yellow-h[required attribute] for this element
+   - most attributes are optional, but some are required
 
 ---
-## HTML &amp;mdash; Links 
+## HTML &amp;mdash; Other Important Elements &amp;mdash; Links 
 
-Links
+Links can have titles
 
 ```md
 &lt;p&gt;Click &lt;a `title="This text appears when visitors hover over the link"` 
@@ -1571,10 +1662,10 @@ Links
 Note that
 
 - the `title` attribute is one of the optional attributes
-- it becomes visible when hovered over with mouse
+  - it becomes visible when hovered over with mouse
 
 ---
-## HTML &amp;mdash; Lists
+## HTML &amp;mdash; Other Important Elements &amp;mdash; Lists
 
 The `&lt;ul&gt;` tag introduces un-ordered lists, while the `&lt;li&gt;` tag defines lists items
 
@@ -1605,42 +1696,86 @@ Note that
 - Ordered lists are introduced with the the `&lt;ol&gt;` tag instead
 
 ---
-## HTML &amp;mdash; HTML &amp;mdash; Notes
+## HTML &amp;mdash; Other Important Elements &amp;mdash; Containers 
 
-By default, multiple spaces and/or lines breaks are ignored by browsers
+The `&lt;div&gt;` tag defines a section, containing one or often more elements
+
+.pull-left[
+
+&lt;br&gt;
 
 
 ```r
-&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
-&lt;/li&gt;
-  
-  
+&lt;p&gt;This is an introductory paragraph.&lt;/p&gt;
+
+&lt;`div` style="text-decoration: underline;"&gt;
+&lt;p&gt;In this important division there are two 
+elements, which are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a paragraph, and&lt;/li&gt;
+  &lt;li&gt;an unordered list.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;`/div`&gt;
+
+&lt;p&gt;This is the concluding paragraph.&lt;p&gt;
 ```
+
+]
+
+.pull-right[
+
+&lt;br&gt;
 
 .out-t[
 
-&lt;ul&gt;&lt;li&gt;books&lt;/li&gt;&lt;li&gt;journal                     articles&lt;/li&gt;&lt;li&gt;reports
-&lt;/li&gt;
-  
-  
+&lt;p&gt;This is an introductory paragraph.&lt;/p&gt;
+
+&lt;div style="text-decoration: underline;"&gt;
+&lt;p&gt;In this important division there are two 
+elements, which are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a paragraph, and&lt;/li&gt;
+  &lt;li&gt;an unordered list.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is the concluding paragraph.&lt;p&gt;
+
+]
+
+]
+
+---
+## HTML &amp;mdash; Other Important Elements &amp;mdash; Containers 
+
+The `&lt;span&gt;` tag also defines a section, containing a part of an element
+
+
+
+```r
+&lt;p&gt;This is an &lt;`span` style="text-decoration: underline;"&gt;important paragraph&lt;`/span`&gt;, which
+you must read carefully.&lt;p&gt;
+```
+
+
+.out-t[
+
+&lt;p&gt;This is an &lt;span style="text-decoration: underline;"&gt;important paragraph&lt;/span&gt;, which you must read carefully.&lt;p&gt;
 
 ]
 
 &lt;br&gt;
 
 Note that
-
-- plain source code may or may not be written in a readable manner
-- this is one reason why DOM is helpful
-
+ - containers are useful in applying styles to sections
+    - or, attributing classes or ids to them
+ 
 ---
 class: action
 
 ## Exercises
 
-6) Re-create the .yellow-h[body] of the page at &lt;https://luzpar.netlify.app/states/&gt; in R
+6) Re-create the page at &lt;https://luzpar.netlify.app/states/&gt; in R
 
 - start an HTML file, following from the RStudio menu:
 
@@ -1652,16 +1787,17 @@ class: action
 
 &lt;br&gt;
 
-7) Add an attribute to an element
-- which is not already on the original page
-- hints:
-   - there are at least two attributes for the list elements on the original page
-   - google to see what attributes list items accept
-   - &lt;https://www.w3schools.com/&gt; is a great place to look at
-   - save this document as we will continue working on it
+7) Add at least one extra tag and/or attribute
 
-<div class="countdown" id="timer_60afd56d" style="top:0;right:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+- with a visible effect on how the page looks at the front end
+   - hints:
+       - google if you need to
+       - [www.w3schools.com](https://www.w3schools.com/) has a lot resources
+       
+- save this document as we will continue working on it
+
+<div class="countdown" id="timer_6221300f" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -1699,7 +1835,7 @@ class: inverse, center, middle
 ## CSS &amp;mdash; Syntax
 
 .pull-left[
-CSS is written in .yellow-h[rules]
+- CSS is written in .yellow-h[rules]
 
 ]
 
@@ -1724,12 +1860,6 @@ CSS is written in .yellow-h[rules]
 
 &lt;br&gt;
 
-- Note that
-
-   - the syntax changes with the selector type
-      - elements and attributes
-      - among attributes, classes and ids
-
 ]
 
 .pull-right[
@@ -1741,6 +1871,96 @@ CSS is written in .yellow-h[rules]
  `.count` {background-color:yellow;}
 
  `#sentence-count` {color:red; font-size:14px;}
+
+```
+]
+
+---
+## CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+   - one or more &lt;span style="background-color: #ffff88;"&gt;selectors&lt;/span&gt;, matching one or more HTML elements and/or attributes
+
+&lt;br&gt;
+
+- Note that
+
+   - the syntax changes with the selector type
+      - elements and attributes are written as they are
+
+]
+
+.pull-right[
+```md
+ `p` {font-size:14px;}
+
+ `h1 h2` {color:blue;}
+
+ .count {background-color:yellow;}
+
+ #sentence-count {color:red; font-size:14px;}
+
+```
+]
+
+---
+## CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+   - one or more &lt;span style="background-color: #ffff88;"&gt;selectors&lt;/span&gt;, matching one or more HTML elements and/or attributes
+
+&lt;br&gt;
+
+- Note that
+
+   - the syntax changes with the selector type
+      - elements and attributes are written as they are
+      - classes are prefixed with a full stop, ids with a number sign
+
+]
+
+.pull-right[
+```md
+ p {font-size:14px;}
+
+ h1 h2 {color:blue;}
+
+ `.count` {background-color:yellow;}
+
+ `#sentence-count` {color:red; font-size:14px;}
+
+```
+]
+
+---
+## CSS &amp;mdash; Syntax
+
+.pull-left[
+- CSS is written in rules, with a syntax consisting of
+   - one or more &lt;span style="background-color: #ffff88;"&gt;selectors&lt;/span&gt;, matching one or more HTML elements and/or attributes
+
+&lt;br&gt;
+
+- Note that
+
+   - the syntax changes with the selector type
+      - elements and attributes are written as they are
+      - classes are prefixed with a full stop, ids with a number sign
+ 
+   - you can define the same rule for more than one element and/or attribute
+]
+
+.pull-right[
+```md
+ p {font-size:14px;}
+
+ `h1 h2` {color:blue;}
+
+ .count {background-color:yellow;}
+
+ #sentence-count {color:red; font-size:14px;}
 
 ```
 ]
@@ -1773,7 +1993,6 @@ CSS is written in .yellow-h[rules]
 
 ```
 ]
-
 
 ---
 ## CSS &amp;mdash; Syntax
@@ -1856,7 +2075,7 @@ CSS is written in .yellow-h[rules]
 &lt;html&gt;
   &lt;head&gt;
 *   &lt;style&gt;
-*     h1 {color: blue;}
+*     h1 {color:blue;}
 *   &lt;/style&gt;
     &lt;title&gt;A title for browsers&lt;/title&gt;
   &lt;/head&gt;
@@ -1937,14 +2156,15 @@ class: action
 8) Provide some simple style to your HTML document
 - one that you created during the previous exercise
 - using internal or external style, but not inline
-   - so that you can practice selecting element and/or attributes     
+   - so that you can practice selecting elements     
 &lt;br&gt;
 - no idea what to do? try
    - increasing the font size of the text in paragraph  
    - change the colour of the second item in the list to red
+   - get more ideas from [www.w3schools.com/css](https://www.w3schools.com/css/default.asp)
    
-<div class="countdown" id="timer_60afd51e" style="top:0;right:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<div class="countdown" id="timer_62213175" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
 </div>
 
 ---
@@ -1973,7 +2193,7 @@ class: inverse, center, middle
 
 &lt;br&gt;
 
-- Scraping static pages involves two main tasks
+- Scraping static pages involves two main steps
 
    - download the source code from one or more pages to R
       - typically, the only interaction with the page itself     
@@ -1990,7 +2210,7 @@ class: inverse, center, middle
 
   - created by [Hadley Wickham](http://http://hadley.nz/)
   - popular &amp;mdash; used by many for web scraping
-      - downloaded 635,132 times last month
+      - downloaded 549,515 times last month
       - some of it must be thanks to being a part of the `tidyverse` family     
 &lt;br&gt;      
   - last major revision was in March 2021
@@ -2003,7 +2223,7 @@ class: inverse, center, middle
 - A lot has already been written on this package
 
   - you will find solutions to, or help for, any issues online
-  - see first the [package documentation](https://cran.r-project.org/web/packages/rvest/rvest.pdf), numerous tutorials &amp;mdash; such as [this](https://rvest.tidyverse.org/) and [this](https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/), and [this](https://steviep42.github.io/webscraping/book/index.html#quick-rvest-tutorial)
+  - see first the [package documentation](https://cran.r-project.org/web/packages/rvest/rvest.pdf), numerous tutorials &amp;mdash; such as [this](https://rvest.tidyverse.org/), [this](https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/), and [this](https://steviep42.github.io/webscraping/book/index.html#quick-rvest-tutorial)
      
 --
 
@@ -2026,14 +2246,21 @@ read_html("https://luzpar.netlify.app/")
 ```
 ## {html_document}
 ## &lt;html lang="en-us"&gt;
-## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
-## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-ma ...
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class ...
 ```
 
+&lt;br&gt;
+Note that
+- this is the first of two steps in scraping static pages 
+      - typically, the only interaction with the page itself     
+&lt;br&gt;
+   - we still need to select the exact information that we need
+   
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
 
-You may wish to check the protocol first
+You may wish to check the protocol first, for ethical scraping
 
 
 ```r
@@ -2051,8 +2278,8 @@ read_html("https://luzpar.netlify.app/")
 ```
 ## {html_document}
 ## &lt;html lang="en-us"&gt;
-## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
-## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-ma ...
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class ...
 ```
 
 ---
@@ -2064,19 +2291,19 @@ read_html("https://luzpar.netlify.app/")
 
 &lt;br&gt;
 
-- It divides the process of getting source code into two
+- It divides the step of getting source code into two
    
    - check the protocol
    - get the source only if allowed
 
 &lt;br&gt;
 
-- It also 
+- Among its other fuctions are  
 
-   - waits for a period of time
+   - waiting for a period of time
        - minimum by what is specified in the protocol     
 &lt;br&gt;
-   - allows you to introduce yourself to website administrators while scraping
+   - introducing you to website administrators while scraping
    
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code &amp;mdash; `polite`
@@ -2241,7 +2468,9 @@ scrape(`bow`,
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
 
-These two are equal, when there is no protocol against the access
+These two pieces of code lead to the same outcome, as there is .yellow-h[no protocol against the access]
+
+.pull-left[
 
 
 ```r
@@ -2251,10 +2480,13 @@ read_html("https://luzpar.netlify.app/")
 ```
 ## {html_document}
 ## &lt;html lang="en-us"&gt;
-## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
-## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-ma ...
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class ...
 ```
 
+]
+
+.pull-right[
 
 
 ```r
@@ -2265,43 +2497,99 @@ bow(url = "https://luzpar.netlify.app/") %&gt;%
 ```
 ## {html_document}
 ## &lt;html lang="en-us"&gt;
-## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
-## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-ma ...
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;meta ...
+## [2] &lt;body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class ...
 ```
 
+]
 
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; Get Source Code
 
-The difference occurs when there is a protocol against the access
+The difference occurs when there is .yellow-h[a protocol against the access]
 
-```md
-bow(url = "https://luzpar.netlify.app`/states/`", user_agent = `"googlebot"`)
-```
+.pull-left[
 
 
+```r
+read_html("https://luzpar.netlify.app/exercises/exercise_6.Rhtml")
 ```
-## &lt;polite session&gt; https://luzpar.netlify.app/states/
-##     User-agent: googlebot
-##     robots.txt: 2 rules are defined for 2 bots
-##    Crawl delay: 5 sec
-##   The path is not scrapable for this user-agent
+
 ```
+## {html_document}
+## &lt;html&gt;
+## [1] &lt;head&gt;\n&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;\n&lt;titl ...
+## [2] &lt;body&gt;\r\n\r\n&lt;h1&gt;States of Luzland&lt;/h1&gt;\r\n        \r\n&lt;p&gt;There are four states i ...
+```
+
+]
+
+.pull-right[
+
+
+```r
+bow(url = "https://luzpar.netlify.app/exercises/exercise_6.Rhtml") %&gt;% 
+    scrape()
+```
+
+```
+## NULL
+```
+
+]
+
+---
+class: action
+
+## Exercises
+
+9) Get the source code of the page at &lt;https://luzpar.netlify.app/states/&gt; in R
+
+- using the `read_html` function
 
 &lt;br&gt;
 
+10) Get the same page source, this time in the `polite` way
+
+- let the website know who you are
+- define delay time
+
+<div class="countdown" id="timer_6221307a" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
+
+.pull-left[
+
+- Get one or more&lt;span&gt;*&lt;/span&gt; HTML elements
+
+  - from the .yellow-h[source code] downloaded in the previous step
+      
+]
+
+
+.pull-right[
 
 ```md
-bow(url = "https://luzpar.netlify.app/states/", user_agent = "googlebot") `%&gt;%` 
-    `scrape()`
-```
-.out-t[
+
+html_element(`x`, 
+             css, 
+             xpath)
+
+html_element`s`(`x`, 
+              css, 
+              xpath)
 
 ```
-## Warning: No scraping allowed here!
 
-## NULL
-```
+]
+
+.footnote[
+
+&lt;span&gt;*&lt;/span&gt; Note that there are two versions of the same function: singular one gets the first instance of an element, plural one gets all instances.
+
 ]
 
 ---
@@ -2311,19 +2599,17 @@ bow(url = "https://luzpar.netlify.app/states/", user_agent = "googlebot") `%&gt;
 
 - Get one or more HTML elements
 
-   - specified with a selector
-       - CSS or XPATH    
-&lt;br&gt;
-  - we will work with css in this workshop
-       - facilitated by Chrome and SelectorGagdet
+  - from the source code downloaded in the previous step
+
+  - specified with .yellow-h[a selector], CSS .yellow-h[or] XPATH    
+      
        
 &lt;br&gt;
 
 - Note that
  
-  - there are two versions of the same function
-      - singular one gets the first instance of an element
-      - plural one gets all instances
+  - we will work with CSS only in this workshop
+  - using CSS is facilitated by Chrome and SelectorGagdet
       
 ]
 
@@ -2333,10 +2619,10 @@ bow(url = "https://luzpar.netlify.app/states/", user_agent = "googlebot") `%&gt;
 ```md
 
 html_element(x, 
-             css, 
-             xpath)
+             `css`, 
+             `xpath`)
 
-html_elements(x, 
+html_element`s`(x, 
               css, 
               xpath)
 
@@ -2345,9 +2631,54 @@ html_elements(x,
 ]
 
 ---
+## Static Pages &amp;mdash; Finding Selectors
+
+- Finding the correct selector(s) is the key to successful scraping, and there are three ways to do it
+
+  - figure it out yourself, by looking at the source code and/or the DOM
+     - difficult, time consuming, prone to error    
+&lt;br&gt;
+  - use SelectorGagdet or other browser extensions
+     - easy and quick
+     - works well when selecting both single and multiple elements
+     - but sometimes not accurate    
+&lt;br&gt;
+  - use the functionality that Chrome provides
+     - an in-between option in terms of ease and time
+     - works very well with single elements
+&lt;br&gt;
+--
+
+- I recommend using
+   - the SelectorGagdet method first, and if it does not help
+   - then the Chrome method, especially when selecting single elements
+
+---
+## Static Pages &amp;mdash; Finding Selectors &amp;mdash; SelectorGagdet
+
+To find the selectors for the hyperlinks on the homepage of the Parliamenta of Luzland
+
+.pull-left[
+1. visit the page on a Chrome browser
+2. click on SelectorGagdet to activate it
+3. click on a hyperlink
+
+Note that
+- the element that you clicked is highlighted green
+- many other elements, including menu items, are in yellow
+- SelectorGagdet says the selector is `a`
+
+]
+
+.pull-right[
+
+&lt;img src="scrp_workshop_files/images_data/sg1.png" width="100%" /&gt;
+
+]
+---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
 
-Get the anchor (a) elements on the homepage
+Get the `a` (anchor) elements on the homepage
 
 
 ```r
@@ -2359,7 +2690,7 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 
 ```
 ## {xml_nodeset (24)}
-##  [1] &lt;a class="js-search" href="#" aria-label="Close"&gt;&lt;i class="fas fa-times- ...
+##  [1] &lt;a class="js-search" href="#" aria-label="Close"&gt;&lt;i class="fas fa-times-circle te ...
 ##  [2] &lt;a class="navbar-brand" href="/"&gt;Parliament of Luzland&lt;/a&gt;
 ##  [3] &lt;a class="navbar-brand" href="/"&gt;Parliament of Luzland&lt;/a&gt;
 ##  [4] &lt;a class="nav-link active" href="/"&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
@@ -2367,26 +2698,71 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 ##  [6] &lt;a class="nav-link" href="/constituencies/"&gt;&lt;span&gt;Constituencies&lt;/span&gt;&lt;/a&gt;
 ##  [7] &lt;a class="nav-link" href="/members/"&gt;&lt;span&gt;Members&lt;/span&gt;&lt;/a&gt;
 ##  [8] &lt;a class="nav-link" href="/documents/"&gt;&lt;span&gt;Documents&lt;/span&gt;&lt;/a&gt;
-##  [9] &lt;a class="nav-link js-search" href="#" aria-label="Search"&gt;&lt;i class="fas ...
-## [10] &lt;a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" ...
+##  [9] &lt;a class="nav-link js-search" href="#" aria-label="Search"&gt;&lt;i class="fas fa-searc ...
+## [10] &lt;a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-lab ...
 ## [11] &lt;a href="#" class="dropdown-item js-set-theme-light"&gt;&lt;span&gt;Light&lt;/span&gt;&lt;/a&gt;
 ## [12] &lt;a href="#" class="dropdown-item js-set-theme-dark"&gt;&lt;span&gt;Dark&lt;/span&gt;&lt;/a&gt;
-## [13] &lt;a href="#" class="dropdown-item js-set-theme-auto"&gt;&lt;span&gt;Automatic&lt;/spa ...
-## [14] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel ...
-## [15] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Um ...
+## [13] &lt;a href="#" class="dropdown-item js-set-theme-auto"&gt;&lt;span&gt;Automatic&lt;/span&gt;&lt;/a&gt;
+## [14] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel="noopene ...
+## [15] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Umit&lt;/a&gt;
 ## [16] &lt;a href="/documents/"&gt;documents&lt;/a&gt;
 ## [17] &lt;a href="/constituencies/"&gt;constituencies&lt;/a&gt;
 ## [18] &lt;a href="/members/"&gt;members&lt;/a&gt;
 ## [19] &lt;a href="/states/"&gt;states&lt;/a&gt;
-## [20] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noope ...
+## [20] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener"&gt;Blog ...
 ## ...
 ```
 
 ---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_element`
+
+Get the .yellow-h[first] `a` (anchor) element on the homepage
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_element`(c`ss = "a")
+```
+
+
+```
+## {html_node}
+## &lt;a class="js-search" href="#" aria-label="Close"&gt;
+## [1] &lt;i class="fas fa-times-circle text-muted" aria-hidden="true"&gt;&lt;/i&gt;
+```
+
+&lt;br&gt;
+
+Note that
+
+- the function on this slide is the singular version
+
+---
+## Static Pages &amp;mdash; Finding Selectors &amp;mdash; SelectorGagdet
+
+Click on a menu item as we are not interested in them
+
+.pull-left[
+4. click on a menu item as we are not interested in them
+
+Note that
+- the element that you clicked is highlighted red
+- other menu items are not highlighted at all
+- SelectorGagdet says the selector is now  
+`#title` `a`
+]
+
+.pull-right[
+
+&lt;img src="scrp_workshop_files/images_data/sg2.png" width="100%" /&gt;
+
+]
+
+---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_elements`
 
-I would like to get only the URLs on the main body of the page
-- SelectorGadget tells me the correct selector is `#title` `a`
+Get the `a` (anchor) elements on the homepage with a `#title` attribute
 
 
 ```r
@@ -2398,16 +2774,122 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 
 ```
 ## {xml_nodeset (9)}
-## [1] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel= ...
-## [2] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Umi ...
+## [1] &lt;a href="https://github.com/resulumit/scrp_workshop" target="_blank" rel="noopener ...
+## [2] &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;Resul Umit&lt;/a&gt;
 ## [3] &lt;a href="/documents/"&gt;documents&lt;/a&gt;
 ## [4] &lt;a href="/constituencies/"&gt;constituencies&lt;/a&gt;
 ## [5] &lt;a href="/members/"&gt;members&lt;/a&gt;
 ## [6] &lt;a href="/states/"&gt;states&lt;/a&gt;
-## [7] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopen ...
+## [7] &lt;a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener"&gt;Blogd ...
 ## [8] &lt;a href="https://gohugo.io/" target="_blank" rel="noopener"&gt;Hugo&lt;/a&gt;
-## [9] &lt;a href="https://github.com/wowchemy" target="_blank" rel="noopener"&gt;Wowc ...
+## [9] &lt;a href="https://github.com/wowchemy" target="_blank" rel="noopener"&gt;Wowchemy&lt;/a&gt;
 ```
+
+---
+## Static Pages &amp;mdash; Finding Selectors &amp;mdash; SelectorGagdet
+
+You can click further to exclude/include everything, or the only thing, that you want
+
+&lt;img src="scrp_workshop_files/images_data/sg3.png" width="100%" /&gt;
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_element`
+
+Get the link behind one element
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_elemen`t(c`ss = `"br+ p a+ a"`)
+```
+
+
+```
+## {html_node}
+## &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;
+```
+
+&lt;br&gt;
+
+Note that
+
+- the function on this slide is the singular version
+  - but the plural one would result in the same output as the selector itself is for a single element
+
+---
+## Static Pages &amp;mdash; Finding Selectors &amp;mdash; Chrome
+
+To find the selector for a single item, you could also use Chrome itself
+
+.pull-left[
+
+1. right click, and then `Inspect`
+2. click ![](scrp_workshop_files/images_data/ch2.png)
+3. click on an element on the front end
+4. right click on the highlighted section in the DOM
+4. follow `Copy -&gt; Copy selector` 
+
+]
+
+.pull-right[
+
+&lt;img src="scrp_workshop_files/images_data/ch1.png" width="100%" /&gt;
+
+]
+
+---
+## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_element`
+
+Get the link behind one element
+
+
+```r
+bow(url = "https://luzpar.netlify.app") %&gt;%
+  scrape() %&gt;%
+  html_element(css = `"#title &gt; div.container &gt; div &gt; p:nth-child(2) &gt; a:nth-child(2)"`)
+```
+
+
+```
+## {html_node}
+## &lt;a href="https://resulumit.com/" target="_blank" rel="noopener"&gt;
+```
+
+&lt;br&gt;
+
+Note that
+
+- the selector is different
+   - longer, and therefore, more specific and accurate
+
+- but the outcome is the same
+
+---
+class: action
+
+## Exercises
+
+11) Get the fist list element on the page at &lt;https://luzpar.netlify.app/states/&gt;
+
+- find the selector with the functionality Chrome offers
+
+&lt;br&gt;
+
+12) Get all list elements on the same page
+
+- find the selector with SelectorGadget
+
+&lt;br&gt;
+
+13) Get only the second and fourth element on the list
+
+- without repeating the code
+- that is, use only a single selector that would return both list elements
+
+<div class="countdown" id="timer_62213157" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_text`
@@ -2456,16 +2938,28 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 
 
 ```
-## [1] "a workshop on automated web scraping"
-## [2] "Resul Umit"                          
-## [3] "documents"                           
-## [4] "constituencies"                      
-## [5] "members"                             
-## [6] "states"                              
-## [7] "Blogdown"                            
-## [8] "Hugo"                                
+## [1] "a workshop on automated web scraping" "Resul Umit"                          
+## [3] "documents"                            "constituencies"                      
+## [5] "members"                              "states"                              
+## [7] "Blogdown"                             "Hugo"                                
 ## [9] "Wowchemy"
 ```
+
+---
+class: action
+
+## Exercises
+
+14) Get the text on the list elements on the page at &lt;https://luzpar.netlify.app/states/&gt;
+
+&lt;br&gt;
+
+15) Get the constituency names on the page at &lt;https://luzpar.netlify.app/constituencies/&gt;
+
+
+<div class="countdown" id="timer_6221309b" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
 
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_attr`
@@ -2493,12 +2987,11 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 
 .pull-right[
 
-```md
 
+```r
 html_attr(x, name, default = NA_character_)
 
 html_attrs(x)
-
 ```
 
 ]
@@ -2590,7 +3083,7 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 Note that
 
 - some URLs are given relative to the base URL
-   - e.g., `/states/`, which is actually `/states/`
+   - e.g., `/states/`, which is actually &lt;https://luzpar.netlify.app/states/&gt;
    - you can complete them with the `url_absolute` function
    
 ---
@@ -2618,6 +3111,23 @@ bow(url = "https://luzpar.netlify.app") %&gt;%
 ## [8] "https://gohugo.io/"                        
 ## [9] "https://github.com/wowchemy"
 ```
+
+---
+class: action
+
+## Exercises
+
+16) Get the hyperlink attributes for the constituencies at &lt;https://luzpar.netlify.app/constituencies/&gt;
+
+&lt;br&gt;
+
+17) Create complete links to the constituency pages
+
+
+<div class="countdown" id="timer_622130a1" style="top:0;right:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
 
 ---
 ## Static Pages &amp;mdash; `rvest` &amp;mdash; `html_table`
@@ -2713,7 +3223,7 @@ class: action
 
 ## Exercise
 
-9) Create a dataframe out of the table at &lt;https://luzpar.netlify.app/members/&gt;
+18) Create a dataframe out of the table at &lt;https://luzpar.netlify.app/members/&gt;
 - with as many variables as possible
 - hints:
    - start with the code in the previous slide, and add new variables from attributes
@@ -2722,7 +3232,7 @@ class: action
       - make these URLs absolute   
       - see what other attributes are there to collect     
 
-<div class="countdown" id="timer_60afd610" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62212f81" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -3026,7 +3536,7 @@ class: action
 
 ## Exercise
 
-10) Crawl into members' personal pages to create a rich dataset
+19) Crawl into members' personal pages to create a rich dataset
 - with members being the unit of observation
 
 
@@ -3038,7 +3548,7 @@ Hints:
 -  practice with 3 members until you are ready to run the loop for all 
     - e.g., by replacing `1:length(the_links)` with `1:3` for the loop
 
-<div class="countdown" id="timer_60afd3eb" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6221304e" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">45</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -3080,20 +3590,19 @@ class: inverse, center, middle
 ---
 ## Dynamic Pages &amp;mdash; Three Steps to Scrape
 
-Scraping dynamic pages involves three main tasks      
+Scraping dynamic pages involves three main steps      
 &lt;br&gt;
-- Create the desired instance of the dynamic page
+- .yellow-h[Create] the desired instance of the dynamic page
   - with the `RSelenium` package
-  - e.g., by clicking, scrolling, filling in forms
-      - from within R    
+  - e.g., by clicking, scrolling, filling in forms, from within R    
 &lt;br&gt;
-- Get the source code into R
+- .yellow-h[Get] the source code into R
       - `RSelenium` downloads XML
       - `rvest` turns it into HTML    
 &lt;br&gt;
-- Select the exact information needed from the source code
+- .yellow-h[Extract] the exact information needed from the source code
       - as for static pages
-      - with the the`rvest` page
+      - with the the `rvest` package
     
 ---
 ## Dynamic Pages &amp;mdash; `Rselenium` &amp;mdash; Overview
@@ -3101,7 +3610,7 @@ Scraping dynamic pages involves three main tasks
 - A package that integrates [Selenium 2.0 WebDriver](https://www.selenium.dev/documentation/en/) into R
 
   - created by [John Harrison](http://johndharrison.github.io/#/cover)
-  - downloaded 4,966 times last month
+  - downloaded 4,654 times last month
   - last updated in February 2020
 
 --
@@ -3120,7 +3629,7 @@ Scraping dynamic pages involves three main tasks
 
 - The package involves more methods than functions
   
-  - code look slightly unusual
+  - code look slightly unusual for R
   - as it follows the logic behind Selenium
 
 --
@@ -3129,10 +3638,10 @@ Scraping dynamic pages involves three main tasks
 
 - It allows interacting with two things &amp;mdash; and it is crucial that we are aware of the difference
 
-  - browsers
+  - browsers on your computer
       - e.g., opening a browser and navigating to a page     
 &lt;br&gt;
-  - elements
+  - elements on a webpage
       - e.g., opening and clicking on a drop-down menu
 
 ---
@@ -3206,16 +3715,17 @@ rsDriver(`port` = 4567L,
 .pull-left[
 
 - Use the `rsDriver` function to start a server
-    - so that you can control a web browser from within R
+
+  - so that you can control a web browser from within R
 
 &lt;br&gt;
 
 - Note that the defaults can cause errors, such as
-   - tying to start two servers from the same port
-   - any mismatch between the .yellow[version and driver numbers]
+
+  - trying to start two servers from the same port
+  - any mismatch between the .yellow[version and driver numbers]
 
 ]
-
 
 .pull-right[
 
@@ -3254,8 +3764,8 @@ binman::list_versions("chromedriver")
 
 - Note that
 
-  - you can only use the version that *you* get
-  - not one of the version that you see on this slide
+  - you can only use the version that *you* have
+  - you might have a different the version than the ones on this slide
 
 ---
 ## Dynamic Pages &amp;mdash; Browsers &amp;mdash; Starting a Server
@@ -3283,7 +3793,7 @@ binman::list_versions("chromedriver")
 .pull-right[
 
 ```md
-driver &lt;- rsDriver(`chromever = "90.0.4430.24"`)
+driver &lt;- rsDriver(`chromever = "98.0.4758.102"`)
 ```
 
 &lt;img src="scrp_workshop_files/images_data/chrome_works.png" width="2073" /&gt;
@@ -3411,7 +3921,7 @@ browser$getTitle()
 
 Close the browser
 - which will not close the session on the server
-    - recall that we singled the client out
+    - recall that we have singled the client out
 
 ```md
 browser$close()
@@ -3539,14 +4049,14 @@ class: action
 
 ## Exercises
 
-11) Navigate to and get the source code of a page
+20) Navigate to and get the source code of a page
 - e.g., &lt;https://luzpar.netlify.app/constituencies/&gt;
 - by using both packages
 
 
 &lt;br&gt;
 
-13) See what other methods are available to interact with browsers
+21) See what other methods are available to interact with browsers
 - by typing the object name for your client into R console
    - followed by the dollar sign
    - and hitting the tab key on your keyboard if necessary
@@ -3554,11 +4064,11 @@ class: action
 
 &lt;br&gt;
 
-14) Try one or more new methods
+22) Try one or more new methods
 - e.g., take a screenshot of your browser
    - and view it in R
 
-<div class="countdown" id="timer_60afd6c0" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_6221322e" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -3856,7 +4366,7 @@ Choosing the body element, you can scroll up and down a page
 
 
 ```r
-body &lt;- broswer$findElement(using = "css", `value = "body"`)
+body &lt;- browser$findElement(using = "css", `value = "body"`)
 body$sendKeysToElement(list(`key = "page_down"`))
 ```
 
@@ -3923,7 +4433,7 @@ class: action
 
 ## Exercise
 
-15) Conduct an internet search programatically
+23) Conduct an internet search programatically
 - navigate to &lt;https://duckduckgo.com/&gt;
    - just to keep it simple as Google would require you to scroll down and accept a policy     
 &lt;br&gt;   
@@ -3932,11 +4442,16 @@ class: action
     
 &lt;br&gt;
 
-16) Scroll down programatically, and up
+24) Scroll down programatically, and up
 - to see all results
 
+&lt;br&gt;
 
-<div class="countdown" id="timer_60afd7c3" style="top:0;right:0;" data-warnwhen="0">
+25) Go back, and conduct another search
+- hint: you will have to find the search bar again
+
+
+<div class="countdown" id="timer_62213198" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -4102,22 +4617,15 @@ class: action
 
 ## Exercise
 
-17) Collect data on a subset of documents
+26) Collect data on a subset of documents
 - article tags and image credits
 - for documents within the Law and Proposal categories
 - published after 2019
 
 
-&lt;br&gt;
-
-Hint
-- start with the related code in the previous slides, and adopt it to your needs  
-
-
-<div class="countdown" id="timer_60afd62d" style="top:0;right:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62213260" style="top:0;right:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">30</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-
 
 ---
 name: reference-slide
@@ -4131,20 +4639,34 @@ class: inverse, center, middle
 
 ]
 
+
 ---
 ## References
 
-Harrison, J. (2020). [RSelenium: R Bindings for 'Selenium WebDriver'](https://cran.r-project.org/web/packages/RSelenium/index.html). R package, version 1.7.7.
+Harrison, J. (2020). _RSelenium: R Bindings for Selenium WebDriver_. R package
+version 1.7.7.  http://docs.ropensci.org/RSelenium.
 
-Meissner, P., &amp; Ren, K. (2020). [robotstxt: A 'robots.txt' Parser and 'Webbot'/'Spider'/'Crawler' Permissions Checker](https://cran.r-project.org/web/packages/robotstxt/index.html). R package, version 0.7.13.
+Meissner, P. and K. Ren (2020). _robotstxt: A robots.txt Parser and
+Webbot/'Spider'/Crawler Permissions Checker_. R package version 0.7.13. 
+https://CRAN.R-project.org/package=robotstxt.
 
-Perepolkin, D. (2019). [polite: Be Nice on the Web](https://cran.r-project.org/web/packages/polite/index.html). R package, version 0.1.1.
+Perepolkin, D. (2019). _polite: Be Nice on the Web_. R package version 0.1.1.
+ https://github.com/dmi3kno/polite.
 
-Wickham, H. (2021). [rvest: Easily Harvest (Scrape) Web Pages](https://cran.r-project.org/web/packages/rvest/index.html). R package, version 1.0.0.
+Silge, J. and D. Robinson (2017). _Text mining with R: A tidy approach_.
+O'Reilly.
 
-Wickham, H., François, R., Henry, L., &amp; Müller, K. (2021). [dplyr: A grammar of data manipulation](https://cran.r-project.org/web/packages/dplyr/index.html). R package, version 1.0.6.
+Wickham, H. (2021). _rvest: Easily Harvest (Scrape) Web Pages_. R package
+version 1.0.2.  https://CRAN.R-project.org/package=rvest.
 
-Xie, Y. (2020). [xaringan: Presentation Ninja](https://cran.r-project.org/web/packages/xaringan/index.html). R package, version 0.19.
+Wickham, H., R. François, L. Henry, et al. (2021). _dplyr: A Grammar of Data
+Manipulation_. R package version 1.0.7. 
+https://CRAN.R-project.org/package=dplyr.
+
+Wickham, H. and G. Grolemund (2021). _R for data science_. O'Reilly.
+
+Xie, Y. (2021). _xaringan: Presentation Ninja_. R package version 0.22. 
+https://github.com/yihui/xaringan.
 
 ---
 class: middle, center
