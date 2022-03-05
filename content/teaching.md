@@ -76,5 +76,6 @@ My teaching experience includes the following courses and workshops:
 </div>
     
 * *Web scraping*
-    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
+    - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022
+        - Previous iteration: <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
     - <a href="https://resulumit.com/syllabi/21spring_ws.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/scrp_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/scrp_workshop" target="_blank">Materials</a> | <a href="https://luzpar.netlify.app/" target="_blank">Demonstration site</a>
