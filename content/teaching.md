@@ -59,7 +59,8 @@ My teaching experience includes the following courses and workshops:
 </div>
 
 * *Twitter data*
-    - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
+- <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022
+        - Previous iteration: <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, February 2021
     - <a href="https://resulumit.com/syllabi/21spring_twtr.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/twtr_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/twtr_workshop" target="_blank">Materials</a>
     
 <div style = "line-height: 50%;">
