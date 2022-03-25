@@ -10,6 +10,7 @@ googleAnalytics = "UA-37636856-2" # change to "G-GC34XXL0WV" for GA4
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 pluralizeListTitles = false
 buildFuture = true
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
 unsafe= true
