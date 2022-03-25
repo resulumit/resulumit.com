@@ -1,5 +1,6 @@
 ---
 date: 2021-07-06
+lastmod: 2022-03-25
 slug: polisci-turnaround-acceptance
 title: "Turnaround times and acceptance rates in political science journals"
 output: html_document
@@ -17,9 +18,7 @@ library(kableExtra)
 
 df <- read_csv("2021-turnaround-acceptance/tf_metrics.csv")
         
-
 ```
-
 
 It would be great if <a href="https://resulumit.shinyapps.io/psjournals/" target="_blank">the psjournals app</a> included information on turnaround times and acceptance rates in political science journals. This is one of the most common requests that I receive from its users, and I could not agree more.
 
@@ -27,19 +26,21 @@ These statistics are unfortunately unavailable for many journals.
 
 The ones published by Taylor & Francis are now a welcome exception. The publisher has recently started to provide statistics on journal turnaround times and acceptance rates on its website --- in separate sections for individual journals. 
 
-This blogpost brings these statistics together, collecting the data with the code <a href="https://gist.github.com/resulumit/05f5186f2c7abd7efed0e05bc64a358e" target="_blank">available on GitHub</a>.
+This blogpost brings these statistics together, available for `r nrow(df)` of the journals classified under _Politics & International Relations_ by the publisher. 
+
+I last collected the data on `r format(Sys.time(), "%d %B %Y")`. In case you need up-to-date statistics at any time in the future, the code that does the job is <a href="https://gist.github.com/resulumit/05f5186f2c7abd7efed0e05bc64a358e" target="_blank">available on GitHub</a>.
 
 All turnaround times indicate the median, measured in days. Further details on measurement are available on <a href="https://authorservices.taylorandfrancis.com/publishing-your-research/choosing-a-journal/journal-metrics/#" target="_blank">the publisher's website</a>. 
 
 See also the graphs that summarise the statistics [at the end of the post](#descriptive-graphs).
 
 ```{r, table}
-df %>% rename(Journal = journal, "Including desk rejects" = "first_decision",
+df |> rename(Journal = journal, "Including desk rejects" = "first_decision",
               "Excluding desk rejects" = "first_review", 
               "Acceptance to online" = "online_publication", 
-              "Acceptance rate" = acceptance_rate) %>% 
-       kable(format = "html", escape = FALSE, align = "l") %>%
-  kable_styling("striped") %>%
+              "Acceptance rate" = "acceptance_rate") |> 
+       kable(format = "html", escape = FALSE, align = "l") |>
+  kable_styling("striped") |>
   add_header_above(c("", "Submission to first decision" = 2, "", ""))
 
 ```
@@ -52,10 +53,11 @@ Here are two graphs that describe the data in the table above. The first is for 
 
 ```{r, turnaround}
 
-df %>% pivot_longer(cols = first_decision:online_publication,
-                    names_to = "type", values_to = "statistic") %>%
+df |> select(-acceptance_rate) |> 
+        pivot_longer(cols = first_decision:online_publication,
+                    names_to = "type", values_to = "statistic") |>
         mutate(type = factor(type, levels = c("first_decision", "first_review", "online_publication"),
-                              labels = c("Including desk rejects", "Excluding desk rejects", "Acceptance to online"))) %>% 
+                              labels = c("Including desk rejects", "Excluding desk rejects", "Acceptance to online"))) |> 
         ggplot(aes(x = statistic, color = type, fill = type)) +
         geom_density(alpha = 0.3) +
         theme_light() +
@@ -75,14 +77,13 @@ df %>% pivot_longer(cols = first_decision:online_publication,
         scale_fill_discrete(name = "") +
         scale_color_discrete(name = "")
 
-
 ```
 
 <br>
 
 ```{r, acceptance}
 
-df %>% mutate(acceptance_rate = as.numeric(str_remove(acceptance_rate, "%"))) %>%
+df |> mutate(acceptance_rate = as.numeric(str_remove(acceptance_rate, "%"))) |>
     ggplot(aes(x = acceptance_rate)) +
         geom_density(alpha = 0.3) +
         theme_light() +
