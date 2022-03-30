@@ -1,0 +1,25 @@
+---
+date: 2022-03-31
+slug: twtr-workshop
+title: "Twitter data in R"
+output: html_document
+categories:
+        - teaching
+        - workshop
+        - rstats
+---
+
+**<a href="https://resulumit.com/teaching/twtr_workshop.html" target="_blank"><b>Slides</b></a> | <a href="https://github.com/resulumit/twtr_workshop" target="_blank"><b>All course materials</b></a>**
+
+Earlier this month, I taught my two-day course on working with Twitter data in R, at the <a href="https://www.unilu.ch/en" target="_blank">University of Lucerne</a>. This was part of a Master's Programme in Computational Social Science, <a href="https://www.unilu.ch/en/study/study-programmes/masters-degrees/faculty-of-humanities-and-social-sciences/lucerne-master-in-computational-social-sciences-lumacss/" target="_blank">LUMACSS</a>.
+
+This course is designed as an introduction to collecting, cleaning, and analysing Twitter data --- without having to apply for a developer account. You can find the course material at <a href="https://github.com/resulumit/twtr_workshop" target="_blank">GitHub</a>. The slides are better viewed <a href="https://resulumit.com/teaching/twtr_workshop.html" target="_blank">here on my website</a>.&#42;
+
+Once the teaching sessions are over, I guide those interested in using Twitter data for academic research to write a strong application for [Academic Research access](https://developer.twitter.com/en/products/twitter-api/academic-research), which removes many of Twitter's strict restrictions on how much data is otherwise available to download, how quickly, how frequently, and how far dating back. 
+
+I would be happy to organise this course again. <a href="mailto:resuluy@uio.no?subject=Twitter workshop">Let me know</a> if this might be possible at your institution.
+
+And if you like the sound of this course, you might also be interested in the other digital-skills courses that I teach. Have a look at the [teaching section](https://resulumit.com/teaching/) of my website.
+
+_____
+&#42; These HTML slides crash for some Safari users. If using a different browser application, such as Chrome or Firefox, is not an option for you, I recommend viewing the <a href="https://github.com/resulumit/scrp_workshop/blob/master/presentation/scrp_workshop.pdf">PDF version of the slides</a> on GitHub.
