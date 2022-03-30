@@ -19,5 +19,7 @@ You can find other course material at <a href="https://github.com/resulumit/scrp
 
 I would be happy to organise this course again. <a href="mailto:resuluy@uio.no?subject=Web scraping workshop">Let me know</a> if this might be possible at your institution.
 
+And if you like the sound of this course, you might also be interested in the other digital-skills courses that I teach. Have a look at the [teaching section](https://resulumit.com/teaching/) of my website.
+
 _____
 &#42; These HTML slides crash for some Safari users. If using a different browser application, such as Chrome or Firefox, is not an option for you, I recommend viewing the <a href="https://github.com/resulumit/scrp_workshop/blob/master/presentation/scrp_workshop.pdf">PDF version of the slides</a> on GitHub.
