@@ -35,7 +35,8 @@ All turnaround times indicate the median, measured in days. Further details on m
 See also the graphs that summarise the statistics [at the end of the post](#descriptive-graphs).
 
 ```{r, table}
-df |> rename(Journal = journal, "Including desk rejects" = "first_decision",
+df |> relocate(acceptance_rate, .after = last_col()) |> 
+        rename(Journal = journal, "Including desk rejects" = "first_decision",
               "Excluding desk rejects" = "first_review", 
               "Acceptance to online" = "online_publication", 
               "Acceptance rate" = "acceptance_rate") |> 
