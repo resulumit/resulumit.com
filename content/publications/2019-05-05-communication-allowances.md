@@ -3,7 +3,7 @@ author: Resul Umit
 comments: false
 date: '2021-08-10'
 slug: communication-allowances
-title: 'Parliamentary Communication Allowances: Good for Nothing?'
+title: 'Parliamentary communication allowances: Good for nothing?'
 kind: article
 tags:
 - parliaments

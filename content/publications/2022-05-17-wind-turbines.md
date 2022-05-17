@@ -3,7 +3,7 @@ author: Resul Umit, Lena Schaffer
 comments: false
 date: '2022-05-17'
 slug: wind-turbines
-title: 'Wind Turbines, Public Acceptance, and Electoral Outcomes'
+title: 'Wind turbines, public acceptance, and electoral outcomes'
 kind: article
 tags:
 - energy

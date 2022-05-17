@@ -3,7 +3,7 @@ author: Resul Umit
 comments: false
 date: '2019-02-18'
 slug: expectations
-title: 'Unfulfilled Winning Expectations Decrease Voter Satisfaction with Democracy'
+title: 'Unfulfilled winning expectations decrease voter satisfaction with democracy'
 kind: unpublished
 tags:
 - brexit
