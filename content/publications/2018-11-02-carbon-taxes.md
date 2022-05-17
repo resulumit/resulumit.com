@@ -1,5 +1,5 @@
 ---
-author: Resul Umit, Lena Maria Schaffer
+author: Resul Umit, Lena Schaffer
 comments: false
 date: '2020-02-21'
 slug: carbon-taxes
