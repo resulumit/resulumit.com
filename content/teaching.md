@@ -42,11 +42,20 @@ My teaching experience includes the following courses and workshops:
 ## Workshops
 
 * *R Markdown*
-  - <a href="https://www.wzb.eu/en" target="_blank">The WZB Berlin Social Science Center</a>, November 2021
-     - Previous iterations: October 2021, November 2020, March 2020 (<a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>)
+  - <a href="https://www.uio.no/english/" target="_blank">University of Oslo</a>, May 2022
+     - Previous iterations: <a href="https://www.wzb.eu/en" target="_blank">WZB Berlin Social Science Center</a>, November 2021; <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, October 2021, November 2020, March 2020
   - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>
 
 <div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *Web scraping*
+  - <a href="https://dfo.no/english" target="_blank">Norwegian Government Agency for Financial Management</a>, June 2022
+     - Previous iterations: <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022<a>;  <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
+  - <a href="https://resulumit.com/syllabi/21spring_ws.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/scrp_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/scrp_workshop" target="_blank">Materials</a> | <a href="https://luzpar.netlify.app/" target="_blank">Demonstration site</a>
+  
+  <div style = "line-height: 50%;">
     <br>
 </div>
 
@@ -71,12 +80,4 @@ My teaching experience includes the following courses and workshops:
   - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, April 2021
      - Previous iteration: May 2020
   - <a href="https://resulumit.com/syllabi/21spring_rbd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rbd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/workshop_website" target="_blank">Materials</a> | <a href="https://janejdoe.netlify.app/" target="_blank">Demonstration site</a>
-    
-<div style = "line-height: 50%;">
-    <br>
-</div>
-    
-* *Web scraping*
-  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022
-     - Previous iteration: <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
-  - <a href="https://resulumit.com/syllabi/21spring_ws.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/scrp_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/scrp_workshop" target="_blank">Materials</a> | <a href="https://luzpar.netlify.app/" target="_blank">Demonstration site</a>
+
