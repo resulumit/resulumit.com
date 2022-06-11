@@ -52,10 +52,10 @@ My teaching experience includes the following courses and workshops:
 
 * *Web scraping*
   - <a href="https://dfo.no/english" target="_blank">Norwegian Government Agency for Financial Management</a>, June 2022
-     - Previous iterations: <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022<a>;  <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
+     - Previous iterations: <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, March 2022;  <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, May 2021
   - <a href="https://resulumit.com/syllabi/21spring_ws.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/scrp_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/scrp_workshop" target="_blank">Materials</a> | <a href="https://luzpar.netlify.app/" target="_blank">Demonstration site</a>
   
-  <div style = "line-height: 50%;">
+<div style = "line-height: 50%;">
     <br>
 </div>
 
@@ -80,4 +80,3 @@ My teaching experience includes the following courses and workshops:
   - <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, April 2021
      - Previous iteration: May 2020
   - <a href="https://resulumit.com/syllabi/21spring_rbd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rbd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/workshop_website" target="_blank">Materials</a> | <a href="https://janejdoe.netlify.app/" target="_blank">Demonstration site</a>
-
