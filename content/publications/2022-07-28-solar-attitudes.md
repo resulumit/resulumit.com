@@ -9,7 +9,7 @@ tags:
 - energy
 - political behaviour
 - panel data
-citation: <em>Political Studies Review, 20</em>(3), 525--533.
+citation: <em>Political Studies Review, 20</em>(3), 525–533
 file: solar_attitudes.pdf
 doi: 10.1177/14789299211044868
 code: https://doi.org/10.7910/DVN/8GYO8F
