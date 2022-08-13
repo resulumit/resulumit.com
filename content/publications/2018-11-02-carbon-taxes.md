@@ -8,7 +8,7 @@ kind: article
 tags:
 - energy
 - surveys
-citation: <em>Energy Policy, 140</em>. 1–7.
+citation: <em>Energy Policy, 140</em>. 1–7
 file: umit2020a.pdf
 doi: 10.1016/j.enpol.2020.111385
 code: https://doi.org/10.7910/DVN/4J6DCF
