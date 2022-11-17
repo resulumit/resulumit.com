@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "About me"
 ---

@@ -6,7 +6,25 @@ In Spring 2021, I completed a 200-hour postgraduate programme in <a href="https:
 
 My teaching experience includes the following courses and workshops: 
 
-## Graduate course
+## Graduate courses
+
+* *Core concepts in political science*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - With <a href="http://vittoriomerola.com/" target="_blank">Vittorio Merola</a> 
+  - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA48030" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *Quantitative methods and analysis*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - With <a href="https://sites.google.com/view/nickvivyan" target="_blank">Nick Vivyan</a> 
+  - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA49915" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
 
 * *Research design in quantitative political science*
   - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, Spring 2020
@@ -15,6 +33,15 @@ My teaching experience includes the following courses and workshops:
 <br>
 
 ## Undergraduate courses
+
+* *Introduction to comparative politics*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - With <a href="https://www.durham.ac.uk/staff/adrian-millican/" target="_blank">Adrian Millican</a> 
+  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2022&module_code=SGIA1211" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
 
 * *Electoral expectations*
   - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Spring 2021     

@@ -13,7 +13,7 @@ buildFuture = true
 enableRobotsTXT = true
 
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
 
 [params]
 
@@ -38,14 +38,14 @@ highlightjsTheme = "github"
 [[params.social]]
 icon = "university"
 icon_pack = "fa"
-link = "https://www.sv.uio.no/arena/english/"
-text = "ARENA Centre for European Studies, University of Oslo, Gaustadalléen 30, 0373 Oslo, Norway."
+link = "https://www.durham.ac.uk/"
+text = "School of Government and International Affairs, Durham University, Elvet Hill Road, Durham DH1 3TU, UK"
 
 [[params.social]]
 icon = "envelope"
 icon_pack = "fa"
-link = "mailto:resuluy@uio.no"
-text = "resuluy@uio.no"
+link = "mailto:resul.umit@durham.ac.uk"
+text = "resul.umit@durham.ac.uk"
     
 [[params.social]]
 icon = "twitter"
