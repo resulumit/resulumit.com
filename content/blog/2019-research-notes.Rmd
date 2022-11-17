@@ -33,8 +33,9 @@ I have gone through the 'author guidelines' of more than three hundred political
 | Public Opinion Quarterly | <a href='https://academic.oup.com/poq/pages/general_instructions'target='_blank'>Research Note</a> | 3k words | 33 |
 | Regulation & Governance | <a href='https://onlinelibrary.wiley.com/page/journal/17485991/homepage/forauthors.html#manuscript'target='_blank'>Research Forum</a> | 6k words | 30 |
 | Global Environmental Politics | <a href='https://www.mitpressjournals.org/journals/glep/sub'target='_blank'>Research Note</a> | 3k -- 5k words | 28 |
-| European Union Politics | <a href='https://uk.sagepub.com/en-gb/eur/journal/european-union-politics#submission-guidelines'target='_blank'>Letter</a> | 1k -- 2k words | 27 |
 | African Affairs | <a href='https://academic.oup.com/afraf/pages/research_notes'target='_blank'>Research Note</a> | 4k -- 5k words | 27 |
+| European Union Politics | <a href='https://uk.sagepub.com/en-gb/eur/journal/european-union-politics#submission-guidelines'target='_blank'>Letter</a> | 1k -- 2k words | 27 |
+| Politics, Groups, and Identities | <a href='https://www.tandfonline.com/journals/rpgi20'target='_blank'>Research Note</a> | 3.5k words | 27 |
 | International Political Science Review | <a href='https://uk.sagepub.com/en-gb/eur/journal/international-political-science-review#submission-guidelines'target='_blank'>Research Report</a> | 6k words | 26 |
 | Political Science Research and Methods | <a href='https://www.cambridge.org/core/journals/political-science-research-and-methods/information/instructions-contributors'target='_blank'>Research Note</a> | 4k words | 26 |
 | Politics, Groups, and Identities | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=rpgi20#prep'target='_blank'>Research Note</a> | 3.5k words | 24 |
@@ -43,6 +44,9 @@ I have gone through the 'author guidelines' of more than three hundred political
 | Foreign Policy Analysis | <a href='https://academic.oup.com/fpa/pages/General_Instructions'target='_blank'>Research Note</a> | 3k -- 6k words | 23 |
 | Urban Affairs Review | <a href='https://journals.sagepub.com/author-instructions/UAR'target='_blank'>Research Note</a> | 6k words | 23 |
 | American Politics Research | <a href='https://uk.sagepub.com/en-gb/eur/journal/american-politics-research#submission-guidelines'target='_blank'>Research Note</a> | 10 pages | 21 |
+| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Meta-Analysis</a> | 3k words | 20 |
+| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Replication</a> | 3k words | 20 |
+| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Short Report</a> | 1k words | 20 |
 | Swiss Political Science Review | <a href='https://onlinelibrary.wiley.com/page/journal/16626370/homepage/forauthors.html'target='_blank'>Research Note</a> | 3k -- 5k words | 20 |
 | Legislative Studies Quarterly | <a href='https://onlinelibrary.wiley.com/page/journal/19399162/homepage/forauthors.html'target='_blank'>Short Form</a> | 4.5k words | 19 |
 | Politics and Governance | <a href='https://www.cogitatiopress.com/politicsandgovernance'target='_blank'>Short Note</a> | 2k words | 19 |
@@ -72,14 +76,12 @@ I have gone through the 'author guidelines' of more than three hundred political
 | Frontiers in Political Science | <a href='https://www.frontiersin.org/journals/political-science'target='_blank'>Brief Research Report</a> | 4k words | *N/A* |
 | Hobbes Studies | <a href='https://brill.com/fileasset/downloads_products/Author_Instructions/HOBS.pdf'target='_blank'>Research Note</a> | 5k words | *N/A* |
 | International Journal of Parliamentary Studies | <a href='https://brill.com/view/journals/parl/parl-overview.xml'target='_blank'>Reports, Analyses</a> | 3.5k -- 6.5k words | *N/A* |
-| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Meta-Analysis</a> | 3k words | *N/A* |
-| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Replication</a> | 3k words | *N/A* |
-| Journal of Experimental Political Science | <a href='https://www.cambridge.org/core/journals/journal-of-experimental-political-science/information/instructions-contributors'target='_blank'>Short Report</a> | 1k words | *N/A* |
 | Journal of International Affairs | <a href='https://jia.sipa.columbia.edu/'target='_blank'>Feature</a> | 1.2k -- 2k words | *N/A* |
 | Political Research Exchange | <a href='https://www.tandfonline.com/action/authorSubmission?show=instructions&journalCode=prxx20#prep'target='_blank'>Research Note</a> | 5k -- 8k words | *N/A* |
 | Political Science | <a href='https://www.tandfonline.com/toc/rpnz20/current'target='_blank'>Research Note</a> | *N/A* | *N/A* |
+| Politics of the Low Countries | <a href='https://www.elevenjournals.com/tijdschrift/PLC'target='_blank'>Research Note</a> | *N/A* | *N/A* |
 
-Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing, or that one or more existing entries need updating, please <a href="mailto:resuluy@uio.no">send me an email</a>. I would be happy to hear from you.
+Please bear in mind that this is not an exhaustive list and that editorial policies change. If you notice that one or more journals are missing, or that one or more existing entries need updating, please <a href="mailto:resulumit@gmail.com">send me an email</a>. I would be happy to hear from you.
 
 _____
 
