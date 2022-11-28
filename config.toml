@@ -46,7 +46,7 @@ icon = "envelope"
 icon_pack = "fa"
 link = "mailto:resul.umit@durham.ac.uk"
 text = "resul.umit@durham.ac.uk"
-    
+
 [[params.social]]
 icon = "twitter"
 icon_pack = "fa"
@@ -74,7 +74,7 @@ text = "Google Scholar"
 name = "Publications"
 url = "/publications/"
 weight = 1
-  
+
 [[menu.main]]
 name = "Unpublished"
 url = "/unpublished/"
@@ -86,44 +86,21 @@ url = "/teaching/"
 weight = 3
 
 [[menu.main]]
-<<<<<<< HEAD
 name = "Software"
 url = "/software/"
 weight = 4
-=======
-name = "Data"
-url = "/data/"
-weight = 4
-
-[[menu.main]]
-name = "Software"
-url = "/software/"
-weight = 5
->>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "Outreach"
 url = "/outreach/" 
-<<<<<<< HEAD
 weight = 5
-=======
-weight = 6
->>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "Blog"
 url = "/blog/"
-<<<<<<< HEAD
 weight = 6
-=======
-weight = 7
->>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "About"
 url = "/about/"
-<<<<<<< HEAD
 weight = 7
-=======
-weight = 8
->>>>>>> 5738fe720a031591de5a867957244c96f0949b76
