@@ -6,7 +6,11 @@ relativeurls = false
 paginate = 10
 theme = "resulumit"
 DisqusShortname = "researchtips"
+<<<<<<< HEAD
 #googleAnalytics = "G-GC34XXL0WV"
+=======
+googleAnalytics = "G-GC34XXL0WV"
+>>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 pluralizeListTitles = false
 buildFuture = true
@@ -86,21 +90,44 @@ url = "/teaching/"
 weight = 3
 
 [[menu.main]]
+<<<<<<< HEAD
 name = "Software"
 url = "/software/"
 weight = 4
+=======
+name = "Data"
+url = "/data/"
+weight = 4
+
+[[menu.main]]
+name = "Software"
+url = "/software/"
+weight = 5
+>>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "Outreach"
 url = "/outreach/" 
+<<<<<<< HEAD
 weight = 5
+=======
+weight = 6
+>>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "Blog"
 url = "/blog/"
+<<<<<<< HEAD
 weight = 6
+=======
+weight = 7
+>>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 
 [[menu.main]]
 name = "About"
 url = "/about/"
+<<<<<<< HEAD
 weight = 7
+=======
+weight = 8
+>>>>>>> 5738fe720a031591de5a867957244c96f0949b76

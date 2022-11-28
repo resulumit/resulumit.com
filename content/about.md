@@ -17,4 +17,3 @@ I completed my PhD in 2017 at the <a href="https://www.univie.ac.at/" target="_b
 <a href="https://scholar.google.com/citations?user=J5Ck-vkAAAAJ&hl=en" class="badge badge-large" id="h4">Google Scholar&nbsp;&nbsp;&nbsp;&nbsp;<i class="ai ai-google-scholar"></i></a>
 <a href="https://resulumit.com/images/resul_umit.jpg" class="badge badge-large" id="h5">Photograph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-camera"></i></a>
 </div>
-
