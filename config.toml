@@ -6,11 +6,7 @@ relativeurls = false
 paginate = 10
 theme = "resulumit"
 DisqusShortname = "researchtips"
-<<<<<<< HEAD
 #googleAnalytics = "G-GC34XXL0WV"
-=======
-googleAnalytics = "G-GC34XXL0WV"
->>>>>>> 5738fe720a031591de5a867957244c96f0949b76
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 pluralizeListTitles = false
 buildFuture = true
