@@ -10,7 +10,7 @@ My teaching experience includes the following courses and workshops:
 
 * *Core concepts in political science*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
-  - With <a href="http://vittoriomerola.com/" target="_blank">Vittorio Merola</a> 
+  - With <a href="http://www.neilvisal.com/" target="_blank">Neil Visalvanich</a> 
   - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA48030" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -34,6 +34,15 @@ My teaching experience includes the following courses and workshops:
 
 ## Undergraduate courses
 
+* *Analytical politics*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - With <a href="https://sites.google.com/site/pmkuhndr/home?pli=1" target="_blank">Patrick M Kuhn</a> 
+  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2022&module_code=SGIA2361" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
 * *Introduction to comparative politics*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
   - With <a href="https://www.durham.ac.uk/staff/adrian-millican/" target="_blank">Adrian Millican</a> 
@@ -42,6 +51,7 @@ My teaching experience includes the following courses and workshops:
 <div style = "line-height: 50%;">
     <br>
 </div>
+
 
 * *Electoral expectations*
   - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Spring 2021     
@@ -61,7 +71,7 @@ My teaching experience includes the following courses and workshops:
 </div>
 
 * *Introduction to media research*
-  - <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>, Fall 2017
+  - <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>, Autumn 2017
   - <a href="https://resulumit.com/syllabi/17fall_rm.pdf" target="_blank">Syllabus</a>
 
 <br>
