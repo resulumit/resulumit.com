@@ -9,7 +9,7 @@ tags:
 - climate
 - energy
 - surveys
-citation: "<em>Innovation: The European Journal of Social Science Research</em>"
+citation: <em>Innovation: The European Journal of Social Science Research</em>, 1–19
 doi: 10.1080/13511610.2021.1909465
 file: pohjolainen2021.pdf
 ---
