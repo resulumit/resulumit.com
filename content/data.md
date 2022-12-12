@@ -8,6 +8,8 @@ I have compiled the following datasets, which are available on Harvard Dataverse
 ## Voting results
 
 - <a href="https://doi.org/10.7910/DVN/S83HOA" target="_blank">UK House of Commons election results at constituency level</a>
+
+- <a href="https://doi.org/10.7910/DVN/KN5Y7V" target="_blank">By-elections to the UK House of Commons</a>
  
 - <a href="https://doi.org/10.7910/DVN/S1M6SA" target="_blank">German Bundestag election results at constituency level</a>
 
