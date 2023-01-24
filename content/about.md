@@ -4,7 +4,9 @@ title: "About me"
 
 I am a political scientist, working as an assistant professor in comparative politics at <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>.
 
-My work focuses on electoral representation, with an additional interest in the politics of energy and climate. study the behaviour of various actors of electoral representation, such as citizens at elections and their representatives in parliaments. Methodologically, I am interested in causal inference with observational and experimental data, textual analysis, and survey methodology.
+My work focuses on electoral representation, with an additional interest in the politics of energy and climate. I study the behaviour of various actors of electoral representation, such as citizens at elections and their representatives in parliaments. 
+
+Methodologically, I am interested in causal inference with observational and experimental data, textual analysis, and surveys.
 
 Before joining Durham University, I was a post-doctoral researcher first at the <a href="https://www.unilu.ch/" target="_blank">University of Lucerne</a> and then at the <a href="https://www.uio.no/" target="_blank">University of Oslo</a>. 
 
