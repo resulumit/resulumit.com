@@ -9,7 +9,7 @@ tags:
 - elections
 - terrorism
 - Turkey
-citation: <em>Political Science Research and Methods, 11</em>, (1), 53–62 
+citation: <em>Political Science Research and Methods, 11</em>(1), 53–62 
 file: umit2023.pdf
 doi: 10.1017/psrm.2021.30
 code: https://doi.org/10.7910/DVN/52X882
