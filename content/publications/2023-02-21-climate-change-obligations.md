@@ -1,15 +1,15 @@
 ---
 author: Lena Schaffer, Resul Umit
 comments: false
-date: '2022-07-25'
+date: '2023-02-21'
 slug: climate-change-obligations
 title: 'Public support for national vs. international climate change obligations'
 kind: article
 tags:
 - climate change
 - survey experiments
-citation: <em>Journal of European Public Policy</em>
-file: schaffer2022.pdf
+citation: <em>Journal of European Public Policy, 30</em>(3), 537–573
+file: schaffer2023.pdf
 doi: 10.1080/13501763.2022.2099957
 code: https://doi.org/10.7910/DVN/41CVZE
 ---
