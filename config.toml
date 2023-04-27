@@ -6,7 +6,7 @@ relativeurls = false
 paginate = 10
 theme = "resulumit"
 DisqusShortname = "researchtips"
-#googleAnalytics = "G-GC34XXL0WV"
+googleAnalytics = "G-GC34XXL0WV"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 pluralizeListTitles = false
 buildFuture = true
@@ -91,21 +91,16 @@ url = "/data/"
 weight = 4
 
 [[menu.main]]
-name = "Software"
-url = "/software/"
-weight = 5
-
-[[menu.main]]
 name = "Outreach"
 url = "/outreach/" 
-weight = 6
+weight = 5
 
 [[menu.main]]
 name = "Blog"
 url = "/blog/"
-weight = 7
+weight = 6
 
 [[menu.main]]
 name = "About"
 url = "/about/"
-weight = 8
+weight = 7
