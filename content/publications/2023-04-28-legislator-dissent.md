@@ -1,15 +1,15 @@
 ---
 author: Philip Cowley, Resul Umit
 comments: false
-date: '2022-12-06'
+date: '2023-04-28'
 slug: legislator-dissent
 title: 'Legislator dissent does not affect electoral outcomes'
 kind: article
 tags:
 - parliaments
 - elections
-citation: <em>British Journal of Political Science</em>, 1–7
-file: cowley2022.pdf
+citation: <em>British Journal of Political Science, 53</em>(2), 789–795
+file: cowley2023.pdf
 doi: 10.1017/S0007123422000618
 code: https://doi.org/10.7910/DVN/XI3ACQ
 ---
