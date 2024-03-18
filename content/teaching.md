@@ -35,18 +35,27 @@ My teaching experience includes the following courses and workshops:
 ## Undergraduate courses
 
 * *Analytical politics*
-  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
   - With <a href="https://sites.google.com/site/pmkuhndr/home?pli=1" target="_blank">Patrick M Kuhn</a> 
-  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2022&module_code=SGIA2361" target="_blank">Module description</a>
+  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA2361" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
     <br>
 </div>
 
 * *Introduction to comparative politics*
-  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
   - With <a href="https://www.durham.ac.uk/staff/adrian-millican/" target="_blank">Adrian Millican</a> 
-  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2022&module_code=SGIA1211" target="_blank">Module description</a>
+  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA1211" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *Challenges and conflict in European politics*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2023 -- 2024
+  - With <a href="https://www.durham.ac.uk/staff/kyriaki-nanou/" target="_blank">Kyriaki Nanou</a> 
+  - <a href="https://apps.dur.ac.uk/faculty.handbook/2023/UG/module/SGIA2371" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
     <br>
