@@ -1,7 +1,7 @@
 ---
 author: Pasi Pohjolainen, Iida Kukkonen, Pekka Jokinen, Wouter Poortinga, Charles Adedayo Ogunbode, Gisela Böhm, Stephen Fisher, Resul Umit
 comments: false
-date: '2022-08-07'
+date: '2024-08-07'
 slug: climate-perceptions
 title: "The role of national affluence, carbon emissions, and democracy in Europeans' climate perceptions"
 kind: article
