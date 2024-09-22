@@ -2,7 +2,7 @@
 title: "Teaching experience"
 ---
 
-In Spring 2021, I completed a 200-hour postgraduate programme in <a href="https://www.uio.no/link/english/academic-development/" target="_blank">teaching and learning in higher education</a> at the University of Oslo.
+In 2021, I completed a 200-hour postgraduate programme in <a href="https://www.uio.no/link/english/academic-development/" target="_blank">teaching and learning in higher education</a> at the University of Oslo. My teaching practice has been recognised with a Fellowship at [Advance HE](https://www.advance-he.ac.uk/).
 
 My teaching experience includes the following courses and workshops: 
 
