@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(kableExtra)
 
-df <- read_csv("2021-turnaround-acceptance/tf_metrics.csv")
+df <- read_csv("data/tf_metrics.csv")
         
 ```
 
