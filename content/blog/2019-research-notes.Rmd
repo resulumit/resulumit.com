@@ -29,7 +29,8 @@ In addition to 'regular' articles, some political science journals publish short
 I have gone through the 'author guidelines' of more than three hundred political science journals and put together a list of journals that publish research notes. You can also click on the hyperlinks under *Format Name* to learn more about the format in each journal.
 
 ```{r, table}
-df |> rename(Journal = journal, "Format Name" = "link",
+df |>  arrange(desc(h5_index), journal) |>
+        rename(Journal = journal, "Format Name" = "link",
              Length = length,
              "h5-index" = h5_index) |>
         mutate(Length = str_replace(Length, "--", "&ndash;")) |>
