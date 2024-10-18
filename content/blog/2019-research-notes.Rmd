@@ -32,8 +32,8 @@ I have gone through the 'author guidelines' of more than three hundred political
 df |>  arrange(desc(h5_index), journal) |>
         # add footnotes
         mutate(link = if_else(journal == "Acta Politica", 
-                               str_c(link, "<sup><a href='#notes'>3</a></sup>"), 
-                               link),
+                              str_c(link, "<sup><a href='#notes'>3</a></sup>"), 
+                               link)
                ) |>
         rename(Journal = journal, "Format Name" = "link",
              Length = length,
@@ -43,7 +43,6 @@ df |>  arrange(desc(h5_index), journal) |>
   kable_styling("striped")
 
 ```
-
 
 ## Notes
 <p id="notes">[1] For example, the *American Political Science Review* previously had a category called *Letters* for short articles, which has since been removed. However, they still publish shorter manuscripts, with most articles expected to be less than 12,000 words and some even half that length—similar to a research note or letter. For more details, see the journal's <a href="https://www.cambridge.org/core/journals/american-political-science-review/information/author-instructions/preparing-your-materials">submission guidelines</a>.</p>
