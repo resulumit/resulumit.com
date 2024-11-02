@@ -1,5 +1,5 @@
 ---
-title: 'Evaluating the Impact of Parliamentary Allowances'
+title: 'Evaluating the impact of parliamentary allowances'
 author: Resul Umit
 date: '2020-11-28'
 slug: impact-parliamentary-allowances
