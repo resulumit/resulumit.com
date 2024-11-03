@@ -7,7 +7,6 @@ categories:
         - journals
 ---
 
-
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -19,6 +18,7 @@ library(kableExtra)
 df <- import("data/research_notes.xlsx")
         
 ```
+
 
 __The data in this blog post was last updated in November 2024. It previously led to the development of an app that allows users to filter data on political science journals, including different article types. Try it out at <a href='https://resulumit.shinyapps.io/psjournals/'target='_blank'>https://resulumit.shinyapps.io/psjournals</a>__.
 
