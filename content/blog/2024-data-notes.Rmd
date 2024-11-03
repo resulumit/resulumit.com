@@ -1,0 +1,63 @@
+---
+date: 2024-11-03
+slug: polisci-data-notes
+title: "Data Notes in Political Science Journals"
+output: html_document
+categories:
+    - journals
+---
+
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(rio)
+library(tidyverse)
+library(kableExtra)
+
+df_metrics <- import("data/psjournals_source_forwebsite.xlsx", which = "journal_metrics") |>
+        select(id, h5_index)
+
+df <- import("data/psjournals_source_forwebsite.xlsx") |>
+        left_join(df_metrics, by = "id") |>
+        filter(type_category == "data") |>
+        mutate( 
+                # hyperlink journal names
+                journal = paste0("<a href='", url, "' target='_blank'>", journal, "</a>"),
+                # create word limits
+                word_limit = case_when(
+                        is.na(lower_limit) & is.na(upper_limit) ~ "*NA*",
+                        is.na(lower_limit) ~ paste0(as.integer(upper_limit / 1000), "k"),
+                        is.na(upper_limit) ~ paste0(as.integer(lower_limit / 1000), "k"),
+                        TRUE ~ paste0(
+                                as.integer(lower_limit / 1000),
+                                "k &ndash; ",
+                                as.integer(upper_limit / 1000),
+                                "k"
+                        )
+                )
+        ) |>
+        select(journal, h5_index, type, word_limit)
+        
+```
+
+Some political science journals now publish a dedicated article type for data. These publications --- often referred as *Data Notes* bu the terminology does vary across journals --- serve to highlight new datasets, document their construction, and support data sharing within the research community. For instance, *Electoral Studies* describes their data notes as follows:
+
+> These ... are designed to promote, describe, and demonstrate the potential of data sources that could interest Electoral Studies readers. They should show the usefulness of these datasets for researchers in the field and undergo peer review.
+
+Below is a curated list of political science journals that publish data notes or similar formats. You can click on *Journal Name* to visit the journal’s website and review their author guidelines for more details. This list is sourced from my [political science journals app](https://resulumit.shinyapps.io/psjournals/), which you may also find useful for exploring additional article types and journal options.
+
+
+```{r, table}
+df |>  arrange(desc(h5_index), journal) |>
+        # add footnotes
+        rename(Journal = journal, "Format Name" = type,
+             "Word Limit" = word_limit,
+             "h5-index" = h5_index) |>
+       kable(format = "html", escape = FALSE, align = "l") |>
+  kable_styling("striped")
+
+```
