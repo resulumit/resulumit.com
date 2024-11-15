@@ -8,7 +8,7 @@ categories:
         - presentations
 ---
 
-I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my [workshop](ttps://resulumit.com/blog/rmd-workshop.html) on  writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days, in November 2020.
+I am currently revising the <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank"> slides</a> for the next iteration of my [workshop](https://resulumit.com/blog/rmd-workshop.html) on  writing reproducible research papers with R Markdown. It will take place at <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, over two full days, in November 2020.
 
 With over 200 slides in the presentation, I thought it is now time to introduce some internal links to facilitate the navigation across the different parts of the presentation, which is written with <a href="https://github.com/yihui/xaringan" target="_blank">`xaringan`</a>.
 
