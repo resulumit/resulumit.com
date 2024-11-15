@@ -8,7 +8,7 @@ kind: article
 tags:
 - eu
 - differentiation
-citation: <em>Journal of Contemporary European Studies</em>, 1–18
+citation: "<em>Journal of Contemporary European Studies, 32</em>(4), 1273–1290"
 file: umit2024.pdf
 doi: 10.1080/14782804.2024.2348161
 ---
