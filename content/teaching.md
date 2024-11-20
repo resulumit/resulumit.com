@@ -4,7 +4,7 @@ title: "Teaching experience"
 
 In 2021, I completed a 200-hour postgraduate programme in <a href="https://www.uio.no/link/english/academic-development/" target="_blank">teaching and learning in higher education</a> at the University of Oslo. My teaching practice has been recognised with a Fellowship at [Advance HE](https://www.advance-he.ac.uk/).
 
-My teaching experience includes the following courses and workshops: 
+My teaching experience includes the following courses and [workshops](#workshops): 
 
 ## Graduate courses
 
@@ -86,6 +86,8 @@ My teaching experience includes the following courses and workshops:
 <br>
 
 ## Workshops
+
+In addition to teaching full-term courses, I also develop and deliver digital-skills workshops on a range of topics. These workshops are highly flexible and can be tailored to meet the needs of different institutions or audiences. I am happy to offer these workshops elsewhere if there is interest --- please feel free to [send me an email](mailto:resul.umit@durham.ac.uk).
 
 * *R Markdown*
   - <a href="https://www.uio.no/english/" target="_blank">University of Oslo</a>, May 2022
