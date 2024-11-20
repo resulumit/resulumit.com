@@ -37,7 +37,7 @@ df <- import("data/psjournals_source_forwebsite.xlsx") |>
         
 ```
 
-Review articles remain an important part of academic publishing, offering overviews of the current state of knowledge, synthesising research trends, or critically engaging with key debates. Political science journals feature a variety of article types that fall under this broad category, including state-of-the-field reviews, literature surveys, and review essays. These formats provide scholars with an opportunity to summarise key developments, highlight gaps in the literature, and propose directions for future research.
+Review articles remain an important part of academic publishing, and this is certainly true in political science, where `r length(unique(df$journal))` journals publish them. These include a variety of article types under this broad category, such as state-of-the-field reviews, literature surveys, and review essays. While author guidelines differ, these articles typically summarise key publications or developments, highlight gaps in the literature, and propose directions for future research.
 
 The table below identifies journals in political science that explicitly categorise and publish review articles, demonstrating the diversity of formats available for this essential academic contribution.It is sourced from my [political science journals app](https://resulumit.shinyapps.io/psjournals/), which you may also find useful for exploring additional article types and journal options.
 
