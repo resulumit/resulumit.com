@@ -1,0 +1,54 @@
+---
+date: 2024-11-20
+slug: polisci-review-articles
+title: "Review articles in political science journals"
+output: html_document
+categories:
+    - journals
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE)
+
+library(rio)
+library(tidyverse)
+library(kableExtra)
+
+df_metrics <- import("data/psjournals_source_forwebsite.xlsx", which = "journal_metrics") |>
+        select(id, h5_index)
+
+df <- import("data/psjournals_source_forwebsite.xlsx") |>
+        left_join(df_metrics, by = "id") |>
+        filter(type_category == "review") |>
+        mutate( 
+                # hyperlink journal names
+                journal = paste0("<a href='", url, "' target='_blank'>", journal, "</a>"),
+                # create word limits
+                word_limit = case_when(
+                        is.na(lower_limit) & is.na(upper_limit) ~ "*NA*",
+                        is.na(lower_limit) & !is.na(upper_limit) ~ paste0(upper_limit, " ", limit_unit),
+                        !is.na(lower_limit) & !is.na(upper_limit) ~ paste0(lower_limit, " -- ", upper_limit, " ", limit_unit),
+                )
+        ) |>
+        select(journal, h5_index, type, word_limit)
+        
+```
+
+Review articles remain an important part of academic publishing, offering overviews of the current state of knowledge, synthesising research trends, or critically engaging with key debates. Political science journals feature a variety of article types that fall under this broad category, including state-of-the-field reviews, literature surveys, and review essays. These formats provide scholars with an opportunity to summarise key developments, highlight gaps in the literature, and propose directions for future research.
+
+The table below identifies journals in political science that explicitly categorise and publish review articles, demonstrating the diversity of formats available for this essential academic contribution.It is sourced from my [political science journals app](https://resulumit.shinyapps.io/psjournals/), which you may also find useful for exploring additional article types and journal options.
+
+```{r, table}
+df |>  arrange(desc(h5_index), journal) |>
+        # add footnotes
+        rename(Journal = journal, "Format Name" = type,
+             "Length Limit" = word_limit,
+             "h5-index" = h5_index) |>
+       kable(format = "html", escape = FALSE, align = "l") |>
+  kable_styling("striped")
+
+```
+
