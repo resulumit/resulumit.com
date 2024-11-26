@@ -1,0 +1,56 @@
+---
+date: 2024-11-26
+slug: pipe-plotly
+title: "Piping ggplot2 objects into plotly"
+output: html_document
+categories:
+        - rstats
+---
+
+The pipe operator (`|>`) offers a way to write cleaner and more readable code in R, and many are familiar with piping objects into functions. However, creating interactive graphs with `plotly` package is less straightforward than most cases.
+
+When you try to pipe a `ggplot2` object directly into `ggplotly()` from the `plotly` packge without storing it in a variable or using curly braces, you will encounter an error. This happens because the pipe operator passes the output of the left-hand side expression as the first argument to the function on the right-hand side. However, `ggplot2` plots are often built over multiple lines, and without proper grouping, the pipe operator does not interpret the entire plot object correctly.
+
+This means that we would create a `ggplot2` object and then pass it to `ggplotly()` like so:
+
+```{r, out.width = "100%", fig.align='center'}
+#| message: false
+# 1 load libraries
+library(ggplot2)
+library(plotly)
+
+# 2 create the ggplot2 object
+plot <- ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+        geom_point(size = 3) +
+        theme_minimal() +
+        labs(title = "Fuel Efficiency by Vehicle Weight",
+             x = "Weight (1000 lbs)",
+             y = "Miles per Gallon",
+             color = "Cylinders")
+
+# 3 convert the ggplot2 object to an interactive plot
+ggplotly(plot)
+```
+
+This approach works perfectly but involves creating an intermediate variable, which might not be ideal for those who prefer piping for cleaner code.
+
+To pipe a `ggplot2` plot directly into `ggplotly()`, you need to wrap the `ggplot2` code block in curly braces `{}`. This tells R to evaluate the entire block as a single expression before passing it along the pipe.
+
+```{r, out.width = "100%", fig.align='center'}
+
+# using pipe: 2 and 3 in one step
+{
+    ggplot(data = mtcars, 
+           aes(x = wt, y = mpg, color = factor(cyl))) +
+        geom_point(size = 3) +
+        theme_minimal() +
+        theme(legend.position = "bottom") +
+        labs(title = "Fuel Efficiency by Vehicle Weight",
+             x = "Weight (1000 lbs)",
+             y = "Miles per Gallon",
+             color = "Cylinders")
+} |>
+ggplotly()
+```
+
+By integrating `ggplot2` and `plotly` as such, you can create interactive visualisations without cluttering your workspace with intermediate variables. While working on [a Shiny app to analyse data on political participation](https://resulumit.shinyapps.io/participation/), I spent more time than expected figuring this out.
