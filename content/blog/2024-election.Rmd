@@ -1,0 +1,77 @@
+---
+title: "Data on UK general election results"
+date: 2024-10-15
+slug: uk-general-election-results
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+categories:
+    - data
+    - elections
+keywords: "UK General Election Results, Candidate-Level Election Data, Historical UK Elections Dataset, UK Election Dataset 1832–2024, UK House of Commons Election Results, Electoral Analysis UK"
+---
+
+If you're studying UK politics, historical electoral trends, or legislative representation, having access to a comprehensive dataset is invaluable. My latest dataset, *UK House of Commons Election Results at Candidate Level*, offers exactly that—a detailed, candidate-level account of every UK general election since 1832, including the recently concluded 2024 election.
+
+
+## What’s in the Dataset?
+
+This dataset spans 49 general elections from 1832 to 2024, making it one of the most comprehensive resources on UK election results available. Each entry provides granular data at the **candidate level**, enabling researchers, journalists, and enthusiasts to dive deep into election results, candidate details, and voting patterns over nearly two centuries.
+
+- **Years Covered**: 1832–2024  
+- **Elections**: 49 general elections  
+- **Level**: Candidate-level data  
+
+The dataset is freely accessible and can be downloaded from [Harvard Dataverse](https://doi.org/10.7910/DVN/S83HOA).
+
+
+## Data Sources and Accuracy
+
+The dataset consolidates information from multiple trusted sources:
+
+- **1832–2019 Elections**: Originally sourced from the now-defunct ElectionHub website. Additional corrections and cross-verifications were made using:
+  - Data from the House of Commons
+  - Wikipedia entries for individual elections
+  - Research by Eggers and Spirling (2014), who compiled historical legislative data.
+  
+- **2024 Election**: Results sourced from the **House of Commons Library**, specifically Cracknell and Baker’s (2024) official report.  
+
+While every effort has been made to ensure accuracy, historical datasets often involve inconsistencies. I welcome feedback and encourage users to report any errors they identify [via email](mailto:resul.umit@durham.ac.uk).
+
+
+## Why Use This Dataset?
+
+Whether you are an academic researching historical voting trends, a journalist exploring modern election patterns, or a political enthusiast interested in the evolution of democracy, this dataset has applications for a wide range of analyses. Here’s what you can achieve:
+
+1. **Longitudinal Analysis**: Study the shifts in candidate profiles, party dominance, and voter turnout over 192 years.
+2. **Historical Comparisons**: Compare electoral trends across time, including significant milestones like the Reform Acts, suffrage expansions, and the rise of new political parties.
+3. **Candidate-Level Insights**: Gain detailed insights into the individuals who have contested elections over the years.
+
+
+## How to Cite the Dataset
+
+If you use this dataset for your research or publication, please cite it as follows:
+
+> Umit, R. (2024). *UK House of Commons Election Results at Candidate Level*. Harvard Dataverse, version 11. Available at: [https://doi.org/10.7910/DVN/S83HOA](https://doi.org/10.7910/DVN/S83HOA)
+
+
+## Future Updates
+
+The dataset will continue to be updated to ensure it remains accurate and comprehensive. If future elections introduce new patterns or require adjustments to historical data, I will incorporate those changes promptly.
+
+
+## Acknowledgements
+
+This project draws on the work of several outstanding resources, including:
+
+- Eggers, A. C., & Spirling, A. (2014). [Legislative Studies Quarterly](https://onlinelibrary.wiley.com/journal/19399162)
+- Cracknell, R., & Baker, C. (2024). *General Election 2024 Results* [House of Commons Library Report](https://researchbriefings.files.parliament.uk/documents/CBP-10009/CBP-10009.pdf).
+
+Special thanks to the ElectionHub website for their earlier efforts in compiling electoral data.
+
+
+## Get the Dataset
+
+Ready to explore? Visit [Harvard Dataverse](https://doi.org/10.7910/DVN/S83HOA) to download the dataset and start your analysis today.
