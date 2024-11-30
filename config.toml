@@ -48,6 +48,13 @@ link = "mailto:resul.umit@durham.ac.uk"
 text = "resul.umit@durham.ac.uk"
 
 [[params.social]]
+icon = "bluesky"
+icon_pack = "fa"
+link = "https://bsky.app/profile/resulumit.bsky.social"
+text = "resulumit.bsky.social"
+site = "Bluesky"
+
+[[params.social]]
 icon = "twitter"
 icon_pack = "fa"
 link = "https://twitter.com/ResulUmit"
