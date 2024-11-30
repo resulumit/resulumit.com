@@ -1,5 +1,5 @@
 ---
-title: "PhD Supervision"
+title: "PhD supervision"
 ---
 
 I am available to supervise PhD dissertations, and welcome inquiries from prospective students about supervision. 
