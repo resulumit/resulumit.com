@@ -86,7 +86,7 @@ url = "/teaching/"
 weight = 3
 
 [[menu.main]]
-name = "PhD Supervision"
+name = "Supervision"
 url = "/supervision/"
 weight = 4
 
