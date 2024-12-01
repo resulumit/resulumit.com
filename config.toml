@@ -36,41 +36,41 @@ highlightjsLang = ["r", "yaml"]
 highlightjsTheme = "github"
 
 [[params.social]]
-icon = "university"
-icon_pack = "fa"
+icon = "fa-building-columns"
+icon_pack = "fa-solid"
 link = "https://www.durham.ac.uk/"
 text = "School of Government and International Affairs, Durham University, Elvet Hill Road, Durham DH1 3TU, UK"
 
 [[params.social]]
-icon = "envelope"
-icon_pack = "fa"
+icon = "fa-envelope"
+icon_pack = "fa-solid"
 link = "mailto:resul.umit@durham.ac.uk"
 text = "resul.umit@durham.ac.uk"
 
 [[params.social]]
-icon = "bluesky"
-icon_pack = "fab"
+icon = "fa-bluesky"
+icon_pack = "fa-brands"
 link = "https://bsky.app/profile/resulumit.bsky.social"
 text = "resulumit.bsky.social"
 site = "Bluesky"
 
 [[params.social]]
-icon = "twitter"
-icon_pack = "fas"
+icon = "fa-twitter"
+icon_pack = "fa-brands"
 link = "https://twitter.com/ResulUmit"
 text = "@ResulUmit"
 site = "Twitter"
 
 [[params.social]]
-icon = "github"
-icon_pack = "fa"
+icon = "fa-github"
+icon_pack = "fa-brands"
 link = "https://github.com/resulumit"
 text = "resulumit"
 site = "GitHub"
 
 [[params.social]]
-icon = "google-scholar"
-icon_pack = "ai"
+icon = "fa-google-scholar"
+icon_pack = "fa-brands"
 link = "https://scholar.google.com/citations?user=J5Ck-vkAAAAJ&hl=en"
 text = "Google Scholar"
 
