@@ -15,9 +15,23 @@ Before joining Durham University, I was a post-doctoral researcher first at the 
 I completed my PhD in 2017 at the <a href="https://www.univie.ac.at/" target="_blank">University of Vienna</a>. During my PhD, I was based at the <a href="https://www.ihs.ac.at/" target="_blank">Institute for Advanced Studies</a> in Vienna, which funded my studies.
 
 <div class="home">
-<a href="https://resulumit.com/files/cv_resulumit.pdf" class="badge badge-large" id="h1">Curriculum Vitae&nbsp; <i class="fa fa-file-pdf-o"></i></a>
-<a href="https://twitter.com/ResulUmit" class="badge badge-large" id="h2">Twitter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-twitter"></i></a>
-<a href="https://github.com/resulumit" class="badge badge-large" id="h3">GitHub &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-github"></i></a>
-<a href="https://scholar.google.com/citations?user=J5Ck-vkAAAAJ&hl=en" class="badge badge-large" id="h4">Google Scholar&nbsp;&nbsp;&nbsp;&nbsp;<i class="ai ai-google-scholar"></i></a>
-<a href="https://resulumit.com/images/resul_umit.jpg" class="badge badge-large" id="h5">Photograph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-camera"></i></a>
+  <a href="https://resulumit.com/files/cv_resulumit.pdf" class="badge badge-large" id="h1" target="_blank" rel="noopener noreferrer">
+    <span>Curriculum Vitae</span> <i class="fa-solid fa-file-pdf"></i>
+  </a>
+  <a href="https://bsky.app/profile/resulumit.bsky.social" class="badge badge-large" id="h2" target="_blank" rel="noopener noreferrer">
+    <span>Bluesky</span> <i class="fa-brands fa-bluesky"></i>
+  </a>
+  <a href="https://twitter.com/ResulUmit" class="badge badge-large" id="h2" target="_blank" rel="noopener noreferrer">
+    <span>Twitter</span> <i class="fa-brands fa-twitter"></i>
+  </a>
+  <a href="https://github.com/resulumit" class="badge badge-large" id="h3" target="_blank" rel="noopener noreferrer">
+    <span>GitHub</span> <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="https://scholar.google.com/citations?user=J5Ck-vkAAAAJ&hl=en" class="badge badge-large" id="h4" target="_blank" rel="noopener noreferrer">
+    <span>Google Scholar</span> <i class="fa-brands fa-google-scholar"></i>
+  </a>
+  <a href="https://resulumit.com/images/resul_umit.jpg" class="badge badge-large" id="h5" target="_blank" rel="noopener noreferrer">
+    <span>Photograph</span> <i class="fa-solid fa-camera"></i>
+  </a>
 </div>
+
