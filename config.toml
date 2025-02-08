@@ -55,13 +55,6 @@ text = "resulumit.bsky.social"
 site = "Bluesky"
 
 [[params.social]]
-icon = "fa-twitter"
-icon_pack = "fa-brands"
-link = "https://twitter.com/ResulUmit"
-text = "@ResulUmit"
-site = "Twitter"
-
-[[params.social]]
 icon = "fa-github"
 icon_pack = "fa-brands"
 link = "https://github.com/resulumit"

@@ -24,9 +24,6 @@ I completed my PhD in 2017 at the <a href="https://www.univie.ac.at/" target="_b
   <a href="https://bsky.app/profile/resulumit.bsky.social" class="badge badge-large" id="h2" target="_blank" rel="noopener noreferrer">
     <span>Bluesky</span> <i class="fa-brands fa-bluesky"></i>
   </a>
-  <a href="https://twitter.com/ResulUmit" class="badge badge-large" id="h2" target="_blank" rel="noopener noreferrer">
-    <span>Twitter</span> <i class="fa-brands fa-twitter"></i>
-  </a>
   <a href="https://github.com/resulumit" class="badge badge-large" id="h3" target="_blank" rel="noopener noreferrer">
     <span>GitHub</span> <i class="fa-brands fa-github"></i>
   </a>
