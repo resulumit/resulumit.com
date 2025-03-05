@@ -11,7 +11,6 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 * *Core concepts in political science*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
-  - With <a href="http://www.neilvisal.com/" target="_blank">Neil Visalvanich</a> 
   - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA48030" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -20,7 +19,6 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 * *Quantitative methods and analysis*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
-  - With <a href="https://sites.google.com/view/nickvivyan" target="_blank">Nick Vivyan</a> 
   - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA49915" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -37,7 +35,6 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 * *Analytical politics*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
-  - With <a href="https://sites.google.com/site/pmkuhndr/home?pli=1" target="_blank">Patrick M Kuhn</a> 
   - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA2361" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -46,7 +43,6 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 * *Introduction to comparative politics*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
-  - With <a href="https://www.durham.ac.uk/staff/adrian-millican/" target="_blank">Adrian Millican</a> 
   - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA1211" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -55,7 +51,6 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 * *Challenges and conflict in European politics*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2023 -- 2024
-  - With <a href="https://www.durham.ac.uk/staff/kyriaki-nanou/" target="_blank">Kyriaki Nanou</a> 
   - <a href="https://apps.dur.ac.uk/faculty.handbook/2023/UG/module/SGIA2371" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
