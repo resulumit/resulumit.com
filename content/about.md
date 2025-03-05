@@ -7,7 +7,7 @@ I am a political scientist, working as an Assistant Professor in Comparative Pol
 My work focuses on electoral representation, with an additional interest in the politics of energy and climate. I study the behaviour of various actors of electoral representation, such as citizens at elections and their representatives in parliaments. 
 Methodologically, I am interested in causal inference with observational and experimental data, textual analysis, and surveys.
 
-I am committed to teaching excellence, having completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a comprehensive postgraduate programme in higher education pedagogy</a> and receiving a Fellowship at <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
+I am committed to teaching excellence, having completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a comprehensive programme in higher education pedagogy</a> and receiving a Fellowship at <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
 My teaching portfolio includes graduate and undergraduate courses in political science, covering topics such as research design, quantitative methods, and electoral behaviour. In addition to full-term courses, I develop and deliver workshops on digital research skills for academics.
 
 Before joining Durham University, I was a post-doctoral researcher first at the <a href="https://www.unilu.ch/" target="_blank">University of Lucerne</a> and then at the <a href="https://www.uio.no/" target="_blank">University of Oslo</a>. 
