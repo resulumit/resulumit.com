@@ -2,7 +2,7 @@
 title: "Teaching experience"
 ---
 
-In 2021, I completed a programme in <a href="https://www.uio.no/link/english/academic-development/" target="_blank">teaching and learning in higher education</a> at the University of Oslo. 
+I have completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a programme in in higher education pedagogy</a> at the University of Oslo. 
 My commitment to teaching excellence has also been formally recognised through a Fellowship at <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
 
 My teaching experience includes the following courses and [workshops](#workshops): 
