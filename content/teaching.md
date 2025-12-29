@@ -9,6 +9,14 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 ## Graduate courses
 
+* *Researching the Global South*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2024 -- 2025
+  - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2025&module_code=SGIA40S15" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
 * *Core concepts in political science*
   - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2023
   - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2022&module_code=SGIA48030" target="_blank">Module description</a>
@@ -33,8 +41,17 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 ## Undergraduate courses
 
+
+* *Environmental politics*
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2025 -- 2026
+  - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2025&module_code=SGIA3851" target="_blank">Module description</a>
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
 * *Analytical politics*
-  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2026
   - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA2361" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -42,7 +59,7 @@ My teaching experience includes the following courses and [workshops](#workshops
 </div>
 
 * *Introduction to comparative politics*
-  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2024
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2022 -- 2025
   - <a href="https://www.dur.ac.uk/faculty.handbook/module_description/?year=2023&module_code=SGIA1211" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
