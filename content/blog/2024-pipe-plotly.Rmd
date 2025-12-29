@@ -7,11 +7,11 @@ categories:
         - rstats
 ---
 
-The pipe operator (`|>`) offers a way to write cleaner and more readable code in R, and many are familiar with piping objects into functions. However, creating interactive graphs with `plotly` package is less straightforward than most cases.
+While working on [a Shiny app to analyse data on political participation](https://resulumit.shinyapps.io/participation/), I wanted to use the pipe operator (`|>`), to pass a `ggplot2` object directly into `ggplotly()` from the `plotly` package. This resulted in an error and took longer than expected to resolve, which prompted this blog post explaining the issue and its solution.
 
-When you try to pipe a `ggplot2` object directly into `ggplotly()` from the `plotly` packge without storing it in a variable or using curly braces, you will encounter an error. This happens because the pipe operator passes the output of the left-hand side expression as the first argument to the function on the right-hand side. However, `ggplot2` plots are often built over multiple lines, and without proper grouping, the pipe operator does not interpret the entire plot object correctly.
+The pipe operator passes the output of the left-hand side expression as the first argument to the function on the right-hand side. However, `ggplot2` plots are often built over multiple lines, and without proper grouping, the pipe operator does not interpret the entire plot object correctly.
 
-This means that we would create a `ggplot2` object and then pass it to `ggplotly()` like so:
+This means that we would create a `ggplot2` object and then pass it to `ggplotly()`, like so:
 
 ```{r, out.width = "100%", fig.align='center'}
 #| message: false
@@ -32,7 +32,7 @@ plot <- ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
 ggplotly(plot)
 ```
 
-This approach works perfectly but involves creating an intermediate variable, which might not be ideal for those who prefer piping for cleaner code.
+This approach works perfectly but involves creating an intermediate object, which might not be ideal for those who prefer piping for cleaner code.
 
 To pipe a `ggplot2` plot directly into `ggplotly()`, you need to wrap the `ggplot2` code block in curly braces `{}`. This tells R to evaluate the entire block as a single expression before passing it along the pipe.
 
@@ -53,4 +53,4 @@ To pipe a `ggplot2` plot directly into `ggplotly()`, you need to wrap the `ggplo
 ggplotly()
 ```
 
-By integrating `ggplot2` and `plotly` as such, you can create interactive visualisations without cluttering your workspace with intermediate variables. While working on [a Shiny app to analyse data on political participation](https://resulumit.shinyapps.io/participation/), I spent more time than expected figuring this out.
+By integrating `ggplot2` and `plotly` as such, you can create interactive visualisations without cluttering your workspace with intermediate objects.
