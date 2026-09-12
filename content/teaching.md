@@ -10,7 +10,7 @@ My teaching experience includes the following courses and [workshops](#workshops
 ## Graduate courses
 
 * *Researching the Global South*
-  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2024 -- 2025
+  - <a href="https://www.durham.ac.uk/" target="_blank">Durham University</a>, 2024 -- 2026
   - <a href="https://www.dur.ac.uk/postgraduate.modules/module_description/?year=2025&module_code=SGIA40S15" target="_blank">Module description</a>
 
 <div style = "line-height: 50%;">
@@ -34,7 +34,7 @@ My teaching experience includes the following courses and [workshops](#workshops
 </div>
 
 * *Research design in quantitative political science*
-  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, Spring 2020
+  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, 2020
   - <a href="https://resulumit.com/syllabi/20spring_rd.pdf" target="_blank">Syllabus</a>
 
 <br>
@@ -76,24 +76,15 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 
 * *Electoral expectations*
-  - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, Spring 2021     
-     - Previuos iteration: Autumn 2020
+  - <a href="https://www.hhu.de/en/" target="_blank">Heinrich Heine University Düsseldorf</a>, 2020 -- 2021
   - <a href="https://resulumit.com/syllabi/21spring_ee.pdf" target="_blank">Syllabus</a>
 
 <div style = "line-height: 50%;">
     <br>
 </div>
 
-* *Causality in law, economics, and politics*
-  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, Spring 2020
-  - With <a href="http://www.alrik-thiem.net/" target="_blank">Alrik Thiem</a>
-
-<div style = "line-height: 50%;">
-    <br>
-</div>
-
 * *Introduction to media research*
-  - <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>, Autumn 2017
+  - <a href="http://webster.ac.at" target="_blank">Webster Vienna University</a>, 2017
   - <a href="https://resulumit.com/syllabi/17fall_rm.pdf" target="_blank">Syllabus</a>
 
 <br>
