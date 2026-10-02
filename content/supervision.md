@@ -7,4 +7,5 @@ If you would like to discuss potential research projects and supervision opportu
 please do [reach out via email](mailto:resul.umit@durham.ac.uk). 
 I would be happy to hear from you, and you can expect a prompt reply.
 
-I am currently supervising one PhD dissertation and mentoring another PhD student.
+At Durham University, I am currently supervising two PhD dissertations and 
+mentoring another PhD student.
