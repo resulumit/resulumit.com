@@ -2,10 +2,11 @@
 title: "Teaching experience"
 ---
 
-I have completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a programme in higher education pedagogy</a> at the University of Oslo.  
-My commitment to teaching excellence has also been formally recognised through a Fellowship at <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
+I have completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a 
+programme in higher education pedagogy</a> at the University of Oslo. And I am a Fellow of <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
 
-My teaching experience includes the following courses and [workshops](#workshops):
+Below is an overview of my undergraduate and graduate teaching, together with 
+[short courses and workshops](#workshops) on research methods and digital skills.
 
 ## Graduate courses
 
@@ -87,10 +88,7 @@ My teaching experience includes the following courses and [workshops](#workshops
 
 <br>
 
-## Workshops     
-
-In addition to teaching full-term courses, I also develop and deliver short 
-courses and workshops on research methods and digital skills.
+## Short courses and workshops     
 
 * *Reproducible research with Quarto and Git*            
 &#x20;  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, November 2026       
