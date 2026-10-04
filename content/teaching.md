@@ -3,10 +3,10 @@ title: "Teaching experience"
 ---
 
 I have completed <a href="https://www.uio.no/link/english/academic-development/" target="_blank">a 
-programme in higher education pedagogy</a> at the University of Oslo. And I am a Fellow of <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
+programme in higher education pedagogy</a> at the University of Oslo. I am a Fellow of <a href="https://www.advance-he.ac.uk/" target="_blank">Advance HE</a>.
 
 Below is an overview of my undergraduate and graduate teaching, together with 
-[short courses and workshops](#workshops) on research methods and digital skills.
+[short courses and workshops](#short-courses-and-workshops) on research methods and digital skills.
 
 ## Graduate courses
 
