@@ -98,7 +98,8 @@ Below is an overview of my undergraduate and graduate teaching, together with
 </div>
 
 * *Causal analysis with R*     
-&#x20;  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, May 2026
+&#x20;  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, May 2026    
+&#x20;  - <a href="https://resulumit.com/syllabi/26spring_causal.pdf" target="_blank">Syllabus</a>
 
 <div style = "line-height: 50%;">
 &#x20;   <br>
@@ -106,7 +107,8 @@ Below is an overview of my undergraduate and graduate teaching, together with
 
 * *Bluesky data*       
 &#x20;  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, October 2025       
-&#x20;   - Previous iteration: AI Horizons, August 2025        
+&#x20;   - Previous iteration: AI Horizons, August 2025     
+&#x20;  - <a href="https://resulumit.com/syllabi/25fall_bsky.pdf" target="_blank">Syllabus</a>
 
 <div style = "line-height: 50%;">
 &#x20;   <br>
@@ -114,7 +116,7 @@ Below is an overview of my undergraduate and graduate teaching, together with
 
 * *R Markdown*         
 &#x20;  - <a href="https://www.uio.no/english/" target="_blank">University of Oslo</a>, May 2022        
-&#x20;   - Previous iterations: <a href="https://www.wzb.eu/en" target="_blank">WZB Berlin Social Science Center</a>, November 2021; <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, October 2021, November 2020, March 2020          
+&#x20;  - Previous iterations: <a href="https://www.wzb.eu/en" target="_blank">WZB Berlin Social Science Center</a>, November 2021; <a href="https://www.campus-luzern.ch/" target="_blank">Campus Luzern</a>, October 2021, November 2020, March 2020          
 &#x20;  - <a href="https://resulumit.com/syllabi/20autumn_rmd.pdf" target="_blank">Syllabus</a> | <a href="https://resulumit.com/teaching/rmd_workshop.html" target="_blank">Slides</a> | <a href="https://github.com/resulumit/rmd_workshop" target="_blank">Materials</a>      
 
 <div style = "line-height: 50%;">
