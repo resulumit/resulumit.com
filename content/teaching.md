@@ -107,7 +107,7 @@ Below is an overview of my undergraduate and graduate teaching, together with
 
 * *Bluesky data*       
 &#x20;  - <a href="https://www.unilu.ch/en/" target="_blank">University of Lucerne</a>, October 2025       
-&#x20;   - Previous iteration: AI Horizons, August 2025     
+&#x20;   - Previous iteration: Code Horizons (now <a href="https://aihorizons.io/" target="_blank">AI Horizons</a>), August 2025     
 &#x20;  - <a href="https://resulumit.com/syllabi/25fall_bsky.pdf" target="_blank">Syllabus</a>
 
 <div style = "line-height: 50%;">
